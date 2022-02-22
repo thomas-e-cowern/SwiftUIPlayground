@@ -12,6 +12,7 @@
 		418727E127C4E4BF003CA164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418727E027C4E4BF003CA164 /* Assets.xcassets */; };
 		418727E427C4E4BF003CA164 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418727E327C4E4BF003CA164 /* Preview Assets.xcassets */; };
 		418727EC27C4E995003CA164 /* ListPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418727EB27C4E995003CA164 /* ListPlayView.swift */; };
+		418727EE27C4EB7D003CA164 /* ImagePlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418727ED27C4EB7D003CA164 /* ImagePlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		418727E327C4E4BF003CA164 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		418727E527C4E4BF003CA164 /* SwiftPlay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftPlay.entitlements; sourceTree = "<group>"; };
 		418727EB27C4E995003CA164 /* ListPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPlayView.swift; sourceTree = "<group>"; };
+		418727ED27C4EB7D003CA164 /* ImagePlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				418727DE27C4E4B1003CA164 /* ContentView.swift */,
 				418727EB27C4E995003CA164 /* ListPlayView.swift */,
 				418727E027C4E4BF003CA164 /* Assets.xcassets */,
+				418727ED27C4EB7D003CA164 /* ImagePlayView.swift */,
 				418727E527C4E4BF003CA164 /* SwiftPlay.entitlements */,
 				418727E227C4E4BF003CA164 /* Preview Content */,
 			);
@@ -144,6 +147,7 @@
 			files = (
 				418727DF27C4E4B1003CA164 /* ContentView.swift in Sources */,
 				418727EC27C4E995003CA164 /* ListPlayView.swift in Sources */,
+				418727EE27C4EB7D003CA164 /* ImagePlayView.swift in Sources */,
 				418727DD27C4E4B1003CA164 /* SwiftPlayApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
