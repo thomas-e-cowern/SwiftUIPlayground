@@ -13,13 +13,15 @@ class Settings: ObservableObject {
 
 struct ContentView: View {
     
-    @State private var selectedColor: Color = .clear
+    @EnvironmentObject var settings: Settings
+    
+//    @State private var selectedColor: Color = .clear
     
     var body: some View {
         HStack {
             VStack (spacing: 5) {
                 
-                BindingPlayView(colorSelected: $selectedColor)
+//                BindingPlayView(colorSelected: $selectedColor)
                 
                 Spacer()
                 
@@ -27,7 +29,7 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    Text("123")
+                    Text("\(settings.counter)")
                         .font(.system(size: 25))
                     
                     Button {
