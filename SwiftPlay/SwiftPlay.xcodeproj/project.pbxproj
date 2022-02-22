@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		417373C227C5197600AF3D70 /* BindingPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417373C127C5197600AF3D70 /* BindingPlayView.swift */; };
+		417373C427C52FF000AF3D70 /* EnvPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417373C327C52FF000AF3D70 /* EnvPlayView.swift */; };
 		418727DD27C4E4B1003CA164 /* SwiftPlayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418727DC27C4E4B1003CA164 /* SwiftPlayApp.swift */; };
 		418727DF27C4E4B1003CA164 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418727DE27C4E4B1003CA164 /* ContentView.swift */; };
 		418727E127C4E4BF003CA164 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 418727E027C4E4BF003CA164 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		417373C127C5197600AF3D70 /* BindingPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingPlayView.swift; sourceTree = "<group>"; };
+		417373C327C52FF000AF3D70 /* EnvPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvPlayView.swift; sourceTree = "<group>"; };
 		418727D927C4E4B1003CA164 /* SwiftPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		418727DC27C4E4B1003CA164 /* SwiftPlayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftPlayApp.swift; sourceTree = "<group>"; };
 		418727DE27C4E4B1003CA164 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			children = (
 				418727DC27C4E4B1003CA164 /* SwiftPlayApp.swift */,
 				418727DE27C4E4B1003CA164 /* ContentView.swift */,
+				417373C327C52FF000AF3D70 /* EnvPlayView.swift */,
 				418727EB27C4E995003CA164 /* ListPlayView.swift */,
 				418727EF27C4F1BF003CA164 /* StateCounterView.swift */,
 				418727F127C4F4C0003CA164 /* TogglePlayView.swift */,
@@ -160,6 +163,7 @@
 				418727EC27C4E995003CA164 /* ListPlayView.swift in Sources */,
 				418727EE27C4EB7D003CA164 /* ImagePlayView.swift in Sources */,
 				418727DD27C4E4B1003CA164 /* SwiftPlayApp.swift in Sources */,
+				417373C427C52FF000AF3D70 /* EnvPlayView.swift in Sources */,
 				418727F027C4F1BF003CA164 /* StateCounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BindingPlayView: View {
     
-    @State private var colorSelected: Color = .clear
+    @Binding var colorSelected: Color
     
     let colors: [Color] = [.red, .green, .yellow, .blue, .purple]
     
@@ -17,11 +17,14 @@ struct BindingPlayView: View {
         HStack {
             VStack {
                 ForEach(colors, id: \.self) { color in
-                    Circle()
-                        .foregroundColor(color)
-                        .onTapGesture {
-                            colorSelected = color
+                    ZStack {
+                        Circle()
+                            .foregroundColor(color)
+                            .onTapGesture {
+                                colorSelected = color
+
                         }
+                    }
                 }
             }
             .frame(width: 300, height: 300, alignment: .center)
@@ -34,6 +37,6 @@ struct BindingPlayView: View {
 
 struct BindingPlayView_Previews: PreviewProvider {
     static var previews: some View {
-        BindingPlayView()
+        BindingPlayView(colorSelected: .constant(.red))
     }
 }
