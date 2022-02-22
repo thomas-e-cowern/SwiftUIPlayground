@@ -9,7 +9,28 @@ import SwiftUI
 
 struct EnvPlayView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer().frame(height: 45)
+            
+            Text("123")
+                .font(.system(size: 25))
+            
+            Spacer().frame(height: 75)
+            
+            Button {
+                print("Pressed")
+            } label: {
+                Text("Click to Increment")
+                    
+            }
+            .padding()
+            .background(Color(red: 0, green: 0, blue: 0.5))
+            .clipShape(Capsule())
+            
+
+        }
+        .frame(width: 300, height: 300, alignment: .center)
+        .padding(20)
     }
 }
 

@@ -11,7 +11,8 @@ import SwiftUI
 struct SwiftPlayApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let settings = Settings()
+            ContentView().environmentObject(settings)
         }
     }
 }

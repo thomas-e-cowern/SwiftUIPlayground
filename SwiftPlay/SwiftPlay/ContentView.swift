@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+class Settings: ObservableObject {
+    @Published var counter: Int = 0
+}
+
 struct ContentView: View {
     
     @State private var selectedColor: Color = .clear
@@ -16,6 +20,29 @@ struct ContentView: View {
             VStack (spacing: 5) {
                 
                 BindingPlayView(colorSelected: $selectedColor)
+                
+                Spacer()
+                
+                HStack (alignment: .center, spacing: 10) {
+                    
+                    Spacer()
+                    
+                    Text("123")
+                        .font(.system(size: 25))
+                    
+                    Button {
+                        print("This one")
+                    } label: {
+                        Text("Increment Also")
+                    }
+                    
+                    Spacer()
+                    
+                    EnvPlayView()
+                }
+                
+                Spacer()
+
 //                Rectangle()
 //                    .fill(.red)
 //                    .frame(width: 100, height: 100)
