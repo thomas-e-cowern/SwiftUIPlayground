@@ -53,6 +53,7 @@ struct ContentView: View {
                 Rectangle()
                     .fill(.blue)
                     .frame(width: 100, height: 100)
+                    .rotationEffect(.degrees(45))
                 
                 Rectangle()
                     .fill(.green)
