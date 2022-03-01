@@ -46,6 +46,8 @@ struct ContentView: View {
                             Text("\($0)")
                         }
                     }
+                } header: {
+                    Text("Bill amount")
                 }
                 Section {
                     Picker("Tip Percentage", selection: $tipPercentage) {
@@ -56,6 +58,7 @@ struct ContentView: View {
                     .pickerStyle(.segmented)
                     
                     Text("Tip Amount: \(tipValue, format: .currency(code: Locale.current.currencyCode ?? "USD"))")
+                    Text("Bill plus Tip: \(checkAmount + tipValue, format: .currency(code: Locale.current.currencyCode ?? "USD"))")
                 } header: {
                     Text("Select tip amount")
                 }
