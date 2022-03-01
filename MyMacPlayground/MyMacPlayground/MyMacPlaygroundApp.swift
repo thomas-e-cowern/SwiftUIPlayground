@@ -11,7 +11,9 @@ import SwiftUI
 struct MyMacPlaygroundApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            let settings = Settings()
+//            ContentView().environmentObject(settings)
+            ContentView().environment(\.layoutDirection, .rightToLeft)
         }
     }
 }

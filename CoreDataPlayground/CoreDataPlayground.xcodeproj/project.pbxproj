@@ -7,27 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4112678427C5A5FB00D3757E /* QuoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4112678327C5A5FB00D3757E /* QuoteView.swift */; };
-		413A945F27C56CA200FDD7EA /* MyMacPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A945E27C56CA200FDD7EA /* MyMacPlaygroundApp.swift */; };
-		413A946127C56CA200FDD7EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A946027C56CA200FDD7EA /* ContentView.swift */; };
-		413A946327C56CAE00FDD7EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413A946227C56CAE00FDD7EA /* Assets.xcassets */; };
-		413A946627C56CAE00FDD7EA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413A946527C56CAE00FDD7EA /* Preview Assets.xcassets */; };
-		413A946E27C56E1100FDD7EA /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413A946D27C56E1100FDD7EA /* CounterView.swift */; };
+		41D9824827C6DC1900D3473E /* CoreDataPlaygroundApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D9824727C6DC1900D3473E /* CoreDataPlaygroundApp.swift */; };
+		41D9824A27C6DC1900D3473E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D9824927C6DC1900D3473E /* ContentView.swift */; };
+		41D9824C27C6DC1E00D3473E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D9824B27C6DC1E00D3473E /* Assets.xcassets */; };
+		41D9824F27C6DC1E00D3473E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D9824E27C6DC1E00D3473E /* Preview Assets.xcassets */; };
+		41D9825727C6DCD300D3473E /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 41D9825527C6DCD300D3473E /* Bookworm.xcdatamodeld */; };
+		41D9825927C6DD3B00D3473E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D9825827C6DD3A00D3473E /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4112678327C5A5FB00D3757E /* QuoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteView.swift; sourceTree = "<group>"; };
-		413A945B27C56CA200FDD7EA /* MyMacPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMacPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		413A945E27C56CA200FDD7EA /* MyMacPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMacPlaygroundApp.swift; sourceTree = "<group>"; };
-		413A946027C56CA200FDD7EA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		413A946227C56CAE00FDD7EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		413A946527C56CAE00FDD7EA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		413A946727C56CAE00FDD7EA /* MyMacPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MyMacPlayground.entitlements; sourceTree = "<group>"; };
-		413A946D27C56E1100FDD7EA /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		41D9824427C6DC1900D3473E /* CoreDataPlayground.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataPlayground.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D9824727C6DC1900D3473E /* CoreDataPlaygroundApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataPlaygroundApp.swift; sourceTree = "<group>"; };
+		41D9824927C6DC1900D3473E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		41D9824B27C6DC1E00D3473E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		41D9824E27C6DC1E00D3473E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41D9825627C6DCD300D3473E /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
+		41D9825827C6DD3A00D3473E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		413A945827C56CA200FDD7EA /* Frameworks */ = {
+		41D9824127C6DC1900D3473E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,40 +36,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		413A945227C56CA200FDD7EA = {
+		41D9823B27C6DC1900D3473E = {
 			isa = PBXGroup;
 			children = (
-				413A945D27C56CA200FDD7EA /* MyMacPlayground */,
-				413A945C27C56CA200FDD7EA /* Products */,
+				41D9824627C6DC1900D3473E /* CoreDataPlayground */,
+				41D9824527C6DC1900D3473E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		413A945C27C56CA200FDD7EA /* Products */ = {
+		41D9824527C6DC1900D3473E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				413A945B27C56CA200FDD7EA /* MyMacPlayground.app */,
+				41D9824427C6DC1900D3473E /* CoreDataPlayground.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		413A945D27C56CA200FDD7EA /* MyMacPlayground */ = {
+		41D9824627C6DC1900D3473E /* CoreDataPlayground */ = {
 			isa = PBXGroup;
 			children = (
-				413A945E27C56CA200FDD7EA /* MyMacPlaygroundApp.swift */,
-				413A946027C56CA200FDD7EA /* ContentView.swift */,
-				4112678327C5A5FB00D3757E /* QuoteView.swift */,
-				413A946D27C56E1100FDD7EA /* CounterView.swift */,
-				413A946227C56CAE00FDD7EA /* Assets.xcassets */,
-				413A946727C56CAE00FDD7EA /* MyMacPlayground.entitlements */,
-				413A946427C56CAE00FDD7EA /* Preview Content */,
+				41D9824727C6DC1900D3473E /* CoreDataPlaygroundApp.swift */,
+				41D9824927C6DC1900D3473E /* ContentView.swift */,
+				41D9825527C6DCD300D3473E /* Bookworm.xcdatamodeld */,
+				41D9825827C6DD3A00D3473E /* DataController.swift */,
+				41D9824B27C6DC1E00D3473E /* Assets.xcassets */,
+				41D9824D27C6DC1E00D3473E /* Preview Content */,
 			);
-			path = MyMacPlayground;
+			path = CoreDataPlayground;
 			sourceTree = "<group>";
 		};
-		413A946427C56CAE00FDD7EA /* Preview Content */ = {
+		41D9824D27C6DC1E00D3473E /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				413A946527C56CAE00FDD7EA /* Preview Assets.xcassets */,
+				41D9824E27C6DC1E00D3473E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -78,39 +76,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		413A945A27C56CA200FDD7EA /* MyMacPlayground */ = {
+		41D9824327C6DC1900D3473E /* CoreDataPlayground */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 413A946A27C56CAE00FDD7EA /* Build configuration list for PBXNativeTarget "MyMacPlayground" */;
+			buildConfigurationList = 41D9825227C6DC1E00D3473E /* Build configuration list for PBXNativeTarget "CoreDataPlayground" */;
 			buildPhases = (
-				413A945727C56CA200FDD7EA /* Sources */,
-				413A945827C56CA200FDD7EA /* Frameworks */,
-				413A945927C56CA200FDD7EA /* Resources */,
+				41D9824027C6DC1900D3473E /* Sources */,
+				41D9824127C6DC1900D3473E /* Frameworks */,
+				41D9824227C6DC1900D3473E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MyMacPlayground;
-			productName = MyMacPlayground;
-			productReference = 413A945B27C56CA200FDD7EA /* MyMacPlayground.app */;
+			name = CoreDataPlayground;
+			productName = CoreDataPlayground;
+			productReference = 41D9824427C6DC1900D3473E /* CoreDataPlayground.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		413A945327C56CA200FDD7EA /* Project object */ = {
+		41D9823C27C6DC1900D3473E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					413A945A27C56CA200FDD7EA = {
+					41D9824327C6DC1900D3473E = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 413A945627C56CA200FDD7EA /* Build configuration list for PBXProject "MyMacPlayground" */;
+			buildConfigurationList = 41D9823F27C6DC1900D3473E /* Build configuration list for PBXProject "CoreDataPlayground" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,44 +116,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 413A945227C56CA200FDD7EA;
-			productRefGroup = 413A945C27C56CA200FDD7EA /* Products */;
+			mainGroup = 41D9823B27C6DC1900D3473E;
+			productRefGroup = 41D9824527C6DC1900D3473E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				413A945A27C56CA200FDD7EA /* MyMacPlayground */,
+				41D9824327C6DC1900D3473E /* CoreDataPlayground */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		413A945927C56CA200FDD7EA /* Resources */ = {
+		41D9824227C6DC1900D3473E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413A946627C56CAE00FDD7EA /* Preview Assets.xcassets in Resources */,
-				413A946327C56CAE00FDD7EA /* Assets.xcassets in Resources */,
+				41D9824F27C6DC1E00D3473E /* Preview Assets.xcassets in Resources */,
+				41D9824C27C6DC1E00D3473E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		413A945727C56CA200FDD7EA /* Sources */ = {
+		41D9824027C6DC1900D3473E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413A946127C56CA200FDD7EA /* ContentView.swift in Sources */,
-				413A945F27C56CA200FDD7EA /* MyMacPlaygroundApp.swift in Sources */,
-				413A946E27C56E1100FDD7EA /* CounterView.swift in Sources */,
-				4112678427C5A5FB00D3757E /* QuoteView.swift in Sources */,
+				41D9824A27C6DC1900D3473E /* ContentView.swift in Sources */,
+				41D9825927C6DD3B00D3473E /* DataController.swift in Sources */,
+				41D9825727C6DCD300D3473E /* Bookworm.xcdatamodeld in Sources */,
+				41D9824827C6DC1900D3473E /* CoreDataPlaygroundApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		413A946827C56CAE00FDD7EA /* Debug */ = {
+		41D9825027C6DC1E00D3473E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,17 +204,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		413A946927C56CAE00FDD7EA /* Release */ = {
+		41D9825127C6DC1E00D3473E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,91 +259,109 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		413A946B27C56CAE00FDD7EA /* Debug */ = {
+		41D9825327C6DC1E00D3473E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyMacPlayground/MyMacPlayground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyMacPlayground/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CoreDataPlayground/Preview Content\"";
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.MyMacPlayground;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.CoreDataPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		413A946C27C56CAE00FDD7EA /* Release */ = {
+		41D9825427C6DC1E00D3473E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = MyMacPlayground/MyMacPlayground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MyMacPlayground/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"CoreDataPlayground/Preview Content\"";
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
-					"@executable_path/../Frameworks",
+					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.MyMacPlayground;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobilesoftwareservices.CoreDataPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		413A945627C56CA200FDD7EA /* Build configuration list for PBXProject "MyMacPlayground" */ = {
+		41D9823F27C6DC1900D3473E /* Build configuration list for PBXProject "CoreDataPlayground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				413A946827C56CAE00FDD7EA /* Debug */,
-				413A946927C56CAE00FDD7EA /* Release */,
+				41D9825027C6DC1E00D3473E /* Debug */,
+				41D9825127C6DC1E00D3473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		413A946A27C56CAE00FDD7EA /* Build configuration list for PBXNativeTarget "MyMacPlayground" */ = {
+		41D9825227C6DC1E00D3473E /* Build configuration list for PBXNativeTarget "CoreDataPlayground" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				413A946B27C56CAE00FDD7EA /* Debug */,
-				413A946C27C56CAE00FDD7EA /* Release */,
+				41D9825327C6DC1E00D3473E /* Debug */,
+				41D9825427C6DC1E00D3473E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		41D9825527C6DCD300D3473E /* Bookworm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				41D9825627C6DCD300D3473E /* Bookworm.xcdatamodel */,
+			);
+			currentVersion = 41D9825627C6DCD300D3473E /* Bookworm.xcdatamodel */;
+			path = Bookworm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
-	rootObject = 413A945327C56CA200FDD7EA /* Project object */;
+	rootObject = 41D9823C27C6DC1900D3473E /* Project object */;
 }
