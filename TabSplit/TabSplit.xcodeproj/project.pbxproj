@@ -10,6 +10,7 @@
 		4159267027CFCD1500FBA7E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */; };
 		4159267327CFF3D400FBA7E8 /* Chicle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4159267127CFF3D400FBA7E8 /* Chicle-Regular.ttf */; };
 		4159267427CFF3D400FBA7E8 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4159267227CFF3D400FBA7E8 /* OFL.txt */; };
+		4159267827CFFA2F00FBA7E8 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4159267727CFFA2F00FBA7E8 /* CreditsView.swift */; };
 		41ED230B27CE4FAE0016FF12 /* TabSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */; };
 		41ED230D27CE4FAE0016FF12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED230C27CE4FAE0016FF12 /* ContentView.swift */; };
 		41ED230F27CE4FB70016FF12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED230E27CE4FB70016FF12 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		4159267127CFF3D400FBA7E8 /* Chicle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chicle-Regular.ttf"; sourceTree = "<group>"; };
 		4159267227CFF3D400FBA7E8 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		4159267627CFF41C00FBA7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4159267727CFFA2F00FBA7E8 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
 		41ED230727CE4FAE0016FF12 /* TabSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSplitApp.swift; sourceTree = "<group>"; };
 		41ED230C27CE4FAE0016FF12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				4159267527CFF3E400FBA7E8 /* Fonts */,
 				41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */,
 				41ED230C27CE4FAE0016FF12 /* ContentView.swift */,
+				4159267727CFFA2F00FBA7E8 /* CreditsView.swift */,
 				4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */,
 				41ED230E27CE4FB70016FF12 /* Assets.xcassets */,
 				41ED231027CE4FB70016FF12 /* Preview Content */,
@@ -159,6 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4159267827CFFA2F00FBA7E8 /* CreditsView.swift in Sources */,
 				41ED230D27CE4FAE0016FF12 /* ContentView.swift in Sources */,
 				41ED230B27CE4FAE0016FF12 /* TabSplitApp.swift in Sources */,
 			);
