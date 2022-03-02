@@ -83,16 +83,10 @@ struct ContentView: View {
                     Button("Credits") {
                         isInfoShowing.toggle()
                     }
-                    .onTapGesture {
-                        sheet(isPresented: $isInfoShowing) {
-                            <#code#>
-                        } content: {
-                            <#code#>
-                        }
-
+                    .sheet(isPresented: $isInfoShowing) {
+                        CreditsView()
                     }
                 }
-                
             }
         }
     }

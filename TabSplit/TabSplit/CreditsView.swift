@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct CreditsView: View {
+    
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Text("This is the credits view...")
+        NavigationView {
+            Form {
+                Text("This is the credits view...")
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Back") {
+                        dismiss()
+                    }
+                }
+            }
+        }
     }
 }
 
