@@ -16,6 +16,7 @@ struct ContentView: View {
     @State private var currencyFormat = Locale.current.currencyCode ?? "USD"
     
     @FocusState private var amountIsFocused: Bool
+    @State private var isInfoShowing: Bool = false
     
     let tipPercentages = [0, 5, 10, 15, 20, 25]
     
@@ -78,6 +79,12 @@ struct ContentView: View {
                         amountIsFocused = false
                     }
                 }
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button("Credits") {
+                        isInfoShowing.toggle()
+                    }
+                }
+                
             }
         }
     }
