@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4159267027CFCD1500FBA7E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */; };
 		41ED230B27CE4FAE0016FF12 /* TabSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */; };
 		41ED230D27CE4FAE0016FF12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED230C27CE4FAE0016FF12 /* ContentView.swift */; };
 		41ED230F27CE4FB70016FF12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED230E27CE4FB70016FF12 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41ED230727CE4FAE0016FF12 /* TabSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSplitApp.swift; sourceTree = "<group>"; };
 		41ED230C27CE4FAE0016FF12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,6 +55,7 @@
 			children = (
 				41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */,
 				41ED230C27CE4FAE0016FF12 /* ContentView.swift */,
+				4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */,
 				41ED230E27CE4FB70016FF12 /* Assets.xcassets */,
 				41ED231027CE4FB70016FF12 /* Preview Content */,
 			);
@@ -125,6 +128,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4159267027CFCD1500FBA7E8 /* LaunchScreen.storyboard in Resources */,
 				41ED231227CE4FB70016FF12 /* Preview Assets.xcassets in Resources */,
 				41ED230F27CE4FB70016FF12 /* Assets.xcassets in Resources */,
 			);
