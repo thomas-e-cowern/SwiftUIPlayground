@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4159267027CFCD1500FBA7E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */; };
+		4159267327CFF3D400FBA7E8 /* Chicle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4159267127CFF3D400FBA7E8 /* Chicle-Regular.ttf */; };
+		4159267427CFF3D400FBA7E8 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4159267227CFF3D400FBA7E8 /* OFL.txt */; };
 		41ED230B27CE4FAE0016FF12 /* TabSplitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */; };
 		41ED230D27CE4FAE0016FF12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED230C27CE4FAE0016FF12 /* ContentView.swift */; };
 		41ED230F27CE4FB70016FF12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED230E27CE4FB70016FF12 /* Assets.xcassets */; };
@@ -16,6 +18,9 @@
 
 /* Begin PBXFileReference section */
 		4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4159267127CFF3D400FBA7E8 /* Chicle-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chicle-Regular.ttf"; sourceTree = "<group>"; };
+		4159267227CFF3D400FBA7E8 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4159267627CFF41C00FBA7E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		41ED230727CE4FAE0016FF12 /* TabSplit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabSplit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSplitApp.swift; sourceTree = "<group>"; };
 		41ED230C27CE4FAE0016FF12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4159267527CFF3E400FBA7E8 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4159267127CFF3D400FBA7E8 /* Chicle-Regular.ttf */,
+				4159267227CFF3D400FBA7E8 /* OFL.txt */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		41ED22FE27CE4FAE0016FF12 = {
 			isa = PBXGroup;
 			children = (
@@ -53,6 +67,8 @@
 		41ED230927CE4FAE0016FF12 /* TabSplit */ = {
 			isa = PBXGroup;
 			children = (
+				4159267627CFF41C00FBA7E8 /* Info.plist */,
+				4159267527CFF3E400FBA7E8 /* Fonts */,
 				41ED230A27CE4FAE0016FF12 /* TabSplitApp.swift */,
 				41ED230C27CE4FAE0016FF12 /* ContentView.swift */,
 				4159266F27CFCD1500FBA7E8 /* LaunchScreen.storyboard */,
@@ -128,7 +144,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4159267427CFF3D400FBA7E8 /* OFL.txt in Resources */,
 				4159267027CFCD1500FBA7E8 /* LaunchScreen.storyboard in Resources */,
+				4159267327CFF3D400FBA7E8 /* Chicle-Regular.ttf in Resources */,
 				41ED231227CE4FB70016FF12 /* Preview Assets.xcassets in Resources */,
 				41ED230F27CE4FB70016FF12 /* Assets.xcassets in Resources */,
 			);
@@ -276,6 +294,7 @@
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TabSplit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +324,7 @@
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TabSplit/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
