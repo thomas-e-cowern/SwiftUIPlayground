@@ -18,7 +18,8 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
+            AngularGradient(gradient: Gradient(colors: [.red, .yellow, .green, .blue, .purple, .red]), center: .center)
+//            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
             VStack (spacing: 30) {
@@ -36,6 +37,8 @@ struct ContentView: View {
                     } label: {
                         Image(countries[number])
                             .renderingMode(.original)
+                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                            .shadow(radius: 5)
                     }
                 }
             }
