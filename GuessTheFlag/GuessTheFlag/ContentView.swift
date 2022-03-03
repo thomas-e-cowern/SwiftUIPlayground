@@ -22,33 +22,45 @@ struct ContentView: View {
 //            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack (spacing: 15) {
-                VStack {
-                    Text("Tap the flag of ")
-                        .foregroundColor(.white)
-                        .font(.subheadline.weight(.heavy))
-                    Text(countries[correctAnswer])
-                        .foregroundColor(.white)
-                        .font(.largeTitle.weight(.semibold))
-                }
-                .foregroundColor(.white)
+            VStack {
                 
-                ForEach(0..<3) { number in
-                    Button {
-                        flagTapped(number)
-                    } label: {
-                        Image(countries[number])
-                            .renderingMode(.original)
-                            .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
-                            .shadow(radius: 5)
+                Spacer()
+                
+                Text("Guess the Flag")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(.white)
+                VStack (spacing: 15) {
+                    VStack {
+                        Text("Tap the flag of ")
+                            .foregroundStyle(.secondary)
+                            .font(.subheadline.weight(.heavy))
+                        Text(countries[correctAnswer])
+                            .font(.largeTitle.weight(.semibold))
+                    }
+                    .foregroundColor(.white)
+                    
+                    ForEach(0..<3) { number in
+                        Button {
+                            flagTapped(number)
+                        } label: {
+                            Image(countries[number])
+                                .renderingMode(.original)
+                                .clipShape(RoundedRectangle(cornerRadius: 15, style: .continuous))
+                                .shadow(radius: 5)
+                        }
                     }
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 20)
+                .background(.thinMaterial)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                
+                Text("Score: ???")
+                    .foregroundColor(.white)
+                    .font(.title.bold())
             }
-            .frame(maxWidth: .infinity)
-            .padding(.vertical, 20)
-            .background(.thinMaterial)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
         }
+        .padding()
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
@@ -56,6 +68,7 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .font(.title.bold())
         }
+        
     }
     
     func flagTapped (_ number: Int) {
