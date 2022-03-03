@@ -22,11 +22,13 @@ struct ContentView: View {
 //            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack (spacing: 30) {
+            VStack (spacing: 15) {
                 VStack {
                     Text("Tap the flag of ")
+                        .foregroundColor(.white)
                         .font(.subheadline.weight(.heavy))
                     Text(countries[correctAnswer])
+                        .foregroundColor(.white)
                         .font(.largeTitle.weight(.semibold))
                 }
                 .foregroundColor(.white)
@@ -42,11 +44,17 @@ struct ContentView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 20)
+            .background(.thinMaterial)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
         }
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
             Text("Current Score: ???")
+                .foregroundColor(.white)
+                .font(.title.bold())
         }
     }
     
