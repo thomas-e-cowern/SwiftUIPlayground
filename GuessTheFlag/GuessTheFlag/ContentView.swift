@@ -55,12 +55,17 @@ struct ContentView: View {
                 .background(.thinMaterial)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 
+                Spacer()
+                Spacer()
+                
                 Text("Score: ???")
                     .foregroundColor(.white)
                     .font(.title.bold())
+                
+                Spacer()
             }
+            .padding()
         }
-        .padding()
         .alert(scoreTitle, isPresented: $showingScore) {
             Button("Continue", action: askQuestion)
         } message: {
