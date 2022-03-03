@@ -8,29 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    var countries = ["Estonia", "France", "Germany", "treland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"]
+    var correctAnswer = Int.random(in: 0...2)
+    
     var body: some View {
-        ZStack {
-            Color.red
-            VStack {
-                HStack {
-                    Text("One")
-                    Text("Two")
-                    Text("Three")
-                }
-                HStack {
-                    Text("One")
-                    Text("Two")
-                    Text("Three")
-                }
-                HStack {
-                    Text("One")
-                    Text("Two")
-                    Text("Three")
-                }
-            }
-            .foregroundColor(.white)
+        VStack {
+            Text("Tap the flag of ")
+            Text(countries[correctAnswer])
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 
