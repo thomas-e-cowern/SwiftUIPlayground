@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var scoreTitle: String = ""
     @State private var score: Int = 0
     @State private var chosenFlag: String = ""
+    @State private var count: Int = 0
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer: Int = 0
@@ -72,7 +73,15 @@ struct ContentView: View {
             .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: selectFlag)
+            if count < 8 {
+                Button("Continue", action: selectFlag)
+            } else {
+                Button("Game Over. Reset Your Score") {
+                    score = 0
+                    selectFlag()
+                }
+            }
+            
         } message: {
             Text("Current Score: \(score)")
                 .foregroundColor(.white)
@@ -100,6 +109,7 @@ struct ContentView: View {
         countries.shuffle()
         correctAnswer = Int.random(in: 0...2)
         chosenFlag = countries[correctAnswer]
+        count += 1
     }
 }
 
