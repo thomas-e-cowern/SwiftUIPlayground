@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var chosenFlag: String = ""
     @State private var count: Int = 0
     
+    
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
     @State private var correctAnswer: Int = 0
     
@@ -83,9 +84,15 @@ struct ContentView: View {
             }
             
         } message: {
-            Text("Current Score: \(score)")
-                .foregroundColor(.white)
-                .font(.title.bold())
+            if count < 8 {
+                Text("Current Score: \(score)")
+                    .foregroundColor(.white)
+                    .font(.title.bold())
+            } else {
+                Text("Final Score: \(score)")
+                    .foregroundColor(.white)
+                    .font(.title.bold())
+            }
         }
     }
     
