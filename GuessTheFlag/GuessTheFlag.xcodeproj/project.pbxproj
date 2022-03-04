@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		41DB83C327D2589800117869 /* CountryCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB83C227D2589800117869 /* CountryCodes.swift */; };
+		41DB83C527D25A6800117869 /* FlagAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB83C427D25A6800117869 /* FlagAPIView.swift */; };
+		41DB83CB27D25BB600117869 /* Countries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DB83CA27D25BB600117869 /* Countries.swift */; };
 		41E5E15427D0E76F0033A2CD /* GuessTheFlagApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5E15327D0E76F0033A2CD /* GuessTheFlagApp.swift */; };
 		41E5E15627D0E76F0033A2CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E5E15527D0E76F0033A2CD /* ContentView.swift */; };
 		41E5E15827D0E7740033A2CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41E5E15727D0E7740033A2CD /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		41DB83C227D2589800117869 /* CountryCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodes.swift; sourceTree = "<group>"; };
+		41DB83C427D25A6800117869 /* FlagAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagAPIView.swift; sourceTree = "<group>"; };
+		41DB83CA27D25BB600117869 /* Countries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Countries.swift; sourceTree = "<group>"; };
 		41E5E15027D0E76F0033A2CD /* GuessTheFlag.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuessTheFlag.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E5E15327D0E76F0033A2CD /* GuessTheFlagApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuessTheFlagApp.swift; sourceTree = "<group>"; };
 		41E5E15527D0E76F0033A2CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,23 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		41DB83C627D25A9B00117869 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41E5E15527D0E76F0033A2CD /* ContentView.swift */,
+				41DB83C427D25A6800117869 /* FlagAPIView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		41DB83C727D25B5900117869 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41DB83CA27D25BB600117869 /* Countries.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		41E5E14727D0E76E0033A2CD = {
 			isa = PBXGroup;
 			children = (
@@ -61,8 +82,9 @@
 		41E5E15227D0E76F0033A2CD /* GuessTheFlag */ = {
 			isa = PBXGroup;
 			children = (
+				41DB83C727D25B5900117869 /* Models */,
 				41E5E15327D0E76F0033A2CD /* GuessTheFlagApp.swift */,
-				41E5E15527D0E76F0033A2CD /* ContentView.swift */,
+				41DB83C627D25A9B00117869 /* Views */,
 				41DB83C127D2587900117869 /* Data */,
 				41E5E15727D0E7740033A2CD /* Assets.xcassets */,
 				41E5E15927D0E7740033A2CD /* Preview Content */,
@@ -151,6 +173,8 @@
 				41E5E15627D0E76F0033A2CD /* ContentView.swift in Sources */,
 				41E5E15427D0E76F0033A2CD /* GuessTheFlagApp.swift in Sources */,
 				41DB83C327D2589800117869 /* CountryCodes.swift in Sources */,
+				41DB83CB27D25BB600117869 /* Countries.swift in Sources */,
+				41DB83C527D25A6800117869 /* FlagAPIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
