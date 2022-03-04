@@ -12,9 +12,10 @@ struct ContentView: View {
     @State private var showingScore: Bool = false
     @State private var scoreTitle: String = ""
     @State private var score: Int = 0
+    @State private var chosenFlag: String = ""
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
-    @State private var correctAnswer = Int.random(in: 0...2)
+    @State private var correctAnswer: Int = 0
     
     var body: some View {
         ZStack {
@@ -35,7 +36,7 @@ struct ContentView: View {
                         Text("Tap the flag of ")
                             .foregroundStyle(.secondary)
                             .font(.subheadline.weight(.heavy))
-                        Text(countries[correctAnswer])
+                        Text(chosenFlag)
                             .font(.largeTitle.weight(.semibold))
                     }
                     .foregroundColor(.white)
@@ -51,6 +52,9 @@ struct ContentView: View {
                         }
                     }
                 }
+                .onAppear(perform: {
+                    selectFlag()
+                })
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 20)
                 .background(.thinMaterial)
@@ -68,7 +72,7 @@ struct ContentView: View {
             .padding()
         }
         .alert(scoreTitle, isPresented: $showingScore) {
-            Button("Continue", action: askQuestion)
+            Button("Continue", action: selectFlag)
         } message: {
             Text("Current Score: \(score)")
                 .foregroundColor(.white)
@@ -87,9 +91,15 @@ struct ContentView: View {
         showingScore = true
     }
     
-    func askQuestion () {
+//    func askQuestion () {
+//        countries.shuffle()
+//        var correctAnswer = Int.random(in: 0...2)
+//    }
+    
+    func selectFlag () {
         countries.shuffle()
-        var correctAnswer = Int.random(in: 0...2)
+        correctAnswer = Int.random(in: 0...2)
+        chosenFlag = countries[correctAnswer]
     }
 }
 
