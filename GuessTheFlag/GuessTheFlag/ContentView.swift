@@ -87,7 +87,6 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .font(.title.bold())
         }
-        
     }
     
     func flagTapped (_ number: Int) {
@@ -95,7 +94,7 @@ struct ContentView: View {
             scoreTitle = "Correct"
             score += 1
         } else {
-            scoreTitle = "Incorrect"
+            scoreTitle = "Incorrect.  That is the flag of \(countries[number])"
         }
         showingScore = true
     }
