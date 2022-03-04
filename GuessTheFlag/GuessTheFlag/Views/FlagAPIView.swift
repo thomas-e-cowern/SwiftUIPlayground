@@ -9,9 +9,30 @@ import SwiftUI
 
 struct FlagAPIView: View {
     
+    @State private var countries = countryCodes
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Look Below")
+        }
+//        .onAppear {
+//            getCountryData()
+//        }
     }
+    
+    
+//    func getCountryData () {
+//        Network().getCountries { (result) in
+//            switch result {
+//            case .success(let countries):
+//                DispatchQueue.main.async {
+//                    self.countries = countries
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
 }
 
 struct FlagAPIView_Previews: PreviewProvider {
