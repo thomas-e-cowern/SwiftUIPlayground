@@ -14,6 +14,11 @@ struct ContentView: View {
     @State private var rootWord: String = ""
     @State private var newWord: String = ""
     
+    // Error properties
+    @State private var errorTitle: String = ""
+    @State private var errorMessage: String = ""
+    @State private var showingError: Bool = false
+    
     // MARK:  Body
     var body: some View {
         NavigationView {
@@ -39,6 +44,11 @@ struct ContentView: View {
             .onAppear {
                 startGame()
             }
+            .alert(errorTitle, isPresented: $showingError) {
+                Button("OK", role: .cancel) { }
+            } message: {
+                Text(errorMessage)
+            }
         }
     }
     
@@ -47,6 +57,21 @@ struct ContentView: View {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
         guard answer.count > 0 else { return }
+        
+        guard isWordOriginal(word: answer) else {
+            wordError(title: "Word has already been used", message: "Please enter an original word")
+            return
+        }
+        
+        guard isLetterPresent(word: answer) else {
+            wordError(title: "Invalid letters present", message: "Please only use letters from the root word")
+            return
+        }
+        
+        guard isActualWord(word: answer) else {
+            wordError(title: "Not a real word", message: "Please enter onaly word from the dictionary")
+            return
+        }
         
         withAnimation {
             usedWords.insert(answer, at: 0)
@@ -78,7 +103,7 @@ struct ContentView: View {
         !usedWords.contains(word)
     }
     
-    // MARK:  Check to make sure the word can be made out of the root word
+    // MARK:  Check to make sure the word can be made out of letters from the root word
     func isLetterPresent (word: String) -> Bool {
         var rootCopy = rootWord
         
@@ -106,6 +131,13 @@ struct ContentView: View {
         
         // if no errors return true.  The word exists!
         return misspelledRange.location == NSNotFound
+    }
+    
+    // MARK:  If validation fails, display the appropriate error
+    func wordError (title: String, message: String) {
+        errorTitle = title
+        errorMessage = message
+        showingError = true
     }
 }
 
