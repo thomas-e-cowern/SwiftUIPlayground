@@ -16,8 +16,19 @@ struct ContentView: View {
     
     // MARK:  Body
     var body: some View {
-        List(0..<5) {
-            Text("Dynamic row \($0)")
+        NavigationView {
+            List {
+                Section {
+                    TextField("Enter your word:", text: $newWord)
+                }
+                
+                Section {
+                    ForEach(usedWords, id: \.self){ word in
+                        Text(word)
+                    }
+                }
+            }
+            .navigationTitle(rootWord)
         }
     }
 }
