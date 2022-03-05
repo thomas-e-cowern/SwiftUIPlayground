@@ -55,15 +55,20 @@ struct ContentView: View {
     }
     
     func startGame () {
+        
+        var wordArray: [String] = []
+        
         if let fileURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
             print("Found the file...")
             
             if let contents = try? String(contentsOf: fileURL) {
                 print(contents.count)
+                wordArray = contents.components(separatedBy: "\n")
+                print(wordArray[3])
             }
+            
+            rootWord = wordArray[Int.random(in: 0..<wordArray.count)]
         }
-        
-        
     }
 }
 
