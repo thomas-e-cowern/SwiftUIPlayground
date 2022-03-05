@@ -11,6 +11,7 @@
 		411A3FFE27D3A7040043E65C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A3FFD27D3A7040043E65C /* ContentView.swift */; };
 		411A400027D3A7090043E65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411A3FFF27D3A7090043E65C /* Assets.xcassets */; };
 		411A400327D3A7090043E65C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 411A400227D3A7090043E65C /* Preview Assets.xcassets */; };
+		411A400A27D3B7EC0043E65C /* start.txt in Resources */ = {isa = PBXBuildFile; fileRef = 411A400927D3B7EC0043E65C /* start.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		411A3FFD27D3A7040043E65C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		411A3FFF27D3A7090043E65C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		411A400227D3A7090043E65C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		411A400927D3B7EC0043E65C /* start.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = start.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		411A3FFA27D3A7040043E65C /* WordScramble */ = {
 			isa = PBXGroup;
 			children = (
+				411A400B27D3B7FA0043E65C /* Data */,
 				411A3FFB27D3A7040043E65C /* WordScrambleApp.swift */,
 				411A3FFD27D3A7040043E65C /* ContentView.swift */,
 				411A3FFF27D3A7090043E65C /* Assets.xcassets */,
@@ -65,6 +68,14 @@
 				411A400227D3A7090043E65C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		411A400B27D3B7FA0043E65C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				411A400927D3B7EC0043E65C /* start.txt */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				411A400327D3A7090043E65C /* Preview Assets.xcassets in Resources */,
+				411A400A27D3B7EC0043E65C /* start.txt in Resources */,
 				411A400027D3A7090043E65C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
