@@ -42,6 +42,7 @@ struct ContentView: View {
         }
     }
     
+    // MARK:  Take the user entered word and perform checks for validity and add the user created word to the list for display if all checks pass
     func addNewWord () {
         let answer = newWord.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
         
@@ -54,6 +55,7 @@ struct ContentView: View {
         newWord = ""
     }
     
+    // MARK:  Start the game by loading the list and choosing a random word
     func startGame () {
    
         if let fileURL = Bundle.main.url(forResource: "start", withExtension: "txt") {
@@ -69,6 +71,41 @@ struct ContentView: View {
         }
         
         fatalError("Could not load list of words from bundle")
+    }
+    
+    // MARK:  Check to ensure the word has not already been entered in the list
+    func isWordOriginal (word: String) -> Bool {
+        !usedWords.contains(word)
+    }
+    
+    // MARK:  Check to make sure the word can be made out of the root word
+    func isLetterPresent (word: String) -> Bool {
+        var rootCopy = rootWord
+        
+        for letter in word {
+            if let pos = rootCopy.firstIndex(of: letter)
+            {
+                rootCopy.remove(at: pos)
+            } else {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    // MARK:  Use UITextChecker to check word spelling and indentify if it is a real word.
+    func isActualWord (word: String) -> Bool {
+        
+        // initialize checker
+        let checker = UITextChecker()
+        // get the size of the word
+        let range = NSRange(location: 0, length: word.utf16.count)
+        // determine if they are any spelling errors
+        let misspelledRange = checker.rangeOfMisspelledWord(in: word, range: range, startingAt: 0, wrap: false, language: "en")
+        
+        // if no errors return true.  The word exists!
+        return misspelledRange.location == NSNotFound
     }
 }
 
