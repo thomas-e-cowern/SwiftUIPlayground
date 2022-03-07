@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var expenses = Expenses()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                ForEach(expenses.items, id: \.name) { item in
+                    Text(item.name)
+                        .padding()
+                }
+            }
+            .navigationBarTitle("iExpense")
+            .toolbar {
+                Button {
+                    let expense = ExpenseItem(name: "Test", type: "personal", amount: 5)
+                    expenses.items.append(expense)
+                } label: {
+                     Image(systemName: "plus")
+                }
+            }
+        }
     }
 }
 
