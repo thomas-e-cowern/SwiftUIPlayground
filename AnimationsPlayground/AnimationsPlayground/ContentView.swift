@@ -15,19 +15,28 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button("Tap Me") {
-                animationAmount += 1
+//                animationAmount += 1
             }
+            .onAppear(perform: {
+                animationAmount = 2
+            })
             .padding(50)
             .background(.red)
             .foregroundColor(.white)
             .clipShape(Circle())
-            .scaleEffect(animationAmount)
-            .animation(.default, value: animationAmount)
-            .blur(radius: (animationAmount - 1) * 3)
+//            .scaleEffect(animationAmount)
+            .overlay(
+                Circle()
+                    .stroke(.blue)
+                    .scaleEffect(animationAmount)
+                    .opacity(2 - animationAmount)
+                    .animation(.easeInOut(duration: 2)
+                                .repeatForever(autoreverses: false), value: animationAmount)
+            )
+//            .animation(.default, value: animationAmount)
+//            .blur(radius: (animationAmount - 1) * 3)
+            
         }
-//        .animation(.default, value: animationAmount)
-//        .blur(radius: (animationAmount - 1) * 3)
-//
     }
 }
 
