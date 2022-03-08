@@ -23,9 +23,9 @@ struct CustomText: View {
 struct ContentView: View {
     var body: some View {
         ScrollView {
-            VStack {
+            LazyVStack {
                 ForEach(0..<100) {
-                    Text("Item \($0)")
+                    CustomText("CT Item \($0)")
                         .font(.title)
                 }
             }
