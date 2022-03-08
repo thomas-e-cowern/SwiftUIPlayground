@@ -22,14 +22,14 @@ struct CustomText: View {
 
 struct ContentView: View {
     var body: some View {
-        ScrollView {
-            LazyVStack {
-                ForEach(0..<100) {
-                    CustomText("CT Item \($0)")
-                        .font(.title)
-                }
+        NavigationView {
+            NavigationLink {
+                Text("Detail View")
+            } label: {
+                Text("Hello World")
+                    .padding()
             }
-            .frame(maxWidth: .infinity)
+            .navigationTitle("SwiftUI")
         }
     }
 }
