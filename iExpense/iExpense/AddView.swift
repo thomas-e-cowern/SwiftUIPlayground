@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct AddView: View {
+    @Environment(\.dismiss) var dismiss
+    
+    @ObservedObject var expenses: Expenses
+    
     @State private var name = ""
     @State private var type = "Personal"
     @State private var amount = 0.0
@@ -29,12 +33,19 @@ struct AddView: View {
                     .keyboardType(.decimalPad)
             }
             .navigationTitle("Add New Expense")
+            .toolbar {
+                Button("Save") {
+                    let item = ExpenseItem(name: name, type: type, amount: amount)
+                    expenses.items.append(item)
+                    dismiss()
+                }
+            }
         }
     }
 }
 
 struct AddView_Previews: PreviewProvider {
     static var previews: some View {
-        AddView()
+        AddView(expenses: Expenses())
     }
 }
