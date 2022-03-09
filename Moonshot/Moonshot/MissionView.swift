@@ -28,11 +28,22 @@ struct MissionView: View {
                            .padding(.top)
 
                        VStack(alignment: .leading) {
+                           
+                           Rectangle()
+                               .frame(height: 2)
+                               .foregroundColor(.lightBackground)
+                               .padding(.vertical)
+                           
                            Text("Mission Highlights")
                                .font(.title.bold())
                                .padding(.bottom, 5)
 
                            Text(mission.description)
+                           
+                           Rectangle()
+                               .frame(height: 2)
+                               .foregroundColor(.lightBackground)
+                               .padding(.vertical)
                        }
                        .padding(.horizontal)
                        
@@ -51,7 +62,17 @@ struct MissionView: View {
                                                     Capsule()
                                                         .strokeBorder(.white, lineWidth: 1)
                                                )
+                                           
+                                           VStack (alignment: .leading) {
+                                               Text(crewMember.astronaut.name)
+                                                   .foregroundColor(.white)
+                                                   .font(.headline)
+                                               
+                                               Text(crewMember.role)
+                                                   .foregroundColor(.secondary)
+                                           }
                                        }
+                                       .padding(.horizontal)
                                    }
                                }
                            }
