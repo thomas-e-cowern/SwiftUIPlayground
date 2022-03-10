@@ -21,6 +21,10 @@ struct Mission: Codable, Identifiable {
         launchDate?.formatted(date: .abbreviated, time: .omitted) ?? "N/A"
     }
     
+    var largeLaunchDate: String {
+        launchDate?.formatted(date: .complete, time: .omitted) ?? "N/A"
+    }
+    
     struct CrewRole: Codable {
         let name: String
         let role: String
