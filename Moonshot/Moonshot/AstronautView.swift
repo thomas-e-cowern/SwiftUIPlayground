@@ -22,6 +22,7 @@ struct AstronautView: View {
                 
                 Text(astronaut.description)
                     .padding()
+                    .foregroundColor(.white)
             }
         }
         .background(.darkBackground)
