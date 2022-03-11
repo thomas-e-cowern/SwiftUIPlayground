@@ -38,7 +38,9 @@ struct MissionListView: View {
                                         .font(.caption)
                                         .foregroundColor(.white.opacity(0.5))
                                 }
-                                .padding(.trailing, 60)
+                                .padding(.horizontal)
+                                .frame(minWidth: 200, maxHeight: .infinity)
+                                .background(.lightBackground)
                             }
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                             .overlay(
