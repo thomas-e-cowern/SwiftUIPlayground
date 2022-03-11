@@ -40,8 +40,11 @@ struct MissionListView: View {
                                 }
                                 .padding(.trailing, 60)
                             }
-                            .frame(width: .infinity)
-                            .padding()
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.lightBackground)
+                            )
                         }
                     }
                 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410BF2AE27DBC82700BE5248 /* MissionGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410BF2AD27DBC82600BE5248 /* MissionGridView.swift */; };
 		4174B23B27D7916E00492ECD /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174B23A27D7916E00492ECD /* MoonshotApp.swift */; };
 		4174B23D27D7916E00492ECD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4174B23C27D7916E00492ECD /* ContentView.swift */; };
 		4174B23F27D7918100492ECD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4174B23E27D7918100492ECD /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410BF2AD27DBC82600BE5248 /* MissionGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionGridView.swift; sourceTree = "<group>"; };
 		4174B23727D7916E00492ECD /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4174B23A27D7916E00492ECD /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		4174B23C27D7916E00492ECD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				4174B23A27D7916E00492ECD /* MoonshotApp.swift */,
 				4174B23C27D7916E00492ECD /* ContentView.swift */,
 				418378D527DAA5C90084E1A1 /* MissionListView.swift */,
+				410BF2AD27DBC82600BE5248 /* MissionGridView.swift */,
 				41FCD53627D8EAA40021F518 /* MissionView.swift */,
 				418378D327DAA0A00084E1A1 /* CrewMemberVIew.swift */,
 				418378D127DA8D3A0084E1A1 /* AstronautView.swift */,
@@ -173,6 +176,7 @@
 				4174B24D27D81FA400492ECD /* Astronaut.swift in Sources */,
 				418378D427DAA0A00084E1A1 /* CrewMemberVIew.swift in Sources */,
 				418378D227DA8D3A0084E1A1 /* AstronautView.swift in Sources */,
+				410BF2AE27DBC82700BE5248 /* MissionGridView.swift in Sources */,
 				4174B23D27D7916E00492ECD /* ContentView.swift in Sources */,
 				4174B23B27D7916E00492ECD /* MoonshotApp.swift in Sources */,
 				41DCC7C027D8A9FE00C22779 /* ColorTheme.swift in Sources */,
