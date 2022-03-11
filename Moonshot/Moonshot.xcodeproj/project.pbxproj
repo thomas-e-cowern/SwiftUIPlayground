@@ -54,6 +54,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410BF2AF27DBD0B500BE5248 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4174B23C27D7916E00492ECD /* ContentView.swift */,
+				418378D527DAA5C90084E1A1 /* MissionListView.swift */,
+				410BF2AD27DBC82600BE5248 /* MissionGridView.swift */,
+				41FCD53627D8EAA40021F518 /* MissionView.swift */,
+				418378D327DAA0A00084E1A1 /* CrewMemberVIew.swift */,
+				418378D127DA8D3A0084E1A1 /* AstronautView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		410BF2B027DBD0DF00BE5248 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4174B25027D826E700492ECD /* Mission.swift */,
+				4174B24C27D81FA400492ECD /* Astronaut.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		410BF2B127DBD0FD00BE5248 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				41DCC7BF27D8A9FE00C22779 /* ColorTheme.swift */,
+				4174B24E27D8246C00492ECD /* DataAccess.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		410BF2B227DBD10A00BE5248 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4174B24927D81EBD00492ECD /* astronauts.json */,
+				4174B24827D81EBD00492ECD /* missions.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		4174B22E27D7916D00492ECD = {
 			isa = PBXGroup;
 			children = (
@@ -73,20 +113,12 @@
 		4174B23927D7916E00492ECD /* Moonshot */ = {
 			isa = PBXGroup;
 			children = (
-				4174B23A27D7916E00492ECD /* MoonshotApp.swift */,
-				4174B23C27D7916E00492ECD /* ContentView.swift */,
-				418378D527DAA5C90084E1A1 /* MissionListView.swift */,
-				410BF2AD27DBC82600BE5248 /* MissionGridView.swift */,
-				41FCD53627D8EAA40021F518 /* MissionView.swift */,
-				418378D327DAA0A00084E1A1 /* CrewMemberVIew.swift */,
-				418378D127DA8D3A0084E1A1 /* AstronautView.swift */,
-				4174B25027D826E700492ECD /* Mission.swift */,
-				41DCC7BF27D8A9FE00C22779 /* ColorTheme.swift */,
 				4174B23E27D7918100492ECD /* Assets.xcassets */,
-				4174B24C27D81FA400492ECD /* Astronaut.swift */,
-				4174B24E27D8246C00492ECD /* DataAccess.swift */,
-				4174B24927D81EBD00492ECD /* astronauts.json */,
-				4174B24827D81EBD00492ECD /* missions.json */,
+				4174B23A27D7916E00492ECD /* MoonshotApp.swift */,
+				410BF2AF27DBD0B500BE5248 /* Views */,
+				410BF2B027DBD0DF00BE5248 /* Models */,
+				410BF2B127DBD0FD00BE5248 /* Utilities */,
+				410BF2B227DBD10A00BE5248 /* Data */,
 				4174B24027D7918100492ECD /* Preview Content */,
 			);
 			path = Moonshot;
