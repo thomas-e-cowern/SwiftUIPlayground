@@ -33,6 +33,14 @@ struct ContentView: View {
                         Toggle("Add Extra Sprinkles", isOn: $order.addSprinkles)
                     }
                 }
+                
+                Section {
+                    NavigationLink {
+                        AddressView(order: order)
+                    } label: {
+                        Text("Delivery Details")
+                    }
+                }
             }
             .navigationBarTitle("Cupcakes")
         }
