@@ -11,10 +11,10 @@ class Order: ObservableObject {
     
     static let type = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     
-    @Published var type = 0
-    @Published var quantity = 3
+    @Published var type: Int = 0
+    @Published var quantity: Int = 3
     
-    @Published var specialRequestEnabled = false {
+    @Published var specialRequestEnabled: Bool = false {
         didSet {
             if specialRequestEnabled == false {
                 extraFrosting = false
@@ -23,6 +23,11 @@ class Order: ObservableObject {
         }
     }
     
-    @Published var extraFrosting = false
-    @Published var addSprinkles = false
+    @Published var extraFrosting: Bool = false
+    @Published var addSprinkles: Bool = false
+    
+    @Published var name: String = ""
+    @Published var street: String = ""
+    @Published var city: String = ""
+    @Published var zip: String = ""
 }

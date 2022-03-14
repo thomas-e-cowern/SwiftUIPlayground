@@ -12,7 +12,24 @@ struct AddressView: View {
     @ObservedObject var order: Order
     
     var body: some View {
-        Text("Hello Order")
+        Form {
+            Section {
+                TextField("Name", text: $order.name)
+                TextField("Street Address", text: $order.street)
+                TextField("City", text: $order.city)
+                TextField("Zip Code", text: $order.zip)
+            }
+            
+            Section {
+                NavigationLink {
+                    // Something will come here
+                } label: {
+                    Text("Check out")
+                }
+            }
+        }
+        .navigationBarTitle("Delivery Details")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
