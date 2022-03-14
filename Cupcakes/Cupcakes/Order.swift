@@ -23,6 +23,14 @@ class Order: ObservableObject {
         }
     }
     
+    var hasValidAddress: Bool {
+        if name.isEmpty || street.isEmpty || city.isEmpty || zip.isEmpty {
+            return false
+        }
+        
+        return true
+    }
+    
     @Published var extraFrosting: Bool = false
     @Published var addSprinkles: Bool = false
     

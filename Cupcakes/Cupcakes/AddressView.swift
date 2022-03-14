@@ -22,11 +22,12 @@ struct AddressView: View {
             
             Section {
                 NavigationLink {
-                    // Something will come here
+                    CheckoutView(order: order)
                 } label: {
                     Text("Check out")
                 }
             }
+            .disabled(order.hasValidAddress == false)
         }
         .navigationBarTitle("Delivery Details")
         .navigationBarTitleDisplayMode(.inline)
