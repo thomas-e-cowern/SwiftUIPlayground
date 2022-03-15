@@ -12,7 +12,7 @@ struct CheckoutView: View {
     @ObservedObject var order: Order
     
     @State private var confirmationMessage = ""
-    @State private var showingConfitmation = false
+    @State private var showingConfirmation = false
     
     var body: some View {
         ScrollView {
@@ -40,6 +40,13 @@ struct CheckoutView: View {
             }
             .navigationTitle("Check Out")
             .navigationBarTitleDisplayMode(.inline)
+            .alert("Thank You!", isPresented: $showingConfirmation) {
+                Button("OK") {
+                    
+                }
+            } message: {
+                Text(confirmationMessage)
+            }
         }
     }
     
@@ -56,6 +63,10 @@ struct CheckoutView: View {
         
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
+            
+            let decodedOrder = try JSONDecoder().decode(Order.self, from: data)
+            confirmationMessage = "Your order for \(decodedOrder.quantity)x \(Order.type[decodedOrder.type].lowercased()) cupcakes has been recieved"
+            showingConfirmation = true
         } catch {
             print("Checkout failed")
         }
