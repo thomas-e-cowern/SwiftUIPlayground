@@ -58,4 +58,8 @@ class Order: ObservableObject {
         
         return cost
     }
+    
+    enum CodingKeys: CodingKey {
+        case type, quantity, extraFrosting, addSprinkles, name, street, city, zip
+    }
 }
