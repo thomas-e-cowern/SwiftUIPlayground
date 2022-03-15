@@ -11,6 +11,9 @@ struct CheckoutView: View {
     
     @ObservedObject var order: Order
     
+    @State private var confirmationMessage = ""
+    @State private var showingConfitmation = false
+    
     var body: some View {
         ScrollView {
             VStack {
@@ -28,13 +31,33 @@ struct CheckoutView: View {
                     .font(.title)
                 
                 Button("Place Order") {
-                    // Order would be placed
+                    Task {
+                        await placeOrder()
+                    }
                 }
                 .padding()
                     
             }
             .navigationTitle("Check Out")
             .navigationBarTitleDisplayMode(.inline)
+        }
+    }
+    
+    func placeOrder () async {
+        guard let encoded = try? JSONEncoder().encode(order) else {
+            print("Failed to encode order")
+            return
+        }
+        let url = URL(string: "https://reqres.in/api/cupcakes")!
+        var request = URLRequest(url: url)
+        
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        
+        do {
+            let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
+        } catch {
+            print("Checkout failed")
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Order: ObservableObject {
+class Order: ObservableObject, Codable {
     
     static let type = ["Vanilla", "Strawberry", "Chocolate", "Rainbow"]
     
