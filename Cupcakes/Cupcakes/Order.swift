@@ -59,6 +59,8 @@ class Order: ObservableObject {
         return cost
     }
     
+    init () {}
+    
     enum CodingKeys: CodingKey {
         case type, quantity, extraFrosting, addSprinkles, name, street, city, zip
     }
@@ -74,6 +76,20 @@ class Order: ObservableObject {
         try container.encode(street, forKey: .street)
         try container.encode(city, forKey: .city)
         try container.encode(zip, forKey: .zip)
+        
+    }
+    
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        type = try container.decode(Int.self, forKey: .type)
+        quantity = try container.decode(Int.self, forKey: .quantity)
+        extraFrosting = try container.decode(Bool.self, forKey: .extraFrosting)
+        addSprinkles = try container.decode(Bool.self, forKey: .addSprinkles)
+        name = try container.decode(String.self, forKey: .name)
+        street = try container.decode(String.self, forKey: .street)
+        city = try container.decode(String.self, forKey: .city)
+        zip = try container.decode(String.self, forKey: .zip)
         
     }
 }
