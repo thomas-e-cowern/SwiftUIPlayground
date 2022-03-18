@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var image: Image?
+    @State private var filterIntensity = 0.5
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
