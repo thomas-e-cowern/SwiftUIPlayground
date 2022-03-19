@@ -46,13 +46,17 @@ struct ContentView: View {
                     Spacer()
                     
                     Button("Save") {
-                        // save pic
+                        save()
                     }
                 }
             }
             .padding([.horizontal, .bottom])
             .navigationTitle("Insta Filter")
         }
+    }
+    
+    func save () {
+        print("Saved")
     }
 }
 
