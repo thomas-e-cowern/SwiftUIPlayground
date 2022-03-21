@@ -43,6 +43,9 @@ struct ContentView: View {
                 HStack {
                     Text("Intensity")
                     Slider(value: $filterIntensity)
+                        .onChange(of: filterIntensity) { _ in
+                            applyProcessing()
+                        }
                 }
                 .padding(.vertical)
                 
@@ -75,7 +78,10 @@ struct ContentView: View {
     
     func loadImage () {
         guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
+        
+        let beginImage = CIImage(image: inputImage)
+        currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
+        applyProcessing()
     }
     
     func applyProcessing () {
