@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4125476A27E61CF600D0D198 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125476927E61CF600D0D198 /* ImagePicker.swift */; };
+		4125EC1B27E8E87500E6D4DA /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4125EC1A27E8E87500E6D4DA /* ImageSaver.swift */; };
 		41966AC227E3B22B00B318DF /* InstafilterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41966AC127E3B22B00B318DF /* InstafilterApp.swift */; };
 		41966AC427E3B22B00B318DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41966AC327E3B22B00B318DF /* ContentView.swift */; };
 		41966AC627E3B23100B318DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41966AC527E3B23100B318DF /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		4125476927E61CF600D0D198 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4125EC1A27E8E87500E6D4DA /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 		41966ABE27E3B22B00B318DF /* Instafilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instafilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41966AC127E3B22B00B318DF /* InstafilterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstafilterApp.swift; sourceTree = "<group>"; };
 		41966AC327E3B22B00B318DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				41966AC127E3B22B00B318DF /* InstafilterApp.swift */,
 				41966AC327E3B22B00B318DF /* ContentView.swift */,
+				4125EC1A27E8E87500E6D4DA /* ImageSaver.swift */,
 				4125476927E61CF600D0D198 /* ImagePicker.swift */,
 				41966AC527E3B23100B318DF /* Assets.xcassets */,
 				41966AC727E3B23100B318DF /* Preview Content */,
@@ -143,6 +146,7 @@
 				4125476A27E61CF600D0D198 /* ImagePicker.swift in Sources */,
 				41966AC427E3B22B00B318DF /* ContentView.swift in Sources */,
 				41966AC227E3B22B00B318DF /* InstafilterApp.swift in Sources */,
+				4125EC1B27E8E87500E6D4DA /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
