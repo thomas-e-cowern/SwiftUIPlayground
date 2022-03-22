@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var score = 900
      
     let pictures = [
         "ales-krivec-15949",
@@ -35,6 +37,19 @@ struct ContentView: View {
             .accessibilityLabel(labels[selectedPicture])
             .accessibilityAddTraits(.isButton)
             .accessibilityRemoveTraits(.isImage)
+        
+        Image(decorative: "character")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 100, height: 200, alignment: .center)
+            .accessibilityHidden(true)
+        
+        VStack {
+            Text("Your score is \(score)")
+//            Text("1000")
+                .font(.title)
+        }
+        .accessibilityElement(children: .combine)
     }
 }
 
