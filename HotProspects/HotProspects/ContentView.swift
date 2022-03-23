@@ -47,7 +47,7 @@ struct ContentView: View {
     
     @State private var output = ""
     
-    
+    @State private var backgroundColor = Color.red
 //    @StateObject private var updater = DelayedUpdater()
 //    static let tag = "ContentView"
 //    @StateObject var user = User()
@@ -55,12 +55,43 @@ struct ContentView: View {
     
     var body: some View {
         
-        
-        
-        Text(output)
-            .task {
-                await fetchReadings()
-            }
+//        Image("example")
+//            .interpolation(.none)
+//            .resizable()
+//            .scaledToFit()
+//            .frame(maxHeight: .infinity)
+//            .background(.black)
+//            .ignoresSafeArea()
+      VStack {
+            Text("Hello World!")
+              .padding()
+              .background(backgroundColor)
+          
+          Text("Change Color")
+              .padding()
+              .contextMenu {
+                  Button {
+                      backgroundColor = .red
+                  } label: {
+                      Label("Red", systemImage: "checkmark.circle.fill")
+                  }
+                  
+                  Button {
+                      backgroundColor = .green
+                  } label: {
+                      Label("Green", systemImage: "checkmark.circle.fill")
+                  }
+                  
+                  Button {
+                      backgroundColor = .blue
+                  } label: {
+                      Label("Blue", systemImage: "checkmark.circle.fill")
+                  }
+              }
+      }
+//            .task {
+//                await fetchReadings()
+//            }
         
 //        VStack {
 //            EditView()
