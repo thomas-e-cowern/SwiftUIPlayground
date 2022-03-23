@@ -6,72 +6,39 @@
 //
 
 import SwiftUI
-
-@MainActor class User: ObservableObject {
-    @Published var name = "Taylor Swift"
-}
-
-struct EditView: View {
-    @EnvironmentObject var user: User
-    
-    var body: some View {
-        TextField("Name", text: $user.name)
-    }
-}
-
-struct DisplayView: View {
-    @EnvironmentObject var user: User
-    
-    var body: some View {
-        Text(user.name)
-    }
-}
-
-@MainActor class DelayedUpdater: ObservableObject {
-    var value = 0 {
-        willSet {
-            objectWillChange.send()
-        }
-    }
-    
-    init () {
-        for i in 1...100 {
-            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
-                self.value += 1
-            }
-        }
-    }
-}
+import UserNotifications
 
 struct ContentView: View {
     
-//    @State private var output = ""
-//    @State private var backgroundColor = Color.red
-//    @StateObject private var updater = DelayedUpdater()
-//    static let tag = "ContentView"
-//    @StateObject var user = User()
-//    @State private var selectedTab = "One"
     
     var body: some View {
         
-        
-        List {
-            Text("Taylor Swift")
-                .swipeActions {
-                    Button (role: .destructive) {
-                        print("Holy")
-                    } label: {
-                        Label("Delete", systemImage: "minus.circle")
+        VStack {
+            Button("Request permission") {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
+                    if success {
+                        print("All Set")
+                    } else if let error = error {
+                        print("Error: \(error.localizedDescription)")
                     }
                 }
-                .swipeActions (edge: .leading) {
-                    Button {
-                        print("Smokes")
-                    } label: {
-                        Label("Pin", systemImage: "pin")
-                    }
-                    .tint(.orange)
-                }
+            }
+            
+            Button("Schedule notification") {
+                let content = UNMutableNotificationContent()
+                content.title = "Feed the cat"
+                content.subtitle = "He looks hungry"
+                content.sound = UNNotificationSound.default
+                
+                // show it 5 seconds from now
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+                
+                // choose a random identifier
+                let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+                
+                // add the notification request
+                UNUserNotificationCenter.current().add(request)
+            }
         }
     }
 }
