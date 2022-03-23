@@ -27,33 +27,54 @@ struct DisplayView: View {
     }
 }
 
+@MainActor class DelayedUpdater: ObservableObject {
+    var value = 0 {
+        willSet {
+            objectWillChange.send()
+        }
+    }
+    
+    init () {
+        for i in 1...100 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(i)) {
+                self.value += 1
+            }
+        }
+    }
+}
+
 struct ContentView: View {
     
-    static let tag = "ContentView"
+    @StateObject private var updater = DelayedUpdater()
+//    static let tag = "ContentView"
 //    @StateObject var user = User()
-    @State private var selectedTab = "One"
+//    @State private var selectedTab = "One"
     
     var body: some View {
+        
+        
+        Text("Value is \(updater.value)")
+        
 //        VStack {
 //            EditView()
 //            DisplayView()
 //        }
 //        .environmentObject(user)
     
-        TabView (selection: $selectedTab) {
-            Text("Tab 1")
-                .onTapGesture {
-                    selectedTab = "Two"
-                }
-                .tabItem {
-                    Label("One", systemImage: "star")
-                }
-            Text("Tab 2")
-                .tabItem {
-                    Label("Two", systemImage: "circle")
-                }
-                .tag("Two")
-        }
+//        TabView (selection: $selectedTab) {
+//            Text("Tab 1")
+//                .onTapGesture {
+//                    selectedTab = "Two"
+//                }
+//                .tabItem {
+//                    Label("One", systemImage: "star")
+//                }
+//            Text("Tab 2")
+//                .tabItem {
+//                    Label("Two", systemImage: "circle")
+//                }
+//                .tag("Two")
+//        }
         
     }
 }
