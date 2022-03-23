@@ -45,7 +45,10 @@ struct DisplayView: View {
 
 struct ContentView: View {
     
-    @StateObject private var updater = DelayedUpdater()
+    @State private var output = ""
+    
+    
+//    @StateObject private var updater = DelayedUpdater()
 //    static let tag = "ContentView"
 //    @StateObject var user = User()
 //    @State private var selectedTab = "One"
@@ -53,7 +56,11 @@ struct ContentView: View {
     var body: some View {
         
         
-        Text("Value is \(updater.value)")
+        
+        Text(output)
+            .task {
+                await fetchReadings()
+            }
         
 //        VStack {
 //            EditView()
@@ -76,6 +83,30 @@ struct ContentView: View {
 //                .tag("Two")
 //        }
         
+    }
+    
+    func fetchReadings () async {
+        let fetchTask = Task { () -> String in
+            let url = URL(string: "https://hws.dev/readings.json")!
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let readings = try JSONDecoder().decode([Double].self, from: data)
+            return "Found \(readings.count) readings"
+        }
+        
+        let result = await fetchTask.result
+        
+        switch result {
+        case .success(let str):
+            output = str
+        case .failure(let error):
+            output = "Download error: \(error)"
+        }
+        
+//        do {
+//            output = try result.get()
+//        } catch {
+//            print("Download error")
+//        }
     }
 }
 
