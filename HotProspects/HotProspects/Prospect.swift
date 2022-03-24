@@ -21,3 +21,5 @@ class Prospect: Identifiable, Codable {
         self.people = []
     }
 }
+
+
