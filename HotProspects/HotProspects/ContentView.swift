@@ -11,15 +11,15 @@ struct ContentView: View {
     var body: some View {
         
         TabView {
-            ProspectView()
+            ProspectView(filter: .none)
                 .tabItem {
                     Label("Everyone", systemImage: "person.3")
                 }
-            ProspectView()
+            ProspectView(filter: .contacted)
                 .tabItem {
                     Label("Contacted", systemImage: "checkmark.circle")
                 }
-            ProspectView()
+            ProspectView(filter: .uncontacted)
                 .tabItem {
                     Label("Uncontacted", systemImage: "questionmark.diamond")
                 }

@@ -13,6 +13,7 @@
 		4107527627EB38E40020B934 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107527527EB38E40020B934 /* Preview Assets.xcassets */; };
 		41A8DF8927ECC0BD002A045E /* ProspectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DF8827ECC0BD002A045E /* ProspectView.swift */; };
 		41A8DF8B27ECC0CA002A045E /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DF8A27ECC0CA002A045E /* MyView.swift */; };
+		41A8DF8D27ECF6F5002A045E /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DF8C27ECF6F5002A045E /* Prospect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4107527527EB38E40020B934 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41A8DF8827ECC0BD002A045E /* ProspectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectView.swift; sourceTree = "<group>"; };
 		41A8DF8A27ECC0CA002A045E /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
+		41A8DF8C27ECF6F5002A045E /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				4107526E27EB38CF0020B934 /* HotProspectsApp.swift */,
 				4107527027EB38CF0020B934 /* ContentView.swift */,
+				41A8DF8C27ECF6F5002A045E /* Prospect.swift */,
 				41A8DF8827ECC0BD002A045E /* ProspectView.swift */,
 				41A8DF8A27ECC0CA002A045E /* MyView.swift */,
 				4107527227EB38E40020B934 /* Assets.xcassets */,
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A8DF8B27ECC0CA002A045E /* MyView.swift in Sources */,
+				41A8DF8D27ECF6F5002A045E /* Prospect.swift in Sources */,
 				41A8DF8927ECC0BD002A045E /* ProspectView.swift in Sources */,
 				4107527127EB38CF0020B934 /* ContentView.swift in Sources */,
 				4107526F27EB38CF0020B934 /* HotProspectsApp.swift in Sources */,
