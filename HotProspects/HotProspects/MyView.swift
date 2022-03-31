@@ -25,16 +25,15 @@ struct MyView: View {
                     .textContentType(.name)
                     .font(.title)
                 
-                Image(uiImage: generateQRCode(from: "\(name)\n\(emailAddress)"))
+                Image(uiImage: qrCode)
                     .interpolation(.none)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
                     .contextMenu  {
                         Button {
-                            let image = generateQRCode(from: "\(name)\n\(emailAddress)")
                             let imageSaver = ImageSaver()
-                            imageSaver.writePhotoToAlbum(image: image)
+                            imageSaver.writePhotoToAlbum(image: qrCode)
                         } label: {
                             Label("Save to photos", systemImage: "square.and.arrow.down")
                         }
@@ -47,8 +46,20 @@ struct MyView: View {
                     .font(.title)
             }
             .navigationTitle("Your code")
+            .onAppear(perform: updateCode)
+            .onChange(of: name) { _ in
+                updateCode()
+            }
+            .onChange(of: emailAddress) { _ in
+                updateCode()
+            }
+            
         }
         
+    }
+    
+    func updateCode () {
+        qrCode =  generateQRCode(from: "\(name)\n\(emailAddress)")
     }
     
     func generateQRCode(from string: String) -> UIImage {
