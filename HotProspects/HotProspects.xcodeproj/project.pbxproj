@@ -11,6 +11,7 @@
 		4107527127EB38CF0020B934 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4107527027EB38CF0020B934 /* ContentView.swift */; };
 		4107527327EB38E40020B934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107527227EB38E40020B934 /* Assets.xcassets */; };
 		4107527627EB38E40020B934 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4107527527EB38E40020B934 /* Preview Assets.xcassets */; };
+		4161A55A27F6338500D6A5BB /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4161A55927F6338500D6A5BB /* ImageSaver.swift */; };
 		41A8DF8927ECC0BD002A045E /* ProspectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DF8827ECC0BD002A045E /* ProspectView.swift */; };
 		41A8DF8B27ECC0CA002A045E /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DF8A27ECC0CA002A045E /* MyView.swift */; };
 		41A8DF8D27ECF6F5002A045E /* Prospect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A8DF8C27ECF6F5002A045E /* Prospect.swift */; };
@@ -23,6 +24,7 @@
 		4107527027EB38CF0020B934 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4107527227EB38E40020B934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4107527527EB38E40020B934 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4161A55927F6338500D6A5BB /* ImageSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageSaver.swift; path = ../../Instafilter/Instafilter/ImageSaver.swift; sourceTree = "<group>"; };
 		41A8DF8827ECC0BD002A045E /* ProspectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProspectView.swift; sourceTree = "<group>"; };
 		41A8DF8A27ECC0CA002A045E /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		41A8DF8C27ECF6F5002A045E /* Prospect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prospect.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				41A8DF8C27ECF6F5002A045E /* Prospect.swift */,
 				41A8DF8827ECC0BD002A045E /* ProspectView.swift */,
 				41A8DF8A27ECC0CA002A045E /* MyView.swift */,
+				4161A55927F6338500D6A5BB /* ImageSaver.swift */,
 				4107527227EB38E40020B934 /* Assets.xcassets */,
 				4107527427EB38E40020B934 /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				41A8DF8B27ECC0CA002A045E /* MyView.swift in Sources */,
+				4161A55A27F6338500D6A5BB /* ImageSaver.swift in Sources */,
 				41A8DF8D27ECF6F5002A045E /* Prospect.swift in Sources */,
 				41A8DF8927ECC0BD002A045E /* ProspectView.swift in Sources */,
 				4107527127EB38CF0020B934 /* ContentView.swift in Sources */,

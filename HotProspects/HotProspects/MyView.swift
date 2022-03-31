@@ -29,6 +29,14 @@ struct MyView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 200, height: 200)
+                    .contextMenu  {
+                        Button {
+                            // save qr code
+                        } label: {
+                            Label("Save to photos", systemImage: "square.and.arrow.down")
+                        }
+
+                    }
                     
                 
                 TextField("Email address", text: $emailAddress)
