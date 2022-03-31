@@ -12,6 +12,7 @@ struct MyView: View {
     
     @State private var name = "Anonymous"
     @State private var emailAddress = "you@yoursite.com"
+    @State private var qrCode = UIImage()
     
     let context = CIContext()
     let filter = CIFilter.qrCodeGenerator()
@@ -31,7 +32,9 @@ struct MyView: View {
                     .frame(width: 200, height: 200)
                     .contextMenu  {
                         Button {
-                            // save qr code
+                            let image = generateQRCode(from: "\(name)\n\(emailAddress)")
+                            let imageSaver = ImageSaver()
+                            imageSaver.writePhotoToAlbum(image: image)
                         } label: {
                             Label("Save to photos", systemImage: "square.and.arrow.down")
                         }
