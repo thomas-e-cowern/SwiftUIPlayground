@@ -17,7 +17,14 @@ class Prospect: Identifiable, Codable {
 @MainActor class Prospects: ObservableObject {
     @Published var people: [Prospect]
     
-    init () {
+    init () {        
+        if let data = UserDefaults.standard.data(forKey: "SavedData") {
+            if let decoded = try? JSONDecoder().decode([Prospect].self, from: data) {
+                people = decoded
+                return
+            }
+        }
+
         self.people = []
     }
     
