@@ -7,11 +7,27 @@
 
 import Foundation
 
-class Prospect: Identifiable, Codable {
-    var id = UUID()
-    var name = ""
-    var emailAddress = ""
-    fileprivate(set) var isContacted = false
+class Prospect: Identifiable, Codable, Comparable, Hashable {
+    
+    var id: UUID = UUID()
+    var name: String = ""
+    var emailAddress: String = ""
+    fileprivate(set) var isContacted: Bool = false
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(name)
+        hasher.combine(emailAddress)
+        hasher.combine(isContacted)
+    }
+    
+    static func == (lhs: Prospect, rhs: Prospect) -> Bool {
+        return lhs.name == rhs.name && lhs.emailAddress == rhs.emailAddress && lhs.isContacted == rhs.isContacted
+    }
+    
+    
+    static func <(lhs: Prospect, rhs: Prospect) -> Bool {
+        return lhs.name < rhs.name
+    }
 }
 
 @MainActor class Prospects: ObservableObject {

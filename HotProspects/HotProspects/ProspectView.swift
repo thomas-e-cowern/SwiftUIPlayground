@@ -25,7 +25,7 @@ struct ProspectView: View {
         
         NavigationView {
             List {
-                ForEach(filteredProspects) { prospect in
+                ForEach(self.filteredProspects.sorted(), id: \.self) { prospect in
                     VStack(alignment: .leading) {
                         Text(prospect.name)
                             .font(.headline)
