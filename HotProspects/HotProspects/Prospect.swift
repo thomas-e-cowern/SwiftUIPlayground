@@ -12,6 +12,7 @@ class Prospect: Identifiable, Codable, Comparable, Hashable {
     var id: UUID = UUID()
     var name: String = ""
     var emailAddress: String = ""
+    var dateEntered: Date = Date()
     fileprivate(set) var isContacted: Bool = false
     
     func hash(into hasher: inout Hasher) {

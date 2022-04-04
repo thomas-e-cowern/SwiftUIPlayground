@@ -31,6 +31,7 @@ struct ProspectView: View {
                             .font(.headline)
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
+                        Text("\(prospect.dateEntered)")
                         if prospect.isContacted {
                             Image(systemName: "person.crop.circle.fill.badge.checkmark")
                         }                        
