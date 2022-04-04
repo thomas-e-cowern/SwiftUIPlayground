@@ -31,6 +31,9 @@ struct ProspectView: View {
                             .font(.headline)
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
+                        if prospect.isContacted {
+                            Image(systemName: "person.crop.circle.fill.badge.checkmark")
+                        }                        
                     }
                     .swipeActions {
                         if prospect.isContacted {
