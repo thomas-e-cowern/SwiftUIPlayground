@@ -12,13 +12,14 @@ class Prospect: Identifiable, Codable, Comparable, Hashable {
     var id: UUID = UUID()
     var name: String = ""
     var emailAddress: String = ""
-    var dateEntered: Date = Date()
+    var dateEntered: Date? = Date()
     fileprivate(set) var isContacted: Bool = false
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
         hasher.combine(emailAddress)
         hasher.combine(isContacted)
+        hasher.combine(dateEntered)
     }
     
     static func == (lhs: Prospect, rhs: Prospect) -> Bool {

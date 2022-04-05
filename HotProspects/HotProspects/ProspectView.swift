@@ -31,7 +31,7 @@ struct ProspectView: View {
                             .font(.headline)
                         Text(prospect.emailAddress)
                             .foregroundColor(.secondary)
-                        Text("\(prospect.dateEntered)")
+                        Text("\(prospect.dateEntered?.formatted(date: .long, time: .shortened) ?? "No date available")")
                         if prospect.isContacted {
                             Image(systemName: "person.crop.circle.fill.badge.checkmark")
                         }                        
