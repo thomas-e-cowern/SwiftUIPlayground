@@ -9,9 +9,23 @@ import SwiftUI
 import CoreHaptics
 
 struct ContentView: View {
+    
+    @State private var cards = [Card](repeating: Card.example, count: 10)
+    
     var body: some View {
-        
-        CardView(card: Card.example)
-        
+        ZStack {
+            Image("background")
+                .resizable()
+                .ignoresSafeArea()
+            
+            VStack {
+                ZStack {
+                    ForEach(0..<cards.count, id: \.self) { index in
+                        CardView(card: cards[index])
+                            .stacked(at: index, in: cards.count)
+                    }
+                }
+            }
+        }
     }
 }
