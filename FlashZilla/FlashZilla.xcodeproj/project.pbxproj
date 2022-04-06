@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		41C06BB527FE0232008D6515 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C06BB427FE0232008D6515 /* Card.swift */; };
+		41C06BB727FE035C008D6515 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C06BB627FE035C008D6515 /* CardView.swift */; };
 		41D527C327FCC862008BC813 /* FlashZillaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D527C227FCC862008BC813 /* FlashZillaApp.swift */; };
 		41D527C527FCC862008BC813 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D527C427FCC862008BC813 /* ContentView.swift */; };
 		41D527C727FCC86A008BC813 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D527C627FCC86A008BC813 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		41C06BB427FE0232008D6515 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		41C06BB627FE035C008D6515 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		41D527BF27FCC862008BC813 /* FlashZilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlashZilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D527C227FCC862008BC813 /* FlashZillaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashZillaApp.swift; sourceTree = "<group>"; };
 		41D527C427FCC862008BC813 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 			children = (
 				41D527C227FCC862008BC813 /* FlashZillaApp.swift */,
 				41D527C427FCC862008BC813 /* ContentView.swift */,
+				41C06BB627FE035C008D6515 /* CardView.swift */,
 				41D527C627FCC86A008BC813 /* Assets.xcassets */,
 				41D527C827FCC86A008BC813 /* Preview Content */,
 				41C06BB427FE0232008D6515 /* Card.swift */,
@@ -142,6 +145,7 @@
 			files = (
 				41D527C527FCC862008BC813 /* ContentView.swift in Sources */,
 				41C06BB527FE0232008D6515 /* Card.swift in Sources */,
+				41C06BB727FE035C008D6515 /* CardView.swift in Sources */,
 				41D527C327FCC862008BC813 /* FlashZillaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,8 +281,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,8 +311,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
