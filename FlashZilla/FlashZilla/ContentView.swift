@@ -17,23 +17,26 @@ struct ContentView: View {
     
 //    @State private var engine: CHHapticEngine?
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+//
+//    @State private var counter = 0
     
-    @State private var counter = 0
+    @Environment(\.scenePhase) var scenePhase
+
 
     var body: some View {
         
         
-        Text("Hello, World! \(counter)")
-            .onReceive(timer) { time in
-                if counter == 5 {
-                    timer.upstream.connect().cancel()
-                } else {
-                    counter += 1
-                    print("The time is now \(time)")
+        Text("Hello, world!")
+            .padding()
+            .onChange(of: scenePhase) { newPhase in
+                if newPhase == .active {
+                    print("Active")
+                } else if newPhase == .inactive {
+                    print("Inactive")
+                } else if newPhase == .background {
+                    print("Background")
                 }
-
-                
             }
         
 //        // a drag gesture that updates offset and isDragging as it moves around
