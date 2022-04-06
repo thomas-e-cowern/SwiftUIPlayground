@@ -20,9 +20,15 @@ struct ContentView: View {
     var body: some View {
         
         
-        Text("Hello, World!")
-            .onAppear(perform: prepareHaptics)
-            .onTapGesture(perform: complexSuccess)
+        VStack {
+            Text("Hello")
+            Spacer().frame(height: 100)
+            Text("World")
+        }
+        .contentShape(Rectangle())
+        .onTapGesture {
+            print("VStack tapped!")
+        }
         
 //        // a drag gesture that updates offset and isDragging as it moves around
 //        let dragGesture = DragGesture()
