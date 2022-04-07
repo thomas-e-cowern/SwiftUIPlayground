@@ -9,20 +9,33 @@ import SwiftUI
 
 struct CardView: View {
     
+    // Variables
     let card: Card
     var removal: (() -> Void)? = nil
+    
+    // @State variables
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
+    
+    //@Environment variables
+    @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 25, style: .continuous)
-                .fill(.white)
-                    .opacity(1 - Double(abs(offset.width / 50)))
-                .background(
-                    RoundedRectangle(cornerRadius: 25, style: .continuous)
-                        .fill(offset.width > 0 ? .green : .red)
-                )
+                .fill(
+                        differentiateWithoutColor
+                            ? .white
+                            : .white
+                                .opacity(1 - Double(abs(offset.width / 50)))
+
+                    )
+                    .background(
+                        differentiateWithoutColor
+                            ? nil
+                            : RoundedRectangle(cornerRadius: 25, style: .continuous)
+                                .fill(offset.width > 0 ? .green : .red)
+                    )
                 .shadow(radius: 10)
             
             VStack {
