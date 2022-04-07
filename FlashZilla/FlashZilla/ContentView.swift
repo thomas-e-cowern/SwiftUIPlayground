@@ -13,9 +13,11 @@ struct ContentView: View {
     // @State properties
     @State private var cards = [Card](repeating: Card.example, count: 10)
     @State private var timeRemaining = 100
+    @State private var isActive = true
     
     // @Evnironment properties
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    @Environment(\.scenePhase) var scenePhase
     
     // properties
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -71,8 +73,18 @@ struct ContentView: View {
             }
         }
         .onReceive(timer) { time in
+            
+            guard isActive else { return }
+            
             if timeRemaining > 0 {
                 timeRemaining -= 1
+            }
+        }
+        .onChange(of: scenePhase) { newPhase in
+            if newPhase == .active {
+                isActive = true
+            } else {
+                isActive = false
             }
         }
     }
