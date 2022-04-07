@@ -10,11 +10,16 @@ import CoreHaptics
 
 struct ContentView: View {
     
-    // @State variables
+    // @State properties
     @State private var cards = [Card](repeating: Card.example, count: 10)
+    @State private var timeRemaining = 100
     
-    // @Evnironment variables
+    // @Evnironment properties
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    
+    // properties
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    
     
     var body: some View {
         ZStack {
@@ -23,6 +28,15 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
+                
+                Text("Time: \(timeRemaining)")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 5)
+                    .background(.black.opacity(0.75))
+                    .clipShape(Capsule())
+                
                 ZStack {
                     ForEach(0..<cards.count, id: \.self) { index in
                         CardView(card: cards[index]) {
@@ -54,6 +68,11 @@ struct ContentView: View {
                         .padding()
                     }
                 }
+            }
+        }
+        .onReceive(timer) { time in
+            if timeRemaining > 0 {
+                timeRemaining -= 1
             }
         }
     }

@@ -9,15 +9,15 @@ import SwiftUI
 
 struct CardView: View {
     
-    // Variables
+    // properties
     let card: Card
     var removal: (() -> Void)? = nil
     
-    // @State variables
+    // @State properties
     @State private var isShowingAnswer = false
     @State private var offset = CGSize.zero
     
-    //@Environment variables
+    //@Environment properties
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     
     var body: some View {
