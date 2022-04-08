@@ -18,6 +18,7 @@ struct ContentView: View {
     // @Evnironment properties
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
     @Environment(\.scenePhase) var scenePhase
+    @Environment(\.accessibilityVoiceOverEnabled) var voiceOverEnabled
     
     // properties
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
@@ -62,7 +63,7 @@ struct ContentView: View {
                         .clipShape(Capsule())
                 }
                 
-                if differentiateWithoutColor {
+                if differentiateWithoutColor || voiceOverEnabled {
                     VStack {
                         Spacer()
 
