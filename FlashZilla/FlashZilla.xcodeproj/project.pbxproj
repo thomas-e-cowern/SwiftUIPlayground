@@ -38,6 +38,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4162892A2800C10800C29D8F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41D527C427FCC862008BC813 /* ContentView.swift */,
+				416289282800BBA200C29D8F /* EditCardView.swift */,
+				41C06BB627FE035C008D6515 /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4162892B2800C11D00C29D8F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41C06BB427FE0232008D6515 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		41D527B627FCC862008BC813 = {
 			isa = PBXGroup;
 			children = (
@@ -58,12 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				41D527C227FCC862008BC813 /* FlashZillaApp.swift */,
-				41D527C427FCC862008BC813 /* ContentView.swift */,
-				416289282800BBA200C29D8F /* EditCardView.swift */,
-				41C06BB627FE035C008D6515 /* CardView.swift */,
+				4162892A2800C10800C29D8F /* Views */,
+				4162892B2800C11D00C29D8F /* Models */,
 				41D527C627FCC86A008BC813 /* Assets.xcassets */,
 				41D527C827FCC86A008BC813 /* Preview Content */,
-				41C06BB427FE0232008D6515 /* Card.swift */,
 			);
 			path = FlashZilla;
 			sourceTree = "<group>";
