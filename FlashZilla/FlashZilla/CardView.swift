@@ -20,6 +20,7 @@ struct CardView: View {
     
     //@Environment properties
     @Environment(\.accessibilityDifferentiateWithoutColor) var differentiateWithoutColor
+    @Environment(\.accessibilityVoiceOverEnabled) var voiceOverEnabled
     
     var body: some View {
         ZStack {
@@ -40,15 +41,21 @@ struct CardView: View {
                 .shadow(radius: 10)
             
             VStack {
-                Text(card.prompt)
-                    .font(.largeTitle)
-                    .foregroundColor(.black)
-                
-                if isShowingAnswer {
-                    Text(card.answer)
-                        .font(.title)
-                    .foregroundColor(.gray)
-                }
+                if voiceOverEnabled {
+                        Text(isShowingAnswer ? card.answer : card.prompt)
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+                    } else {
+                        Text(card.prompt)
+                            .font(.largeTitle)
+                            .foregroundColor(.black)
+
+                        if isShowingAnswer {
+                            Text(card.answer)
+                                .font(.title)
+                                .foregroundColor(.gray)
+                        }
+                    }
             }
             .padding(25)
             .multilineTextAlignment(.center)
