@@ -25,7 +25,7 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            Image("background")
+            Image(decorative: "background")
                 .resizable()
                 .ignoresSafeArea()
             
@@ -50,6 +50,7 @@ struct ContentView: View {
                     }                    
                 }
                 .allowsHitTesting(timeRemaining > 0)
+                .accessibilityHidden(index < cards.count - 1)
                 
                 if cards.isEmpty {
                     Button("Start Again?", action: resetCards   )
