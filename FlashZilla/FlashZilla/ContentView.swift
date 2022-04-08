@@ -11,7 +11,7 @@ import CoreHaptics
 struct ContentView: View {
     
     // @State properties
-    @State private var cards = [Card](repeating: Card.example, count: 10)
+    @State private var cards = [Card]()
     @State private var timeRemaining = 100
     @State private var isActive = true
     @State private var showingEditScreen = false
@@ -141,6 +141,10 @@ struct ContentView: View {
                 isActive = false
             }
         }
+        .sheet(isPresented: $showingEditScreen, onDismiss: resetCards) {
+            EditCardView()
+        }
+        .onAppear(perform: resetCards)
     }
     
     func removeCard(at index: Int) {
@@ -157,5 +161,14 @@ struct ContentView: View {
         cards = [Card] (repeating: Card.example, count: 10)
         timeRemaining = 100
         isActive = true
+        loadData()
+    }
+    
+    func loadData() {
+        if let data = UserDefaults.standard.data(forKey: "Cards") {
+            if let decoded = try? JSONDecoder().decode([Card].self, from: data) {
+                cards = decoded
+            }
+        }
     }
 }
