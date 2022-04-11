@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+extension VerticalAlignment {
+    struct MidAccountAndName: AlignmentID {
+        static func defaultValue(in context: ViewDimensions) -> CGFloat {
+            context[.top]
+        }
+        
+        static let midAccountName = VerticalAlignment(MidAccountAndName.self)
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         HStack {
