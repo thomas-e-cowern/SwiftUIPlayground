@@ -52,10 +52,20 @@ struct InnerView: View {
 }
 
 struct ContentView: View {
+    
+    let colors: [Color] = [.red, .green, .blue, .orange, .pink, .purple, .yellow]
+    
     var body: some View {
-        OuterView()
-            .background(.red)
-            .coordinateSpace(name: "Custom")
+        ScrollView {
+            ForEach(0..<50) { index in
+                GeometryReader { geo in
+                    Text("Row #\(index)")
+                        .font(.title)
+                        .frame(maxWidth: .infinity)
+                        .background(colors[index % 7])
+                }
+            }
+        }
     }
 }
 
