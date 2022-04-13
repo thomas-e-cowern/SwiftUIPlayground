@@ -12,11 +12,14 @@ struct Resort: Codable, Identifiable {
     let name: String
     let country: String
     let description: String
-    let imageCredits: String
+    let imageCredit: String
     let price: Int
     let size: Int
     let snowDepth: Int
     let elevation: Int
     let runs: Int
     let facilities: [String]
+    
+    static let example = (Bundle.main.decode("resorts.json") as [Resort])[0]
+    
 }
