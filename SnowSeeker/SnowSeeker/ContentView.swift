@@ -13,10 +13,28 @@ struct User: Identifiable {
 
 struct ContentView: View {
     
-    
+    @State private var selectedUser: User? = nil
+    @State private var isShowingAlert = false
     
     var body: some View {
         Text("Hello World")
+            .padding()
+            .onTapGesture {
+                selectedUser = User()
+            }
+            .sheet(item: $selectedUser) { user in
+                Text(user.id)
+            }
+        Text("Alert Me")
+            .onTapGesture {
+                selectedUser = User()
+                isShowingAlert.toggle()
+            }
+            .alert("Welcome", isPresented: $isShowingAlert, presenting: selectedUser) { user in
+                Button(user.id) {
+                    
+                }
+            }
         
         
         
