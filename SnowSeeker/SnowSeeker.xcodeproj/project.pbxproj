@@ -14,6 +14,7 @@
 		416D2297280717AE009DD4B7 /* resorts.json in Resources */ = {isa = PBXBuildFile; fileRef = 416D2296280717AE009DD4B7 /* resorts.json */; };
 		416D229C28071A2F009DD4B7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D229B28071A2F009DD4B7 /* Bundle-Decodable.swift */; };
 		416D229F28071B84009DD4B7 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D229E28071B84009DD4B7 /* Resort.swift */; };
+		41804F9D28086DD900B468CF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41804F9C28086DD900B468CF /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		416D2296280717AE009DD4B7 /* resorts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = resorts.json; sourceTree = "<group>"; };
 		416D229B28071A2F009DD4B7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		416D229E28071B84009DD4B7 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = SOURCE_ROOT; };
+		41804F9C28086DD900B468CF /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +63,7 @@
 				416D229A2807197D009DD4B7 /* Models */,
 				416D229528071793009DD4B7 /* Data */,
 				416D22872806F29A009DD4B7 /* SnowSeekerApp.swift */,
-				416D22892806F29A009DD4B7 /* ContentView.swift */,
+				41804F9E28086DE800B468CF /* Views */,
 				416D228B2806F2B6009DD4B7 /* Assets.xcassets */,
 				416D228D2806F2B6009DD4B7 /* Preview Content */,
 			);
@@ -98,6 +100,15 @@
 				416D229B28071A2F009DD4B7 /* Bundle-Decodable.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		41804F9E28086DE800B468CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				416D22892806F29A009DD4B7 /* ContentView.swift */,
+				41804F9C28086DD900B468CF /* WelcomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41804F9D28086DD900B468CF /* WelcomeView.swift in Sources */,
 				416D228A2806F29A009DD4B7 /* ContentView.swift in Sources */,
 				416D22882806F29A009DD4B7 /* SnowSeekerApp.swift in Sources */,
 				416D229F28071B84009DD4B7 /* Resort.swift in Sources */,
