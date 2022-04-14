@@ -15,6 +15,7 @@
 		416D229C28071A2F009DD4B7 /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D229B28071A2F009DD4B7 /* Bundle-Decodable.swift */; };
 		416D229F28071B84009DD4B7 /* Resort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D229E28071B84009DD4B7 /* Resort.swift */; };
 		41804F9D28086DD900B468CF /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41804F9C28086DD900B468CF /* WelcomeView.swift */; };
+		41804FA02808811400B468CF /* ResortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41804F9F2808811300B468CF /* ResortView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		416D229B28071A2F009DD4B7 /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		416D229E28071B84009DD4B7 /* Resort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resort.swift; sourceTree = SOURCE_ROOT; };
 		41804F9C28086DD900B468CF /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		41804F9F2808811300B468CF /* ResortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResortView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				416D22892806F29A009DD4B7 /* ContentView.swift */,
+				41804F9F2808811300B468CF /* ResortView.swift */,
 				41804F9C28086DD900B468CF /* WelcomeView.swift */,
 			);
 			path = Views;
@@ -185,6 +188,7 @@
 				41804F9D28086DD900B468CF /* WelcomeView.swift in Sources */,
 				416D228A2806F29A009DD4B7 /* ContentView.swift in Sources */,
 				416D22882806F29A009DD4B7 /* SnowSeekerApp.swift in Sources */,
+				41804FA02808811400B468CF /* ResortView.swift in Sources */,
 				416D229F28071B84009DD4B7 /* Resort.swift in Sources */,
 				416D229C28071A2F009DD4B7 /* Bundle-Decodable.swift in Sources */,
 			);
