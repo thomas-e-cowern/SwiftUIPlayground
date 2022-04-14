@@ -9,7 +9,13 @@ import SwiftUI
 
 struct WelcomeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Welcome to Snow Seeker")
+                .font(.title)
+            
+            Text("Please select a resort from the left side menu; Swipe form the left edge to show resorts")
+                .foregroundColor(.secondary)
+        }
     }
 }
 
