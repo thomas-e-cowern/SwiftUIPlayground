@@ -30,6 +30,8 @@ struct ResortView: View {
                 .padding(.horizontal)
             }
         }
+        .navigationTitle("\(resort.name), \(resort.country)")
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
