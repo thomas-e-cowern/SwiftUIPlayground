@@ -73,6 +73,8 @@ struct ResortView: View {
                             favorites.add(resort)
                         }
                     }
+                    .buttonStyle(.borderedProminent)
+                    .padding()
                 }
                 .padding(.horizontal)
             }

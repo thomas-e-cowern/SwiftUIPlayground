@@ -69,10 +69,10 @@
 		416D22862806F29A009DD4B7 /* SnowSeeker */ = {
 			isa = PBXGroup;
 			children = (
+				416D22872806F29A009DD4B7 /* SnowSeekerApp.swift */,
 				416D229D28071A38009DD4B7 /* Utilities */,
 				416D229A2807197D009DD4B7 /* Models */,
 				416D229528071793009DD4B7 /* Data */,
-				416D22872806F29A009DD4B7 /* SnowSeekerApp.swift */,
 				41804F9E28086DE800B468CF /* Views */,
 				416D228B2806F2B6009DD4B7 /* Assets.xcassets */,
 				416D228D2806F2B6009DD4B7 /* Preview Content */,
