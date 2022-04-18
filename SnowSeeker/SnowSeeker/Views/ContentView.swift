@@ -20,6 +20,7 @@ extension View {
 struct ContentView: View {
     
     @State private var searchText = ""
+    @StateObject var favorites = Favorites()
     
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
@@ -51,6 +52,7 @@ struct ContentView: View {
             WelcomeView()
         }
         .phoneOnlyNavigationView()
+        .environmentObject(favorites)
     }
     
     var filteredResorts: [Resort] {
