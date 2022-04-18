@@ -19,6 +19,8 @@ extension View {
 
 struct ContentView: View {
     
+    @State private var searchText = ""
+    
     let resorts: [Resort] = Bundle.main.decode("resorts.json")
     
     var body: some View {
@@ -44,6 +46,7 @@ struct ContentView: View {
                     }
                 }
             }.navigationTitle("Resorts")
+                .searchable(text: $searchText, prompt: "Search for a resort...")
             
             WelcomeView()
         }
