@@ -89,7 +89,6 @@
 		416D229528071793009DD4B7 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				414AFAEB280D9BC80062946E /* Facility.swift */,
 				416D2296280717AE009DD4B7 /* resorts.json */,
 			);
 			path = Data;
@@ -99,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				416D229E28071B84009DD4B7 /* Resort.swift */,
+				414AFAEB280D9BC80062946E /* Facility.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
