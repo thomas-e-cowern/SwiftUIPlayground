@@ -17,15 +17,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Picture" textLabel="eWz-kq-KkN" style="IBUITableViewCellStyleDefault" id="fQp-0H-gsP">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Picture" textLabel="eWz-kq-KkN" style="IBUITableViewCellStyleDefault" id="fQp-0H-gsP">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fQp-0H-gsP" id="TJB-Q5-S6E">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eWz-kq-KkN">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <rect key="frame" x="20" y="0.0" width="357.5" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
@@ -72,17 +72,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-hx-ibH">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kiD-hx-ibH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="944"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="llo-pI-fyB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kiD-hx-ibH" firstAttribute="centerX" secondItem="IZq-2P-IGp" secondAttribute="centerX" id="1Qe-Zd-pFl"/>
-                            <constraint firstItem="kiD-hx-ibH" firstAttribute="leading" secondItem="llo-pI-fyB" secondAttribute="leading" id="IIQ-9z-iJN"/>
-                            <constraint firstItem="kiD-hx-ibH" firstAttribute="top" secondItem="IZq-2P-IGp" secondAttribute="topMargin" constant="-44" id="ePi-ZM-PjC"/>
-                            <constraint firstItem="kiD-hx-ibH" firstAttribute="centerY" secondItem="IZq-2P-IGp" secondAttribute="centerY" id="gfy-0n-sh9"/>
+                            <constraint firstItem="kiD-hx-ibH" firstAttribute="leading" secondItem="llo-pI-fyB" secondAttribute="leading" id="1tq-B0-2uQ"/>
+                            <constraint firstItem="kiD-hx-ibH" firstAttribute="centerX" secondItem="IZq-2P-IGp" secondAttribute="centerX" id="KUN-NE-BzI"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="kiD-hx-ibH" secondAttribute="bottom" constant="-82" id="j7W-9E-SxH"/>
+                            <constraint firstItem="kiD-hx-ibH" firstAttribute="top" secondItem="IZq-2P-IGp" secondAttribute="topMargin" constant="-44" id="ym6-hj-C3Z"/>
                         </constraints>
                     </view>
                     <connections>
