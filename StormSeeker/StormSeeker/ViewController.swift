@@ -14,12 +14,13 @@ class ViewController: UITableViewController {
         super.viewDidLoad()
         
         title = "Storm Seeker"
+        navigationController?.navigationBar.prefersLargeTitles = true
         
         let fm = FileManager.default
         let path = Bundle.main.resourcePath!
         let items = try! fm.contentsOfDirectory(atPath: path)
         
-        for item in items {
+        for item in items.sorted() {
             if item.hasPrefix("nssl") {
                 print("This is a picture to load")
                 pictures.append(item)
@@ -43,7 +44,11 @@ class ViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Detail") as? DetailViewController {
+            
             vc.selectedImage = pictures[indexPath.row]
+            vc.totalImages = pictures.count
+            vc.imageNumber = indexPath.row + 1
+            
             navigationController?.pushViewController(vc, animated: true)
         }
     }
