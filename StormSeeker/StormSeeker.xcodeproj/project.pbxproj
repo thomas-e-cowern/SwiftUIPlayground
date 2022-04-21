@@ -23,6 +23,7 @@
 		41A1238B281182EB0042A2A7 /* nssl0046.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41A12381281182EA0042A2A7 /* nssl0046.jpg */; };
 		41A1238C281182EB0042A2A7 /* nssl0051.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41A12382281182EA0042A2A7 /* nssl0051.jpg */; };
 		41A1238D281182EB0042A2A7 /* nssl0043.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 41A12383281182EB0042A2A7 /* nssl0043.jpg */; };
+		41A1238F28119CE20042A2A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A1238E28119CE20042A2A7 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		41A12381281182EA0042A2A7 /* nssl0046.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0046.jpg; sourceTree = "<group>"; };
 		41A12382281182EA0042A2A7 /* nssl0051.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0051.jpg; sourceTree = "<group>"; };
 		41A12383281182EB0042A2A7 /* nssl0043.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nssl0043.jpg; sourceTree = "<group>"; };
+		41A1238E28119CE20042A2A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				41A1236628117BA40042A2A7 /* AppDelegate.swift */,
 				41A1236828117BA40042A2A7 /* SceneDelegate.swift */,
 				41A1236A28117BA40042A2A7 /* ViewController.swift */,
+				41A1238E28119CE20042A2A7 /* DetailViewController.swift */,
 				41A1236C28117BA40042A2A7 /* Main.storyboard */,
 				41A1236F28117BBC0042A2A7 /* Assets.xcassets */,
 				41A1237128117BBC0042A2A7 /* LaunchScreen.storyboard */,
@@ -181,6 +184,7 @@
 				41A1236B28117BA40042A2A7 /* ViewController.swift in Sources */,
 				41A1236728117BA40042A2A7 /* AppDelegate.swift in Sources */,
 				41A1236928117BA40042A2A7 /* SceneDelegate.swift in Sources */,
+				41A1238F28119CE20042A2A7 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
