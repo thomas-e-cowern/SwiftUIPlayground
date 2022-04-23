@@ -8,10 +8,28 @@
 import SwiftUI
 import Combine
 
-struct CoinViewModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+class CoinViewModel: ObservableObject {
+    
+    private let cryptoService = Api()
+    @Published var myCoins: [Coin] = []
+    @Published var isLoading: Bool = false
+    
+    var cancellable: AnyCancellable?
+    
+    func fetchCoins(completion: @escaping () -> Void) {
+        self.isLoading = true
+        cancellable = cryptoService.fetchCoin().sink(receiveCompletion: { error in
+            print(error)
+        }, receiveValue: { cryptoContainer in
+            self.myCoins = cryptoContainer.data.coins
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.isLoading = false
+                completion()
+            }
+        })
     }
+    
 }
 
 struct CoinViewModel_Previews: PreviewProvider {
@@ -22,25 +40,12 @@ struct CoinViewModel_Previews: PreviewProvider {
 
 class Api {
     func fetchCoin () -> AnyPublisher<GetDataDTO, Error> {
-        return URLSession.shared.dataTaskPublisher(for: URL(string: "https://api.coinranking.com/v2/coins"))
+        return URLSession.shared.dataTaskPublisher(for: URL(string: "https://api.coinranking.com/v2/coins")!)
             .map { $0.data }
-            .decode(type: GetDataDTO, decoder: <#T##TopLevelDecoder#>)
+            .decode(type: GetDataDTO.self, decoder: JSONDecoder())
+            .receive(on: DispatchQueue.main)
+            .eraseToAnyPublisher()
     }
 }
 
-struct GetDataDTO : Decodable {
-    let status: String
-    let data: CryptoData
-}
 
-struct CryptoData : Decodable {
-    let coins: [Coin]
-}
-
-struct Coin: Decodable, Hashable {
-    let name: String
-    let price: String
-    let symbol: String
-    let marketCap: String
-    let iconUrl: String
-}
