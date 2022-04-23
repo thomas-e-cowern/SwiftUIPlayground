@@ -11,6 +11,7 @@
 		41F7139F28142A17006B965E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F7139E28142A17006B965E /* ContentView.swift */; };
 		41F713A128142A35006B965E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F713A028142A35006B965E /* Assets.xcassets */; };
 		41F713A428142A35006B965E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F713A328142A35006B965E /* Preview Assets.xcassets */; };
+		41F713AB28142AD0006B965E /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F713AA28142AD0006B965E /* CoinViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		41F7139E28142A17006B965E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41F713A028142A35006B965E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41F713A328142A35006B965E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41F713AA28142AD0006B965E /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				41F7139C28142A17006B965E /* CoreDataCombineApp.swift */,
 				41F7139E28142A17006B965E /* ContentView.swift */,
+				41F713AA28142AD0006B965E /* CoinViewModel.swift */,
 				41F713A028142A35006B965E /* Assets.xcassets */,
 				41F713A228142A35006B965E /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F713AB28142AD0006B965E /* CoinViewModel.swift in Sources */,
 				41F7139F28142A17006B965E /* ContentView.swift in Sources */,
 				41F7139D28142A17006B965E /* CoreDataCombineApp.swift in Sources */,
 			);
