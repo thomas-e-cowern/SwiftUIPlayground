@@ -55,9 +55,10 @@
 		41F7139B28142A17006B965E /* CoreDataCombine */ = {
 			isa = PBXGroup;
 			children = (
+				41F713B028143013006B965E /* View */,
 				41F7139C28142A17006B965E /* CoreDataCombineApp.swift */,
 				41F7139E28142A17006B965E /* ContentView.swift */,
-				41F713AA28142AD0006B965E /* CoinViewModel.swift */,
+				41F713AF28142FF3006B965E /* ViewModel */,
 				41F713AC28142D18006B965E /* Model */,
 				41F713A028142A35006B965E /* Assets.xcassets */,
 				41F713A228142A35006B965E /* Preview Content */,
@@ -79,6 +80,21 @@
 				41F713AD28142D3C006B965E /* GetDataDTO.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		41F713AF28142FF3006B965E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				41F713AA28142AD0006B965E /* CoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		41F713B028143013006B965E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
