@@ -6,15 +6,23 @@
 //
 
 import SwiftUI
+import Network
 
-struct NetworkMonitor: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct NetworkMonitor_Previews: PreviewProvider {
-    static var previews: some View {
-        NetworkMonitor()
+final class NetworkMonitor: ObservableObject {
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue(label: "Monitor")
+    
+    @Published var isConnected = true
+    
+    init () {
+        monitor.pathUpdateHandler = {[weak self] path in
+            DispatchQueue.main.async {
+                withAnimation() {
+                    self?.isConnected = path.status == .satisfied ? true : false
+                }
+            }
+            
+        }
+        monitor.start(queue: queue)
     }
 }
