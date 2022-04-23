@@ -8,6 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject private var viewModel = CoinViewModel()
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @State var coins: [Coin] = []
+    
+    func netowrkFetch () {
+        self.viewModel.fetchCoins {
+            <#code#>
+        }
+    }
+    
     var body: some View {
         Text("Hello, world!")
             .padding()

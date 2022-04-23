@@ -32,12 +32,6 @@ class CoinViewModel: ObservableObject {
     
 }
 
-struct CoinViewModel_Previews: PreviewProvider {
-    static var previews: some View {
-        CoinViewModel()
-    }
-}
-
 class Api {
     func fetchCoin () -> AnyPublisher<GetDataDTO, Error> {
         return URLSession.shared.dataTaskPublisher(for: URL(string: "https://api.coinranking.com/v2/coins")!)
