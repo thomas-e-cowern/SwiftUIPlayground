@@ -10,5 +10,29 @@
             13.4,
             11.26
         ]
+    },
+    {
+        "id" : "LTC",
+        "symbol" : "ltc",
+        "image" : "ltc",
+        "price" : 0.0,
+        "amount" : 0.0,
+        "historicalData" : [
+            11.3,
+            12.4,
+            10.26
+        ]
+    },
+    {
+        "id" : "ETH",
+        "symbol" : "eth",
+        "image" : "eth",
+        "price" : 0.0,
+        "amount" : 0.0,
+        "historicalData" : [
+            11.3,
+            12.4,
+            10.26
+        ]
     }
 ]
