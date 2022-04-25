@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct ContentView: View {
     
@@ -33,9 +34,20 @@ struct ContentView: View {
                     ForEach(viewModel.myCoins, id: \.self) { coin in
                         HStack {
                             let fixUrl = coin.iconUrl.replacingOccurrences(of: "svg", with: "png")
+                            WebImage(url: URL(string: fixUrl))
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                            Text(coin.name + ": " + coin.price)
+                            
                             
                         }
+                        .frame(maxWidth: UIScreen.main.bounds.width, alignment: .leading)
+                        .padding()
+                        .background(Color.white)
+                        .cornerRadius(10)
+                        .shadow(radius: 10)
                     }
+                    .padding()
                 }
             }
         }
