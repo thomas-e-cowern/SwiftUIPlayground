@@ -11,6 +11,7 @@
 		41ED7F392816D75C00ECF3FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED7F382816D75C00ECF3FB /* ContentView.swift */; };
 		41ED7F3B2816D76D00ECF3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED7F3A2816D76D00ECF3FB /* Assets.xcassets */; };
 		41ED7F3E2816D76D00ECF3FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED7F3D2816D76D00ECF3FB /* Preview Assets.xcassets */; };
+		41ED7F452816DBC500ECF3FB /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED7F442816DBC500ECF3FB /* CoinData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		41ED7F382816D75C00ECF3FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41ED7F3A2816D76D00ECF3FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41ED7F3D2816D76D00ECF3FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41ED7F442816DBC500ECF3FB /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,7 @@
 		41ED7F352816D75C00ECF3FB /* CryptoPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				41ED7F442816DBC500ECF3FB /* CoinData.swift */,
 				41ED7F362816D75C00ECF3FB /* CryptoPortfolioApp.swift */,
 				41ED7F382816D75C00ECF3FB /* ContentView.swift */,
 				41ED7F3A2816D76D00ECF3FB /* Assets.xcassets */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41ED7F452816DBC500ECF3FB /* CoinData.swift in Sources */,
 				41ED7F392816D75C00ECF3FB /* ContentView.swift in Sources */,
 				41ED7F372816D75C00ECF3FB /* CryptoPortfolioApp.swift in Sources */,
 			);
