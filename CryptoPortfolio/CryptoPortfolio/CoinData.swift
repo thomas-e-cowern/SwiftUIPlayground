@@ -15,7 +15,7 @@ struct Coin: Codable, Identifiable {
     var symbol: String
     var image: String
     var price: Double
-    var amout: Double
+    var amount: Double
     var historicalData: [Double]
     
     static let example = (Bundle.main.decode("TestCryptoData.json") as [Coin])[0]

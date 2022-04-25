@@ -15,9 +15,12 @@ struct ContentView: View {
         NavigationView {
             List(coins) { coin in
                 HStack {
+                    Image("\(coin.image)")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25)
                     Text(coin.symbol)
                         .padding()
-                    Image("\(coin.image)")
                 }
             }
             .navigationTitle("Crypto Portfolio")

@@ -1,14 +1,14 @@
 [
     {
-        "id" : "BTC"
-        "symbol" : "btc"
-        "image" : "btc"
-        "price" : "0.0"
-        "amount" : "0.0"
+        "id" : "BTC",
+        "symbol" : "btc",
+        "image" : "btc",
+        "price" : 0.0,
+        "amount" : 0.0,
         "historicalData" : [
-            "12.3",
-            "13.4",
-            "11.26"
+            12.3,
+            13.4,
+            11.26
         ]
     }
 ]
