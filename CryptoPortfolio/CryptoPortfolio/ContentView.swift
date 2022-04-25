@@ -8,11 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var coins = CoinData.shared.coins
+    
     var body: some View {
         NavigationView {
-            List(0..<10) { item in
-                Text("Hello, world!")
-                    .padding()
+            List(coins) { coin in
+                HStack {
+                    Text(coin.symbol)
+                        .padding()
+                    Image("\(coin.image)")
+                }
             }
             .navigationTitle("Crypto Portfolio")
         }

@@ -23,7 +23,7 @@ class CoinData {
 }
 
 
-class Coin {
+class Coin: Identifiable {
     var symbol = ""
     var image = UIImage()
     var price = 0.0
@@ -32,5 +32,11 @@ class Coin {
     
     init (symbol: String) {
         self.symbol = symbol
+        if let image = UIImage(named: symbol) {
+            print("Found an image")
+            self.image = image
+        } else {
+            print("No image found")
+        }
     }
 }
