@@ -8,35 +8,50 @@
 import Foundation
 import SwiftUI
 
-class CoinData {
-    static let shared = CoinData()
-    var coins = [Coin]()
+
+
+struct Coin: Codable, Identifiable {
+    var id: String
+    var symbol: String
+    var image: String
+    var price: Double
+    var amout: Double
+    var historicalData: [Double]
     
-    private init () {
-        let symbols = ["BTC", "ETH", "LTC"]
-        
-        for symbol in symbols {
-            let coin = Coin(symbol: symbol)
-            coins.append(coin)
-        }
-    }
+    static let example = (Bundle.main.decode("TestCryptoData.json") as [Coin])[0]
+
 }
 
 
-class Coin: Identifiable {
-    var symbol = ""
-    var image = UIImage()
-    var price = 0.0
-    var amount = 0.0
-    var historicalData = [Double]()
-    
-    init (symbol: String) {
-        self.symbol = symbol
-        if let image = UIImage(named: symbol) {
-            print("Found an image")
-            self.image = image
-        } else {
-            print("No image found")
-        }
-    }
-}
+//class CoinData {
+//    static let shared = CoinData()
+//    var coins = [Coin]()
+//
+//    private init () {
+//        let symbols = ["BTC", "ETH", "LTC"]
+//
+//        for symbol in symbols {
+//            let coin = Coin(symbol: symbol)
+//            coins.append(coin)
+//        }
+//    }
+//}
+
+//class Coin: Identifiable {
+//    var symbol = ""
+//    var image = UIImage()
+//    var price = 0.0
+//    var amount = 0.0
+//    var historicalData = [Double]()
+//
+//    init (symbol: String) {
+//        self.symbol = symbol
+//        print("😡😡😡😡 \(symbol) 😡😡😡😡")
+//        if let image = UIImage(named: symbol) {
+//            print("Found an image")
+//            self.image = image
+//        } else {
+//            print("No image found")
+//        }
+//    }
+//}

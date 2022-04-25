@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var coins = CoinData.shared.coins
+    let coins: [Coin] = Bundle.main.decode("TestCryptoData.json")
     
     var body: some View {
         NavigationView {
