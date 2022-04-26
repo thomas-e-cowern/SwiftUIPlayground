@@ -39,10 +39,10 @@ struct ContentView: View {
         do {
             print("😀😀😀 Inside do block 😀😀😀")
             let (data, _) = try await URLSession.shared.data(from: url)
-            print("😀😀😀 \(data) 😀😀😀")
-            if let decodedResults = try? JSONDecoder().decode(CoinsData.self, from: data) {
-                coins = decodedResults.coins
-                print("😡😡😡 \(coins) 😡😡😡")
+            print("😀😀😀 Data: \(data) 😀😀😀")
+            if let decodedResults = try? JSONDecoder().decode(PriceSymbol.self, from: data) {
+//                coins = decodedResults.price
+                print("😡😡😡 Results: \(decodedResults) 😡😡😡")
             } else {
                 print("😡😡😡 There is a problem 😡😡😡")
             }

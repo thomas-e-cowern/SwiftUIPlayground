@@ -8,8 +8,6 @@
 import Foundation
 import SwiftUI
 
-
-
 struct Coin: Codable, Identifiable {
     var id: String
     var symbol: String
@@ -21,42 +19,18 @@ struct Coin: Codable, Identifiable {
 
 struct CoinsData: Codable {
     var coins: [Coin]
-    
-    
-    
     static let example = (Bundle.main.decode("TestCryptoData.json") as [Coin])[0]
 }
 
+struct PriceSymbol: Decodable {
+    var symbol: String
+//    var price: PriceData
+}
 
-//class CoinData {
-////    static let shared = CoinData()
-//    var coins = [Coin]()
-//
-//    private init () {
-//        let symbols = ["BTC", "ETH", "LTC"]
-//
-//        for symbol in symbols {
-////            let coin = Coin(symbol: symbol)
-//            coins.append(coin)
-//        }
-//    }
-//}
+struct PriceData: Decodable {
+    var currency: String
+    var price: Double
+    
+    var coins: [Coin]
+}
 
-//class Coin: Identifiable {
-//    var symbol = ""
-//    var image = UIImage()
-//    var price = 0.0
-//    var amount = 0.0
-//    var historicalData = [Double]()
-//
-//    init (symbol: String) {
-//        self.symbol = symbol
-//        print("😡😡😡😡 \(symbol) 😡😡😡😡")
-//        if let image = UIImage(named: symbol) {
-//            print("Found an image")
-//            self.image = image
-//        } else {
-//            print("No image found")
-//        }
-//    }
-//}
