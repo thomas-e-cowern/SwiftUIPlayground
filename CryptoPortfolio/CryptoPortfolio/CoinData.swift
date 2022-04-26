@@ -19,7 +19,7 @@ struct Coin: Codable, Identifiable {
     var historicalData: [Double]
 }
 
-struct Coins: Codable {
+struct CoinsData: Codable {
     var coins: [Coin]
     
     
