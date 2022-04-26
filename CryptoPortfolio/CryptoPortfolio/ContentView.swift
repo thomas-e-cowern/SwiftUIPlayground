@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let coins: [Coin] = Bundle.main.decode("TestCryptoData.json")
+    @State private var coins = [Coin]()
     
     var body: some View {
         NavigationView {
@@ -23,7 +23,29 @@ struct ContentView: View {
                         .padding()
                 }
             }
+            .task {
+                await loadData()
+            }
             .navigationTitle("Crypto Portfolio")
+        }
+    }
+    
+    func loadData () async {
+        guard let url = URL(string: "https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH,LTC&tsyms=USD?41078caa97fa9605b5ef004240a4ca29a0232c079d97c52fc6a9febe085694c2") else {
+            print("😡😡😡 Invalid URL 😡😡😡")
+            return
+        }
+        
+        do {
+            print("😀😀😀 Inside do block 😀😀😀")
+            let (data, _) = try await URLSession.shared.data(from: url)
+            
+            if let decodedResults = try? JSONDecoder().decode(Coins.self, from: data) {
+                coins = decodedResults.coins
+                print("😡😡😡 \(coins) 😡😡😡")
+            }
+        } catch {
+            print("😡😡😡 Invalid data from catch block 😡😡😡")
         }
     }
 }

@@ -17,12 +17,14 @@ struct Coin: Codable, Identifiable {
     var price: Double
     var amount: Double
     var historicalData: [Double]
-    
-    static let example = (Bundle.main.decode("TestCryptoData.json") as [Coin])[0]
 }
 
 struct Coins: Codable {
     var coins: [Coin]
+    
+    
+    
+    static let example = (Bundle.main.decode("TestCryptoData.json") as [Coin])[0]
 }
 
 
