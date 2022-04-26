@@ -12,6 +12,7 @@
 		41F269F128184AAF008F260E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F269F028184AAF008F260E /* Assets.xcassets */; };
 		41F269F428184AAF008F260E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F269F328184AAF008F260E /* Preview Assets.xcassets */; };
 		41F269FB28184AEE008F260E /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F269FA28184AEE008F260E /* CoinModel.swift */; };
+		41F269FD28184C2F008F260E /* CoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F269FC28184C2F008F260E /* CoinViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		41F269F028184AAF008F260E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41F269F328184AAF008F260E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41F269FA28184AEE008F260E /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
+		41F269FC28184C2F008F260E /* CoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				41F269EC28184AA3008F260E /* DictionaryTestApp.swift */,
 				41F269EE28184AA3008F260E /* ContentView.swift */,
 				41F269FA28184AEE008F260E /* CoinModel.swift */,
+				41F269FC28184C2F008F260E /* CoinViewModel.swift */,
 				41F269F028184AAF008F260E /* Assets.xcassets */,
 				41F269F228184AAF008F260E /* Preview Content */,
 			);
@@ -143,6 +146,7 @@
 				41F269EF28184AA3008F260E /* ContentView.swift in Sources */,
 				41F269FB28184AEE008F260E /* CoinModel.swift in Sources */,
 				41F269ED28184AA3008F260E /* DictionaryTestApp.swift in Sources */,
+				41F269FD28184C2F008F260E /* CoinViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
