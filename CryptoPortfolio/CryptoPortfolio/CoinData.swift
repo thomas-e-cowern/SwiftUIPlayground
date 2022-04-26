@@ -19,19 +19,22 @@ struct Coin: Codable, Identifiable {
     var historicalData: [Double]
     
     static let example = (Bundle.main.decode("TestCryptoData.json") as [Coin])[0]
+}
 
+struct Coins: Codable {
+    var coins: [Coin]
 }
 
 
 //class CoinData {
-//    static let shared = CoinData()
+////    static let shared = CoinData()
 //    var coins = [Coin]()
 //
 //    private init () {
 //        let symbols = ["BTC", "ETH", "LTC"]
 //
 //        for symbol in symbols {
-//            let coin = Coin(symbol: symbol)
+////            let coin = Coin(symbol: symbol)
 //            coins.append(coin)
 //        }
 //    }
