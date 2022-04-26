@@ -7,6 +7,44 @@
 
 import SwiftUI
 
+struct URLImage: View {
+    let urlString: String
+    
+    @State var data: Data?
+    
+    var body: some View {
+        if let data = data, let uiimage = UIImage(data: data) {
+            Image(uiImage: uiimage)
+                .resizable()
+                .scaledToFill()
+                .frame(width: 100, height: 50)
+                .background(Color.gray)
+        } else {
+            Image(systemName: "video")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 50)
+                .background(Color.gray)
+                .onAppear {
+                    fetchData()
+                }
+        }
+    }
+    
+    private func fetchData () {
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+            self.data = data
+        }
+        
+        task.resume()
+    }
+}
+
+
 struct ContentView: View {
     
     @StateObject var viewModel = ViewModel()
@@ -16,9 +54,8 @@ struct ContentView: View {
             List {
                 ForEach(viewModel.courses, id: \.self) { course in
                     HStack {
-                        Image("")
-                            .frame(width: 130, height: 130)
-                            .background(Color.gray)
+                        URLImage(urlString: course.image, data: nil)
+                            
                         Text(course.name)
                             .bold()
                     }
