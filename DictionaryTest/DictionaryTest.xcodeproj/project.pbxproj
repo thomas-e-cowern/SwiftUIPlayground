@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		416D5494281962C400A95346 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D5493281962C400A95346 /* NewsFeed.swift */; };
 		41F269ED28184AA3008F260E /* DictionaryTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F269EC28184AA3008F260E /* DictionaryTestApp.swift */; };
 		41F269EF28184AA3008F260E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F269EE28184AA3008F260E /* ContentView.swift */; };
 		41F269F128184AAF008F260E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41F269F028184AAF008F260E /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		416D5493281962C400A95346 /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		41F269E928184AA3008F260E /* DictionaryTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DictionaryTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F269EC28184AA3008F260E /* DictionaryTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTestApp.swift; sourceTree = "<group>"; };
 		41F269EE28184AA3008F260E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				41F269EC28184AA3008F260E /* DictionaryTestApp.swift */,
 				41F269EE28184AA3008F260E /* ContentView.swift */,
 				41F269FA28184AEE008F260E /* CoinModel.swift */,
+				416D5493281962C400A95346 /* NewsFeed.swift */,
 				41F269FC28184C2F008F260E /* CoinViewModel.swift */,
 				41F269F028184AAF008F260E /* Assets.xcassets */,
 				41F269F228184AAF008F260E /* Preview Content */,
@@ -146,6 +149,7 @@
 				41F269EF28184AA3008F260E /* ContentView.swift in Sources */,
 				41F269FB28184AEE008F260E /* CoinModel.swift in Sources */,
 				41F269ED28184AA3008F260E /* DictionaryTestApp.swift in Sources */,
+				416D5494281962C400A95346 /* NewsFeed.swift in Sources */,
 				41F269FD28184C2F008F260E /* CoinViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
