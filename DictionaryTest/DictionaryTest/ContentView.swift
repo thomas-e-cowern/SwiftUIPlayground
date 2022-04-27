@@ -12,20 +12,12 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
     @State var newsFeed = NewsFeed()
-    @State var articles: [Article?] = []
+    @State var articlesArray: [Article] = []
     
     
     var body: some View {
         
-//        List(newsFeed.articles!) {
-//            Text($0.title!)
-//        }
-        ForEach(newsFeed.articles ?? Article.exampleArticle, id: \.self) { article in
-            Text(article.title ?? "No Article Title")
-        }
-        
-        
-        Text("\(newsFeed.articles?[0].title ?? "No Article Title")")
+        Text("Test")
             .padding()
             .onAppear {
                 getTheNews()
@@ -51,6 +43,19 @@ struct ContentView: View {
                 do {
                     newsFeed = try decoder.decode(NewsFeed.self, from: data!)
                     print("😀😀😀 \(newsFeed) 😀😀😀")
+                    if let articleTotal = newsFeed.articles?.count {
+                        let articleTotal = articleTotal
+                        print("😀😀 \(articleTotal) 😀😀")
+                    }
+                    
+                    if let articles = newsFeed.articles {
+                        
+                        for article in articles {
+                            
+                            articlesArray.append(article)
+                            print("😀😀 \(articlesArray) 😀😀")
+                        }
+                    }
                     
                     
                 } catch {
