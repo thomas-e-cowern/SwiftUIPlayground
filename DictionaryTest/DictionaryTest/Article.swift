@@ -16,4 +16,6 @@ struct Article: Codable {
     var urlToImage: String?
     var publishedAt: String?
     var content: String?
+    
+    static let exampleArticle = Article(source: Source.exampleSource, author: "", title: "", description: "", url: "", urlToImage: "", publishedAt: "", content: "")
 }

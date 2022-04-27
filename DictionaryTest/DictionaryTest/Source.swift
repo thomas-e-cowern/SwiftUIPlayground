@@ -10,4 +10,6 @@ import Foundation
 struct Source: Codable {
     var id: String?
     var name: String?
+    
+    static let exampleSource = Source(id: "1", name: "Example")
 }
