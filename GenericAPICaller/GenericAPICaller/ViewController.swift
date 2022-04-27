@@ -14,22 +14,27 @@ struct User: Codable {
     let email: String
 }
 
+struct TodoListItem: Codable {
+    let title: String
+    let completed: Bool
+}
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = users[indexPath.row].name
+        cell.textLabel?.text = items[indexPath.row].title
         return cell
     }
     
     
     struct Constants {
         static let userUrl = URL(string: "https://jsonplaceholder.typicode.com/users")
-        static let todoUrl = "https://jsonplaceholder.typicode.com/todos"
+        static let todoUrl = URL(string: "https://jsonplaceholder.typicode.com/todos")
     }
     
     private let table: UITableView = {
@@ -39,6 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }()
     
     private var users: [User] = []
+    private var items: [TodoListItem] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,11 +62,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func fetch () {
-        URLSession.shared.request(url: Constants.userUrl, expecting: [User].self) { [weak self] result in
+        URLSession.shared.request(url: Constants.todoUrl, expecting: [TodoListItem].self) { [weak self] result in
             switch result {
-            case .success(let users):
+            case .success(let items):
                 DispatchQueue.main.async {
-                    self?.users = users
+                    self?.items = items
                     self?.table.reloadData()
                 }
                
