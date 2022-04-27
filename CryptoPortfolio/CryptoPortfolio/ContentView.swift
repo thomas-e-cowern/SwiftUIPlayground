@@ -11,6 +11,7 @@ struct ContentView: View {
     
     let url = URL(string: "https://api.coincap.io/v2/assets")
     @State private var coinsArray: [Coin] = []
+    @EnvironmentObject var coins: CoinList
     
     var body: some View {
         ScrollView {
@@ -20,7 +21,7 @@ struct ContentView: View {
                         .font(.system(.headline))
                 } else {
                     ForEach(coinsArray) { coin in
-                        Text(coin.name)
+                        CoinListView(coin: coin)
                     }
                 }
             }

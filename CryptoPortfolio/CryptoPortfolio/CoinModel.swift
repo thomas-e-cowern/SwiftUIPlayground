@@ -16,3 +16,7 @@ struct Coin: Codable, Identifiable {
 struct CoinData: Codable {
     let data: [Coin]
 }
+
+class CoinList: ObservableObject {
+    @Published var coinsList = [Coin]()
+}
