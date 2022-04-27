@@ -7,30 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		41ED7F372816D75C00ECF3FB /* CryptoPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED7F362816D75C00ECF3FB /* CryptoPortfolioApp.swift */; };
-		41ED7F392816D75C00ECF3FB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED7F382816D75C00ECF3FB /* ContentView.swift */; };
-		41ED7F3B2816D76D00ECF3FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED7F3A2816D76D00ECF3FB /* Assets.xcassets */; };
-		41ED7F3E2816D76D00ECF3FB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41ED7F3D2816D76D00ECF3FB /* Preview Assets.xcassets */; };
-		41ED7F452816DBC500ECF3FB /* CoinData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED7F442816DBC500ECF3FB /* CoinData.swift */; };
-		41ED7F472816E82B00ECF3FB /* btc.png in Resources */ = {isa = PBXBuildFile; fileRef = 41ED7F462816E82B00ECF3FB /* btc.png */; };
-		41ED7F4B2816F00D00ECF3FB /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ED7F4A2816F00D00ECF3FB /* Bundle-Decodable.swift */; };
-		41ED7F4D2816F17D00ECF3FB /* TestCryptoData.json in Resources */ = {isa = PBXBuildFile; fileRef = 41ED7F4C2816F17D00ECF3FB /* TestCryptoData.json */; };
+		416D54A628197A8900A95346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D54A528197A8900A95346 /* AppDelegate.swift */; };
+		416D54A828197A8900A95346 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D54A728197A8900A95346 /* SceneDelegate.swift */; };
+		416D54AA28197A8900A95346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D54A928197A8900A95346 /* ViewController.swift */; };
+		416D54AD28197A8900A95346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416D54AB28197A8900A95346 /* Main.storyboard */; };
+		416D54AF28197A8F00A95346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 416D54AE28197A8F00A95346 /* Assets.xcassets */; };
+		416D54B228197A8F00A95346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 416D54B028197A8F00A95346 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		41ED7F332816D75C00ECF3FB /* CryptoPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		41ED7F362816D75C00ECF3FB /* CryptoPortfolioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPortfolioApp.swift; sourceTree = "<group>"; };
-		41ED7F382816D75C00ECF3FB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		41ED7F3A2816D76D00ECF3FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41ED7F3D2816D76D00ECF3FB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		41ED7F442816DBC500ECF3FB /* CoinData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinData.swift; sourceTree = "<group>"; };
-		41ED7F462816E82B00ECF3FB /* btc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btc.png; sourceTree = "<group>"; };
-		41ED7F4A2816F00D00ECF3FB /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
-		41ED7F4C2816F17D00ECF3FB /* TestCryptoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = TestCryptoData.json; sourceTree = "<group>"; };
+		416D54A228197A8900A95346 /* CryptoPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		416D54A528197A8900A95346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		416D54A728197A8900A95346 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		416D54A928197A8900A95346 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		416D54AC28197A8900A95346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		416D54AE28197A8F00A95346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		416D54B128197A8F00A95346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		416D54B328197A8F00A95346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		41ED7F302816D75C00ECF3FB /* Frameworks */ = {
+		416D549F28197A8900A95346 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -40,55 +37,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		41ED7F2A2816D75B00ECF3FB = {
+		416D549928197A8800A95346 = {
 			isa = PBXGroup;
 			children = (
-				41ED7F352816D75C00ECF3FB /* CryptoPortfolio */,
-				41ED7F342816D75C00ECF3FB /* Products */,
+				416D54A428197A8900A95346 /* CryptoPortfolio */,
+				416D54A328197A8900A95346 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		41ED7F342816D75C00ECF3FB /* Products */ = {
+		416D54A328197A8900A95346 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41ED7F332816D75C00ECF3FB /* CryptoPortfolio.app */,
+				416D54A228197A8900A95346 /* CryptoPortfolio.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		41ED7F352816D75C00ECF3FB /* CryptoPortfolio */ = {
+		416D54A428197A8900A95346 /* CryptoPortfolio */ = {
 			isa = PBXGroup;
 			children = (
-				41ED7F442816DBC500ECF3FB /* CoinData.swift */,
-				41ED7F4A2816F00D00ECF3FB /* Bundle-Decodable.swift */,
-				41ED7F362816D75C00ECF3FB /* CryptoPortfolioApp.swift */,
-				41ED7F382816D75C00ECF3FB /* ContentView.swift */,
-				41ED7F462816E82B00ECF3FB /* btc.png */,
-				41ED7F4C2816F17D00ECF3FB /* TestCryptoData.json */,
-				41ED7F3A2816D76D00ECF3FB /* Assets.xcassets */,
-				41ED7F3C2816D76D00ECF3FB /* Preview Content */,
+				416D54A528197A8900A95346 /* AppDelegate.swift */,
+				416D54A728197A8900A95346 /* SceneDelegate.swift */,
+				416D54A928197A8900A95346 /* ViewController.swift */,
+				416D54AB28197A8900A95346 /* Main.storyboard */,
+				416D54AE28197A8F00A95346 /* Assets.xcassets */,
+				416D54B028197A8F00A95346 /* LaunchScreen.storyboard */,
+				416D54B328197A8F00A95346 /* Info.plist */,
 			);
 			path = CryptoPortfolio;
-			sourceTree = "<group>";
-		};
-		41ED7F3C2816D76D00ECF3FB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				41ED7F3D2816D76D00ECF3FB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41ED7F322816D75C00ECF3FB /* CryptoPortfolio */ = {
+		416D54A128197A8900A95346 /* CryptoPortfolio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41ED7F412816D76D00ECF3FB /* Build configuration list for PBXNativeTarget "CryptoPortfolio" */;
+			buildConfigurationList = 416D54B628197A8F00A95346 /* Build configuration list for PBXNativeTarget "CryptoPortfolio" */;
 			buildPhases = (
-				41ED7F2F2816D75C00ECF3FB /* Sources */,
-				41ED7F302816D75C00ECF3FB /* Frameworks */,
-				41ED7F312816D75C00ECF3FB /* Resources */,
+				416D549E28197A8900A95346 /* Sources */,
+				416D549F28197A8900A95346 /* Frameworks */,
+				416D54A028197A8900A95346 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -96,25 +84,25 @@
 			);
 			name = CryptoPortfolio;
 			productName = CryptoPortfolio;
-			productReference = 41ED7F332816D75C00ECF3FB /* CryptoPortfolio.app */;
+			productReference = 416D54A228197A8900A95346 /* CryptoPortfolio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		41ED7F2B2816D75B00ECF3FB /* Project object */ = {
+		416D549A28197A8800A95346 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					41ED7F322816D75C00ECF3FB = {
+					416D54A128197A8900A95346 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 41ED7F2E2816D75B00ECF3FB /* Build configuration list for PBXProject "CryptoPortfolio" */;
+			buildConfigurationList = 416D549D28197A8800A95346 /* Build configuration list for PBXProject "CryptoPortfolio" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,46 +110,63 @@
 				en,
 				Base,
 			);
-			mainGroup = 41ED7F2A2816D75B00ECF3FB;
-			productRefGroup = 41ED7F342816D75C00ECF3FB /* Products */;
+			mainGroup = 416D549928197A8800A95346;
+			productRefGroup = 416D54A328197A8900A95346 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41ED7F322816D75C00ECF3FB /* CryptoPortfolio */,
+				416D54A128197A8900A95346 /* CryptoPortfolio */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		41ED7F312816D75C00ECF3FB /* Resources */ = {
+		416D54A028197A8900A95346 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41ED7F472816E82B00ECF3FB /* btc.png in Resources */,
-				41ED7F3E2816D76D00ECF3FB /* Preview Assets.xcassets in Resources */,
-				41ED7F4D2816F17D00ECF3FB /* TestCryptoData.json in Resources */,
-				41ED7F3B2816D76D00ECF3FB /* Assets.xcassets in Resources */,
+				416D54B228197A8F00A95346 /* LaunchScreen.storyboard in Resources */,
+				416D54AF28197A8F00A95346 /* Assets.xcassets in Resources */,
+				416D54AD28197A8900A95346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		41ED7F2F2816D75C00ECF3FB /* Sources */ = {
+		416D549E28197A8900A95346 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41ED7F452816DBC500ECF3FB /* CoinData.swift in Sources */,
-				41ED7F392816D75C00ECF3FB /* ContentView.swift in Sources */,
-				41ED7F372816D75C00ECF3FB /* CryptoPortfolioApp.swift in Sources */,
-				41ED7F4B2816F00D00ECF3FB /* Bundle-Decodable.swift in Sources */,
+				416D54AA28197A8900A95346 /* ViewController.swift in Sources */,
+				416D54A628197A8900A95346 /* AppDelegate.swift in Sources */,
+				416D54A828197A8900A95346 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		416D54AB28197A8900A95346 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				416D54AC28197A8900A95346 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		416D54B028197A8F00A95346 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				416D54B128197A8F00A95346 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		41ED7F3F2816D76D00ECF3FB /* Debug */ = {
+		416D54B428197A8F00A95346 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -221,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		41ED7F402816D76D00ECF3FB /* Release */ = {
+		416D54B528197A8F00A95346 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -275,20 +280,19 @@
 			};
 			name = Release;
 		};
-		41ED7F422816D76D00ECF3FB /* Debug */ = {
+		416D54B728197A8F00A95346 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CryptoPortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = CryptoPortfolio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,20 +308,19 @@
 			};
 			name = Debug;
 		};
-		41ED7F432816D76D00ECF3FB /* Release */ = {
+		416D54B828197A8F00A95346 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"CryptoPortfolio/Preview Content\"";
 				DEVELOPMENT_TEAM = 56F54J4H3N;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = CryptoPortfolio/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -336,25 +339,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41ED7F2E2816D75B00ECF3FB /* Build configuration list for PBXProject "CryptoPortfolio" */ = {
+		416D549D28197A8800A95346 /* Build configuration list for PBXProject "CryptoPortfolio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41ED7F3F2816D76D00ECF3FB /* Debug */,
-				41ED7F402816D76D00ECF3FB /* Release */,
+				416D54B428197A8F00A95346 /* Debug */,
+				416D54B528197A8F00A95346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41ED7F412816D76D00ECF3FB /* Build configuration list for PBXNativeTarget "CryptoPortfolio" */ = {
+		416D54B628197A8F00A95346 /* Build configuration list for PBXNativeTarget "CryptoPortfolio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				41ED7F422816D76D00ECF3FB /* Debug */,
-				41ED7F432816D76D00ECF3FB /* Release */,
+				416D54B728197A8F00A95346 /* Debug */,
+				416D54B828197A8F00A95346 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 41ED7F2B2816D75B00ECF3FB /* Project object */;
+	rootObject = 416D549A28197A8800A95346 /* Project object */;
 }
