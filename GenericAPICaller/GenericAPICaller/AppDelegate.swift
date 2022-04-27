@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  CryptoPortfolio
+//  GenericAPICaller
 //
 //  Created by Thomas Cowern New on 4/27/22.
 //
 
 import UIKit
 
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  CryptoPortfolio
+//  GenericAPICaller
 //
 //  Created by Thomas Cowern New on 4/27/22.
 //
