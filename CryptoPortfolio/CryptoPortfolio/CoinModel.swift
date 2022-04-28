@@ -20,7 +20,7 @@ struct Coin: Codable, Identifiable {
         if let price = Double(priceUsd) {
             let roundPrice = round(price * 100) / 100
             if let formattedPrice = formatter.string(from: roundPrice as NSNumber) {
-                print("👉 \(formattedPrice )")
+//                print("👉 \(formattedPrice )")
                 return formattedPrice
             }
         }

@@ -13,30 +13,32 @@ struct CoinListView: View {
     
     var body: some View {
         HStack {
-            VStack (alignment: .leading, spacing: 2) {
+            VStack (spacing: 2) {
                 ZStack {
                     Image("coin")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
-                        .padding(.trailing, 5)
                 }
                 .padding(.leading, 20)
-                .frame(width: 45)
+                .shadow(radius: 15)
+
                 
             }
             VStack (alignment: .leading) {
                 Text(coin.symbol)
             }
+            .frame(width: 60)
             .padding()
+            .shadow(radius: 15)
             
             VStack (alignment: .leading) {
                 Text("Price: \(coin.priceAsDouble())")
             }
+            .shadow(radius: 15)
 
             Spacer()
         }
-        .frame(width: UIScreen.main.bounds.width)
     }
 }
 

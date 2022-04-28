@@ -11,7 +11,6 @@ struct ContentView: View {
     
     let url = URL(string: "https://api.coincap.io/v2/assets")
     @State private var coinsArray: [Coin] = []
-    @EnvironmentObject var coins: CoinList
     
     var body: some View {
         NavigationView {
@@ -20,7 +19,9 @@ struct ContentView: View {
                     if coinsArray.count == 0 {
                         VStack {
                             Text("Loading...")
-                                .font(.system(.headline))
+                                .font(.largeTitle)
+                                .foregroundColor(.red)
+                                .fontWeight(.bold)
                         }
                     } else {
                         ForEach(coinsArray) { coin in
@@ -37,11 +38,6 @@ struct ContentView: View {
             }
             .navigationTitle("Crypto Portfolio")
         }
-            
-//        Text("Test")
-//            .onAppear {
-//                fetch()
-//            }
     }
     
    func fetch () {
@@ -52,12 +48,8 @@ struct ContentView: View {
                 let coins = coins.data
                 
                 for coin in coins {
-//                    print("👉 \(coin)")
                     coinsArray.append(coin)
                 }
-                
-//                print(coinsArray)
-               
             case.failure(let error):
                 print(error)
             }
