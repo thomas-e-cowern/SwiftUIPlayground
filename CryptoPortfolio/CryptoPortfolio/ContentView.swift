@@ -14,21 +14,26 @@ struct ContentView: View {
     @EnvironmentObject var coins: CoinList
     
     var body: some View {
-        ScrollView {
-            VStack {
-                if coinsArray.count == 0 {
-                    Text("Loading...")
-                        .font(.system(.headline))
-                } else {
-                    ForEach(coinsArray) { coin in
-                        CoinListView(coin: coin)
+        NavigationView {
+            ScrollView {
+                VStack {
+                    if coinsArray.count == 0 {
+                        Text("Loading...")
+                            .font(.system(.headline))
+                    } else {
+                        ForEach(coinsArray) { coin in
+                            NavigationLink (destination: Text(coin.name)) {
+                                CoinListView(coin: coin)
+                            }
+                        }
                     }
                 }
             }
-        }
-        .frame(width: UIScreen.main.bounds.width)
-        .onAppear {
-            fetch()
+            .frame(width: UIScreen.main.bounds.width)
+            .onAppear {
+                fetch()
+            }
+            .navigationTitle("Crypto Portfolio")
         }
             
 //        Text("Test")

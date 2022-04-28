@@ -26,8 +26,8 @@ struct CoinListView: View {
                 
             }
             VStack (alignment: .leading) {
-                Text("Name: \(coin.name)")
-                Text("Symbol: \(coin.symbol)")
+                Text(coin.name)
+//                Text("Symbol: \(coin.symbol)")
             }
             .padding()
             
