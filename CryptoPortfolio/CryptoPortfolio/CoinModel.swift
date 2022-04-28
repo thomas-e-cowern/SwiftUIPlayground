@@ -12,6 +12,7 @@ struct Coin: Codable, Identifiable {
     let symbol: String
     let name: String
     let priceUsd: String
+    let explorer: String?
     
     func priceAsDouble () -> String {
         let formatter = NumberFormatter()
@@ -25,6 +26,14 @@ struct Coin: Codable, Identifiable {
             }
         }
         return "0.0"
+    }
+    
+    func checkForUrl () -> URL {
+        if let explorer = explorer {
+            return URL(string: explorer)!
+        } else {
+            return URL(string: "https://api.coincap.io")!
+        }
     }
 }
 

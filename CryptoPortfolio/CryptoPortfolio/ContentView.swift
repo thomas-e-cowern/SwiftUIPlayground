@@ -25,7 +25,7 @@ struct ContentView: View {
                         }
                     } else {
                         ForEach(coinsArray) { coin in
-                            NavigationLink (destination: Text(coin.name)) {
+                            NavigationLink (destination: CoinDetailView(coin: coin)) {
                                 CoinListView(coin: coin)
                             }
                         }
@@ -35,6 +35,7 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
+                            coinsArray = []
                             fetch()
                         } label: {
                             Image(systemName: "repeat.circle.fill")
@@ -42,6 +43,7 @@ struct ContentView: View {
                     }
                 }
                 .onAppear {
+                    coinsArray = []
                     fetch()
                 }
             }
