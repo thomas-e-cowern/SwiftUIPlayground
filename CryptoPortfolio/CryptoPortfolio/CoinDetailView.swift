@@ -15,7 +15,7 @@ struct CoinDetailView: View {
         Text(coin.name)
         Text(coin.symbol)
         Text(coin.priceAsDouble())
-        Text("\(coin.checkForUrl())")
+        Link("Checkf it out...", destination: URL(string: coin.checkForExplorer())!)
     }
 }
 

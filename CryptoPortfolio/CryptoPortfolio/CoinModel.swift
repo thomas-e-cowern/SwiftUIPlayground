@@ -28,11 +28,11 @@ struct Coin: Codable, Identifiable {
         return "0.0"
     }
     
-    func checkForUrl () -> URL {
+    func checkForExplorer () -> String {
         if let explorer = explorer {
-            return URL(string: explorer)!
+            return explorer
         } else {
-            return URL(string: "https://api.coincap.io")!
+            return "" 
         }
     }
 }
