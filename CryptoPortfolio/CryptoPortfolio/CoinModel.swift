@@ -32,7 +32,7 @@ struct Coin: Codable, Identifiable {
         if let explorer = explorer {
             return explorer
         } else {
-            return "" 
+            return "https://api.coincap.io" 
         }
     }
 }

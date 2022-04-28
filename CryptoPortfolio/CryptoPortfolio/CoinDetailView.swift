@@ -12,10 +12,18 @@ struct CoinDetailView: View {
     var coin: Coin
     
     var body: some View {
-        Text(coin.name)
-        Text(coin.symbol)
-        Text(coin.priceAsDouble())
-        Link("Checkf it out...", destination: URL(string: coin.checkForExplorer())!)
+        List() {
+            Text(coin.name)
+            Text(coin.symbol)
+            Text(coin.priceAsDouble())
+            if coin.checkForExplorer() != "https://api.coincap.io" {
+                Link("Check out \(coin.name)", destination: URL(string: coin.checkForExplorer())!)
+            } else {
+                Link("Check out Coincap...", destination: URL(string: coin.checkForExplorer())!)
+            }
+        }
+        
+        
     }
 }
 
