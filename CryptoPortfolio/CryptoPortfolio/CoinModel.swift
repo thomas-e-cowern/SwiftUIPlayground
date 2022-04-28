@@ -13,28 +13,24 @@ struct Coin: Codable, Identifiable {
     let name: String
     let priceUsd: String
     
-    func priceAsDouble () -> Double {
+    func priceAsDouble () -> String {
         if let price = Double(priceUsd) {
-//            print("👉 \(price)")
             let roundPrice = round(price * 100) / 100
             print("👉 \(roundPrice)")
-            return roundPrice
+            return String(roundPrice)
+        } else {
+            return "0.0"
         }
-
-        return 0.0
-//        return Double(price) ?? 0.0
     }
     
-    func priceAsDecimal (price: String) -> Decimal {
-        if let price = Decimal(string: price) {
-//            print("👉 \(price)")
-
-            let decimalPrice = (price * 100.0) / 100.0
-            print("👉 \(decimalPrice)")
+    func priceAsDecimal () -> Decimal {
+        if let price = Decimal(string: priceUsd) {
+            let roundPrice = (price * 100) / 100
+            print("👉 \(roundPrice)")
+            return roundPrice
+        } else {
+            return 0.0
         }
-
-        return 0.0
-//        return Double(price) ?? 0.0
     }
 }
 

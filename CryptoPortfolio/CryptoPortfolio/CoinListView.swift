@@ -32,7 +32,7 @@ struct CoinListView: View {
             .padding()
             
             VStack (alignment: .leading) {
-                Text("Price: \(coin.priceAsDouble())")
+                Text("Price: $\(coin.priceAsDouble())")
             }
         
             
