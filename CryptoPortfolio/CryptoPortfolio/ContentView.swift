@@ -31,12 +31,21 @@ struct ContentView: View {
                         }
                     }
                 }
+                .navigationTitle("Crypto Portfolio")
+                .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button {
+                            fetch()
+                        } label: {
+                            Image(systemName: "repeat.circle.fill")
+                        }
+                    }
+                }
+                .onAppear {
+                    fetch()
+                }
             }
-            .frame(width: UIScreen.main.bounds.width)
-            .onAppear {
-                fetch()
-            }
-            .navigationTitle("Crypto Portfolio")
+            
         }
     }
     
