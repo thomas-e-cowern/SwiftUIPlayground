@@ -26,12 +26,15 @@ struct ContentView: View {
                 }
             }
         }
-        Text("\(coinsArray.count)")
+        .frame(width: UIScreen.main.bounds.width)
+        .onAppear {
+            fetch()
+        }
             
-        Text("Test")
-            .onAppear {
-                fetch()
-            }
+//        Text("Test")
+//            .onAppear {
+//                fetch()
+//            }
     }
     
    func fetch () {
@@ -42,7 +45,7 @@ struct ContentView: View {
                 let coins = coins.data
                 
                 for coin in coins {
-                    print("👉 \(coin)")
+//                    print("👉 \(coin)")
                     coinsArray.append(coin)
                 }
                 
