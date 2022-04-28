@@ -18,8 +18,10 @@ struct ContentView: View {
             ScrollView {
                 VStack {
                     if coinsArray.count == 0 {
-                        Text("Loading...")
-                            .font(.system(.headline))
+                        VStack {
+                            Text("Loading...")
+                                .font(.system(.headline))
+                        }
                     } else {
                         ForEach(coinsArray) { coin in
                             NavigationLink (destination: Text(coin.name)) {

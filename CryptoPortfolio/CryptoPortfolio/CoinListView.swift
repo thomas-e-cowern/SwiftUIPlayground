@@ -26,18 +26,14 @@ struct CoinListView: View {
                 
             }
             VStack (alignment: .leading) {
-                Text(coin.name)
-//                Text("Symbol: \(coin.symbol)")
+                Text(coin.symbol)
             }
             .padding()
             
             VStack (alignment: .leading) {
-                Text("Price: $\(coin.priceAsDouble())")
+                Text("Price: \(coin.priceAsDouble())")
             }
-        
-            
-            
-            
+
             Spacer()
         }
         .frame(width: UIScreen.main.bounds.width)
