@@ -41,6 +41,16 @@ struct CoinData: Codable {
     let data: [Coin]
 }
 
+struct CoinHistoryData: Codable {
+    let data: [CoinHistory]
+}
+
+struct CoinHistory: Codable {
+    let priceUsd: String
+    let time: Int
+    let date: String
+}
+
 class CoinList: ObservableObject {
     @Published var coinsList = [Coin]()
 }
