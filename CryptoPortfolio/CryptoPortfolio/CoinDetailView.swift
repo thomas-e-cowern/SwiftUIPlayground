@@ -32,13 +32,13 @@ struct CoinDetailView: View {
                 }
                 if coin.checkForExplorer() != "https://api.coincap.io" {
                     HStack {
-                        Image(systemName: "link.circle")
-                        Link("Check out \(coin.name)", destination: URL(string: coin.checkForExplorer())!)
+//                        Image(systemName: "link.circle")
+                        Label("Check out \(coin.name)", systemImage: "link.circle")
+                        Link("here...", destination: URL(string: coin.checkForExplorer())!)
                     }
                 } else {
                     HStack {
-                        Image(systemName: "link.circle")
-                        Link("Check out Coincap...", destination: URL(string: coin.checkForExplorer())!)
+                        Label("There is no link for \(coin.name)", systemImage: "eye.slash.circle")
                     }
                     
                 }
