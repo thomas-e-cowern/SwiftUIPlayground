@@ -12,6 +12,7 @@ struct CoinDetailView: View {
     var coin: Coin
     @State private var coinHistory: [CoinHistory] = []
     var testCoinHistory = [1.0, 1.5, 1.3, 0.9, 1.2, 1.7]
+    @State private var coinPriceHistory: [Double] = []
     
     var body: some View {
         List() {
@@ -28,21 +29,33 @@ struct CoinDetailView: View {
             coinHistoryFetch(name: coin.name.lowercased())
         }
         
-        LineChartView(dataPoints: testCoinHistory)
-            .frame(height: 200, alignment: .center)
-            .padding(4)
-            .background(Color.gray.opacity(0.1).cornerRadius(16))
-            .padding()
-        
-        
-        
+        if coinPriceHistory.count == 0 {
+            Text("Loading Price History")
+                .fontWeight(.heavy)
+        } else {
+            LineChartView(dataPoints: coinPriceHistory)
+                .frame(height: 200, alignment: .center)
+                .padding(4)
+                .background(Color.black.opacity(0.1).cornerRadius(16))
+                .padding()
+        }
+    }
+    
+    func convertStringToDouble () {
+        for coin in coinHistory {
+            let coinPrice = coin.historyPriceAsDouble()
+            print("👉 coinPrice: \(coinPrice)")
+            coinPriceHistory.append(round(coinPrice * 10000) / 10000)
+//            print("👉 coinPriceHistory: \(coinPriceHistory.count)")
+        }
+        print("👉 coinPriceHistory: \(coinPriceHistory)")
     }
     
     func coinHistoryFetch (name: String) {
         
         let coinName = name.replacingOccurrences(of: " ", with: "-")
 
-        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
+        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=m5"
         print("History String: \(historyUrlString)")
         
         guard let url = URL(string: historyUrlString) else {
@@ -64,6 +77,10 @@ struct CoinDetailView: View {
                 DispatchQueue.main.async {
                     self.coinHistory = jsonHistory.data
                     print("👉 \(coinHistory)")
+                    DispatchQueue.main.async {
+                        convertStringToDouble()
+                    }
+                    
                 }
             } catch {
                 print(error.localizedDescription)

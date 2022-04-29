@@ -49,6 +49,14 @@ struct CoinHistory: Codable {
     let priceUsd: String
     let time: Int
     let date: String
+    
+    func historyPriceAsDouble () -> Double {
+        
+        if let priceAsDouble = Double(priceUsd) {
+                return priceAsDouble
+        }
+        return 0.0
+    }
 }
 
 class CoinList: ObservableObject {

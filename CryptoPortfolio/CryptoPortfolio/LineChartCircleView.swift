@@ -40,7 +40,7 @@ struct LineChartCircleView: View {
                                 radius: radius, startAngle: .zero, endAngle: .degrees(360.0), clockwise: false)
                 }
             }
-            .stroke(Color.accentColor, lineWidth: 2)
+            .stroke(Color.accentColor, lineWidth: 1)
         }
         .padding(.vertical)
     }
