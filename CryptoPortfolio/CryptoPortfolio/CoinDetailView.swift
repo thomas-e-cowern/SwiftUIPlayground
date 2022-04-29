@@ -11,6 +11,7 @@ struct CoinDetailView: View {
     
     var coin: Coin
     @State private var coinHistory: [CoinHistory] = []
+    var testCoinHistory = [1.0, 1.5, 1.3, 0.9, 1.2, 1.7]
     
     var body: some View {
         List() {
@@ -26,6 +27,13 @@ struct CoinDetailView: View {
         .onAppear {
             coinHistoryFetch(name: coin.name.lowercased())
         }
+        
+        LineChartView(dataPoints: testCoinHistory)
+            .frame(height: 200, alignment: .center)
+            .padding(4)
+            .background(Color.gray.opacity(0.1).cornerRadius(16))
+            .padding()
+        
         
         
     }
