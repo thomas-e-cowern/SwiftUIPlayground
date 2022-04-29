@@ -15,8 +15,32 @@ struct CoinDetailView: View {
     @State private var coinPriceHistory: [Double] = []
     
     var body: some View {
-        List() {
+        
+        VStack (alignment: .center) {
             
+            ZStack {
+                VStack (alignment: .center) {
+                        Image("coin")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+
+                }
+                
+                VStack (alignment: .center) {
+                        Image(coin.symbol.lowercased())
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 200, height: 200)
+
+                }
+            }
+            Text(coin.name)
+                .foregroundColor(.blue)
+                .fontWeight(.heavy)
+        }
+        
+        List() {
             Section(header: Text("\(coin.name) info")) {
                 HStack {
                     Label("Coin Name: ", systemImage: "keyboard")

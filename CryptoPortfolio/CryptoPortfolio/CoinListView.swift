@@ -19,6 +19,11 @@ struct CoinListView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
+                    
+                    Image(coin.symbol.lowercased())
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
                 }
                 .padding(.leading, 20)
                 .shadow(radius: 15)
