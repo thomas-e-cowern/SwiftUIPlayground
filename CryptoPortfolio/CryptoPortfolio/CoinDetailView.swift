@@ -16,28 +16,34 @@ struct CoinDetailView: View {
     
     var body: some View {
         List() {
-            Text(coin.name)
-            Text(coin.symbol)
-            Text(coin.priceAsDouble())
-            if coin.checkForExplorer() != "https://api.coincap.io" {
-                Link("Check out \(coin.name)", destination: URL(string: coin.checkForExplorer())!)
-            } else {
-                Link("Check out Coincap...", destination: URL(string: coin.checkForExplorer())!)
+            
+            Section(header: Text("\(coin.name) info")) {
+                Text(coin.name)
+                Text(coin.symbol)
+                Text(coin.priceAsDouble())
+                if coin.checkForExplorer() != "https://api.coincap.io" {
+                    Link("Check out \(coin.name)", destination: URL(string: coin.checkForExplorer())!)
+                } else {
+                    Link("Check out Coincap...", destination: URL(string: coin.checkForExplorer())!)
+                }
+                
+            }
+            
+            Section(header: Text("\(coin.name) previous day chart")) {
+                if coinPriceHistory.count == 0 {
+                    Text("Loading Price History")
+                        .fontWeight(.heavy)
+                } else {
+                    LineChartView(dataPoints: coinPriceHistory)
+                        .frame(height: 200, alignment: .center)
+                        .padding(4)
+                        .background(Color.black.opacity(0.7).cornerRadius(16))
+                        .padding()
+                }
             }
         }
         .onAppear {
             coinHistoryFetch(name: coin.name.lowercased())
-        }
-        
-        if coinPriceHistory.count == 0 {
-            Text("Loading Price History")
-                .fontWeight(.heavy)
-        } else {
-            LineChartView(dataPoints: coinPriceHistory)
-                .frame(height: 200, alignment: .center)
-                .padding(4)
-                .background(Color.black.opacity(0.1).cornerRadius(16))
-                .padding()
         }
     }
     
@@ -46,7 +52,7 @@ struct CoinDetailView: View {
             let coinPrice = coin.historyPriceAsDouble()
             print("👉 coinPrice: \(coinPrice)")
             coinPriceHistory.append(round(coinPrice * 10000) / 10000)
-//            print("👉 coinPriceHistory: \(coinPriceHistory.count)")
+
         }
         print("👉 coinPriceHistory: \(coinPriceHistory)")
     }
@@ -55,7 +61,7 @@ struct CoinDetailView: View {
         
         let coinName = name.replacingOccurrences(of: " ", with: "-")
 
-        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=m5"
+        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
         print("History String: \(historyUrlString)")
         
         guard let url = URL(string: historyUrlString) else {
