@@ -66,6 +66,10 @@ struct ContentView: View {
             }
         }
     }
+    
+    func fetchCoinData () {
+        
+    }
 }
 
 extension URLSession {
