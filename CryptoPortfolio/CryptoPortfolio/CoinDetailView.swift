@@ -59,7 +59,7 @@ struct CoinDetailView: View {
             }
         }
         .onAppear {
-            coinHistoryFetch(name: coin.name.lowercased())
+            coinHistoryFetch(id: coin.id)
         }
     }
     
@@ -73,9 +73,9 @@ struct CoinDetailView: View {
         print("👉 coinPriceHistory: \(coinPriceHistory)")
     }
     
-    func coinHistoryFetch (name: String) {
+    func coinHistoryFetch (id: String) {
         
-        let coinName = name.replacingOccurrences(of: " ", with: "-")
+        let coinName = id.replacingOccurrences(of: " ", with: "-")
 
         let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
         print("History String: \(historyUrlString)")
