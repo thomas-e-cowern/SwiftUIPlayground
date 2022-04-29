@@ -16,6 +16,7 @@
 		419CDA06281AAFC4002604E7 /* Credits.json in Resources */ = {isa = PBXBuildFile; fileRef = 419CDA05281AAFC4002604E7 /* Credits.json */; };
 		419CDA08281AB882002604E7 /* ApiCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419CDA07281AB882002604E7 /* ApiCalls.swift */; };
 		419CDA0A281B1DEB002604E7 /* CoinDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419CDA09281B1DEB002604E7 /* CoinDetailView.swift */; };
+		41ADB236281C20DB003F76D8 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ADB235281C20DB003F76D8 /* LineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		419CDA05281AAFC4002604E7 /* Credits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Credits.json; sourceTree = "<group>"; };
 		419CDA07281AB882002604E7 /* ApiCalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCalls.swift; sourceTree = "<group>"; };
 		419CDA09281B1DEB002604E7 /* CoinDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDetailView.swift; sourceTree = "<group>"; };
+		41ADB235281C20DB003F76D8 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				419CDA07281AB882002604E7 /* ApiCalls.swift */,
 				416D54F72819D2D300A95346 /* CoinListView.swift */,
 				419CDA09281B1DEB002604E7 /* CoinDetailView.swift */,
+				41ADB235281C20DB003F76D8 /* LineView.swift */,
 				419CDA05281AAFC4002604E7 /* Credits.json */,
 				416D54F528199B1700A95346 /* CoinModel.swift */,
 				416D54EB28199A9800A95346 /* Assets.xcassets */,
@@ -158,6 +161,7 @@
 				419CDA0A281B1DEB002604E7 /* CoinDetailView.swift in Sources */,
 				419CDA08281AB882002604E7 /* ApiCalls.swift in Sources */,
 				416D54F628199B1700A95346 /* CoinModel.swift in Sources */,
+				41ADB236281C20DB003F76D8 /* LineView.swift in Sources */,
 				416D54E828199A8E00A95346 /* CryptoPortfolioApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
