@@ -32,9 +32,10 @@ struct CoinDetailView: View {
     
     func coinHistoryFetch (name: String) {
         
-        print("String: \(name)")
-        
-        let historyUrlString = "https://api.coincap.io/v2/assets/bitcoin/history?interval=d1"
+        let coinName = name.replacingOccurrences(of: " ", with: "-")
+
+        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
+        print("History String: \(historyUrlString)")
         
         guard let url = URL(string: historyUrlString) else {
             return
@@ -54,10 +55,10 @@ struct CoinDetailView: View {
                 let jsonHistory = try JSONDecoder().decode(CoinHistoryData.self, from: data)
                 DispatchQueue.main.async {
                     self.coinHistory = jsonHistory.data
-//                    print("👉 \(coinHistory)")
+                    print("👉 \(coinHistory)")
                 }
             } catch {
-                
+                print(error.localizedDescription)
             }
         }
         task.resume()
