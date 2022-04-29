@@ -18,13 +18,29 @@ struct CoinDetailView: View {
         List() {
             
             Section(header: Text("\(coin.name) info")) {
-                Text(coin.name)
-                Text(coin.symbol)
-                Text(coin.priceAsDouble())
+                HStack {
+                    Label("Coin Name: ", systemImage: "keyboard")
+                    Text(coin.name)
+                }
+                HStack {
+                    Label("Coin Symbol: ", systemImage: "star")
+                    Text(coin.symbol)
+                }
+                HStack {
+                    Label("Current Price: ", systemImage: "dollarsign.circle")
+                    Text(coin.priceAsDouble())
+                }
                 if coin.checkForExplorer() != "https://api.coincap.io" {
-                    Link("Check out \(coin.name)", destination: URL(string: coin.checkForExplorer())!)
+                    HStack {
+                        Image(systemName: "link.circle")
+                        Link("Check out \(coin.name)", destination: URL(string: coin.checkForExplorer())!)
+                    }
                 } else {
-                    Link("Check out Coincap...", destination: URL(string: coin.checkForExplorer())!)
+                    HStack {
+                        Image(systemName: "link.circle")
+                        Link("Check out Coincap...", destination: URL(string: coin.checkForExplorer())!)
+                    }
+                    
                 }
                 
             }
