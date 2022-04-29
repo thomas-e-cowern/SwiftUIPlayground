@@ -24,13 +24,15 @@ struct CoinDetailView: View {
             }
         }
         .onAppear {
-            coinHistoryFetch(name: "bitcoin")
+            coinHistoryFetch(name: coin.name.lowercased())
         }
         
         
     }
     
     func coinHistoryFetch (name: String) {
+        
+        print("String: \(name)")
         
         let historyUrlString = "https://api.coincap.io/v2/assets/bitcoin/history?interval=d1"
         
@@ -52,7 +54,7 @@ struct CoinDetailView: View {
                 let jsonHistory = try JSONDecoder().decode(CoinHistoryData.self, from: data)
                 DispatchQueue.main.async {
                     self.coinHistory = jsonHistory.data
-                    print("👉 \(coinHistory)")
+//                    print("👉 \(coinHistory)")
                 }
             } catch {
                 
