@@ -10,6 +10,7 @@ import SwiftUI
 struct CoinListView: View {
     
     var coin: Coin
+    var favoriteCoins = CoinContoller.shared.favoriteCoins2
     
     var body: some View {
         HStack (alignment: .center) {
@@ -35,8 +36,13 @@ struct CoinListView: View {
                 Button {
                     // more to come
                     print("pressed: \(coin.name)")
+                    CoinContoller.shared.addCoinToFavs(coin: coin)
                 } label: {
-                    Image(systemName: "heart")
+                    if favoriteCoins.contains(coin.symbol) {
+                        Image(systemName: "heart.fill")
+                    } else {
+                        Image(systemName: "heart")
+                    }
                 }
             }
             

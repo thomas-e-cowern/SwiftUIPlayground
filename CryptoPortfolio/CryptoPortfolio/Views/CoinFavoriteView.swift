@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoinFavoriteView: View {
     
-    @State private var coinsArray: [Coin] = []
+//    @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
     @State private var favoriteCoinArray: [Coin] = []
     
@@ -17,7 +17,7 @@ struct CoinFavoriteView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    if coinsArray.count == 0 {
+                    if favoriteCoinArray.count == 0 {
                         VStack {
                             Text("Loading...")
                                 .font(.largeTitle)
@@ -41,8 +41,8 @@ struct CoinFavoriteView: View {
 //                            CoinContoller.shared.saveData()
                             CoinContoller.shared.loadData()
                             favoriteCoinArray = CoinContoller.shared.favoriteCoins
-                            print(favoriteCoinArray)
-                            fetchCoinData()
+                            print(" $$$$$ \(favoriteCoinArray)")
+//                            fetchCoinData()
                         } label: {
                             Image(systemName: "repeat.circle.fill")
                         }
@@ -50,6 +50,7 @@ struct CoinFavoriteView: View {
                 }
                 .onAppear {
                     fetchCoinData()
+                    CoinContoller.shared.loadData()
                 }
             }
             

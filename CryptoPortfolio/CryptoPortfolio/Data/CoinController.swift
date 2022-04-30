@@ -12,6 +12,7 @@ class CoinContoller: ObservableObject {
     static let shared = CoinContoller()
     
     var favoriteCoins: [Coin] = [Coin(id: "TestId", symbol: "TID", name: "Test ID", priceUsd: "123.45", explorer: "Explorer")]
+    var favoriteCoins2: [String] = ["BTC", "LUNA", "DOT"]
     
     static let coinUrlString = "https://api.coincap.io/v2/assets"
     
@@ -83,6 +84,13 @@ class CoinContoller: ObservableObject {
                 }
             }
         }
+    }
+    
+    // MARK:  Add to favorites
+    func addCoinToFavs (coin: Coin) {
+        favoriteCoins2.append(coin.symbol)
+        saveData()
+        print(favoriteCoins2)
     }
 }
 
