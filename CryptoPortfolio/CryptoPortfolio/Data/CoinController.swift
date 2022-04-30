@@ -9,6 +9,8 @@ import Foundation
 
 class CoinContoller: ObservableObject {
     
+    static let shared = CoinContoller()
+    
     static let coinUrlString = "https://api.coincap.io/v2/assets"
     
     static func fetchCoinPrices (completion: @escaping ([Coin]?) -> Void) {
@@ -47,39 +49,5 @@ class CoinContoller: ObservableObject {
         }
         .resume()
     }
-    
-    
-    
-    
-//    static var shared = CoinContoller()
-//
-//    @Published var coinsArray: [Coin] = []
-//    @Published var favoritesArray: [Coin] = []
-//
-//    func fetchCoinData () {
-//
-//        let coinUrlString = "https://api.coincap.io/v2/assets"
-//
-//        guard let url = URL(string: coinUrlString) else {
-//            return
-//        }
-//
-//        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-//            guard let data = data, error == nil else {
-//                return
-//            }
-//
-//            do {
-//                let jsonResult = try JSONDecoder().decode(CoinData.self, from: data)
-//                DispatchQueue.main.async {
-//                    print("👉 \(jsonResult.data)")
-//                    self.coinsArray = jsonResult.data
-//                }
-//            } catch {
-//                print(error)
-//            }
-//        }
-//        task.resume()
-//    }
 }
 

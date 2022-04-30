@@ -41,14 +41,14 @@ struct ContentView: View {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
                             // update coins array
-                            CoinContoller.shared.fetchCoinData()
+                            fetchCoinData()
                         } label: {
                             Image(systemName: "repeat.circle.fill")
                         }
                     }
                 }
                 .onAppear {
-                    CoinContoller.shared.fetchCoinData()
+                    fetchCoinData()
                 }
             }
             
@@ -64,27 +64,14 @@ struct ContentView: View {
         }
     }
     
-//    func fetchCoinData () {
-//        guard let url = URL(string: coinUrlString) else {
-//            return
-//        }
-//
-//        let task = URLSession.shared.dataTask(with: url) { data, _, error in
-//            guard let data = data, error == nil else {
-//                return
-//            }
-//
-//            do {
-//                let jsonResult = try JSONDecoder().decode(CoinData.self, from: data)
-//                DispatchQueue.main.async {
-//                    self.coinsArray = jsonResult.data
-//                }
-//            } catch {
-//                print(error)
-//            }
-//        }
-//        task.resume()
-//    }
+    func fetchCoinData () {
+        CoinContoller.fetchCoinPrices { coins in
+            guard let fetchedCoins = coins else { return }
+            DispatchQueue.main.async {
+                self.coinsArray = fetchedCoins
+            }
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

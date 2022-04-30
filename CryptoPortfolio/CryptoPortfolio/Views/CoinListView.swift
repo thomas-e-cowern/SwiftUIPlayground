@@ -48,7 +48,7 @@ struct CoinListView: View {
             .shadow(radius: 15)
             
             VStack (alignment: .leading) {
-                Text("Price: \(coin.priceAsDouble())")
+                Text("\(coin.priceAsDouble())")
             }
             .shadow(radius: 15)
             
