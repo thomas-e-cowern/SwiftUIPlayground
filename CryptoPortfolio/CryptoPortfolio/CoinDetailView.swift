@@ -90,7 +90,6 @@ struct CoinDetailView: View {
     func convertStringToDouble () {
         for coin in coinHistory {
             let coinPrice = coin.historyPriceAsDouble()
-            print("👉 coinPrice: \(coinPrice)")
             coinPriceHistory.append(round(coinPrice * 10000) / 10000)
 
         }

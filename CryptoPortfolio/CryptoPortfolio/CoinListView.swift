@@ -12,7 +12,7 @@ struct CoinListView: View {
     var coin: Coin
     
     var body: some View {
-        HStack {
+        HStack (alignment: .center) {
             VStack (spacing: 2) {
                 ZStack {
                     Image("generic")
@@ -41,6 +41,12 @@ struct CoinListView: View {
                 Text("Price: \(coin.priceAsDouble())")
             }
             .shadow(radius: 15)
+            
+            Spacer()
+            
+            VStack (alignment: .trailing) {
+                Image(systemName: "heart")
+            }
 
             Spacer()
         }
