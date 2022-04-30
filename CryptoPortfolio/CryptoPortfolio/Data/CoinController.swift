@@ -65,5 +65,10 @@ class CoinContoller: ObservableObject {
             }
         }
     }
+    
+    // MARK:  Load data from user defaults
+    func loadData () {
+        
+    }
 }
 
