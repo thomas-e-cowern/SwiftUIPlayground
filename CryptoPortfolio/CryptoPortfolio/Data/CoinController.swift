@@ -11,8 +11,11 @@ class CoinContoller: ObservableObject {
     
     static let shared = CoinContoller()
     
+    var favoriteCoins: [Coin] = [Coin(id: "TestId", symbol: "TID", name: "Test ID", priceUsd: "123.45", explorer: "Explorer")]
+    
     static let coinUrlString = "https://api.coincap.io/v2/assets"
     
+    // MARK:  Fetch Coin Prices
     static func fetchCoinPrices (completion: @escaping ([Coin]?) -> Void) {
         
         guard let url = URL(string: coinUrlString) else {
@@ -48,6 +51,19 @@ class CoinContoller: ObservableObject {
             }
         }
         .resume()
+    }
+    
+    // MARK:  Save data to user defaults
+    func saveData () {
+        DispatchQueue.global().async {
+            if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(self.favoriteCoins) {
+                    defaults.setValue(encoded, forKey: "favoriteCoins")
+                    defaults.synchronize()
+                }
+            }
+        }
     }
 }
 

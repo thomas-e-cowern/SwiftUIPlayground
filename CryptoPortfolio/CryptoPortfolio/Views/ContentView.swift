@@ -41,6 +41,7 @@ struct ContentView: View {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
                             // update coins array
+                            CoinContoller.shared.saveData()
                             fetchCoinData()
                         } label: {
                             Image(systemName: "repeat.circle.fill")
