@@ -1,14 +1,14 @@
 //
-//  ContentView.swift
+//  CoinFavoriteView.swift
 //  CryptoPortfolio
 //
-//  Created by Thomas Cowern New on 4/27/22.
+//  Created by Thomas Cowern New on 4/30/22.
 //
 
 import SwiftUI
 
-struct ContentView: View {
-   
+struct CoinFavoriteView: View {
+    
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
     @State private var favoriteCoinArray: [Coin] = []
@@ -25,10 +25,10 @@ struct ContentView: View {
                                 .fontWeight(.bold)
                         }
                     } else {
-                        ForEach(searchResults) { coin in
+                        ForEach(favoriteCoinArray) { coin in
                             NavigationLink (destination: CoinDetailView(coin: coin)) {
                                 CoinListView(coin: coin)
-                            }                            
+                            }
                         }
                         .searchable(text: $coinSearch)
                     }
@@ -58,9 +58,9 @@ struct ContentView: View {
     
     var searchResults: [Coin] {
         if coinSearch.isEmpty {
-            return coinsArray
+            return favoriteCoinArray
         } else {
-            let filtered = coinsArray.filter { $0.symbol.contains("\(coinSearch.uppercased())") }
+            let filtered = favoriteCoinArray.filter { $0.symbol.contains("\(coinSearch.uppercased())") }
             return filtered
         }
     }
@@ -69,14 +69,8 @@ struct ContentView: View {
         CoinContoller.fetchCoinPrices { coins in
             guard let fetchedCoins = coins else { return }
             DispatchQueue.main.async {
-                self.coinsArray = fetchedCoins
+                self.favoriteCoinArray = fetchedCoins
             }
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
