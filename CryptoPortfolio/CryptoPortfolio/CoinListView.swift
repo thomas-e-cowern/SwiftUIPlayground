@@ -32,7 +32,12 @@ struct CoinListView: View {
             }
             
             VStack (alignment: .trailing) {
-                Image(systemName: "heart")
+                Button {
+                    // more to come
+                    print("pressed: \(coin.name)")
+                } label: {
+                    Image(systemName: "heart")
+                }
             }
             
             VStack (alignment: .leading) {
