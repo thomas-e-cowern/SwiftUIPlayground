@@ -13,6 +13,7 @@ struct ContentView: View {
     let coinUrlString = "https://api.coincap.io/v2/assets"
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
+    @State private var favoriteCoinArray: [Coin] = []
     
     var body: some View {
         NavigationView {

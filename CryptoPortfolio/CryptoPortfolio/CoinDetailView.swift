@@ -11,8 +11,8 @@ struct CoinDetailView: View {
     
     var coin: Coin
     @State private var coinHistory: [CoinHistory] = []
-    var testCoinHistory = [1.0, 1.5, 1.3, 0.9, 1.2, 1.7]
     @State private var coinPriceHistory: [Double] = []
+    @State private var isFavorite: Bool = false
     
     var body: some View {
         
@@ -38,6 +38,15 @@ struct CoinDetailView: View {
             Text(coin.name)
                 .foregroundColor(.blue)
                 .fontWeight(.heavy)
+                .padding(.top, 20)
+            
+            Button {
+                // add to favorites
+            } label: {
+                isFavorite ? Text("Remove from favorites") : Text("Add to favorites")
+            }
+            .padding(.top, 10)
+
         }
         
         List() {
@@ -56,7 +65,6 @@ struct CoinDetailView: View {
                 }
                 if coin.checkForExplorer() != "https://api.coincap.io" {
                     HStack {
-//                        Image(systemName: "link.circle")
                         Label("Check out \(coin.name)", systemImage: "link.circle")
                         Link("here...", destination: URL(string: coin.checkForExplorer())!)
                     }
@@ -93,7 +101,7 @@ struct CoinDetailView: View {
             coinPriceHistory.append(round(coinPrice * 10000) / 10000)
 
         }
-        print("👉 coinPriceHistory: \(coinPriceHistory)")
+//        print("👉 coinPriceHistory: \(coinPriceHistory)")
     }
     
     func coinHistoryFetch (id: String) {
@@ -101,7 +109,6 @@ struct CoinDetailView: View {
         let coinName = id.replacingOccurrences(of: " ", with: "-")
 
         let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
-        print("History String: \(historyUrlString)")
         
         guard let url = URL(string: historyUrlString) else {
             return
@@ -121,7 +128,6 @@ struct CoinDetailView: View {
                 let jsonHistory = try JSONDecoder().decode(CoinHistoryData.self, from: data)
                 DispatchQueue.main.async {
                     self.coinHistory = jsonHistory.data
-                    print("👉 \(coinHistory)")
                     DispatchQueue.main.async {
                         convertStringToDouble()
                     }

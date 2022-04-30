@@ -30,6 +30,11 @@ struct CoinListView: View {
 
                 
             }
+            
+            VStack (alignment: .trailing) {
+                Image(systemName: "heart")
+            }
+            
             VStack (alignment: .leading) {
                 Text(coin.symbol)
             }
@@ -42,12 +47,6 @@ struct CoinListView: View {
             }
             .shadow(radius: 15)
             
-            Spacer()
-            
-            VStack (alignment: .trailing) {
-                Image(systemName: "heart")
-            }
-
             Spacer()
         }
     }
