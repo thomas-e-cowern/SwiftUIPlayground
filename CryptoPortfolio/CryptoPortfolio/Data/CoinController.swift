@@ -68,7 +68,21 @@ class CoinContoller: ObservableObject {
     
     // MARK:  Load data from user defaults
     func loadData () {
-        
+        print("inside load")
+        DispatchQueue.global().async {
+            if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
+                if let data = defaults.data(forKey: "favoriteCoins") {
+                    print(data)
+                    let decoder = JSONDecoder()
+                    if let jsonUserFavorites = try? decoder.decode([Coin].self, from: data) {
+                        self.favoriteCoins = jsonUserFavorites
+                        print("👉 \(self.favoriteCoins)")
+                    }
+                } else {
+                    print("Problem with data")
+                }
+            }
+        }
     }
 }
 
