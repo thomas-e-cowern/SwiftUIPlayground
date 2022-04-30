@@ -12,6 +12,7 @@ struct ContentView: View {
 //    let url = URL(string: "https://api.coincap.io/v2/assets")
     let coinUrlString = "https://api.coincap.io/v2/assets"
     @State private var coinsArray: [Coin] = []
+    @State private var coinSearch: String = ""
     
     var body: some View {
         NavigationView {
@@ -25,11 +26,12 @@ struct ContentView: View {
                                 .fontWeight(.bold)
                         }
                     } else {
-                        ForEach(coinsArray) { coin in
+                        ForEach(searchResults) { coin in
                             NavigationLink (destination: CoinDetailView(coin: coin)) {
                                 CoinListView(coin: coin)
-                            }
+                            }                            
                         }
+                        .searchable(text: $coinSearch)
                     }
                 }
                 .navigationTitle("Crypto Portfolio")
@@ -48,6 +50,15 @@ struct ContentView: View {
                 }
             }
             
+        }
+    }
+    
+    var searchResults: [Coin] {
+        if coinSearch.isEmpty {
+            return coinsArray
+        } else {
+            let filtered = coinsArray.filter { $0.symbol.contains("\(coinSearch.uppercased())") }
+            return filtered
         }
     }
     

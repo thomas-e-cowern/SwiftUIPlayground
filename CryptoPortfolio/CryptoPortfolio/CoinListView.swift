@@ -15,7 +15,7 @@ struct CoinListView: View {
         HStack {
             VStack (spacing: 2) {
                 ZStack {
-                    Image("coin")
+                    Image("generic")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)

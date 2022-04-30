@@ -20,7 +20,7 @@ struct CoinDetailView: View {
             
             ZStack {
                 VStack (alignment: .center) {
-                        Image("coin")
+                        Image("generic")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 200, height: 200)

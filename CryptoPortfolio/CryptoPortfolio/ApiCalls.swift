@@ -41,7 +41,4 @@ class ApiCalls {
         task.resume()
         
     }
-    
-    
-    
 }
