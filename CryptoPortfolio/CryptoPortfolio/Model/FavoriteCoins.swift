@@ -13,8 +13,6 @@ class FavoriteCoins: ObservableObject {
     
     init () {
         
-//        loadFavorites()
-        
         favoriteCoins = []
     }
     

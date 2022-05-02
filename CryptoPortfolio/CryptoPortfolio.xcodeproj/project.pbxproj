@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4110C045281D851D00338808 /* CoinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110C044281D851D00338808 /* CoinController.swift */; };
-		4110C047281DB21600338808 /* CoinFavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110C046281DB21600338808 /* CoinFavoriteView.swift */; };
 		4110C049281DB3CB00338808 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4110C048281DB3CB00338808 /* MainView.swift */; };
 		414051BD28202D0400D4AE2C /* FavoriteCoins.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414051BC28202D0400D4AE2C /* FavoriteCoins.swift */; };
 		416D54E828199A8E00A95346 /* CryptoPortfolioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416D54E728199A8E00A95346 /* CryptoPortfolioApp.swift */; };
@@ -26,7 +25,6 @@
 
 /* Begin PBXFileReference section */
 		4110C044281D851D00338808 /* CoinController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinController.swift; sourceTree = "<group>"; };
-		4110C046281DB21600338808 /* CoinFavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinFavoriteView.swift; sourceTree = "<group>"; };
 		4110C048281DB3CB00338808 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		414051BC28202D0400D4AE2C /* FavoriteCoins.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteCoins.swift; path = CryptoPortfolio/Model/FavoriteCoins.swift; sourceTree = SOURCE_ROOT; };
 		416D54E428199A8E00A95346 /* CryptoPortfolio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoPortfolio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,7 +77,6 @@
 				416D54F72819D2D300A95346 /* CoinListView.swift */,
 				416D54E928199A8E00A95346 /* ContentView.swift */,
 				419CDA09281B1DEB002604E7 /* CoinDetailView.swift */,
-				4110C046281DB21600338808 /* CoinFavoriteView.swift */,
 				4110C048281DB3CB00338808 /* MainView.swift */,
 			);
 			path = Views;
@@ -204,7 +201,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				416D54EA28199A8E00A95346 /* ContentView.swift in Sources */,
-				4110C047281DB21600338808 /* CoinFavoriteView.swift in Sources */,
 				416D54F82819D2D300A95346 /* CoinListView.swift in Sources */,
 				419CDA0A281B1DEB002604E7 /* CoinDetailView.swift in Sources */,
 				4110C045281D851D00338808 /* CoinController.swift in Sources */,

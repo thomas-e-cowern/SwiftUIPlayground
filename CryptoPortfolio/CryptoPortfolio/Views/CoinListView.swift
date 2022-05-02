@@ -37,7 +37,6 @@ struct CoinListView: View {
             VStack (alignment: .trailing) {
                 
                 if favoriteCoins.contains(coin) {
-//                    Spacer()
                     Image(systemName: "heart.fill")
                         .accessibilityLabel("This is a favorite coin")
                         .foregroundColor(.red)
