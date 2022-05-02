@@ -11,8 +11,8 @@ class CoinContoller: ObservableObject {
     
     static let shared = CoinContoller()
     
-    var favoriteCoins: [Coin] = [Coin(id: "TestId", symbol: "TID", name: "Test ID", priceUsd: "123.45", explorer: "Explorer")]
-    var favoriteCoins2: [String] = ["BTC", "LUNA", "DOT"]
+    var favoriteCoins: [Coin] = []
+    var favoriteCoinsArray: [String] = []
     
     static let coinUrlString = "https://api.coincap.io/v2/assets"
     
@@ -77,7 +77,7 @@ class CoinContoller: ObservableObject {
                     let decoder = JSONDecoder()
                     if let jsonUserFavorites = try? decoder.decode([Coin].self, from: data) {
                         self.favoriteCoins = jsonUserFavorites
-                        print("👉 \(self.favoriteCoins)")
+                        print("👉 load Data: \(self.favoriteCoins)")
                     }
                 } else {
                     print("Problem with data")
@@ -89,9 +89,9 @@ class CoinContoller: ObservableObject {
     // MARK:  Add to favorites
     func addCoinToFavs (coin: Coin) {
         loadData()
-        favoriteCoins2.append(coin.symbol)
+        favoriteCoinsArray.append(coin.symbol)
         saveData()
-        print(favoriteCoins2)
+        print(favoriteCoinsArray)
     }
 }
 
