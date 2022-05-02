@@ -50,7 +50,6 @@ struct CoinDetailView: View {
                     favoriteCoins.add(coin)
                     favoriteCoins.save()
                 }
-//                favoriteCoins.save()
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)

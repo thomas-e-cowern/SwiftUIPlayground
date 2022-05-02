@@ -12,7 +12,6 @@ class CoinContoller: ObservableObject {
     static let shared = CoinContoller()
     
     var favoriteCoins: [Coin] = []
-    var favoriteCoinsArray: [String] = []
     
     static let coinUrlString = "https://api.coincap.io/v2/assets"
     

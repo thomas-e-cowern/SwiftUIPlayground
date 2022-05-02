@@ -11,7 +11,6 @@ struct ContentView: View {
    
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
-    @State private var favoriteCoinArray: [Coin] = []
     
     @EnvironmentObject var favoriteCoins: FavoriteCoins
     
@@ -39,8 +38,6 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
-                            CoinContoller.shared.loadData()
-                            favoriteCoinArray = CoinContoller.shared.favoriteCoins
                             fetchCoinData()
                         } label: {
                             Image(systemName: "repeat.circle.fill")

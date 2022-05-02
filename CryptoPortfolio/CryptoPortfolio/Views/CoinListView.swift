@@ -10,7 +10,6 @@ import SwiftUI
 struct CoinListView: View {
     
     var coin: Coin
-    var favoriteCoinsArray = CoinContoller.shared.favoriteCoinsArray
     
     @EnvironmentObject var favoriteCoins : FavoriteCoins
     
