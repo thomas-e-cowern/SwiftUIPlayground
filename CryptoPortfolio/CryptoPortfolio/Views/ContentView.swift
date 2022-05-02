@@ -13,6 +13,8 @@ struct ContentView: View {
     @State private var coinSearch: String = ""
     @State private var favoriteCoinArray: [Coin] = []
     
+    @EnvironmentObject var favoriteCoins: FavoriteCoins
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -47,7 +49,7 @@ struct ContentView: View {
                 }
                 .onAppear {
                     fetchCoinData()
-                    CoinContoller.shared.loadData()
+                    favoriteCoins.loadFavorites()
                 }
             }
             

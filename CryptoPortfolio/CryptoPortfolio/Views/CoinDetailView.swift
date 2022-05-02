@@ -45,9 +45,12 @@ struct CoinDetailView: View {
             Button(favoriteCoins.contains(coin) ? "Remove from favorites" : "Add to favorites") {
                 if favoriteCoins.contains(coin) {
                     favoriteCoins.remove(coin)
+                    favoriteCoins.save()
                 } else {
                     favoriteCoins.add(coin)
+                    favoriteCoins.save()
                 }
+                favoriteCoins.save()
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)
