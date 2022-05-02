@@ -97,8 +97,34 @@ class CoinContoller: ObservableObject {
     }
     
     // MARK: Fetch single coin price
-    func getCoinPrice (coin: Coin) {
-        print("👉 coin price: \(updatePrice)")
+   func getCoinPrice (coin: String) -> String {
+
+        // Creating url
+        guard let coinUrl = URL(string: "https://api.coincap.io/v2/assets/\(coin)") else {
+            return "No price update"
+        }
+        
+        URLSession.shared.dataTask(with: coinUrl) { data, _, error in
+            print("Inside url session get coin price")
+            // if error call fails immediatley
+            if let error = error {
+                print("😡😡😡 There was an error in \(#function) ; \(error) ; \(error.localizedDescription)")
+            }
+            
+            if let data = data {
+                print("😡😡😡 There was an error with the data from \(#function)")
+            }
+            
+            // making the data usable
+            do {
+                let coinPriceResult = try JSONDecoder().decode(Coin.self, from: data!)
+                print("👉 coin price: \(coinPriceResult)")
+            } catch {
+                
+            }
+        }
+//        print("👉 coin price: \(String(describing: coinUrl))")
+        return "New coin price"
     }
 }
 

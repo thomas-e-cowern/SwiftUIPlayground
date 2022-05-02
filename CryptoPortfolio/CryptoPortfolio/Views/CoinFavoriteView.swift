@@ -38,6 +38,7 @@ struct CoinFavoriteView: View {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
                             // update coins array
+                            
 //                            CoinContoller.shared.saveData()
                             CoinContoller.shared.loadData()
                             favoriteCoinArray = CoinContoller.shared.favoriteCoins
@@ -49,8 +50,9 @@ struct CoinFavoriteView: View {
                     }
                 }
                 .onAppear {
-                    fetchCoinData()
-                    CoinContoller.shared.loadData()
+//                    fetchCoinData()
+//                    CoinContoller.shared.loadData()
+                    CoinContoller.shared.getCoinPrice(coin: "bitcoin")
                 }
             }
             
