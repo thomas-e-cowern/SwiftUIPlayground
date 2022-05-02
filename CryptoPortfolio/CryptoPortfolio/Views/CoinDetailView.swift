@@ -98,56 +98,26 @@ struct CoinDetailView: View {
             }
         }
         .onAppear {
-            coinHistoryFetch(id: coin.id)
+            fetchCoinHistory(id: coin.id)
         }
-//        .environmentObject(favoriteCoins)
-        
     }
     
     func convertStringToDouble () {
         for coin in coinHistory {
             let coinPrice = coin.historyPriceAsDouble()
             coinPriceHistory.append(round(coinPrice * 10000) / 10000)
-
         }
-//        print("👉 coinPriceHistory: \(coinPriceHistory)")
     }
     
-    func coinHistoryFetch (id: String) {
+    func fetchCoinHistory (id: String) {
         
-        let coinName = id.replacingOccurrences(of: " ", with: "-")
-
-        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
-        
-        guard let url = URL(string: historyUrlString) else {
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else {
-                print("😡😡😡 Something is wrong with data in coinHistoryFetch")
-                return
-            }
-            
-            if error != nil {
-                print("😡😡😡 Error: \(String(describing: error?.localizedDescription))")
-            }
-            
-            do {
-                let jsonHistory = try JSONDecoder().decode(CoinHistoryData.self, from: data)
-                DispatchQueue.main.async {
-                    self.coinHistory = jsonHistory.data
-                    DispatchQueue.main.async {
-                        convertStringToDouble()
-                    }
-                    
-                }
-            } catch {
-                print(error.localizedDescription)
+        CoinContoller.shared.coinHistoryFetch2(id: id) { history in
+            guard let fetchedHistory = history else { return }
+            self.coinHistory = fetchedHistory
+            DispatchQueue.main.async {
+                convertStringToDouble()
             }
         }
-        task.resume()
-        
     }
 }
 

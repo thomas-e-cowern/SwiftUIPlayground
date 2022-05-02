@@ -52,5 +52,50 @@ class CoinContoller: ObservableObject {
         }
         .resume()
     }
+    
+    func coinHistoryFetch2 (id: String, completion: @escaping ([CoinHistory]?) -> Void) {
+        
+        let coinName = id.replacingOccurrences(of: " ", with: "-")
+
+        let historyUrlString = "https://api.coincap.io/v2/assets/\(coinName)/history?interval=d1"
+        
+        guard let url = URL(string: historyUrlString) else {
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) { data, _, error in
+            // If error, call fails immediately
+            if let error = error {
+                print("😡😡😡 There was an error in \(#function) ; \(error) ; \(error.localizedDescription)")
+                completion(nil)
+                return
+            }
+            
+            // Check data
+            guard let data = data else {
+                completion(nil)
+                return
+            }
+            
+            do {
+                let jsonHistory = try JSONDecoder().decode(CoinHistoryData.self, from: data)
+                
+                let history = jsonHistory.data
+                completion(history)
+                
+//                DispatchQueue.main.async {
+//                    self.coinHistory = jsonHistory.data
+//                    DispatchQueue.main.async {
+//                        convertStringToDouble()
+//                    }
+//
+//                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }
+        task.resume()
+        
+    }
 }
 
