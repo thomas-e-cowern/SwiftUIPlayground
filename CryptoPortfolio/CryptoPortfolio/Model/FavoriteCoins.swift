@@ -13,21 +13,21 @@ class FavoriteCoins: ObservableObject {
     
     init () {
         
-//        print("inside load")
-//        DispatchQueue.global().async { [self] in
-//                 if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
-//                     if let data = defaults.data(forKey: saveKey) {
-//                         print(data)
-//                         let decoder = JSONDecoder()
-//                         if let jsonUserFavorites = try? decoder.decode([String].self, from: data) {
-//                             print("😀 jsonUserFavorites: \(jsonUserFavorites)")
-//                             self.favoriteCoins = jsonUserFavorites
-//                             print("👉 load Data: \(self.favoriteCoins)")
-//                         }
-//                     } else {
-//                         print("Problem with data")
-//                     }
-//                 }
+        print("inside load")
+//        DispatchQueue.global().async {
+                 if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
+                     if let data = defaults.data(forKey: self.saveKey) {
+                         print(data)
+                         let decoder = JSONDecoder()
+                         if let jsonUserFavorites = try? decoder.decode(Set<String>.self, from: data) {
+                             print("😀 jsonUserFavorites: \(jsonUserFavorites)")
+                             self.favoriteCoins = jsonUserFavorites
+                             print("👉 load Data: \(self.favoriteCoins)")
+                         }
+                     } else {
+                         print("Problem with data")
+                     }
+                 }
 //             }
         
         

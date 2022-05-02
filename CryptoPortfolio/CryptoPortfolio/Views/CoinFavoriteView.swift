@@ -10,7 +10,7 @@ import SwiftUI
 struct CoinFavoriteView: View {
     
 //    @State private var coinsArray: [Coin] = []
-    @StateObject var favoriteCoins = FavoriteCoins()
+    @EnvironmentObject var favoriteCoins: FavoriteCoins
     @State private var coinSearch: String = ""
     @State private var favoriteCoinArray: [Coin] = []
     
@@ -18,21 +18,14 @@ struct CoinFavoriteView: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    if favoriteCoinArray.count == 0 {
-                        VStack {
-                            Text("Loading...")
-                                .font(.largeTitle)
-                                .foregroundColor(.red)
-                                .fontWeight(.bold)
-                        }
-                    } else {
-                        ForEach(favoriteCoinArray) { coin in
-                            NavigationLink (destination: CoinDetailView(coin: coin)) {
-                                CoinListView(coin: coin)
-                            }
-                        }
-                        .searchable(text: $coinSearch)
-                    }
+                    
+                    Text("This")
+//                    ForEach(searchResults) { coin in
+//                        NavigationLink (destination: CoinDetailView(coin: coin)) {
+//                            CoinListView(coin: coin)
+//                        }
+//                    }
+//                    .searchable(text: $coinSearch)
                 }
                 .navigationTitle("Crypto Portfolio")
                 .toolbar {
@@ -61,21 +54,21 @@ struct CoinFavoriteView: View {
         }
     }
     
-    var searchResults: [Coin] {
-        if coinSearch.isEmpty {
-            return favoriteCoinArray
-        } else {
-            let filtered = favoriteCoinArray.filter { $0.symbol.contains("\(coinSearch.uppercased())") }
-            return filtered
-        }
-    }
-    
-    func fetchCoinData () {
-        CoinContoller.fetchCoinPrices { coins in
-            guard let fetchedCoins = coins else { return }
-            DispatchQueue.main.async {
-                self.favoriteCoinArray = fetchedCoins
-            }
-        }
-    }
+//    var searchResults: [Coin] {
+//        if coinSearch.isEmpty {
+//            return favoriteCoins
+//        } else {
+//            let filtered = favoriteCoins.filter { $0.symbol.contains("\(coinSearch.uppercased())") }
+//            return filtered
+//        }
+//    }
+//
+//    func fetchCoinData () {
+//        CoinContoller.fetchCoinPrices { coins in
+//            guard let fetchedCoins = coins else { return }
+//            DispatchQueue.main.async {
+//                self.favoriteCoinArray = fetchedCoins
+//            }
+//        }
+//    }
 }

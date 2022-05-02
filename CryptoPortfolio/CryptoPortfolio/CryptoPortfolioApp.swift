@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct CryptoPortfolioApp: App {
+    
+    @StateObject var favoriteCoins = FavoriteCoins()
+    
     var body: some Scene {
         WindowGroup {
-            MainView()
+            ContentView()
+                .environmentObject(favoriteCoins)
         }
     }
 }
