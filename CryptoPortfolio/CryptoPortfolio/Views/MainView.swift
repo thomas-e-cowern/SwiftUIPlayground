@@ -18,6 +18,14 @@ struct MainView: View {
                 .tabItem {
                 Label("All Coins", systemImage: "list.bullet")
             }
+            
+            FavoritesView()
+                .environmentObject(favoriteCoins)
+                .tabItem {
+                Label("Favorites", systemImage: "star")
+            }
+            
+            
         }
     }
 }

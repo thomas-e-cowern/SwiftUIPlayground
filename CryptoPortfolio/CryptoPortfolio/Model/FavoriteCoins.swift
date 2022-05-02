@@ -11,6 +11,8 @@ class FavoriteCoins: ObservableObject {
     private var favoriteCoins: Set<String>
     private let saveKey = "favoriteCoins"
     
+    static let coinUrlString = "https://api.coincap.io/v2/assets?&limit=1000"
+    
     init () {
         
         favoriteCoins = []
@@ -49,6 +51,10 @@ class FavoriteCoins: ObservableObject {
         favoriteCoins.remove(coin.id)
         save()
     }
+    
+//    func abx (_ coin: Coin) {
+//        favoriteCoins.filter(<#(String) throws -> Bool#>)
+//    }
     
     func save() {
         DispatchQueue.main.async {

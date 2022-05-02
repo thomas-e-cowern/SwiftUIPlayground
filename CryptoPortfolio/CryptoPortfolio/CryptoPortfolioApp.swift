@@ -14,7 +14,7 @@ struct CryptoPortfolioApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
                 .environmentObject(favoriteCoins)
         }
     }
