@@ -10,6 +10,7 @@ import SwiftUI
 struct CoinFavoriteView: View {
     
 //    @State private var coinsArray: [Coin] = []
+    @StateObject var favoriteCoins = FavoriteCoins()
     @State private var coinSearch: String = ""
     @State private var favoriteCoinArray: [Coin] = []
     
@@ -49,10 +50,11 @@ struct CoinFavoriteView: View {
                         }
                     }
                 }
+                .environmentObject(favoriteCoins)
                 .onAppear {
 //                    fetchCoinData()
 //                    CoinContoller.shared.loadData()
-                    CoinContoller.shared.getCoinPrice(coin: "bitcoin")
+//                    CoinContoller.shared.getCoinPrice(coin: "bitcoin")
                 }
             }
             

@@ -12,6 +12,8 @@ struct CoinListView: View {
     var coin: Coin
     var favoriteCoinsArray = CoinContoller.shared.favoriteCoinsArray
     
+    @StateObject var favoriteCoins = FavoriteCoins()
+    
     var body: some View {
         HStack (alignment: .center) {
             VStack (spacing: 2) {
@@ -33,21 +35,28 @@ struct CoinListView: View {
             }
             
             VStack (alignment: .trailing) {
-                Button {
-                    // more to come
-                    print("pressed: \(coin.name)")
-                    CoinContoller.shared.addCoinToFavs(coin: coin)
-                    print("👉 coinListView Button: \(favoriteCoinsArray)")
-                    CoinContoller.shared.loadData()
-                    
-                } label: {
-                    
-                    if favoriteCoinsArray.contains(coin.symbol) {
-                        Image(systemName: "heart.fill")
-                    } else {
-                        Image(systemName: "heart")
-                    }
+                
+                if favoriteCoins.contains(coin) {
+                    Spacer()
+                    Image(systemName: "heart.fill")
+                        .accessibilityLabel("This is a favorite resort")
+                        .foregroundColor(.red)
                 }
+//                Button {
+//                    // more to come
+//                    print("pressed: \(coin.name)")
+//                    CoinContoller.shared.addCoinToFavs(coin: coin)
+//                    print("👉 coinListView Button: \(favoriteCoinsArray)")
+//                    CoinContoller.shared.loadData()
+//
+//                } label: {
+//
+//                    if favoriteCoinsArray.contains(coin.symbol) {
+//                        Image(systemName: "heart.fill")
+//                    } else {
+//                        Image(systemName: "heart")
+//                    }
+//                }
             }
             
             VStack (alignment: .leading) {
@@ -64,6 +73,7 @@ struct CoinListView: View {
             
             Spacer()
         }
+        .environmentObject(favoriteCoins)
     }
 }
 

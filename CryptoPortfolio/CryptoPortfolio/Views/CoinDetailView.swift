@@ -14,6 +14,8 @@ struct CoinDetailView: View {
     @State private var coinPriceHistory: [Double] = []
     @State private var isFavorite: Bool = false
     
+    @EnvironmentObject var favoriteCoins: FavoriteCoins
+    
     var body: some View {
         
         VStack (alignment: .center) {
@@ -40,11 +42,14 @@ struct CoinDetailView: View {
                 .fontWeight(.heavy)
                 .padding(.top, 20)
             
-            Button {
-                // add to favorites
-            } label: {
-                isFavorite ? Text("Remove from favorites") : Text("Add to favorites")
+            Button(favoriteCoins.contains(coin) ? "Remove from favorites" : "Add to favorites") {
+                if favoriteCoins.contains(coin) {
+                    favoriteCoins.remove(coin)
+                } else {
+                    favoriteCoins.add(coin)
+                }
             }
+            .buttonStyle(.borderedProminent)
             .padding(.top, 10)
 
         }
@@ -93,6 +98,8 @@ struct CoinDetailView: View {
         .onAppear {
             coinHistoryFetch(id: coin.id)
         }
+//        .environmentObject(favoriteCoins)
+        
     }
     
     func convertStringToDouble () {

@@ -8,18 +8,26 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @StateObject var favoriteCoins = FavoriteCoins()
+    
     var body: some View {
         TabView {
             ContentView()
-            .tabItem {
+                .environmentObject(favoriteCoins)
+                .tabItem {
                 Label("All Coins", systemImage: "list.bullet")
             }
             
+            
             CoinFavoriteView()
+                .environmentObject(favoriteCoins)
                 .tabItem {
                     Label("Favorites", systemImage: "star")
-                }
+            }
+            
         }
+        
     }
 }
 
