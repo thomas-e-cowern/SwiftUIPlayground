@@ -39,6 +39,9 @@ struct CoinListView: View {
                     Image(systemName: "heart.fill")
                         .accessibilityLabel("This is a favorite coin")
                         .foregroundColor(.red)
+                } else {
+                    Image(systemName: "heart")
+                        .accessibilityLabel("This is not a favorite coin")
                 }
             }
             

@@ -82,14 +82,7 @@ class CoinContoller: ObservableObject {
                 
                 let history = jsonHistory.data
                 completion(history)
-                
-//                DispatchQueue.main.async {
-//                    self.coinHistory = jsonHistory.data
-//                    DispatchQueue.main.async {
-//                        convertStringToDouble()
-//                    }
-//
-//                }
+
             } catch {
                 print(error.localizedDescription)
             }
