@@ -57,9 +57,10 @@ class CoinContoller: ObservableObject {
     // MARK:  Save data to user defaults
     func saveData () {
         DispatchQueue.global().async {
+            print("Inside Save")
             if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
                 let encoder = JSONEncoder()
-                if let encoded = try? encoder.encode(self.favoriteCoins) {
+                if let encoded = try? encoder.encode(self.favoriteCoinsArray) {
                     defaults.setValue(encoded, forKey: "favoriteCoins")
                     defaults.synchronize()
                 }
@@ -69,15 +70,16 @@ class CoinContoller: ObservableObject {
     
     // MARK:  Load data from user defaults
     func loadData () {
-        print("inside load")
+//        print("inside load")
         DispatchQueue.global().async {
             if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
                 if let data = defaults.data(forKey: "favoriteCoins") {
                     print(data)
                     let decoder = JSONDecoder()
-                    if let jsonUserFavorites = try? decoder.decode([Coin].self, from: data) {
-                        self.favoriteCoins = jsonUserFavorites
-                        print("👉 load Data: \(self.favoriteCoins)")
+                    if let jsonUserFavorites = try? decoder.decode([String].self, from: data) {
+                        print("😀 jsonUserFavorites: \(jsonUserFavorites)")
+                        self.favoriteCoinsArray = jsonUserFavorites
+                        print("👉 load Data: \(self.favoriteCoinsArray)")
                     }
                 } else {
                     print("Problem with data")
@@ -92,6 +94,11 @@ class CoinContoller: ObservableObject {
         favoriteCoinsArray.append(coin.symbol)
         saveData()
         print(favoriteCoinsArray)
+    }
+    
+    // MARK: Fetch single coin price
+    func getCoinPrice (coin: Coin) {
+        print("👉 coin price: \(updatePrice)")
     }
 }
 
