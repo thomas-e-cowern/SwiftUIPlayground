@@ -37,7 +37,10 @@ struct CoinListView: View {
                     // more to come
                     print("pressed: \(coin.name)")
                     CoinContoller.shared.addCoinToFavs(coin: coin)
+                    print(favoriteCoins)
+                    
                 } label: {
+                    
                     if favoriteCoins.contains(coin.symbol) {
                         Image(systemName: "heart.fill")
                     } else {

@@ -88,6 +88,7 @@ class CoinContoller: ObservableObject {
     
     // MARK:  Add to favorites
     func addCoinToFavs (coin: Coin) {
+        loadData()
         favoriteCoins2.append(coin.symbol)
         saveData()
         print(favoriteCoins2)

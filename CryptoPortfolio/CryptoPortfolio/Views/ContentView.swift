@@ -37,11 +37,8 @@ struct ContentView: View {
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
-                            // update coins array
-//                            CoinContoller.shared.saveData()
                             CoinContoller.shared.loadData()
                             favoriteCoinArray = CoinContoller.shared.favoriteCoins
-                            print(favoriteCoinArray)
                             fetchCoinData()
                         } label: {
                             Image(systemName: "repeat.circle.fill")
@@ -50,6 +47,7 @@ struct ContentView: View {
                 }
                 .onAppear {
                     fetchCoinData()
+                    CoinContoller.shared.loadData()
                 }
             }
             
