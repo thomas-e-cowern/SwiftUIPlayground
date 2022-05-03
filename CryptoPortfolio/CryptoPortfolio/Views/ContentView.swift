@@ -54,6 +54,17 @@ struct ContentView: View {
                 }
                 .navigationTitle("Crypto Portfolio")
                 .toolbar {
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                        Toggle("View Favorites", isOn: $isFavorites)
+                    }
+                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        Button {
+                            // Info Here
+                        } label: {
+                            Image(systemName: "info.circle")
+                        }
+
+                    }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
                             fetchCoinData()
@@ -61,9 +72,7 @@ struct ContentView: View {
                             Image(systemName: "repeat.circle.fill")
                         }
                     }
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Toggle("View Favorites", isOn: $isFavorites)
-                    }
+                    
                 }
                 .onAppear {
                     fetchCoinData()
