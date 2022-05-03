@@ -15,13 +15,16 @@ struct CoinDetailView: View {
     @State private var isFavorite: Bool = false
     
     @EnvironmentObject var favoriteCoins: FavoriteCoins
+    @EnvironmentObject var ownedCoins: OwnedCoins
     
     var body: some View {
         
-        
+        var owned = 0.0
         
         VStack (alignment: .center) {
-            
+    
+            Text("You own \(owned) of \(coin.name)")
+    
             VStack (alignment: .center) {
                 checkForImage(symbol: coin.symbol.lowercased())
                         .resizable()
@@ -47,6 +50,18 @@ struct CoinDetailView: View {
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)
 
+            Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add coins owned") {
+                if ownedCoins.contains(coin) {
+                    ownedCoins.remove(coin)
+                    ownedCoins.save()
+                } else {
+                    ownedCoins.add(coin, 1.0)
+//                    ownedCoins.add(coin)
+                    ownedCoins.save()
+                }
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.top, 10)
         }
         
         List() {

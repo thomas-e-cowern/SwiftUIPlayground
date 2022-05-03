@@ -8,11 +8,13 @@
 import Foundation
 
 class OwnedCoins: ObservableObject {
-    private var ownedCoins: Set<String>
+//    private var ownedCoins: Set<String>
     private let saveKey = "ownedCoins"
+    private var ownedCoins: [String: Double]
     
     init () {
-        ownedCoins = []
+        ownedCoins = [:]
+//        amountOwned = [:]
     }
     
     func loadOwnedCoins () {
@@ -21,7 +23,7 @@ class OwnedCoins: ObservableObject {
              if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
                  if let data = defaults.data(forKey: self.saveKey) {
                      let decoder = JSONDecoder()
-                     if let jsonUserFavorites = try? decoder.decode(Set<String>.self, from: data) {
+                     if let jsonUserFavorites = try? decoder.decode([String:Double].self, from: data) {
                          print("😀 jsonUserFavorites: \(jsonUserFavorites)")
                          self.ownedCoins = jsonUserFavorites
                          print("👉 load Data: \(self.ownedCoins)")
@@ -34,18 +36,20 @@ class OwnedCoins: ObservableObject {
     }
     
     func contains(_ coin: Coin) -> Bool {
-        ownedCoins.contains(coin.id)
+        ownedCoins.keys.contains(coin.id)
     }
     
-    func add(_ coin: Coin) {
+    func add(_ coin: Coin, _ amount: Double) {
         objectWillChange.send()
-        ownedCoins.insert(coin.id)
+        ownedCoins.updateValue(amount, forKey: coin.id)
+//        ownedCoins.insert(coin.id)
         save()
     }
     
     func remove(_ coin: Coin) {
         objectWillChange.send()
-        ownedCoins.remove(coin.id)
+        ownedCoins.removeValue(forKey: coin.id)
+//        ownedCoins.remove(coin.id)
         save()
     }
     

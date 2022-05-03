@@ -15,6 +15,7 @@ struct ContentView: View {
     @State private var isShowingInfo: Bool = false
     
     @EnvironmentObject var favoriteCoins: FavoriteCoins
+    @EnvironmentObject var ownedCoins: OwnedCoins
     
     var body: some View {
         NavigationView {
