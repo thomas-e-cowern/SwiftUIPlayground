@@ -51,6 +51,7 @@ struct CoinListView: View {
             
             VStack (alignment: .leading) {
                 Text("\(coin.priceAsDouble())")
+                    .scaledToFit()
             }
             
             Spacer()
