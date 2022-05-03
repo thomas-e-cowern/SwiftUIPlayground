@@ -50,14 +50,17 @@ struct CoinListView: View {
             }
             .frame(width: 60)
             .padding()
-            .shadow(radius: 15)
             
             VStack (alignment: .leading) {
                 Text("\(coin.priceAsDouble())")
             }
-            .shadow(radius: 15)
             
             Spacer()
+            
+            VStack (alignment: .leading) {
+                Image(systemName: "chevron.right")
+            }
+            .padding()
         }
     }
 }
