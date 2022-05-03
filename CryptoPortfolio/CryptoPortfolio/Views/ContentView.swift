@@ -69,9 +69,12 @@ struct ContentView: View {
                     fetchCoinData()
                     favoriteCoins.loadFavorites()
                 }
+                
+               
             }
-            
+            FirstView()
         }
+        .phoneOnlyNavigationView()
     }
     
     var searchResults: [Coin] {
