@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CoinDetailView: View {
-    
     var coin: Coin
+    
     @State private var coinHistory: [CoinHistory] = []
     @State private var coinPriceHistory: [Double] = []
     @State private var isFavorite: Bool = false
@@ -17,16 +17,17 @@ struct CoinDetailView: View {
     @EnvironmentObject var favoriteCoins: FavoriteCoins
     @EnvironmentObject var ownedCoins: OwnedCoins
     
-    @State private var alertIsPresented = false
-    @State private var owned = ""
+    @State private var showSheet = false
+    @State private var amount: String = ""
     
     var body: some View {
         
-//        var owned = 0.0
+
+        
         
         VStack (alignment: .center) {
     
-            Text("You own \(owned) of \(coin.name)")
+            Text("You own \(amount) \(coin.name) crypto-currency")
     
             VStack (alignment: .center) {
                 checkForImage(symbol: coin.symbol.lowercased())
@@ -53,19 +54,21 @@ struct CoinDetailView: View {
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)
 
-            Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add coins owned") {
+            Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add/Edit coins owned") {
                 if ownedCoins.contains(coin) {
                     ownedCoins.remove(coin)
                     ownedCoins.save()
                 } else {
-                    ownedCoins.add(coin, 1.0)
-                    alertIsPresented = true
-//                    ownedCoins.add(coin)
+                    showSheet.toggle()
+                    ownedCoins.add(coin, amount)
                     ownedCoins.save()
                 }
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)
+            .sheet(isPresented: $showSheet) {
+                CoinAmountView(coin: coin, amount: $amount)
+            }
         }
         
         List() {
@@ -111,6 +114,8 @@ struct CoinDetailView: View {
         }
         .onAppear {
             fetchCoinHistory(id: coin.id)
+            ownedCoins.loadOwnedCoins()
+            amount = ownedCoins.getValue(coin)
         }
     }
     

@@ -97,6 +97,7 @@ struct ContentView: View {
                 .onAppear {
                     fetchCoinData()
                     favoriteCoins.loadFavorites()
+                    ownedCoins.loadOwnedCoins()
                 }
                 
                

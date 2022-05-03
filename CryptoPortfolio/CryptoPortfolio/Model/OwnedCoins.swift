@@ -10,7 +10,7 @@ import Foundation
 class OwnedCoins: ObservableObject {
 //    private var ownedCoins: Set<String>
     private let saveKey = "ownedCoins"
-    private var ownedCoins: [String: Double]
+    private var ownedCoins: [String: String]
     
     init () {
         ownedCoins = [:]
@@ -23,7 +23,7 @@ class OwnedCoins: ObservableObject {
              if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
                  if let data = defaults.data(forKey: self.saveKey) {
                      let decoder = JSONDecoder()
-                     if let jsonUserFavorites = try? decoder.decode([String:Double].self, from: data) {
+                     if let jsonUserFavorites = try? decoder.decode([String:String].self, from: data) {
                          print("😀 jsonUserFavorites: \(jsonUserFavorites)")
                          self.ownedCoins = jsonUserFavorites
                          print("👉 load Data: \(self.ownedCoins)")
@@ -35,11 +35,20 @@ class OwnedCoins: ObservableObject {
          }
     }
     
+    func getValue(_ coin: Coin) -> String {
+        objectWillChange.send()
+        if let amount =  ownedCoins[coin.id] {
+            return amount
+        } else {
+            return "0.0"
+        }
+    }
+    
     func contains(_ coin: Coin) -> Bool {
         ownedCoins.keys.contains(coin.id)
     }
     
-    func add(_ coin: Coin, _ amount: Double) {
+    func add(_ coin: Coin, _ amount: String) {
         objectWillChange.send()
         ownedCoins.updateValue(amount, forKey: coin.id)
 //        ownedCoins.insert(coin.id)
@@ -55,7 +64,7 @@ class OwnedCoins: ObservableObject {
     
     func save() {
         DispatchQueue.main.async {
-            print("😀😀😀 Inside ownded coins save")
+            print("😀😀😀 saved coins: \(self.ownedCoins)")
             if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
                 let encoder = JSONEncoder()
                 if let encoded = try? encoder.encode(self.ownedCoins) {
