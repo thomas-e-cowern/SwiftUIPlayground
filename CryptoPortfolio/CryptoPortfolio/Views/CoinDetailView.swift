@@ -25,7 +25,7 @@ struct CoinDetailView: View {
                         Image("generic")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 200, height: 200)
+                            .frame(width: 150, height: 150)
 
                 }
                 
@@ -33,7 +33,7 @@ struct CoinDetailView: View {
                         Image(coin.symbol.lowercased())
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 200, height: 200)
+                            .frame(width: 150, height: 150)
 
                 }
             }
