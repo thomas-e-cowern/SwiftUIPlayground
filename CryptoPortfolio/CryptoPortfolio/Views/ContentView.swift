@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
     @State private var isFavorites: Bool = false
+    @State private var isShowingInfo: Bool = false
     
     @EnvironmentObject var favoriteCoins: FavoriteCoins
     
@@ -59,11 +60,13 @@ struct ContentView: View {
                     }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
-                            // Info Here
+                            isShowingInfo.toggle()
                         } label: {
                             Image(systemName: "info.circle")
                         }
-
+                        .sheet(isPresented: $isShowingInfo) {
+                            InfoView()
+                        }
                     }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
