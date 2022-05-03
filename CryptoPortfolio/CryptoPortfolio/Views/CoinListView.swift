@@ -29,8 +29,6 @@ struct CoinListView: View {
                 }
                 .padding(.leading, 20)
                 .shadow(radius: 15)
-
-                
             }
             
             VStack (alignment: .trailing) {
