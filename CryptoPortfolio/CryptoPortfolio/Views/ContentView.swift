@@ -56,9 +56,30 @@ struct ContentView: View {
                 .navigationTitle("Crypto Portfolio")
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Toggle("View Favorites", isOn: $isFavorites)
+                        Button {
+                            isFavorites.toggle()
+                        } label: {
+                            if isFavorites {
+                                Text("Favorites")
+                                    .padding(5)
+                                    .font(.footnote)
+                                    .background(Color.blue)
+                                    .foregroundColor(.white)
+                                    .clipShape(Capsule())
+                            } else {
+                                Text("Favorites")
+                                    .padding(5)
+                                    .font(.footnote)
+                                    .background(Color.white)
+                                    .foregroundColor(.blue)
+                                    .clipShape(Capsule())
+                            }
+                            
+                        }
+
                     }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
+
                         Button {
                             isShowingInfo.toggle()
                         } label: {
@@ -67,15 +88,12 @@ struct ContentView: View {
                         .sheet(isPresented: $isShowingInfo) {
                             InfoView()
                         }
-                    }
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
                         Button {
                             fetchCoinData()
                         } label: {
                             Image(systemName: "repeat.circle.fill")
                         }
                     }
-                    
                 }
                 .onAppear {
                     fetchCoinData()
