@@ -18,25 +18,18 @@ struct CoinDetailView: View {
     
     var body: some View {
         
+        
+        
         VStack (alignment: .center) {
             
-            ZStack {
-                VStack (alignment: .center) {
-                        Image("generic")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150, height: 150)
+            VStack (alignment: .center) {
+                checkForImage(symbol: coin.symbol.lowercased())
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150, height: 150)
 
-                }
-                
-                VStack (alignment: .center) {
-                        Image(coin.symbol.lowercased())
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 150, height: 150)
-
-                }
             }
+            
             Text(coin.name)
                 .foregroundColor(.blue)
                 .fontWeight(.heavy)
@@ -118,6 +111,11 @@ struct CoinDetailView: View {
                 convertStringToDouble()
             }
         }
+    }
+    
+    func checkForImage(symbol: String) -> Image {
+        let image = (UIImage(named: symbol) ?? UIImage(named: "generic.png"))!
+        return Image(uiImage: image)
     }
 }
 

@@ -16,19 +16,11 @@ struct CoinListView: View {
     var body: some View {
         HStack (alignment: .center) {
             VStack (spacing: 2) {
-                ZStack {
-                    Image("generic")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-
-                    Image(coin.symbol.lowercased())
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 30, height: 30)
-                }
-                .padding(.leading, 20)
-                .shadow(radius: 15)
+                checkForImage(symbol: coin.symbol.lowercased())
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 30, height: 30)
+                    .padding(.leading, 10)
             }
             
             VStack (alignment: .trailing) {
@@ -61,6 +53,11 @@ struct CoinListView: View {
             }
             .padding()
         }
+    }
+    
+    func checkForImage(symbol: String) -> Image {
+        let image = (UIImage(named: symbol) ?? UIImage(named: "generic.png"))!
+        return Image(uiImage: image)
     }
 }
 
