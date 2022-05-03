@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+extension View {
+    @ViewBuilder func phoneOnlyNavigationView() -> some View {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            self.navigationViewStyle(.stack)
+        } else {
+            self
+        }
+    }
+}
+
+
 struct MainView: View {
     
     @StateObject var favoriteCoins = FavoriteCoins()
@@ -18,6 +29,8 @@ struct MainView: View {
                 .tabItem {
                 Label("All Coins", systemImage: "list.bullet")
             }
+            
+            FirstView()
             
             FavoritesView()
                 .environmentObject(favoriteCoins)

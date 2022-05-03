@@ -11,6 +11,7 @@ struct ContentView: View {
    
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
+    @State private var isFavorites: Bool = false
     
     @EnvironmentObject var favoriteCoins: FavoriteCoins
     
@@ -26,12 +27,29 @@ struct ContentView: View {
                                 .fontWeight(.bold)
                         }
                     } else {
-                        ForEach(searchResults) { coin in
-                            NavigationLink (destination: CoinDetailView(coin: coin)) {
-                                CoinListView(coin: coin)
-                            }                            
+                        if  isFavorites {
+                            VStack {
+                                ForEach(coinsArray) { coin in
+                                    if favoriteCoins.contains(coin) {
+                                        NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                            CoinListView(coin: coin)
+                                        }
+                                    }
+                                }
+                            }
+                            .navigationTitle("Crypto Favorites")
+                            .onAppear {
+                                favoriteCoins.loadFavorites()
+                                fetchCoinData()
+                            }
+                        } else {
+                            ForEach(searchResults) { coin in
+                                NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                    CoinListView(coin: coin)
+                                }
+                            }
+                            .searchable(text: $coinSearch)
                         }
-                        .searchable(text: $coinSearch)
                     }
                 }
                 .navigationTitle("Crypto Portfolio")
@@ -42,6 +60,9 @@ struct ContentView: View {
                         } label: {
                             Image(systemName: "repeat.circle.fill")
                         }
+                    }
+                    ToolbarItemGroup(placement: .navigationBarLeading) {
+                        Toggle("View Favorites", isOn: $isFavorites)
                     }
                 }
                 .onAppear {
