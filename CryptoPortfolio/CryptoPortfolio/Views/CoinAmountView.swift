@@ -26,14 +26,26 @@ struct CoinAmountView: View {
                 .cornerRadius(4)
                 .keyboardType(.numbersAndPunctuation)
             
-            Button("Save") {
-                ownedCoins.add(coin, amount)
-                ownedCoins.save()
-                dismiss()
+            HStack {
+                Button("Save") {
+                    ownedCoins.add(coin, amount)
+                    ownedCoins.save()
+                    dismiss()
+                }
+                .padding()
+                .border(Color.blue, width: 3)
+                .cornerRadius(4)
+                
+                Button("Delete") {
+                    ownedCoins.remove(coin)
+                    ownedCoins.save()
+                    amount = "0.0"
+                    dismiss()
+                }
+                .padding()
+                .border(Color.red, width: 3)
+                .cornerRadius(4)
             }
-            .padding()
-            .border(Color.blue, width: 3)
-            .cornerRadius(4)
         }
         .frame(width: 400, height: 200)
     }

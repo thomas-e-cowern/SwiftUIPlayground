@@ -21,13 +21,10 @@ struct CoinDetailView: View {
     @State private var amount: String = ""
     
     var body: some View {
-        
-
-        
-        
         VStack (alignment: .center) {
     
             Text("You own \(amount) \(coin.name) crypto-currency")
+            Text("The value of crypto-currency is $\(returnValue(amount: amount, price: coin.priceUsd))")
     
             VStack (alignment: .center) {
                 checkForImage(symbol: coin.symbol.lowercased())
@@ -54,15 +51,8 @@ struct CoinDetailView: View {
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)
 
-            Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add/Edit coins owned") {
-                if ownedCoins.contains(coin) {
-                    ownedCoins.remove(coin)
-                    ownedCoins.save()
-                } else {
-                    showSheet.toggle()
-                    ownedCoins.add(coin, amount)
-                    ownedCoins.save()
-                }
+            Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add coins owned") {
+                showSheet.toggle()
             }
             .buttonStyle(.borderedProminent)
             .padding(.top, 10)
@@ -140,6 +130,19 @@ struct CoinDetailView: View {
     func checkForImage(symbol: String) -> Image {
         let image = (UIImage(named: symbol) ?? UIImage(named: "generic.png"))!
         return Image(uiImage: image)
+    }
+    
+    func returnValue(amount: String, price: String) -> String {
+
+        guard let price = Double(price) else { return "" }
+        
+        guard let amount = Double(amount) else { return "" }
+        
+        let returnAmount = round((amount * price) * 100) / 100
+        
+        print("Return Amount: \(returnAmount)")
+    
+        return String(returnAmount)
     }
 }
 
