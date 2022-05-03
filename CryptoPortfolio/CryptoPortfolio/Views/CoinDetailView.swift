@@ -17,9 +17,12 @@ struct CoinDetailView: View {
     @EnvironmentObject var favoriteCoins: FavoriteCoins
     @EnvironmentObject var ownedCoins: OwnedCoins
     
+    @State private var alertIsPresented = false
+    @State private var owned = ""
+    
     var body: some View {
         
-        var owned = 0.0
+//        var owned = 0.0
         
         VStack (alignment: .center) {
     
@@ -56,6 +59,7 @@ struct CoinDetailView: View {
                     ownedCoins.save()
                 } else {
                     ownedCoins.add(coin, 1.0)
+                    alertIsPresented = true
 //                    ownedCoins.add(coin)
                     ownedCoins.save()
                 }
