@@ -73,10 +73,8 @@ struct ContentView: View {
                                     .background(Color.white)
                                     .foregroundColor(.blue)
                                     .clipShape(Capsule())
-                            }
-                            
+                            }                            
                         }
-
                     }
                     ToolbarItemGroup(placement: .navigationBarTrailing) {
 
