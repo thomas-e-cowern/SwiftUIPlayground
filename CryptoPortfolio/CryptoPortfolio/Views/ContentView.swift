@@ -156,6 +156,31 @@ struct ContentView: View {
     
     func createReport () {
         print("So you want a report?")
+        let formatter = UIMarkupTextPrintFormatter(markupText: "So you want a report?")
+        
+        let render = UIPrintPageRenderer()
+        
+        render.addPrintFormatter(formatter, startingAtPageAt: 0)
+        
+        let page = CGRect(x: 0, y: 0, width: 595, height: 842)
+        
+        render.setValue(page, forKey: "paperRect")
+        render.setValue(page, forKey: "printableRect")
+        
+        let pdfData = NSMutableData()
+        
+        UIGraphicsBeginPDFContextToData(pdfData, .zero, nil)
+        
+        for i in 0..<render.numberOfPages {
+            UIGraphicsBeginPDFPage()
+            render.drawPage(at: i, in: UIGraphicsGetPDFContextBounds())
+        }
+        
+        UIGraphicsEndPDFContext()
+        
+        let activityController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
     }
     
     func authenticate () {
