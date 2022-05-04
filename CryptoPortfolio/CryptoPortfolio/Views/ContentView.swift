@@ -10,9 +10,11 @@ import LocalAuthentication
 
 struct ContentView: View {
    
-    @State private var isUnlocked = false
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
+    
+    @State private var isUnlocked = false
+    @State private var isOwned = false
     @State private var isFavorites: Bool = false
     @State private var isShowingInfo: Bool = false
     
@@ -37,6 +39,21 @@ struct ContentView: View {
                                 VStack {
                                     ForEach(coinsArray) { coin in
                                         if favoriteCoins.contains(coin) {
+                                            NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                                CoinListView(coin: coin)
+                                            }
+                                        }
+                                    }
+                                }
+                                .navigationTitle("Favorites: \(favoriteCoins.count()) coins")
+                                .onAppear {
+                                    favoriteCoins.loadFavorites()
+                                    fetchCoinData()
+                                }
+                            } else if isOwned {
+                                VStack {
+                                    ForEach(coinsArray) { coin in
+                                        if ownedCoins.contains(coin) {
                                             NavigationLink (destination: CoinDetailView(coin: coin)) {
                                                 CoinListView(coin: coin)
                                             }
@@ -74,6 +91,25 @@ struct ContentView: View {
                                         .clipShape(Capsule())
                                 } else {
                                     Text("Favorites")
+                                        .padding(5)
+                                        .font(.footnote)
+                                        .background(Color.white)
+                                        .foregroundColor(.blue)
+                                        .clipShape(Capsule())
+                                }
+                            }
+                            Button {
+                                isOwned.toggle()
+                            } label: {
+                                if isOwned {
+                                    Text("Owned")
+                                        .padding(5)
+                                        .font(.footnote)
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .clipShape(Capsule())
+                                } else {
+                                    Text("Owned")
                                         .padding(5)
                                         .font(.footnote)
                                         .background(Color.white)

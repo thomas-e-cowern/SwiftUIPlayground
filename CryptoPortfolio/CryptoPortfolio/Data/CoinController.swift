@@ -11,7 +11,7 @@ class CoinContoller: ObservableObject {
     
     static let shared = CoinContoller()
     
-    static let coinUrlString = "https://api.coincap.io/v2/assets?&limit=10"
+    static let coinUrlString = "https://api.coincap.io/v2/assets?&limit=100"
     
     // MARK:  Fetch Coin Prices
     static func fetchCoinPrices (completion: @escaping ([Coin]?) -> Void) {
