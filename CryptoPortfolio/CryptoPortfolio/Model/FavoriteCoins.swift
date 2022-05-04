@@ -34,6 +34,10 @@ class FavoriteCoins: ObservableObject {
          }
     }
     
+    func count() -> Int {
+        favoriteCoins.count
+    }
+    
     func contains(_ coin: Coin) -> Bool {
         favoriteCoins.contains(coin.id)
     }

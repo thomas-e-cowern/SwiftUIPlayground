@@ -43,7 +43,7 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                                .navigationTitle("Favorites: \($favoriteCoins.count) coins")
+                                .navigationTitle("Favorites: \(favoriteCoins.count()) coins")
                                 .onAppear {
                                     favoriteCoins.loadFavorites()
                                     fetchCoinData()
