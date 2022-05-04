@@ -43,7 +43,7 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                                .navigationTitle("Crypto Favorites")
+                                .navigationTitle("Favorites: \($favoriteCoins.count) coins")
                                 .onAppear {
                                     favoriteCoins.loadFavorites()
                                     fetchCoinData()
@@ -58,7 +58,8 @@ struct ContentView: View {
                             }
                         }
                     }
-                    .navigationTitle("Crypto Portfolio")
+                    .navigationTitle("Viewing \(coinsArray.count) coins")
+                    .font(.title3)
                     .toolbar {
                         ToolbarItemGroup(placement: .navigationBarLeading) {
                             Button {
