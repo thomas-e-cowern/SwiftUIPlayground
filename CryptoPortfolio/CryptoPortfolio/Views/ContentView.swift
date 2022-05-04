@@ -155,10 +155,12 @@ struct ContentView: View {
                     isUnlocked = true
                 } else {
                     // not authenticated successfully
+                    print("Failed authentication \(String(describing: authenticationError?.localizedDescription))")
                 }
             }
         } else {
             // No biometrics, not authorized
+            print("Failed authentication \(String(describing: error?.localizedDescription))")
         }
     }
 }
