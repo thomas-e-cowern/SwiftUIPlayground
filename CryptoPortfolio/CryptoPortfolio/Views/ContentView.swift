@@ -149,18 +149,18 @@ struct ContentView: View {
             // can use biometrics
             let reason = "We need to unlock your crypto portfolio"
             
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason) { success, authenticationError in
                 if success {
                     // authenticated successfully
                     isUnlocked = true
                 } else {
                     // not authenticated successfully
-                    print("Failed authentication \(String(describing: authenticationError?.localizedDescription))")
+                    print("Failed authentication inside if \(String(describing: authenticationError?.localizedDescription))")
                 }
             }
         } else {
             // No biometrics, not authorized
-            print("Failed authentication \(String(describing: error?.localizedDescription))")
+            print("Failed authentication else \(String(describing: error?.localizedDescription))")
         }
     }
 }
