@@ -33,7 +33,7 @@ struct CoinDetailView: View {
                 }
                 
                 if amount != "0.0" {
-                    Text("The value of your \(coin.name) crypto-currency is $\(returnValue(amount: amount, price: coin.priceUsd))")
+                    Text("Your \(coin.name) crypto is worth: $\(returnValue(amount: amount, price: coin.priceUsd))")
                         .padding(4)
                 }
         
