@@ -24,7 +24,9 @@ struct CoinDetailView: View {
         VStack (alignment: .center) {
     
             Text("You own \(amount) \(coin.name) crypto-currency")
-            Text("The value of crypto-currency is $\(returnValue(amount: amount, price: coin.priceUsd))")
+                .padding(4)
+            Text("The value of your \(coin.name) crypto-currency is $\(returnValue(amount: amount, price: coin.priceUsd))")
+                .padding(4)
     
             VStack (alignment: .center) {
                 checkForImage(symbol: coin.symbol.lowercased())
