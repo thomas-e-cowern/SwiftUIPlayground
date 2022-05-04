@@ -96,6 +96,12 @@ struct ContentView: View {
                             } label: {
                                 Image(systemName: "repeat.circle.fill")
                             }
+                            Button {
+                                isUnlocked.toggle()
+                            } label: {
+                                Image(systemName: isUnlocked ? "lock" : "lock.open")
+                            }
+
                         }
                     }
                     .onAppear {
