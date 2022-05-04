@@ -154,6 +154,14 @@ struct ContentView: View {
         }
     }
     
+    func createHtml () -> String {
+        var html = "<h1>My Crypto Reprot</h1>"
+        
+        html += "<h2></h2>"
+        
+        return html
+    }
+    
     func createReport () {
         print("So you want a report?")
         let formatter = UIMarkupTextPrintFormatter(markupText: "So you want a report?")
