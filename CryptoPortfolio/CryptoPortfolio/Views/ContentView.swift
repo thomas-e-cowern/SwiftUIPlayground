@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import LocalAuthentication
 
 struct ContentView: View {
    
+    @State private var isUnlocked = false
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
     @State private var isFavorites: Bool = false
@@ -18,93 +20,107 @@ struct ContentView: View {
     @EnvironmentObject var ownedCoins: OwnedCoins
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack {
-                    if coinsArray.count == 0 {
-                        VStack {
-                            Text("Loading...")
-                                .font(.largeTitle)
-                                .foregroundColor(.red)
-                                .fontWeight(.bold)
-                        }
-                    } else {
-                        if  isFavorites {
+        VStack {
+            if isUnlocked {
+                NavigationView {
+                ScrollView {
+                    VStack {
+                        if coinsArray.count == 0 {
                             VStack {
-                                ForEach(coinsArray) { coin in
-                                    if favoriteCoins.contains(coin) {
-                                        NavigationLink (destination: CoinDetailView(coin: coin)) {
-                                            CoinListView(coin: coin)
+                                Text("Loading...")
+                                    .font(.largeTitle)
+                                    .foregroundColor(.red)
+                                    .fontWeight(.bold)
+                            }
+                        } else {
+                            if  isFavorites {
+                                VStack {
+                                    ForEach(coinsArray) { coin in
+                                        if favoriteCoins.contains(coin) {
+                                            NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                                CoinListView(coin: coin)
+                                            }
                                         }
                                     }
                                 }
+                                .navigationTitle("Crypto Favorites")
+                                .onAppear {
+                                    favoriteCoins.loadFavorites()
+                                    fetchCoinData()
+                                }
+                            } else {
+                                ForEach(searchResults) { coin in
+                                    NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                        CoinListView(coin: coin)
+                                    }
+                                }
+                                .searchable(text: $coinSearch)
                             }
-                            .navigationTitle("Crypto Favorites")
-                            .onAppear {
-                                favoriteCoins.loadFavorites()
-                                fetchCoinData()
-                            }
-                        } else {
-                            ForEach(searchResults) { coin in
-                                NavigationLink (destination: CoinDetailView(coin: coin)) {
-                                    CoinListView(coin: coin)
+                        }
+                    }
+                    .navigationTitle("Crypto Portfolio")
+                    .toolbar {
+                        ToolbarItemGroup(placement: .navigationBarLeading) {
+                            Button {
+                                isFavorites.toggle()
+                            } label: {
+                                if isFavorites {
+                                    Text("Favorites")
+                                        .padding(5)
+                                        .font(.footnote)
+                                        .background(Color.blue)
+                                        .foregroundColor(.white)
+                                        .clipShape(Capsule())
+                                } else {
+                                    Text("Favorites")
+                                        .padding(5)
+                                        .font(.footnote)
+                                        .background(Color.white)
+                                        .foregroundColor(.blue)
+                                        .clipShape(Capsule())
                                 }
                             }
-                            .searchable(text: $coinSearch)
                         }
-                    }
-                }
-                .navigationTitle("Crypto Portfolio")
-                .toolbar {
-                    ToolbarItemGroup(placement: .navigationBarLeading) {
-                        Button {
-                            isFavorites.toggle()
-                        } label: {
-                            if isFavorites {
-                                Text("Favorites")
-                                    .padding(5)
-                                    .font(.footnote)
-                                    .background(Color.blue)
-                                    .foregroundColor(.white)
-                                    .clipShape(Capsule())
-                            } else {
-                                Text("Favorites")
-                                    .padding(5)
-                                    .font(.footnote)
-                                    .background(Color.white)
-                                    .foregroundColor(.blue)
-                                    .clipShape(Capsule())
-                            }                            
-                        }
-                    }
-                    ToolbarItemGroup(placement: .navigationBarTrailing) {
+                        ToolbarItemGroup(placement: .navigationBarTrailing) {
 
-                        Button {
-                            isShowingInfo.toggle()
-                        } label: {
-                            Image(systemName: "info.circle")
-                        }
-                        .sheet(isPresented: $isShowingInfo) {
-                            InfoView()
-                        }
-                        Button {
-                            fetchCoinData()
-                        } label: {
-                            Image(systemName: "repeat.circle.fill")
+                            Button {
+                                isShowingInfo.toggle()
+                            } label: {
+                                Image(systemName: "info.circle")
+                            }
+                            .sheet(isPresented: $isShowingInfo) {
+                                InfoView()
+                            }
+                            Button {
+                                fetchCoinData()
+                            } label: {
+                                Image(systemName: "repeat.circle.fill")
+                            }
                         }
                     }
+                    .onAppear {
+                        fetchCoinData()
+                        favoriteCoins.loadFavorites()
+                        ownedCoins.loadOwnedCoins()
+                    }
+                    
+                   
                 }
-                .onAppear {
-                    fetchCoinData()
-                    favoriteCoins.loadFavorites()
-                    ownedCoins.loadOwnedCoins()
-                }
-                
-               
+                FirstView()
             }
-            FirstView()
+                .phoneOnlyNavigationView()
+            } else {
+                Button {
+                    authenticate()
+                } label: {
+                    Text("Tap to unlock")
+                }
+                .padding()
+                .background(.blue)
+                .foregroundColor(.white)
+                .clipShape(Capsule())
+            }
         }
-        .phoneOnlyNavigationView()
     }
     
     var searchResults: [Coin] {
@@ -122,6 +138,27 @@ struct ContentView: View {
             DispatchQueue.main.async {
                 self.coinsArray = fetchedCoins
             }
+        }
+    }
+    
+    func authenticate () {
+        let context = LAContext()
+        var error: NSError?
+        
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
+            // can use biometrics
+            let reason = "We need to unlock your crypto portfolio"
+            
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
+                if success {
+                    // authenticated successfully
+                    isUnlocked = true
+                } else {
+                    // not authenticated successfully
+                }
+            }
+        } else {
+            // No biometrics, not authorized
         }
     }
 }
