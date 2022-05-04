@@ -171,7 +171,7 @@ struct ContentView: View {
     
     func createReport () {
         print("So you want a report?")
-        let formatter = UIMarkupTextPrintFormatter(markupText: "So you want a report?")
+        let formatter = UIMarkupTextPrintFormatter(markupText: createHtml())
         
         let render = UIPrintPageRenderer()
         
