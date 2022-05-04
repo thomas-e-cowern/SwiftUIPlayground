@@ -85,6 +85,12 @@ struct ContentView: View {
                         ToolbarItemGroup(placement: .navigationBarTrailing) {
 
                             Button {
+                                createReport()
+                            } label: {
+                                Image(systemName: "printer")
+                            }
+
+                            Button {
                                 isShowingInfo.toggle()
                             } label: {
                                 Image(systemName: "info.circle")
@@ -146,6 +152,10 @@ struct ContentView: View {
                 self.coinsArray = fetchedCoins
             }
         }
+    }
+    
+    func createReport () {
+        print("So you want a report?")
     }
     
     func authenticate () {
