@@ -21,102 +21,105 @@ struct CoinDetailView: View {
     @State private var amount: String = ""
     
     var body: some View {
-        VStack (alignment: .center) {
-    
-            if amount == "0.0" {
-                Text("You own no \(coin.name) crypto-currency")
-                    .padding(4)
-            } else {
-                Text("You own \(amount) \(coin.name) crypto-currency")
-                .padding(4)
-            }
-            
-            if amount != "0.0" {
-                Text("The value of your \(coin.name) crypto-currency is $\(returnValue(amount: amount, price: coin.priceUsd))")
-                    .padding(4)
-            }
-    
+        ScrollView {
             VStack (alignment: .center) {
-                checkForImage(symbol: coin.symbol.lowercased())
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 150, height: 150)
-
-            }
-            
-            Text(coin.name)
-                .foregroundColor(.blue)
-                .fontWeight(.heavy)
-                .padding(.top, 20)
-            
-            Button(favoriteCoins.contains(coin) ? "Remove from favorites" : "Add to favorites") {
-                if favoriteCoins.contains(coin) {
-                    favoriteCoins.remove(coin)
-                    favoriteCoins.save()
-                } else {
-                    favoriteCoins.add(coin)
-                    favoriteCoins.save()
-                }
-            }
-            .buttonStyle(.borderedProminent)
-            .padding(.top, 10)
-
-            Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add coins owned") {
-                showSheet.toggle()
-            }
-            .buttonStyle(.borderedProminent)
-            .padding(.top, 10)
-            .sheet(isPresented: $showSheet) {
-                CoinAmountView(coin: coin, amount: $amount)
-            }
-        }
         
-        List() {
-            Section(header: Text("\(coin.name) info")) {
-                HStack {
-                    Label("Coin Name: ", systemImage: "keyboard")
-                    Text(coin.name)
-                }
-                HStack {
-                    Label("Coin Symbol: ", systemImage: "star")
-                    Text(coin.symbol)
-                }
-                HStack {
-                    Label("Current Price: ", systemImage: "dollarsign.circle")
-                    Text(coin.priceAsDouble())
-                }
-                if coin.checkForExplorer() != "https://api.coincap.io" {
-                    HStack {
-                        Label("Check out \(coin.name)", systemImage: "link.circle")
-                        Link("here...", destination: URL(string: coin.checkForExplorer())!)
-                    }
+                if amount == "0.0" {
+                    Text("You own no \(coin.name) crypto-currency")
+                        .padding(4)
                 } else {
+                    Text("You own \(amount) \(coin.name) crypto-currency")
+                    .padding(4)
+                }
+                
+                if amount != "0.0" {
+                    Text("The value of your \(coin.name) crypto-currency is $\(returnValue(amount: amount, price: coin.priceUsd))")
+                        .padding(4)
+                }
+        
+                VStack (alignment: .center) {
+                    checkForImage(symbol: coin.symbol.lowercased())
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 150, height: 150)
+                }
+                
+                Text(coin.name)
+                    .foregroundColor(.blue)
+                    .fontWeight(.heavy)
+                    .padding(.top, 20)
+                
+                Button(favoriteCoins.contains(coin) ? "Remove from favorites" : "Add to favorites") {
+                    if favoriteCoins.contains(coin) {
+                        favoriteCoins.remove(coin)
+                        favoriteCoins.save()
+                    } else {
+                        favoriteCoins.add(coin)
+                        favoriteCoins.save()
+                    }
+                }
+                .buttonStyle(.borderedProminent)
+                .padding(.top, 10)
+
+                Button(ownedCoins.contains(coin) ? "Edit owned coin" : "Add coins owned") {
+                    showSheet.toggle()
+                }
+                .buttonStyle(.borderedProminent)
+                .padding(.top, 10)
+                .sheet(isPresented: $showSheet) {
+                    CoinAmountView(coin: coin, amount: $amount)
+                }
+            }
+            .frame(maxWidth: .infinity)
+        }
+            
+            List() {
+                Section(header: Text("\(coin.name) info")) {
                     HStack {
-                        Label("There is no link for \(coin.name)", systemImage: "eye.slash.circle")
+                        Label("Coin Name: ", systemImage: "keyboard")
+                        Text(coin.name)
+                    }
+                    HStack {
+                        Label("Coin Symbol: ", systemImage: "star")
+                        Text(coin.symbol)
+                    }
+                    HStack {
+                        Label("Current Price: ", systemImage: "dollarsign.circle")
+                        Text(coin.priceAsDouble())
+                    }
+                    if coin.checkForExplorer() != "https://api.coincap.io" {
+                        HStack {
+                            Label("Check out \(coin.name)", systemImage: "link.circle")
+                            Link("here...", destination: URL(string: coin.checkForExplorer())!)
+                        }
+                    } else {
+                        HStack {
+                            Label("There is no link for \(coin.name)", systemImage: "eye.slash.circle")
+                        }
+                        
                     }
                     
                 }
                 
-            }
-            
-            Section(header: Text("\(coin.name) previous day chart")) {
-                if coinPriceHistory.count == 0 {
-                    Text("Loading Price History")
-                        .fontWeight(.heavy)
-                } else {
-                    LineChartView(dataPoints: coinPriceHistory)
-                        .frame(height: 200, alignment: .center)
-                        .padding(4)
-                        .background(Color.black.opacity(0.7).cornerRadius(16))
-                        .padding()
+                Section(header: Text("\(coin.name) previous day chart")) {
+                    if coinPriceHistory.count == 0 {
+                        Text("Loading Price History")
+                            .fontWeight(.heavy)
+                    } else {
+                        LineChartView(dataPoints: coinPriceHistory)
+                            .frame(height: 200, alignment: .center)
+                            .padding(4)
+                            .background(Color.black.opacity(0.7).cornerRadius(16))
+                            .padding()
+                    }
                 }
             }
-        }
-        .onAppear {
-            fetchCoinHistory(id: coin.id)
-            ownedCoins.loadOwnedCoins()
-            amount = ownedCoins.getValue(coin)
-        }
+            .onAppear {
+                fetchCoinHistory(id: coin.id)
+                ownedCoins.loadOwnedCoins()
+                amount = ownedCoins.getValue(coin)
+            }
+//        }
     }
     
     func convertStringToDouble () {
