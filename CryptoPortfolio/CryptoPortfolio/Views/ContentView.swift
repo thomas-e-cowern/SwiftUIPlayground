@@ -155,9 +155,16 @@ struct ContentView: View {
     }
     
     func createHtml () -> String {
-        var html = "<h1>My Crypto Reprot</h1>"
+        var html = "<h1>My Crypto Report</h1>"
+        let coinReportArray = ownedCoins.getCoinsForReport()
         
-        html += "<h2></h2>"
+        html += "<ul>"
+        
+        for coin in coinReportArray {
+            html += "<li> \(coin) </li>"
+        }
+
+        html += "</ul>"
         
         return html
     }

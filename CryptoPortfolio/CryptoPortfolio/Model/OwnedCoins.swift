@@ -44,6 +44,18 @@ class OwnedCoins: ObservableObject {
         }
     }
     
+    func getCoinsForReport () -> [String] {
+        var reportArray = [String]()
+        
+        for (key, value) in ownedCoins {
+            let coin = "\(key) : \(value)"
+            
+            reportArray.append(coin)
+        }
+        
+        return reportArray
+    }
+    
     func contains(_ coin: Coin) -> Bool {
         ownedCoins.keys.contains(coin.id)
     }
