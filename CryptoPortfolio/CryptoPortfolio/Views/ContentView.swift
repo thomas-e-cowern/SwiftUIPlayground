@@ -229,9 +229,27 @@ struct ContentView: View {
         
         UIGraphicsEndPDFContext()
         
-        let activityController = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
+        let activityView = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
         
-        UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
+        let allScenes = UIApplication.shared.connectedScenes
+        let scene = allScenes.first { $0.activationState == .foregroundActive }
+        
+        if let windowScene = scene as? UIWindowScene {
+            windowScene.keyWindow?.rootViewController?.present(activityView, animated: true)
+        }
+        
+//        activityController.present(activityController, animated: true)
+        
+//        present(activityController, animated: true)
+//        let ac = UIApplication
+//            .shared
+//            .connectedScenes
+//            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
+//            .first { $0.isKeyWindow }
+//
+         
+//
+//        UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
     }
     
     func authenticate () {
