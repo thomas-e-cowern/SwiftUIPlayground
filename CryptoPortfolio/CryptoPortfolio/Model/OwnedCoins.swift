@@ -44,6 +44,10 @@ class OwnedCoins: ObservableObject {
         }
     }
     
+    func count () -> Int {
+        return ownedCoins.count
+    }
+    
     func getCoinsForReport () -> [String] {
         var reportArray = [String]()
         
