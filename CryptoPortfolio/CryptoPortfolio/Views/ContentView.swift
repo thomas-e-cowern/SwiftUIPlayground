@@ -232,24 +232,10 @@ struct ContentView: View {
         let activityView = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
         
         let allScenes = UIApplication.shared.connectedScenes
-        let scene = allScenes.first { $0.activationState == .foregroundActive }
+//        let scene = allScenes.first { $0.activationState == .foregroundActive }
+        let windowScene = allScenes.first as? UIWindowScene
         
-        if let windowScene = scene as? UIWindowScene {
-            windowScene.keyWindow?.rootViewController?.present(activityView, animated: true)
-        }
-        
-//        activityController.present(activityController, animated: true)
-        
-//        present(activityController, animated: true)
-//        let ac = UIApplication
-//            .shared
-//            .connectedScenes
-//            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-//            .first { $0.isKeyWindow }
-//
-         
-//
-//        UIApplication.shared.windows.first?.rootViewController?.present(activityController, animated: true, completion: nil)
+        windowScene?.keyWindow?.rootViewController?.present(activityView, animated: true)
     }
     
     func authenticate () {
