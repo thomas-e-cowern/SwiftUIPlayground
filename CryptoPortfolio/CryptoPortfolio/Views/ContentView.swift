@@ -60,7 +60,7 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                                .navigationTitle("Favorites: \(favoriteCoins.count()) coins")
+                                .navigationTitle("Owned: \(favoriteCoins.count()) coins")
                                 .onAppear {
                                     favoriteCoins.loadFavorites()
                                     fetchCoinData()
@@ -90,7 +90,7 @@ struct ContentView: View {
                                         .foregroundColor(.white)
                                         .clipShape(Capsule())
                                 } else {
-                                    Text("Favorites")
+                                    Text("Owned")
                                         .padding(5)
                                         .font(.footnote)
                                         .background(Color.white)
