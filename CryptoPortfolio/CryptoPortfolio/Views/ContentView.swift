@@ -61,7 +61,7 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                                .navigationTitle("Owned: \(ownedCoins.count()) coins")
+                                .navigationTitle("Owned: \(netWorth()) coins")
                                 .onAppear {
                                     
                                     favoriteCoins.loadFavorites()
@@ -263,6 +263,12 @@ struct ContentView: View {
             // No biometrics, not authorized
             print("Failed authentication else \(String(describing: error?.localizedDescription))")
         }
+    }
+    
+    func netWorth () -> String {
+        print("Inside Net Worth")
+        print("😍\(ownedCoins)")
+        return "$1234.56"
     }
 }
 
