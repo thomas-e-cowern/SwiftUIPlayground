@@ -12,6 +12,7 @@ struct ContentView: View {
    
     @State private var coinsArray: [Coin] = []
     @State private var coinSearch: String = ""
+    @State private var totalNetWorth: String = ""
     
     @State private var isUnlocked = false
     @State private var isOwned = false
@@ -61,9 +62,9 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                                .navigationTitle("Owned: \(netWorth()) coins")
+                                .navigationTitle("Total Coin Title: \(totalNetWorth)")
                                 .onAppear {
-                                    
+                                    getNetWorth()
                                     favoriteCoins.loadFavorites()
                                     fetchCoinData()
                                 }
@@ -265,10 +266,36 @@ struct ContentView: View {
         }
     }
     
-    func netWorth () -> String {
+    func getNetWorth () {
         print("Inside Net Worth")
-        print("😍\(ownedCoins)")
-        return "$1234.56"
+        
+        var count = 0
+        
+        var netWorth = 0.0
+
+        for coin in coinsArray {
+            
+            
+            
+            count += 1
+            print("inside for \(count)")
+            if ownedCoins.contains(coin) {
+                
+                print("inside if coin")
+
+                guard let price = Double(coin.priceUsd) else { return }
+
+                guard let amount = Double(ownedCoins.getValue(coin)) else { return }
+
+                let value = round((price * amount) * 100 / 100)
+
+                netWorth += value
+            }
+        }
+        
+        totalNetWorth = String(netWorth)
+        
+        print("😍 \(totalNetWorth)")
     }
 }
 
