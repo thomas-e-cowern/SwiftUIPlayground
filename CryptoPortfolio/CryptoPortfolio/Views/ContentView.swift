@@ -35,7 +35,7 @@ struct ContentView: View {
                                     .fontWeight(.bold)
                             }
                         } else {
-                            if  isFavorites {
+                            if isFavorites {
                                 VStack {
                                     ForEach(coinsArray) { coin in
                                         if favoriteCoins.contains(coin) {
@@ -47,6 +47,7 @@ struct ContentView: View {
                                 }
                                 .navigationTitle("Favorites: \(favoriteCoins.count()) coins")
                                 .onAppear {
+                                   
                                     favoriteCoins.loadFavorites()
                                     fetchCoinData()
                                 }
@@ -62,6 +63,7 @@ struct ContentView: View {
                                 }
                                 .navigationTitle("Owned: \(ownedCoins.count()) coins")
                                 .onAppear {
+                                    
                                     favoriteCoins.loadFavorites()
                                     fetchCoinData()
                                 }
@@ -81,6 +83,7 @@ struct ContentView: View {
                         ToolbarItemGroup(placement: .navigationBarLeading) {
                             Button {
                                 isFavorites.toggle()
+                                isOwned = false
                             } label: {
                                 if isFavorites {
                                     Text("Favorites")
@@ -100,6 +103,7 @@ struct ContentView: View {
                             }
                             Button {
                                 isOwned.toggle()
+                                isFavorites = false
                             } label: {
                                 if isOwned {
                                     Text("Owned")
@@ -232,7 +236,7 @@ struct ContentView: View {
         let activityView = UIActivityViewController(activityItems: [pdfData], applicationActivities: nil)
         
         let allScenes = UIApplication.shared.connectedScenes
-//        let scene = allScenes.first { $0.activationState == .foregroundActive }
+
         let windowScene = allScenes.first as? UIWindowScene
         
         windowScene?.keyWindow?.rootViewController?.present(activityView, animated: true)
