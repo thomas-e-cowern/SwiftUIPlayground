@@ -62,7 +62,7 @@ struct ContentView: View {
                                         }
                                     }
                                 }
-                                .navigationTitle("Total Coin Title: \(totalNetWorth)")
+                                .navigationTitle("Total: $\(totalNetWorth)")
                                 .onAppear {
                                     getNetWorth()
                                     favoriteCoins.loadFavorites()
@@ -287,15 +287,22 @@ struct ContentView: View {
 
                 guard let amount = Double(ownedCoins.getValue(coin)) else { return }
 
-                let value = round((price * amount) * 100 / 100)
+                let value = round((price * amount) * 100) / 100
 
                 netWorth += value
             }
+            
+            print("net worth: \(netWorth)")
         }
         
-        totalNetWorth = String(netWorth)
+        let numFormat = NumberFormatter()
+        numFormat.numberStyle = .decimal
         
-        print("😍 \(totalNetWorth)")
+        guard let formattedNumber = numFormat.string(from: NSNumber(value: netWorth)) else { return }
+        
+        totalNetWorth = formattedNumber
+        
+//        print("😍 \(totalNetWorth)")
     }
 }
 
