@@ -21,7 +21,7 @@ Data Source:
 
 Icons and Images:
 
-[![News icons][news-icon-image]][news-icon-url]
+[![Crypto icons][crypto-icon-image]][crypto-icon-url]
 [![Icon Generator][icon-gen-image]][icon-gen-url]
 
 <!--[![License][license-image]][license-url]  -->
@@ -30,9 +30,10 @@ Icons and Images:
 
 ## Features
 
-- [x] Headline News 
-- [x] Search by subject
-- [x] Headline by news channel
+- [x] Current crypto value
+- [x] Favorite list
+- [x] Owned crypto with current value
+- [x] PDF Report Generator
 
 ## Requirements
 
@@ -47,8 +48,8 @@ Icons and Images:
 [license-url]: LICENSE
 [coincap-image]: https://img.shields.io/badge/crypto%20data-coincap.io-lightgrey
 [coincap-url]: https://coincap.io
-[news-icon-url]: https://www.flaticon.com/free-icons/news
-[news-icon-image]: https://img.shields.io/badge/News--icons-Freepik%20--%20Flaticon-lightgrey
+[crypto-icon-url]: https://github.com/spothq/cryptocurrency-icons
+[crypto-icon-image]: https://img.shields.io/badge/crypto%20icons-spothq-lightgrey
 [icon-gen-image]: https://img.shields.io/badge/Icon%20generator-appicon.co-lightgrey
 [icon-gen-url]: https://appicon.co
 
