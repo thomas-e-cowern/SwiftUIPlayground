@@ -302,7 +302,6 @@ struct ContentView: View {
         
         totalNetWorth = formattedNumber
         
-//        print("😍 \(totalNetWorth)")
     }
 }
 
