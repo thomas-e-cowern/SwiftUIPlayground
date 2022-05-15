@@ -113,6 +113,7 @@
 		416D54DB28199A8E00A95346 = {
 			isa = PBXGroup;
 			children = (
+				41C23DD528314512006454A5 /* readme.md */,
 				416D54E628199A8E00A95346 /* CryptoPortfolio */,
 				416D54E528199A8E00A95346 /* Products */,
 			);
@@ -136,7 +137,6 @@
 				416D54E728199A8E00A95346 /* CryptoPortfolioApp.swift */,
 				416D54EB28199A9800A95346 /* Assets.xcassets */,
 				416D54ED28199A9800A95346 /* Preview Content */,
-				41C23DD528314512006454A5 /* readme.md */,
 			);
 			path = CryptoPortfolio;
 			sourceTree = "<group>";
