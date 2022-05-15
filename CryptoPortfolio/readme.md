@@ -25,6 +25,11 @@ Icons and Images:
 [![Icon Generator][icon-gen-image]][icon-gen-url]
 
 <!--[![License][license-image]][license-url]  -->
+Charting:
+
+[![Charting][charting-image]][charting-url]
+
+
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
@@ -52,5 +57,7 @@ Icons and Images:
 [crypto-icon-image]: https://img.shields.io/badge/crypto%20icons-spothq-lightgrey
 [icon-gen-image]: https://img.shields.io/badge/Icon%20generator-appicon.co-lightgrey
 [icon-gen-url]: https://appicon.co
+[charting-image]: https://img.shields.io/badge/charts-logrocket.com-lightgrey
+[charting-url]: https://blog.logrocket.com/building-custom-charts-swiftui/
 
 
