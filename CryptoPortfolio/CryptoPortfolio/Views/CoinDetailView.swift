@@ -23,6 +23,12 @@ struct CoinDetailView: View {
     var body: some View {
         
         VStack (alignment: .center) {
+            VStack (alignment: .center) {
+                checkForImage(symbol: coin.symbol.lowercased())
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 150, height: 150, alignment: .center)
+            }
             Form {
                 Section (header: Text("Crypto Summary")) {
                     if amount == "0.0" {
@@ -32,6 +38,18 @@ struct CoinDetailView: View {
                         Text("You own \(amount) \(coin.name) crypto-currency")
                             .padding(4)
                     }
+                    
+                    if amount != "0.0" {
+                        Text("Your \(coin.name) crypto is worth: $\(returnValue(amount: amount, price: coin.priceUsd))")
+                            .padding(4)
+                    }
+                    
+                    
+                    
+                    Text(coin.name)
+                        .foregroundColor(.blue)
+                        .fontWeight(.heavy)
+                        .padding(.top, 20)
                 }
             }
             if amount == "0.0" {
