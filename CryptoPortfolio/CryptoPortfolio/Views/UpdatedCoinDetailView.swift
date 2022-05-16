@@ -76,7 +76,6 @@ struct UpdatedCoinDetailView: View {
                         HStack {
                             Label("Coin Name: ", systemImage: "keyboard")
                             Text(coin.name)
-                            Spacer()
                         }
                         
                         HStack {

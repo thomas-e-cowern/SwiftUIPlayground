@@ -32,8 +32,10 @@ struct CoinAmountView: View {
                     ownedCoins.save()
                     dismiss()
                 }
+                .frame(width: 100)
                 .padding()
-                .border(Color.blue, width: 3)
+                .background(Color.green)
+                .foregroundColor(.white)
                 .cornerRadius(4)
                 
                 Button("Delete") {
@@ -42,8 +44,19 @@ struct CoinAmountView: View {
                     amount = "0.0"
                     dismiss()
                 }
+                .frame(width: 100)
                 .padding()
-                .border(Color.red, width: 3)
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(4)
+                
+                Button("Cancel") {
+                    dismiss()
+                }
+                .frame(width: 100)
+                .padding()
+                .background(Color.blue)
+                .foregroundColor(.white)
                 .cornerRadius(4)
             }
         }
