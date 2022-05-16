@@ -37,7 +37,7 @@ struct UpdatedCoinDetailView: View {
                     .fontWeight(.heavy)
                     .padding(.top, 20)
                 
-                if amount == "0.0" {
+                if amount.isEmpty {
                     Text("You own no \(coin.name) crypto-currency")
                         .padding(4)
                 } else {
@@ -46,7 +46,7 @@ struct UpdatedCoinDetailView: View {
                 }
                 
                 if amount != "0.0" {
-                    Text("Your \(coin.name) crypto is worth: $\(returnValue(amount: amount, price: coin.priceUsd))")
+                    Text("Your \(coin.name) crypto is worth: \(returnValue(amount: amount, price: coin.priceUsd))")
                         .padding(4)
                 }
                 

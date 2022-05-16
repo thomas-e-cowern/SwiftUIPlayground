@@ -40,7 +40,7 @@ class OwnedCoins: ObservableObject {
         if let amount =  ownedCoins[coin.id] {
             return amount
         } else {
-            return "0.0"
+            return ""
         }
     }
     

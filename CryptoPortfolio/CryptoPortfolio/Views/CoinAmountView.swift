@@ -10,6 +10,7 @@ import SwiftUI
 struct CoinAmountView: View {
     
     var coin: Coin
+    var deleteIsUsable: Bool = true
     
     @Binding var amount: String
     
@@ -20,7 +21,7 @@ struct CoinAmountView: View {
     var body: some View {
         VStack {
             Text("Enter your coin amount below")
-            TextField("  Coin amount...", text: $amount)
+            TextField("Coin amount...", text: $amount)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.numbersAndPunctuation)
             
@@ -30,7 +31,7 @@ struct CoinAmountView: View {
                     ownedCoins.save()
                     dismiss()
                 }
-                .frame(width: 100)
+                .frame(width: 60)
                 .padding()
                 .background(Color.green)
                 .foregroundColor(.white)
@@ -42,16 +43,17 @@ struct CoinAmountView: View {
                     amount = "0.0"
                     dismiss()
                 }
-                .frame(width: 100)
+                .frame(width: 60)
                 .padding()
                 .background(Color.red)
                 .foregroundColor(.white)
                 .cornerRadius(4)
+                .disabled(deleteIsUsable)
                 
                 Button("Cancel") {
                     dismiss()
                 }
-                .frame(width: 100)
+                .frame(width: 60)
                 .padding()
                 .background(Color.blue)
                 .foregroundColor(.white)
