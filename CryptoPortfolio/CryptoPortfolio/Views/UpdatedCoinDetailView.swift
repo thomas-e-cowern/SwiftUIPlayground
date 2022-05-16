@@ -71,45 +71,55 @@ struct UpdatedCoinDetailView: View {
                     CoinAmountView(coin: coin, amount: $amount)
                 }
                 
-                VStack (alignment: .leading, spacing: 20) {
-                    HStack {
-                        Label("Coin Name: ", systemImage: "keyboard")
-                        Text(coin.name)
-                    }
-                    
-                    HStack {
-                        Label("Coin Symbol: ", systemImage: "star")
-                        Text(coin.symbol)
-                    }
-                    
-                    HStack {
-                        Label("Current Price: ", systemImage: "dollarsign.circle")
-                        Text(coin.priceAsDouble())
-                    }
-                    
-                    if coin.checkForExplorer() != "https://api.coincap.io" {
+                VStack {
+                    VStack (alignment: .leading, spacing: 20) {
                         HStack {
-                            Label("Check out \(coin.name)", systemImage: "link.circle")
-                            Link("here...", destination: URL(string: coin.checkForExplorer())!)
+                            Label("Coin Name: ", systemImage: "keyboard")
+                            Text(coin.name)
+                            Spacer()
                         }
-                    } else {
+                        
                         HStack {
-                            Label("There is no link for \(coin.name)", systemImage: "eye.slash.circle")
+                            Label("Coin Symbol: ", systemImage: "star")
+                            Text(coin.symbol)
+                        }
+                        
+                        HStack {
+                            Label("Current Price: ", systemImage: "dollarsign.circle")
+                            Text(coin.priceAsDouble())
+                        }
+                        
+                        if coin.checkForExplorer() != "https://api.coincap.io" {
+                            HStack {
+                                Label("Check out \(coin.name)", systemImage: "link.circle")
+                                Link("here...", destination: URL(string: coin.checkForExplorer())!)
+                            }
+                        } else {
+                            HStack {
+                                Label("There is no link for \(coin.name)", systemImage: "eye.slash.circle")
+                            }
                         }
                     }
+                    .padding()
                     
-                    if coinPriceHistory.count == 0 {
-                        Text("Loading Price History")
-                            .fontWeight(.heavy)
-                    } else {
-                        LineChartView(dataPoints: coinPriceHistory)
-                            .frame(height: 200, alignment: .center)
-                            .padding(4)
-                            .background(Color.black.opacity(0.7).cornerRadius(16))
-                            .padding()
+                    VStack (alignment: .leading) {
+                        if coinPriceHistory.count == 0 {
+                            Text("Loading Price History")
+                                .fontWeight(.heavy)
+                                
+                        } else {
+                            Text("Previous 24 hr activity")
+                                .fontWeight(.bold)
+                                .padding(.leading, 20)
+                            LineChartView(dataPoints: coinPriceHistory)
+                                .frame(height: 200, alignment: .center)
+                                .background(Color.black.opacity(0.7).cornerRadius(16))
+                                .padding()
+                        }
                     }
-                }
-       
+
+
+                } // End of VStack
             } // End of VStack
             .onAppear {
                 fetchCoinHistory(id: coin.id)
