@@ -10,7 +10,7 @@ import Foundation
 class OwnedCoins: ObservableObject {
 //    private var ownedCoins: Set<String>
     private let saveKey = "ownedCoins"
-    private var ownedCoins: [String: String]
+    @Published var ownedCoins: [String: String]
     
     init () {
         ownedCoins = [:]
