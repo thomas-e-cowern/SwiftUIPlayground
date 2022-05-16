@@ -21,9 +21,7 @@ struct CoinAmountView: View {
         VStack {
             Text("Enter your coin amount below")
             TextField("  Coin amount...", text: $amount)
-                .frame(width: 200, height: 50, alignment: .center)
-                .border(Color.blue, width: 3)
-                .cornerRadius(4)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.numbersAndPunctuation)
             
             HStack {
