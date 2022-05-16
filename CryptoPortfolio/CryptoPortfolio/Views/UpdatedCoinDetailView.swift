@@ -135,15 +135,20 @@ struct UpdatedCoinDetailView: View {
     
     func returnValue(amount: String, price: String) -> String {
         
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        
         guard let price = Double(price) else { return "" }
         
         guard let amount = Double(amount) else { return "" }
         
         let returnAmount = round((amount * price) * 100) / 100
         
-        print("Return Amount: \(returnAmount)")
+        print("Original Return Amount: \(returnAmount)")
+        print("Return Amount: \(formatter.string(from: NSNumber(value: returnAmount)) ?? "0")")
         
-        return String(returnAmount)
+        
+        return formatter.string(from: NSNumber(value: returnAmount)) ?? "0"
     }
     
     func fetchCoinHistory (id: String) {

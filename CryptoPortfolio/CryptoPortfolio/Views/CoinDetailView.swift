@@ -40,7 +40,7 @@ struct CoinDetailView: View {
                     }
                     
                     if amount != "0.0" {
-                        Text("Your \(coin.name) crypto is worth: $\(returnValue(amount: amount, price: coin.priceUsd))")
+                        Text("Your \(coin.name) crypto is worth: \(returnValue(amount: amount, price: coin.priceUsd))")
                             .padding(4)
                     }
                     
@@ -175,16 +175,21 @@ struct CoinDetailView: View {
     }
     
     func returnValue(amount: String, price: String) -> String {
+        print("inside return value")
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
         
         guard let price = Double(price) else { return "" }
         
         guard let amount = Double(amount) else { return "" }
         
         let returnAmount = round((amount * price) * 100) / 100
+        print("Original Return Amount: \(returnAmount)")
+        print("Return Amount: \(formatter.string(from: NSNumber(value: returnAmount)) ?? "0")")
         
-        print("Return Amount: \(returnAmount)")
         
-        return String(returnAmount)
+        return formatter.string(from: NSNumber(value: returnAmount)) ?? "0"
+//        return String(returnAmount)
     }
 }
 

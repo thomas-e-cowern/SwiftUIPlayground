@@ -18,7 +18,7 @@ class OwnedCoins: ObservableObject {
     }
     
     func loadOwnedCoins () {
-        print("inside load in owned coins")
+//        print("inside load in owned coins")
         DispatchQueue.main.async {
              if let defaults = UserDefaults(suiteName: "group.MobileSoftware.Services.CryptoPortfolio") {
                  if let data = defaults.data(forKey: self.saveKey) {
