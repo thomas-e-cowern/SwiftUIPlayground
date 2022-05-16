@@ -10,7 +10,6 @@ import SwiftUI
 struct CoinAmountView: View {
     
     var coin: Coin
-    var deleteIsUsable: Bool = true
     
     @Binding var amount: String
     
@@ -37,18 +36,30 @@ struct CoinAmountView: View {
                 .foregroundColor(.white)
                 .cornerRadius(4)
                 
-                Button("Delete") {
-                    ownedCoins.remove(coin)
-                    ownedCoins.save()
-                    amount = "0.0"
-                    dismiss()
+                if amount == "" {
+                    Button("Delete") {
+
+                    // Do Nothing
+                    
+                    }
+                    .frame(width: 60)
+                    .padding()
+                    .background(Color.red.opacity(0.1))
+                    .foregroundColor(.white)
+                    .cornerRadius(4)
+                } else {
+                    Button("Delete") {
+                        ownedCoins.remove(coin)
+                        ownedCoins.save()
+                        amount = ""
+                        dismiss()
+                    }
+                    .frame(width: 60)
+                    .padding()
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(4)
                 }
-                .frame(width: 60)
-                .padding()
-                .background(Color.red)
-                .foregroundColor(.white)
-                .cornerRadius(4)
-                .disabled(deleteIsUsable)
                 
                 Button("Cancel") {
                     dismiss()
@@ -61,9 +72,5 @@ struct CoinAmountView: View {
             }
         }
         .frame(width: 200, height: 200)
-//        .onDisappear {
-//            print("Coin amount view dissapeared")
-//            ownedCoins.loadOwnedCoins()
-//        }
     }
 }
