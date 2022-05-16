@@ -99,7 +99,6 @@ struct CoinDetailView: View {
             }
             
             Form {
-                
                 Section (header: Text("Details")) {
                     HStack {
                         Label("Coin Name: ", systemImage: "keyboard")
