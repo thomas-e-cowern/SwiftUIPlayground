@@ -40,7 +40,7 @@ struct ContentView: View {
                                 VStack {
                                     ForEach(coinsArray) { coin in
                                         if favoriteCoins.contains(coin) {
-                                            NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                            NavigationLink (destination: UpdatedCoinDetailView(coin: coin)) {
                                                 CoinListView(coin: coin)
                                             }
                                         }
@@ -56,7 +56,7 @@ struct ContentView: View {
                                 VStack {
                                     ForEach(coinsArray) { coin in
                                         if ownedCoins.contains(coin) {
-                                            NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                            NavigationLink (destination: UpdatedCoinDetailView(coin: coin)) {
                                                 CoinListView(coin: coin)
                                             }
                                         }
@@ -70,7 +70,7 @@ struct ContentView: View {
                                 }
                             } else {
                                 ForEach(searchResults) { coin in
-                                    NavigationLink (destination: CoinDetailView(coin: coin)) {
+                                    NavigationLink (destination: UpdatedCoinDetailView(coin: coin)) {
                                         CoinListView(coin: coin)
                                     }
                                 }

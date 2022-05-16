@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class CoinContoller: ObservableObject {
     
@@ -89,6 +90,9 @@ class CoinContoller: ObservableObject {
         
     }
     
-    
+    func checkForImage(symbol: String) -> Image {
+        let image = (UIImage(named: symbol) ?? UIImage(named: "generic.png"))!
+        return Image(uiImage: image)
+    }
 }
 
