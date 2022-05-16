@@ -274,9 +274,6 @@ struct ContentView: View {
         var netWorth = 0.0
 
         for coin in coinsArray {
-            
-            
-            
             count += 1
             print("inside for \(count)")
             if ownedCoins.contains(coin) {
