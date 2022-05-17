@@ -10,7 +10,7 @@
 </p>
 <p align="row">
 <img src= "CryptoPortfolio/Unlock-detail-link.gif" width="200" >
-<img src= "https://media.giphy.com/media/HYOlBKJBqgAfe/giphy.gif" width="400" >
+<img src= "CryptoPortfolio/Favorites" width="200" >
 </p>
 <br />
 
