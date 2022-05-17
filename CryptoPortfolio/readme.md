@@ -50,6 +50,12 @@ Charting:
 - iOS 15
 - Xcode 13.0
 
+## Credits
+
+- Crypto data from coincap.io: https://coincap.io
+- Inspired by the crypt currency project by Nick Walter on Udemy: https://www.udemy.com/course/intermediate-ios-11-complex-and-advanced-iphone-apps/
+- Coin images: https://github.com/spothq/cryptocurrency-icons
+
 [https://github.com/thomas-e-cowern/](https://github.com/thomas-e-cowern/)
 
 [swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
