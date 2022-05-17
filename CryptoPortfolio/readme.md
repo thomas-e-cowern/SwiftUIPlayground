@@ -8,6 +8,10 @@
     Crypto Portfolio offers users the ability to see current price of the top 100 crypto currencies.  It allows them to see 24 hour historical charts, and provides links to individual currency websites.  It allows users to create favorites, and manually enter any currency coins they may own.
   </p>
 </p>
+<p align="row">
+<img src= "https://media.giphy.com/media/HYOlBKJBqgAfe/giphy.gif" width="400" >
+<img src= "https://media.giphy.com/media/HYOlBKJBqgAfe/giphy.gif" width="400" >
+</p>
 <br />
 
 Technologies:
