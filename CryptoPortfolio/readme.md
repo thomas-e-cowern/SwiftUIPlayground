@@ -11,6 +11,7 @@
 <p align="row">
 <img src= "CryptoPortfolio/Unlock-detail-link.gif" width="200" >
 <img src= "CryptoPortfolio/Favorites.gif" width="200" >
+<img src= "CryptoPortfolio/Owned.gif" width="200" >
 </p>
 <br />
 

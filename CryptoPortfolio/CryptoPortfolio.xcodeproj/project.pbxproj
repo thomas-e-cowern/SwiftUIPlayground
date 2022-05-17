@@ -31,6 +31,7 @@
 		41C23DD628314512006454A5 /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 41C23DD528314512006454A5 /* readme.md */; };
 		41E5F9422833C5C40027DEB3 /* Unlock-detail-link.gif in Resources */ = {isa = PBXBuildFile; fileRef = 41E5F9412833C5C30027DEB3 /* Unlock-detail-link.gif */; };
 		41E5F9442833C74F0027DEB3 /* Favorites.gif in Resources */ = {isa = PBXBuildFile; fileRef = 41E5F9432833C74F0027DEB3 /* Favorites.gif */; };
+		41E5F9462833C8B10027DEB3 /* Owned.gif in Resources */ = {isa = PBXBuildFile; fileRef = 41E5F9452833C8B10027DEB3 /* Owned.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		41C23DD528314512006454A5 /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		41E5F9412833C5C30027DEB3 /* Unlock-detail-link.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Unlock-detail-link.gif"; sourceTree = "<group>"; };
 		41E5F9432833C74F0027DEB3 /* Favorites.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Favorites.gif; sourceTree = "<group>"; };
+		41E5F9452833C8B10027DEB3 /* Owned.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Owned.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		416D54E628199A8E00A95346 /* CryptoPortfolio */ = {
 			isa = PBXGroup;
 			children = (
+				41E5F9452833C8B10027DEB3 /* Owned.gif */,
 				41E5F9432833C74F0027DEB3 /* Favorites.gif */,
 				41E5F9412833C5C30027DEB3 /* Unlock-detail-link.gif */,
 				41957014282157B500C322AD /* Info.plist */,
@@ -223,6 +226,7 @@
 				41E5F9422833C5C40027DEB3 /* Unlock-detail-link.gif in Resources */,
 				41E5F9442833C74F0027DEB3 /* Favorites.gif in Resources */,
 				419CDA06281AAFC4002604E7 /* Credits.json in Resources */,
+				41E5F9462833C8B10027DEB3 /* Owned.gif in Resources */,
 				41C23DD628314512006454A5 /* readme.md in Resources */,
 				416D54EC28199A9800A95346 /* Assets.xcassets in Resources */,
 			);
