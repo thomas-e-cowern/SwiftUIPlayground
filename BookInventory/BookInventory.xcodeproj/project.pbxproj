@@ -11,6 +11,8 @@
 		413D5CCD283C17A000FE7DA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CCC283C17A000FE7DA3 /* ContentView.swift */; };
 		413D5CCF283C17A800FE7DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413D5CCE283C17A800FE7DA3 /* Assets.xcassets */; };
 		413D5CD2283C17A800FE7DA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413D5CD1283C17A800FE7DA3 /* Preview Assets.xcassets */; };
+		413D5CDA283C4A2900FE7DA3 /* BookInventory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CD8283C4A2900FE7DA3 /* BookInventory.xcdatamodeld */; };
+		413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CDB283C4A7700FE7DA3 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		413D5CCC283C17A000FE7DA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		413D5CCE283C17A800FE7DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		413D5CD1283C17A800FE7DA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		413D5CD9283C4A2900FE7DA3 /* BookInventory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookInventory.xcdatamodel; sourceTree = "<group>"; };
+		413D5CDB283C4A7700FE7DA3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,8 @@
 			children = (
 				413D5CCA283C17A000FE7DA3 /* BookInventoryApp.swift */,
 				413D5CCC283C17A000FE7DA3 /* ContentView.swift */,
+				413D5CDB283C4A7700FE7DA3 /* DataController.swift */,
+				413D5CD8283C4A2900FE7DA3 /* BookInventory.xcdatamodeld */,
 				413D5CCE283C17A800FE7DA3 /* Assets.xcassets */,
 				413D5CD0283C17A800FE7DA3 /* Preview Content */,
 			);
@@ -137,6 +143,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413D5CDA283C4A2900FE7DA3 /* BookInventory.xcdatamodeld in Sources */,
+				413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */,
 				413D5CCD283C17A000FE7DA3 /* ContentView.swift in Sources */,
 				413D5CCB283C17A000FE7DA3 /* BookInventoryApp.swift in Sources */,
 			);
@@ -341,6 +349,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		413D5CD8283C4A2900FE7DA3 /* BookInventory.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				413D5CD9283C4A2900FE7DA3 /* BookInventory.xcdatamodel */,
+			);
+			currentVersion = 413D5CD9283C4A2900FE7DA3 /* BookInventory.xcdatamodel */;
+			path = BookInventory.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 413D5CBF283C17A000FE7DA3 /* Project object */;
 }
