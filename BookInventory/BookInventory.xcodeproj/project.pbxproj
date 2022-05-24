@@ -13,6 +13,7 @@
 		413D5CD2283C17A800FE7DA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413D5CD1283C17A800FE7DA3 /* Preview Assets.xcassets */; };
 		413D5CDA283C4A2900FE7DA3 /* BookInventory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CD8283C4A2900FE7DA3 /* BookInventory.xcdatamodeld */; };
 		413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CDB283C4A7700FE7DA3 /* DataController.swift */; };
+		41A4BC03283D7443007E29B5 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BC02283D7442007E29B5 /* AddBookView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		413D5CD1283C17A800FE7DA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		413D5CD9283C4A2900FE7DA3 /* BookInventory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BookInventory.xcdatamodel; sourceTree = "<group>"; };
 		413D5CDB283C4A7700FE7DA3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		41A4BC02283D7442007E29B5 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				413D5CCC283C17A000FE7DA3 /* ContentView.swift */,
 				413D5CDB283C4A7700FE7DA3 /* DataController.swift */,
 				413D5CD8283C4A2900FE7DA3 /* BookInventory.xcdatamodeld */,
+				41A4BC02283D7442007E29B5 /* AddBookView.swift */,
 				413D5CCE283C17A800FE7DA3 /* Assets.xcassets */,
 				413D5CD0283C17A800FE7DA3 /* Preview Content */,
 			);
@@ -147,6 +150,7 @@
 				413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */,
 				413D5CCD283C17A000FE7DA3 /* ContentView.swift in Sources */,
 				413D5CCB283C17A000FE7DA3 /* BookInventoryApp.swift in Sources */,
+				41A4BC03283D7443007E29B5 /* AddBookView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
