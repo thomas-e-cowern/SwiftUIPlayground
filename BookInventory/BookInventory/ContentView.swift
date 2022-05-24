@@ -9,11 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) var moc
-//    @FetchRequest(sortDescriptors: []) var students: FetchedResults<Student>
+    @FetchRequest(sortDescriptors: []) var books: FetchedResults<Book>
+    
+    @State private var showAddScreen = false
     
     var body: some View {
-        VStack {
-            Text("Start Over")
+        NavigationView {
+            Text("Count is \(books.count)")
+                .navigationTitle("Book Worm")
+                .toolbar {
+                    
+                }
         }
     }
 }
