@@ -15,6 +15,7 @@
 		413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CDB283C4A7700FE7DA3 /* DataController.swift */; };
 		41A4BC03283D7443007E29B5 /* AddBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BC02283D7442007E29B5 /* AddBookView.swift */; };
 		41A4BC05283D8509007E29B5 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BC04283D8509007E29B5 /* RatingView.swift */; };
+		41A4BC07283D90C9007E29B5 /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A4BC06283D90C9007E29B5 /* EmojiRatingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		413D5CDB283C4A7700FE7DA3 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		41A4BC02283D7442007E29B5 /* AddBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBookView.swift; sourceTree = "<group>"; };
 		41A4BC04283D8509007E29B5 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		41A4BC06283D90C9007E29B5 /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				413D5CDB283C4A7700FE7DA3 /* DataController.swift */,
 				413D5CD8283C4A2900FE7DA3 /* BookInventory.xcdatamodeld */,
 				41A4BC02283D7442007E29B5 /* AddBookView.swift */,
+				41A4BC06283D90C9007E29B5 /* EmojiRatingView.swift */,
 				41A4BC04283D8509007E29B5 /* RatingView.swift */,
 				413D5CCE283C17A800FE7DA3 /* Assets.xcassets */,
 				413D5CD0283C17A800FE7DA3 /* Preview Content */,
@@ -151,6 +154,7 @@
 			files = (
 				413D5CDA283C4A2900FE7DA3 /* BookInventory.xcdatamodeld in Sources */,
 				413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */,
+				41A4BC07283D90C9007E29B5 /* EmojiRatingView.swift in Sources */,
 				413D5CCD283C17A000FE7DA3 /* ContentView.swift in Sources */,
 				41A4BC05283D8509007E29B5 /* RatingView.swift in Sources */,
 				413D5CCB283C17A000FE7DA3 /* BookInventoryApp.swift in Sources */,
