@@ -21,10 +21,14 @@ struct ContentView: View {
                 let firstNames = ["Ginny", "Harry", "Hermione", "Luna", "Ron"]
                 let lastNames = ["Moskovits", "Granger", "Lovegood", "Potter", "Weasley"]
                 
-                let chosenFirstName = firstNames.randomElement()
-                let chosenLastName = lastNames.randomElement()
+                let chosenFirstName = firstNames.randomElement()!
+                let chosenLastName = lastNames.randomElement()!
                 
+                let student = Student(context: moc)
+                student.id = UUID()
+                student.name = "\(chosenFirstName) \(chosenLastName)"
                 
+                try? moc.save()
                 
             }
         }
