@@ -18,7 +18,16 @@ struct ContentView: View {
             Text("Count is \(books.count)")
                 .navigationTitle("Book Worm")
                 .toolbar {
-                    
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button {
+                            showAddScreen.toggle()
+                        } label: {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
+                .sheet(isPresented: $showAddScreen) {
+                    AddBookView()
                 }
         }
     }
