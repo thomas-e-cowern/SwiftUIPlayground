@@ -26,9 +26,30 @@ struct AddBookView: View {
                     TextField("Name of book", text: $title)
                     TextField("Author's Name", text: $author)
                     
-                    Picker("Genre", selection: $genre)
+                    Picker("Genre", selection: $genre) {
+                        ForEach(genres, id: \.self) {
+                            Text($0)
+                        }
+                    }
                 }
                 
+                Section {
+                    TextEditor(text: $review)
+                    
+                    Picker("Rating", selection: $rating) {
+                        ForEach(0..<6) {
+                            Text(String($0))
+                        }
+                    }
+                } header: {
+                    Text("Write a review")
+                }
+                
+                Section {
+                    Button("Save") {
+                        // add the book
+                    }
+                }
             }
         }
     }
