@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41375890283E5D6F006BCF68 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137588F283E5D6F006BCF68 /* DetailView.swift */; };
 		413D5CCB283C17A000FE7DA3 /* BookInventoryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CCA283C17A000FE7DA3 /* BookInventoryApp.swift */; };
 		413D5CCD283C17A000FE7DA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413D5CCC283C17A000FE7DA3 /* ContentView.swift */; };
 		413D5CCF283C17A800FE7DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413D5CCE283C17A800FE7DA3 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4137588F283E5D6F006BCF68 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		413D5CC7283C17A000FE7DA3 /* BookInventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookInventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413D5CCA283C17A000FE7DA3 /* BookInventoryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInventoryApp.swift; sourceTree = "<group>"; };
 		413D5CCC283C17A000FE7DA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				41A4BC06283D90C9007E29B5 /* EmojiRatingView.swift */,
 				41A4BC04283D8509007E29B5 /* RatingView.swift */,
 				413D5CCE283C17A800FE7DA3 /* Assets.xcassets */,
+				4137588F283E5D6F006BCF68 /* DetailView.swift */,
 				413D5CD0283C17A800FE7DA3 /* Preview Content */,
 			);
 			path = BookInventory;
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413D5CDA283C4A2900FE7DA3 /* BookInventory.xcdatamodeld in Sources */,
+				41375890283E5D6F006BCF68 /* DetailView.swift in Sources */,
 				413D5CDC283C4A7700FE7DA3 /* DataController.swift in Sources */,
 				41A4BC07283D90C9007E29B5 /* EmojiRatingView.swift in Sources */,
 				413D5CCD283C17A000FE7DA3 /* ContentView.swift in Sources */,
