@@ -10,6 +10,10 @@ import CoreData
 
 struct DetailView: View {
     
+    @Environment(\.managedObjectContext) var moc
+    @Environment(\.dismiss) var dismiss
+    @State private var showDeleteAlert = false
+    
     let book: Book
     
     var body: some View {
@@ -41,6 +45,28 @@ struct DetailView: View {
         }
         .navigationTitle(book.title ?? "Unknown Book")
         .navigationBarTitleDisplayMode(.inline)
+        .alert("Delete Book?", isPresented: $showDeleteAlert) {
+            Button("Delete", role: .destructive, action: deleteBook)
+            Button("Cancel", role: .cancel) {  }
+        } message: {
+            Text("Are you sure you want to delete this book?")
+        }
+        .toolbar {
+            Button {
+                showDeleteAlert = true
+            } label: {
+                Label("Delete This Book",systemImage: "trash")
+            }
+
+        }
+    }
+    
+    func deleteBook () {
+        moc.delete(book)
+        
+//        try? moc.save()
+        
+        dismiss()
     }
 }
 
