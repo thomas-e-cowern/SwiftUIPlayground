@@ -35,10 +35,14 @@ struct ContentView: View {
                             }
                         }
                     }
-                }
+                }.onDelete(perform: deleteBooks)
             }
                 .navigationTitle("Book Worm")
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        EditButton()
+                    }
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         Button {
                             showAddScreen.toggle()
@@ -59,7 +63,7 @@ struct ContentView: View {
             moc.delete(book)
         }
         
-        try? moc.save()
+//        try? moc.save()
     }
 }
 
