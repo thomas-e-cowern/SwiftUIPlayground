@@ -51,7 +51,11 @@ Charting:
 
 ## Upcoming
 
-- [] 
+- [] Update print function with net worth and additional details
+- [] Add accessibility per apple: https://www.apple.com/accessibility/ 
+- [] Add comments 
+- [] Delete unused views (Yeah, there's a few...)
+- [] And last, but certainly not least, try to refactor for MVVM (WHAT? ....)
 
 ## Requirements
 
