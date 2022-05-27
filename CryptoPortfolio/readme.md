@@ -47,11 +47,11 @@ Charting:
 
 ## Bugs
 
-- [] Print option works on physical iPhone but crashes on iPad Pro v2
+- [ ] Print option works on physical iPhone but crashes on iPad Pro v2
 
 ## Upcoming
 
-- [ ] Update print function with net worth and additional details
+- [ ] Update print function with net worth and additional details (make the report look better...)
 - [ ] Add accessibility per apple: https://www.apple.com/accessibility/ 
 - [ ] Add comments 
 - [ ] Delete unused views (Yeah, there's a few...)
