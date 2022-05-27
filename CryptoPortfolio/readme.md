@@ -45,6 +45,14 @@ Charting:
 - [x] Owned crypto with current value
 - [x] PDF Report Generator
 
+## Bugs
+
+- [] Print option works on physical iPhone but crashes on iPad Pro v2
+
+## Upcoming
+
+- [] 
+
 ## Requirements
 
 - iOS 15
