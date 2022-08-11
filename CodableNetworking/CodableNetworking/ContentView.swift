@@ -25,7 +25,14 @@ struct ContentView: View {
             if let error = error {
                 print(User.default)
             } else if let data = data {
-                // decode and print
+                let decoder = JSONDecoder()
+                
+                do {
+                    let user = try decoder.decode(User.self, from: data)
+                    print(user)
+                } catch {
+                    print("There was an error decoding: \(error.localizedDescription)")
+                }
             }
         }.resume()
     }
