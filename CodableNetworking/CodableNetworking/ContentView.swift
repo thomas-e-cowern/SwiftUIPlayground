@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct User: Decodable {
     var id: UUID
@@ -15,6 +16,9 @@ struct User: Decodable {
 }
 
 struct ContentView: View {
+    
+    @State private var requests = Set<AnyCancellable>()
+    
     var body: some View {
         Button("Fetch Data") {
             let url = URL(string: "https://www.hackingwithswift.com/samples/user-24601.json")
@@ -22,21 +26,32 @@ struct ContentView: View {
         }
     }
     
+//    func fetch(_ url: URL) {
+//        URLSession.shared.dataTask(with: url) { data, response, error in
+//            if let error = error {
+//                print("\(error.localizedDescription)")
+//            } else if let data = data {
+//                let decoder = JSONDecoder()
+//
+//                do {
+//                    let user = try decoder.decode(User.self, from: data)
+//                    print(user)
+//                } catch {
+//                    print("There was an error decoding: \(error.localizedDescription)")
+//                }
+//            }
+//        }.resume()
+//    }
+    
     func fetch(_ url: URL) {
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            if let error = error {
-                print("\(error.localizedDescription)")
-            } else if let data = data {
-                let decoder = JSONDecoder()
-                
-                do {
-                    let user = try decoder.decode(User.self, from: data)
-                    print(user)
-                } catch {
-                    print("There was an error decoding: \(error.localizedDescription)")
-                }
-            }
-        }.resume()
+        let decoder = JSONDecoder()
+        
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map(\.data)
+            .decode(type: User.self, decoder: decoder)
+            .replaceError(with: User.default)
+            .sink(receiveValue: { print($0.name) })
+            .store(in: &requests)
     }
 }
 
