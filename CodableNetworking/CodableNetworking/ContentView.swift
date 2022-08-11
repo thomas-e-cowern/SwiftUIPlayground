@@ -22,7 +22,9 @@ struct ContentView: View {
     var body: some View {
         Button("Fetch Data") {
             let url = URL(string: "https://www.hackingwithswift.com/samples/user-24601.json")
-            self.fetch(url!)
+            self.fetch(url!, defaultValue: User.default) {
+                print($0.name)
+            }
         }
     }
     
@@ -43,14 +45,30 @@ struct ContentView: View {
 //        }.resume()
 //    }
     
-    func fetch(_ url: URL) {
+    // Specific combine below
+    
+    
+//    func fetch(_ url: URL) {
+//        let decoder = JSONDecoder()
+//
+//        URLSession.shared.dataTaskPublisher(for: url)
+//            .map(\.data)
+//            .decode(type: User.self, decoder: decoder)
+//            .replaceError(with: User.default)
+//            .sink(receiveValue: { print($0.name) })
+//            .store(in: &requests)
+//    }
+    
+    // Generic implementation of combine
+    
+    func fetch<T: Decodable>(_ url: URL, defaultValue: T, completion: @escaping (T) -> Void) {
         let decoder = JSONDecoder()
         
         URLSession.shared.dataTaskPublisher(for: url)
             .map(\.data)
-            .decode(type: User.self, decoder: decoder)
-            .replaceError(with: User.default)
-            .sink(receiveValue: { print($0.name) })
+            .decode(type: T.self, decoder: decoder)
+            .replaceError(with: defaultValue)
+            .sink(receiveValue: completion)
             .store(in: &requests)
     }
 }
