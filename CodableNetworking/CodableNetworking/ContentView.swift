@@ -16,14 +16,16 @@ struct User: Decodable {
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button("Fetch Data") {
+            let url = URL(string: "https://www.hackingwithswift.com/samples/user-24601.json")
+            self.fetch(url!)
+        }
     }
     
     func fetch(_ url: URL) {
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
-                print(User.default)
+                print("\(error.localizedDescription)")
             } else if let data = data {
                 let decoder = JSONDecoder()
                 
