@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject var network: NetworkMonitor
+    
     var body: some View {
-        Text("Hello, world!")
+        Text(verbatim: """
+        Active: \(network.isActive)
+        Expensive: \(network.isExpensive)
+        Constrained: \(network.isConstrained)
+        """)
             .padding()
+        
+        Button("Fetch Data") {
+            network.makeRequest()
+        }
     }
 }
 
