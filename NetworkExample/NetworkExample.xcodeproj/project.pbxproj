@@ -11,6 +11,7 @@
 		4101819828A5754B00E8EDCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4101819728A5754B00E8EDCA /* ContentView.swift */; };
 		4101819A28A5756C00E8EDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4101819928A5756C00E8EDCA /* Assets.xcassets */; };
 		4101819D28A5756C00E8EDCA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4101819C28A5756C00E8EDCA /* Preview Assets.xcassets */; };
+		410181A428A575FC00E8EDCA /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410181A328A575FC00E8EDCA /* NetworkMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4101819728A5754B00E8EDCA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4101819928A5756C00E8EDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4101819C28A5756C00E8EDCA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		410181A328A575FC00E8EDCA /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				4101819728A5754B00E8EDCA /* ContentView.swift */,
 				4101819928A5756C00E8EDCA /* Assets.xcassets */,
 				4101819B28A5756C00E8EDCA /* Preview Content */,
+				410181A328A575FC00E8EDCA /* NetworkMonitor.swift */,
 			);
 			path = NetworkExample;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4101819828A5754B00E8EDCA /* ContentView.swift in Sources */,
+				410181A428A575FC00E8EDCA /* NetworkMonitor.swift in Sources */,
 				4101819628A5754B00E8EDCA /* NetworkExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
