@@ -7,10 +7,27 @@
 
 import SwiftUI
 
+struct User: Decodable {
+    var id: UUID
+    var name: String
+    
+    static let `default` = User(id: UUID(), name: "Anonymous")
+}
+
 struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
+    }
+    
+    func fetch(_ url: URL) {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                print(User.default)
+            } else if let data = data {
+                // decode and print
+            }
+        }.resume()
     }
 }
 
