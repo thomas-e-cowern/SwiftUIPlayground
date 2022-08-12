@@ -19,24 +19,32 @@ struct ContentView: View {
         }
     }
     
-    func upload(_ data: MovieStar, to url: URL) {
-        let encoder = JSONEncoder()
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try? encoder.encode(data)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                let result = String(decoding: data, as: UTF8.self)
-                print(result)
-            } else if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("There was an unidentified error")
-            }
-        }.resume()
+//    func upload(_ data: MovieStar, to url: URL) {
+//        let encoder = JSONEncoder()
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.httpBody = try? encoder.encode(data)
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            if let data = data {
+//                let result = String(decoding: data, as: UTF8.self)
+//                print(result)
+//            } else if let error = error {
+//                print(error.localizedDescription)
+//            } else {
+//                print("There was an unidentified error")
+//            }
+//        }.resume()
+//    }
+    
+    func upload<Input: Encodable, Output: Decodable>(
+        _ data: Input, to url: URL,
+        httpMethod: String = "POST",
+        contenttype: String = "application/json",
+        completion: @escaping (Result<Output, Error>) -> Void) {
+        // More to come
     }
 }
 
