@@ -11,6 +11,7 @@
 		41A2C11F28A6A6E800E8AA12 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C11E28A6A6E800E8AA12 /* ContentView.swift */; };
 		41A2C12128A6A6F400E8AA12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A2C12028A6A6F400E8AA12 /* Assets.xcassets */; };
 		41A2C12428A6A6F400E8AA12 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41A2C12328A6A6F400E8AA12 /* Preview Assets.xcassets */; };
+		41A2C12B28A6A85600E8AA12 /* MovieStar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A2C12A28A6A85600E8AA12 /* MovieStar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		41A2C11E28A6A6E800E8AA12 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		41A2C12028A6A6F400E8AA12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41A2C12328A6A6F400E8AA12 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		41A2C12A28A6A85600E8AA12 /* MovieStar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieStar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				41A2C11C28A6A6E800E8AA12 /* UploadingCodableDataApp.swift */,
 				41A2C11E28A6A6E800E8AA12 /* ContentView.swift */,
+				41A2C12A28A6A85600E8AA12 /* MovieStar.swift */,
 				41A2C12028A6A6F400E8AA12 /* Assets.xcassets */,
 				41A2C12228A6A6F400E8AA12 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41A2C12B28A6A85600E8AA12 /* MovieStar.swift in Sources */,
 				41A2C11F28A6A6E800E8AA12 /* ContentView.swift in Sources */,
 				41A2C11D28A6A6E800E8AA12 /* UploadingCodableDataApp.swift in Sources */,
 			);
