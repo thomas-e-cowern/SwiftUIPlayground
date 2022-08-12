@@ -11,7 +11,7 @@ import SwiftUI
 struct UploadingCodableDataApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(movieStar: MovieStar(name: "Harrison Ford", movies: ["Clear and present danger", "Patriot games"]))
         }
     }
 }
