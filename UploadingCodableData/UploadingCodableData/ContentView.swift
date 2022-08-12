@@ -9,16 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let movieStar: MovieStar
-    
     var body: some View {
         Button("Send Data") {
             let movies = ["The Lord of the Rings", "Elizabeth"]
             let cate = MovieStar(name: "Cate Blanchett", movies: movies)
             let url = URL(string: "https://reqres.in/api/users")!
             
-            movieStar.upload(cate, to: url)
+            self.upload(cate, to: url)
         }
+    }
+    
+    func upload(_ data: MovieStar, to url: URL) {
+        let encoder = JSONEncoder()
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try? encoder.encode(data)
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let data = data {
+                let result = String(decoding: data, as: UTF8.self)
+                print(result)
+            } else if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("There was an unidentified error")
+            }
+        }.resume()
     }
 }
 
