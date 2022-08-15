@@ -7,8 +7,11 @@
 
 import SwiftUI
 import Foundation
+import Combine
 
 struct ContentView: View {
+    
+    @State private var requests = Set<AnyCancellable>()
     
     var body: some View {
         Button("Send Data") {
@@ -51,7 +54,7 @@ struct ContentView: View {
         URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .decode(type: Output.self, decoder: JSONDecoder())
-            .map(Result.success)
+            .map(Result<Any, Error>.success)
             .catch { error -> Just<Result<Output, UploadError>> in
                 error is DecodingError
                     ? Just(.failure(.decodeFailed))
