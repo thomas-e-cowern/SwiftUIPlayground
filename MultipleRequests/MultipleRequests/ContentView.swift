@@ -21,9 +21,27 @@ struct ContentView: View {
     @State private var favorites = Set<Int>()
     
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+        NavigationView {
+            List(messages) { message in
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(message.from)
+                            .font(.headline)
+
+                        Text(message.message)
+                            .foregroundColor(.secondary)
+                    }
+
+                    if favorites.contains(message.id) {
+                        Spacer()
+
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.red)
+                    }
+                }
+            }
+            .navigationTitle("Messages")
+        }
 }
 
 struct ContentView_Previews: PreviewProvider {
