@@ -6,6 +6,13 @@
 //
 
 import SwiftUI
+import Combine
+
+struct Message: Decodable, Identifiable {
+    let id: Int
+    let from: String
+    let message: String
+}
 
 struct ContentView: View {
     var body: some View {
