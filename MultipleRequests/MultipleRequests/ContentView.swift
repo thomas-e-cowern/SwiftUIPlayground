@@ -42,6 +42,21 @@ struct ContentView: View {
             }
             .navigationTitle("Messages")
         }
+        .onAppear {
+            let messagesURL = URL(string: "https://www.hackingwithswift.com/samples/user-messages.json")!
+
+            fetch(messagesURL, defaultValue: [Message]()) {
+                messages = $0
+            }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                let favoritesURL = URL(string: "https://www.hackingwithswift.com/samples/user-favorites.json")!
+
+                fetch(favoritesURL, defaultValue: Set<Int>()) {
+                    favorites = $0
+                }
+            }
+        }
     }
     
     func fetch<T: Decodable>(_ url: URL, defaultValue: T, completion: @escaping (T) -> Void) {
