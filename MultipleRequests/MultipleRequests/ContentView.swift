@@ -15,6 +15,11 @@ struct Message: Decodable, Identifiable {
 }
 
 struct ContentView: View {
+    
+    @State private var requests = Set<AnyCancellable>()
+    @State private var messages = [Message]()
+    @State private var favorites = Set<Int>()
+    
     var body: some View {
         Text("Hello, world!")
             .padding()
