@@ -24,7 +24,14 @@ struct ContentView: View {
             let cate = MovieStar(name: "Cate Blanchett", movies: movies)
             let url = URL(string: "https://reqres.in/api/users")!
             
-            self.upload(cate, to: url)
+            upload(cate, to: url) { (result: Result<MovieStar, UploadError>) in
+                switch result {
+                case .success(let star):
+                    print("Recieved back \(star.name)")
+                case .failure(let error):
+                    print(error)
+                }
+            }
         }
     }
     
@@ -59,8 +66,8 @@ struct ContentView: View {
         URLSession.shared.dataTaskPublisher(for: request)
             .map(\.data)
             .decode(type: Output.self, decoder: JSONDecoder())
-            .map(Result<Any, Error>.success)
-            .catch { error -> Just<Result<Output, Error>> in
+            .map(Result.success)
+            .catch { error -> Just<Result<Output, UploadError>> in
                 error is DecodingError
                     ? Just(.failure(.decodeFailed))
                     : Just(.failure(.uploadFailed))
