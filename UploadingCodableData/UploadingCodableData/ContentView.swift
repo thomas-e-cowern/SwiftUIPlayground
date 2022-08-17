@@ -13,6 +13,11 @@ struct ContentView: View {
     
     @State private var requests = Set<AnyCancellable>()
     
+    enum UploadError: Error {
+        case uploadFailed
+        case decodeFailed
+    }
+    
     var body: some View {
         Button("Send Data") {
             let movies = ["The Lord of the Rings", "Elizabeth"]
@@ -55,7 +60,7 @@ struct ContentView: View {
             .map(\.data)
             .decode(type: Output.self, decoder: JSONDecoder())
             .map(Result<Any, Error>.success)
-            .catch { error -> Just<Result<Output, UploadError>> in
+            .catch { error -> Just<Result<Output, Error>> in
                 error is DecodingError
                     ? Just(.failure(.decodeFailed))
                     : Just(.failure(.uploadFailed))
