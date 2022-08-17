@@ -22,7 +22,20 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Button("Fetch news") {
-                    let url = URL(string: "https://www.hackingwithswift.com/samples/news1.json")
+                    let url = URL(string: "https://www.hackingwithswift.com/samples/news.json")!
+                    
+                    fetch(url, defaultValue: [URL]())
+                        .flatMap { urls in
+                            urls.publisher.flatMap { url in
+                                fetch(url, defaultValue: [NewsItem]())
+                            }
+                        }
+                        .collect()
+                        .sink { values in
+                            let allItems = values.joined()
+                            print(allItems)
+                            items = allItems.sorted { $0.id > $1.id }
+                        }
                 }
 
                 List(items) { item in
@@ -40,6 +53,7 @@ struct ContentView: View {
     }
 
     func fetch<T: Decodable>(_ url: URL, defaultValue: T) -> AnyPublisher<T, Never> {
+        print(" 😁 inside fetch")
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
 
