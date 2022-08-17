@@ -32,9 +32,11 @@ struct ContentView: View {
                         }
                         .collect()
                         .sink { values in
+                            print("Values: \(values)")
                             let allItems = values.joined()
                             items = allItems.sorted { $0.id > $1.id }
                         }
+                        .store(in: &requests)
                 }
 
                 List(items) { item in
