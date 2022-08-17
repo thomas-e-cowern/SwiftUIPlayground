@@ -33,7 +33,6 @@ struct ContentView: View {
                         .collect()
                         .sink { values in
                             let allItems = values.joined()
-                            print(allItems)
                             items = allItems.sorted { $0.id > $1.id }
                         }
                 }
