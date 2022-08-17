@@ -22,7 +22,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Button("Fetch news") {
-                    // fetch the news!
+                    let url = URL(string: "https://www.hackingwithswift.com/samples/news1.json")
                 }
 
                 List(items) { item in
