@@ -10,8 +10,13 @@ import SwiftUI
 
 struct EmitterView: View {
     private struct ParticleView: View {
+        
+        @State var isActive: Bool = false
+        let position: ParticleState<CGPoint>
+        
         var body: some View {
             Image("spark")
+                .position(isActive ? position.end : position.start)
         }
     }
         
@@ -43,7 +48,7 @@ struct EmitterView: View {
         GeometryReader { geo in
             ZStack {
                 ForEach(0..<self.particleCount, id: \.self) { i in
-                    ParticleView()
+                    ParticleView(position: self.position(in: geo))
                 }
             }
         }
