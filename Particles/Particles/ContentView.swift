@@ -16,6 +16,14 @@ struct EmitterView: View {
     }
         
     var particleCount: Int
+    var creationPoint = UnitPoint.center
+    var creationRange = CGSize.zero
+    
+    var angle = Angle.zero
+    var angleRange = Angle.zero
+    
+    var speed = 5.0
+    var speedRange = 0.0
 
     var body: some View {
         GeometryReader { geo in
