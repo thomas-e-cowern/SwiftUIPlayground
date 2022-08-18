@@ -17,6 +17,9 @@ struct EmitterView: View {
         var body: some View {
             Image("spark")
                 .position(isActive ? position.end : position.start)
+                .onAppear {
+                    self.isActive = true
+                }
         }
     }
         
@@ -45,7 +48,14 @@ struct EmitterView: View {
         let halfSpeedRange = speedRange / 2
         let actualSpeed  = speed + Double.random(in: -halfSpeedRange...halfSpeedRange)
         
-        ParticleState(.zero, .zero)
+        let halfAngleRange = angleRange.radians / 2
+        let actualDirection = angle.radians + Double.random(in: -halfAngleRange...halfAngleRange)
+        
+        let finalX = cos(actualDirection - .pi / 2) * actualSpeed
+        let finalY = sin(actualDirection - .pi / 2) * actualSpeed
+        let end = CGPoint(x: startX + finalX, y: startY + finalY)
+
+        return ParticleState(start, end)
     }
     
     var particleCount: Int
@@ -72,7 +82,8 @@ struct EmitterView: View {
 struct ContentView: View {
     var body: some View {
         ZStack {
-            EmitterView(particleCount: 200)
+            EmitterView(particleCount: 200, angleRange: .radians(360), speedRange: 80)
+                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
         }
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
