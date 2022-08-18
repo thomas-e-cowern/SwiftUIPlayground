@@ -31,6 +31,20 @@ struct EmitterView: View {
     }
     
     private func position(in proxy: GeometryProxy) -> ParticleState<CGPoint> {
+        
+        let halfCreationRangeWidth = creationRange.width / 2
+        let halfCreationRangeHeight = creationRange.height / 2
+        
+        let creationOffsetX = CGFloat.random(in: -halfCreationRangeWidth...halfCreationRangeWidth)
+        let creationOffsetY = CGFloat.random(in: -halfCreationRangeHeight...halfCreationRangeHeight)
+        
+        let startX = Double(proxy.size.width * (creationPoint.x + creationOffsetX))
+        let startY = Double(proxy.size.height * (creationPoint.y + creationOffsetY))
+        let start = CGPoint(x: startX, y: startY)
+        
+        let halfSpeedRange = speedRange / 2
+        let actualSpeed  = speed + Double.random(in: -halfSpeedRange...halfSpeedRange)
+        
         ParticleState(.zero, .zero)
     }
     
