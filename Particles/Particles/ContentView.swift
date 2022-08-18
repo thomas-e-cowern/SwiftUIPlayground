@@ -65,6 +65,14 @@ struct EmitterView: View {
     var angle = Angle.zero
     var angleRange = Angle.zero
     
+    var opacity = 1.0
+    var opacityRange = 0.0
+    var opacitySpeed = 0.0
+    
+    var scale: CGFloat = 1
+    var scaleRange: CGFloat = 0
+    var scaleSpeed: CGFloat = 0
+    
     var speed = 5.0
     var speedRange = 0.0
 
@@ -76,6 +84,18 @@ struct EmitterView: View {
                 }
             }
         }
+    }
+    
+    private func makeOpacity() -> ParticleState<Double> {
+        let halfOpacityRange = opacityRange / 2
+        let randomOpacity = Double.random(in: -halfOpacityRange...halfOpacityRange)
+        return ParticleState(opacity + randomOpacity, opacity + opacitySpeed + randomOpacity)
+    }
+    
+    private func makeScale() -> ParticleState<CGFloat> {
+        let halfScaleRange = scaleRange / 2
+        let randomScale = CGFloat.random(in: -halfScaleRange...halfScaleRange)
+        return ParticleState(scale + randomScale, scale + scaleSpeed + randomScale)
     }
 }
 
