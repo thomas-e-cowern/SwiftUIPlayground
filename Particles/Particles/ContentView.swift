@@ -14,8 +14,13 @@ struct EmitterView: View {
         @State var isActive: Bool = false
         let position: ParticleState<CGPoint>
         
+        let opacity: ParticleState<Double>
+        let scale: ParticleState<CGFloat>
+        
         var body: some View {
             Image("spark")
+                .opacity(isActive ? opacity.end : opacity.start)
+                .scaleEffect(isActive ? scale.end : scale.start)
                 .position(isActive ? position.end : position.start)
                 .onAppear {
                     self.isActive = true
@@ -80,7 +85,11 @@ struct EmitterView: View {
         GeometryReader { geo in
             ZStack {
                 ForEach(0..<self.particleCount, id: \.self) { i in
-                    ParticleView(position: self.position(in: geo))
+                    ParticleView(
+                        position: self.position(in: geo),
+                        opacity: self.makeOpacity(),
+                        scale: self.makeScale()
+                    )
                 }
             }
         }
@@ -102,8 +111,14 @@ struct EmitterView: View {
 struct ContentView: View {
     var body: some View {
         ZStack {
-            EmitterView(particleCount: 200, angleRange: .radians(360), speedRange: 80)
-                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
+            EmitterView(
+                particleCount: 200,
+                angleRange: .radians(360),
+                opacitySpeed: -1,
+                scaleRange: 0.1, scaleSpeed: 0.4,
+                speedRange: 80
+            )
+                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
         }
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
