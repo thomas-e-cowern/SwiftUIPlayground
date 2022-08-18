@@ -15,6 +15,20 @@ struct EmitterView: View {
         }
     }
         
+    private struct ParticleState<T> {
+        var start: T
+        var end: T
+        
+        init(_ start:T, _ end: T) {
+            self.start = start
+            self.end = end
+        }
+    }
+    
+    private func position(in proxy: GeometryProxy) -> ParticleState<CGPoint> {
+        ParticleState(.zero, .zero)
+    }
+    
     var particleCount: Int
     var creationPoint = UnitPoint.center
     var creationRange = CGSize.zero
