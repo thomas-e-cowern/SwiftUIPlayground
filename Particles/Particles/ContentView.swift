@@ -44,6 +44,9 @@ struct EmitterView: View {
     var creationPoint = UnitPoint.center
     var creationRange = CGSize.zero
     
+    var colors = [Color.white]
+    var blendMode = BlendMode.normal
+    
     var angle = Angle.zero
     var angleRange = Angle.zero
     
