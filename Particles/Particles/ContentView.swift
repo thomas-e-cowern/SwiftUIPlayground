@@ -17,6 +17,8 @@ struct EmitterView: View {
         let opacity: ParticleState<Double>
         let rotation: ParticleState<Angle>
         let scale: ParticleState<CGFloat>
+        let color: Color
+        let blendMode: BlendMode
         
         var body: some View {
             Image("spark")
@@ -73,8 +75,11 @@ struct EmitterView: View {
                         position: self.position(in: geo),
                         opacity: self.makeOpacity(),
                         rotation: self.makeRotation(),
-                        scale: self.makeScale()
+                        scale: self.makeScale(),
+                        color: self.colors.randomElement() ?? .white,
+                        blendMode: self.blendMode
                     )
+                    .animation(Animation.linear(duration: 1).repeatForever(autoreverses: true))
                 }
             }
         }
@@ -130,12 +135,14 @@ struct ContentView: View {
         ZStack {
             EmitterView(
                 particleCount: 200,
+                colors: [.red],
+                blendMode: .screen,
                 angleRange: .radians(360),
                 opacitySpeed: -1,
-                scaleRange: 0.1, scaleSpeed: 0.4,
+                scaleRange: 0.1,
+                scaleSpeed: 0.4,
                 speedRange: 80
             )
-                .animation(Animation.linear(duration: 1).repeatForever(autoreverses: false))
         }
         .background(Color.black)
         .edgesIgnoringSafeArea(.all)
