@@ -38,6 +38,42 @@ struct EmitterView: View {
         }
     }
     
+    var particleCount: Int
+    var creationPoint = UnitPoint.center
+    var creationRange = CGSize.zero
+    
+    var angle = Angle.zero
+    var angleRange = Angle.zero
+    
+    var opacity = 1.0
+    var opacityRange = 0.0
+    var opacitySpeed = 0.0
+    
+    var rotation = Angle.zero
+    var rotationRange = Angle.zero
+    var rotationSpeed = Angle.zero
+    
+    var scale: CGFloat = 1
+    var scaleRange: CGFloat = 0
+    var scaleSpeed: CGFloat = 0
+    
+    var speed = 5.0
+    var speedRange = 0.0
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                ForEach(0..<self.particleCount, id: \.self) { i in
+                    ParticleView(
+                        position: self.position(in: geo),
+                        opacity: self.makeOpacity(),
+                        scale: self.makeScale()
+                    )
+                }
+            }
+        }
+    }
+    
     private func position(in proxy: GeometryProxy) -> ParticleState<CGPoint> {
         
         let halfCreationRangeWidth = creationRange.width / 2
@@ -61,38 +97,6 @@ struct EmitterView: View {
         let end = CGPoint(x: startX + finalX, y: startY + finalY)
 
         return ParticleState(start, end)
-    }
-    
-    var particleCount: Int
-    var creationPoint = UnitPoint.center
-    var creationRange = CGSize.zero
-    
-    var angle = Angle.zero
-    var angleRange = Angle.zero
-    
-    var opacity = 1.0
-    var opacityRange = 0.0
-    var opacitySpeed = 0.0
-    
-    var scale: CGFloat = 1
-    var scaleRange: CGFloat = 0
-    var scaleSpeed: CGFloat = 0
-    
-    var speed = 5.0
-    var speedRange = 0.0
-
-    var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                ForEach(0..<self.particleCount, id: \.self) { i in
-                    ParticleView(
-                        position: self.position(in: geo),
-                        opacity: self.makeOpacity(),
-                        scale: self.makeScale()
-                    )
-                }
-            }
-        }
     }
     
     private func makeOpacity() -> ParticleState<Double> {
