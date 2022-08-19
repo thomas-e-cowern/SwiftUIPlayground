@@ -15,12 +15,14 @@ struct EmitterView: View {
         let position: ParticleState<CGPoint>
         
         let opacity: ParticleState<Double>
+        let rotation: ParticleState<Angle>
         let scale: ParticleState<CGFloat>
         
         var body: some View {
             Image("spark")
                 .opacity(isActive ? opacity.end : opacity.start)
                 .scaleEffect(isActive ? scale.end : scale.start)
+                .rotationEffect(isActive ? rotation.end : rotation.start)
                 .position(isActive ? position.end : position.start)
                 .onAppear {
                     self.isActive = true
@@ -67,6 +69,7 @@ struct EmitterView: View {
                     ParticleView(
                         position: self.position(in: geo),
                         opacity: self.makeOpacity(),
+                        rotation: self.makeRotation(),
                         scale: self.makeScale()
                     )
                 }
@@ -109,6 +112,13 @@ struct EmitterView: View {
         let halfScaleRange = scaleRange / 2
         let randomScale = CGFloat.random(in: -halfScaleRange...halfScaleRange)
         return ParticleState(scale + randomScale, scale + scaleSpeed + randomScale)
+    }
+    
+    private func makeRotation() -> ParticleState<Angle> {
+        let halfRotationRange = (rotationRange / 2).radians
+        let randomRotation = Double.random(in: -halfRotationRange...halfRotationRange)
+        let randomRotationAngle = Angle(radians: randomRotation)
+        return ParticleState(rotation + randomRotationAngle, rotation + rotationSpeed + randomRotationAngle)
     }
 }
 
