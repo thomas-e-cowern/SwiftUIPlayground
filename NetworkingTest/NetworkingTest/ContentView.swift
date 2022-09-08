@@ -17,6 +17,8 @@ struct ContentView: View {
                 
                 if vm.isRefreshing {
                     ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: Color.blue))
+                        .scaleEffect(4.0, anchor: .center)
                 } else {
                     List {
                         ForEach(vm.users, id: \.id) { user in
