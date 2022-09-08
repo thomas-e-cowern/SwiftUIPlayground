@@ -14,21 +14,27 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                List {
-                    ForEach(vm.users, id: \.id) { user in
-                        UserView(user: user)
-                            .listSectionSeparator(.automatic)
+                
+                if vm.isRefreshing {
+                    ProgressView()
+                } else {
+                    List {
+                        ForEach(vm.users, id: \.id) { user in
+                            UserView(user: user)
+                                .listSectionSeparator(.automatic)
+                        }
                     }
-                }
-                .listStyle(.plain)
-                .navigationTitle("Users")
-                .alert(isPresented: $vm.hasError, error: vm.error) {
-                    Button(action: vm.fetchUsers) {
-                        Text("Retry")
-                    }
+                    .listStyle(.plain)
+                    .navigationTitle("Users")
+
                 }
             }
             .onAppear(perform: vm.fetchUsers)
+            .alert(isPresented: $vm.hasError, error: vm.error) {
+                Button(action: vm.fetchUsers) {
+                    Text("Retry")
+                }
+            }
         }
     }
 }

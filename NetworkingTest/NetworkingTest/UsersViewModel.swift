@@ -12,16 +12,18 @@ final class UsersViewModel: ObservableObject {
     @Published var users: [User] = []
     @Published var hasError = false
     @Published var error: UserError?
+    @Published private(set) var isRefreshing = false
     
     func fetchUsers() {
         
+        isRefreshing = true
         hasError = false
         
         let userUrlString = "https://jsonplaceholder.typicode.com/users"
         if let url = URL(string: userUrlString) {
             URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
                 
-                DispatchQueue.main.async {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
                     if let error = error {
                         print("There was an error in the network call: \(error.localizedDescription)")
                         self?.hasError = true
@@ -39,6 +41,8 @@ final class UsersViewModel: ObservableObject {
                                 self?.error = UserError.failedToDecode
                             }
                     }
+                    
+                    self?.isRefreshing = false
                 }
 
             }.resume()
