@@ -13,6 +13,7 @@
 		4D24AE6028CA3FFD00360595 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D24AE5F28CA3FFD00360595 /* Preview Assets.xcassets */; };
 		4D24AE6728CA41CC00360595 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24AE6628CA41CC00360595 /* UserModel.swift */; };
 		4D24AE6928CA441F00360595 /* UsersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24AE6828CA441F00360595 /* UsersViewModel.swift */; };
+		4D24AE6B28CA518800360595 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D24AE6A28CA518800360595 /* UserView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D24AE5F28CA3FFD00360595 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D24AE6628CA41CC00360595 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		4D24AE6828CA441F00360595 /* UsersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewModel.swift; sourceTree = "<group>"; };
+		4D24AE6A28CA518800360595 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				4D24AE5828CA3FF400360595 /* NetworkingTestApp.swift */,
 				4D24AE5A28CA3FF400360595 /* ContentView.swift */,
+				4D24AE6A28CA518800360595 /* UserView.swift */,
 				4D24AE6628CA41CC00360595 /* UserModel.swift */,
 				4D24AE6828CA441F00360595 /* UsersViewModel.swift */,
 				4D24AE5C28CA3FFD00360595 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			files = (
 				4D24AE5B28CA3FF400360595 /* ContentView.swift in Sources */,
 				4D24AE6928CA441F00360595 /* UsersViewModel.swift in Sources */,
+				4D24AE6B28CA518800360595 /* UserView.swift in Sources */,
 				4D24AE6728CA41CC00360595 /* UserModel.swift in Sources */,
 				4D24AE5928CA3FF400360595 /* NetworkingTestApp.swift in Sources */,
 			);
