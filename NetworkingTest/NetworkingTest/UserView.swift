@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct UserView: View {
+    
+    let user: User
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text("**Name**: [Name Here]")
-            Text("**Email**: [Email Here]")
+            Text("**Name**: \(user.name)")
+            Text("**Email**: \(user.email)")
             Divider()
-            Text("**Company**: [Company Here]")
+            Text("**Company**: \(user.company.name)")
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
@@ -25,6 +28,6 @@ struct UserView: View {
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
+        UserView(user: .init(id: 0, name: "Bill SMith", email: "Bill@bill.com", company: .init(name: "BillVille", catchPhrase: "We have no idea")))
     }
 }
