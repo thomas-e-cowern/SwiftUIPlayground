@@ -16,4 +16,5 @@ struct User: Codable {
 
 struct Company: Codable {
     let name: String
+    let catchPhrase: String
 }
