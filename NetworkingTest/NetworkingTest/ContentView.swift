@@ -21,7 +21,12 @@ struct ContentView: View {
                     }
                 }
                 .listStyle(.plain)
-            .navigationTitle("Users")
+                .navigationTitle("Users")
+                .alert(isPresented: $vm.hasError, error: vm.error) {
+                    Button(action: vm.fetchUsers) {
+                        Text("Retry")
+                    }
+                }
             }
             .onAppear(perform: vm.fetchUsers)
         }
