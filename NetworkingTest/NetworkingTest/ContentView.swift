@@ -13,14 +13,17 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                ForEach(vm.users, id: \.id) { user in
-                    UserView()
-                        .listSectionSeparator(.automatic)
+            ZStack {
+                List {
+                    ForEach(vm.users, id: \.id) { user in
+                        UserView(user: user)
+                            .listSectionSeparator(.automatic)
+                    }
                 }
-            }
-            .listStyle(.plain)
+                .listStyle(.plain)
             .navigationTitle("Users")
+            }
+            .onAppear(perform: vm.fetchUsers)
         }
     }
 }
