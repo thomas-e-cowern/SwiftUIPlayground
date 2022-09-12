@@ -10,7 +10,7 @@ import Foundation
 struct Constants {
     
     struct Urls {
-        static let petListin = "\(baseUrl)pet-listing"
+        static let petListing = "\(baseUrl)pet-listing"
         static let baseUrl = "http://localhost:3000/"
     }
 }

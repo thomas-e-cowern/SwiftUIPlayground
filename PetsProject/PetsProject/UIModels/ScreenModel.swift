@@ -20,3 +20,20 @@ struct ScreenModel: Decodable {
     let pageTitle: String
     let components: [ComponentModel]
 }
+
+extension ScreenModel {
+    
+    func buildComponents() throws -> [UIComponent] {
+        var components: [UIComponent] = []
+        
+        for component in self.components {
+            switch component.type {
+            case .featuredImage:
+                print("Featured Image")
+            }
+        }
+        
+        return components
+    }
+    
+}

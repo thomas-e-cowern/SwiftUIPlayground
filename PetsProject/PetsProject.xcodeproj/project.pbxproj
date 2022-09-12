@@ -18,6 +18,7 @@
 		4DF27CC228CFAAB9005BB897 /* FeaturedImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CC128CFAAB9005BB897 /* FeaturedImageComponent.swift */; };
 		4DF27CC428CFAB86005BB897 /* FeaturedImageUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CC328CFAB86005BB897 /* FeaturedImageUIModel.swift */; };
 		4DF27CC728CFAC3E005BB897 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CC628CFAC3E005BB897 /* View+Extensions.swift */; };
+		4DF27CCA28CFACED005BB897 /* PetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CC928CFACED005BB897 /* PetListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4DF27CC128CFAAB9005BB897 /* FeaturedImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedImageComponent.swift; sourceTree = "<group>"; };
 		4DF27CC328CFAB86005BB897 /* FeaturedImageUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedImageUIModel.swift; sourceTree = "<group>"; };
 		4DF27CC628CFAC3E005BB897 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		4DF27CC928CFACED005BB897 /* PetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		4DF27CA628CF8D73005BB897 /* PetsProject */ = {
 			isa = PBXGroup;
 			children = (
+				4DF27CC828CFACD7005BB897 /* ViewModels */,
 				4DF27CC528CFAC28005BB897 /* Extensions */,
 				4DF27CBE28CFAA3C005BB897 /* Components */,
 				4DF27CBB28CF9FE4005BB897 /* UIModels */,
@@ -126,6 +129,14 @@
 				4DF27CC628CFAC3E005BB897 /* View+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4DF27CC828CFACD7005BB897 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4DF27CC928CFACED005BB897 /* PetListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				4DF27CC728CFAC3E005BB897 /* View+Extensions.swift in Sources */,
 				4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */,
 				4DF27CC228CFAAB9005BB897 /* FeaturedImageComponent.swift in Sources */,
+				4DF27CCA28CFACED005BB897 /* PetListViewModel.swift in Sources */,
 				4DF27CBD28CF9FF5005BB897 /* ScreenModel.swift in Sources */,
 				4DF27CAA28CF8D73005BB897 /* ContentView.swift in Sources */,
 				4DF27CA828CF8D73005BB897 /* PetsProjectApp.swift in Sources */,
