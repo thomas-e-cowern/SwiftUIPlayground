@@ -14,6 +14,7 @@
 		4DF27CB728CF9629005BB897 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CB628CF9629005BB897 /* WebService.swift */; };
 		4DF27CBA28CF9D0F005BB897 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CB928CF9D0F005BB897 /* Constants.swift */; };
 		4DF27CBD28CF9FF5005BB897 /* ScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CBC28CF9FF5005BB897 /* ScreenModel.swift */; };
+		4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CBF28CFAA50005BB897 /* UIComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4DF27CB628CF9629005BB897 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4DF27CB928CF9D0F005BB897 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4DF27CBC28CF9FF5005BB897 /* ScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenModel.swift; sourceTree = "<group>"; };
+		4DF27CBF28CFAA50005BB897 /* UIComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		4DF27CA628CF8D73005BB897 /* PetsProject */ = {
 			isa = PBXGroup;
 			children = (
+				4DF27CBE28CFAA3C005BB897 /* Components */,
 				4DF27CBB28CF9FE4005BB897 /* UIModels */,
 				4DF27CB828CF9CFC005BB897 /* Utilities */,
 				4DF27CA728CF8D73005BB897 /* PetsProjectApp.swift */,
@@ -98,6 +101,14 @@
 				4DF27CBC28CF9FF5005BB897 /* ScreenModel.swift */,
 			);
 			path = UIModels;
+			sourceTree = "<group>";
+		};
+		4DF27CBE28CFAA3C005BB897 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4DF27CBF28CFAA50005BB897 /* UIComponent.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF27CB728CF9629005BB897 /* WebService.swift in Sources */,
+				4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */,
 				4DF27CBD28CF9FF5005BB897 /* ScreenModel.swift in Sources */,
 				4DF27CAA28CF8D73005BB897 /* ContentView.swift in Sources */,
 				4DF27CA828CF8D73005BB897 /* PetsProjectApp.swift in Sources */,
