@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum ComponentErrror: Error {
+    case decodingError
+}
+
 enum ComponentType: String, Decodable {
     case featuredImage
 }
@@ -29,7 +33,11 @@ extension ScreenModel {
         for component in self.components {
             switch component.type {
             case .featuredImage:
-                print("Featured Image")
+                guard let uiModel: FeaturedImageUIModel = component.data.decode() else {
+                    throw ComponentErrror.decodingError
+                }
+                
+                components.append(FeaturedImageComponent(uiModel: uiModel))
             }
         }
         
