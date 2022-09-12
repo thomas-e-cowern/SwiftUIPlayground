@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct FeaturedImageComponent: UIComponent {
+    
+    let uiModel: FeaturedImageUIModel
+    
     var uniqueId: String {
         return ComponentType.featuredImage.rawValue
     }
