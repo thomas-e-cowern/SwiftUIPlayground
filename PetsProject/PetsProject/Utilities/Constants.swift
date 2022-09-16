@@ -10,7 +10,7 @@ import Foundation
 struct Constants {
     
     struct ScreenResources {
-        static let baseUrl = "localhost:3000"
+        static let baseUrl = "//localhost:3000/"
         static let petListing = "pet-listing"
         
         static func resource(for resourceName: String) -> URL? {
