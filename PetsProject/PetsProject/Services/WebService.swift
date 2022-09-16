@@ -12,7 +12,7 @@ enum NetworkError: Error {
     case invalidServerResponse
 }
 
-class WebService {
+class WebService: NetworkService {
     
     func load(resource: String) async throws -> ScreenModel {
         
