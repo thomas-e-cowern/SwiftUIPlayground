@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ComponentErrror: Error {
+enum ComponentError: Error {
     case decodingError
 }
 
@@ -28,20 +28,21 @@ struct ScreenModel: Decodable {
 extension ScreenModel {
     
     func buildComponents() throws -> [UIComponent] {
+        
         var components: [UIComponent] = []
         
         for component in self.components {
             switch component.type {
-            case .featuredImage:
-                guard let uiModel: FeaturedImageUIModel = component.data.decode() else {
-                    throw ComponentErrror.decodingError
-                }
-                
-                components.append(FeaturedImageComponent(uiModel: uiModel))
+                case .featuredImage:
+                    guard let uiModel: FeaturedImageUIModel = component.data.decode() else {
+                        throw ComponentError.decodingError
+                    }
+                    components.append(FeaturedImageComponent(uiModel: uiModel))
             }
         }
         
         return components
+        
     }
     
 }

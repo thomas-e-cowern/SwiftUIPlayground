@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4D5D0C1D28D4B02D0021BDC5 /* Pet-Listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1C28D4B02D0021BDC5 /* Pet-Listing.json */; };
+		4D5D0C1D28D4B02D0021BDC5 /* pet-listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */; };
 		4D5D0C1F28D4B1270021BDC5 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */; };
 		4D5D0C2128D4B1640021BDC5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */; };
 		4DF27CA828CF8D73005BB897 /* PetsProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CA728CF8D73005BB897 /* PetsProjectApp.swift */; };
@@ -26,7 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4D5D0C1C28D4B02D0021BDC5 /* Pet-Listing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Pet-Listing.json"; sourceTree = "<group>"; };
+		4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pet-listing.json"; sourceTree = "<group>"; };
 		4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		4DF27CA428CF8D73005BB897 /* PetsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,7 +84,7 @@
 				4DF27CA928CF8D73005BB897 /* ContentView.swift */,
 				4DF27CB528CF9615005BB897 /* Services */,
 				4DF27CAB28CF8D7C005BB897 /* Assets.xcassets */,
-				4D5D0C1C28D4B02D0021BDC5 /* Pet-Listing.json */,
+				4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */,
 				4DF27CAD28CF8D7C005BB897 /* Preview Content */,
 			);
 			path = PetsProject;
@@ -209,7 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D5D0C1D28D4B02D0021BDC5 /* Pet-Listing.json in Resources */,
+				4D5D0C1D28D4B02D0021BDC5 /* pet-listing.json in Resources */,
 				4DF27CAF28CF8D7C005BB897 /* Preview Assets.xcassets in Resources */,
 				4DF27CAC28CF8D7C005BB897 /* Assets.xcassets in Resources */,
 			);

@@ -25,7 +25,8 @@ class WebService: NetworkService {
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
             throw NetworkError.invalidServerResponse
         }
-        
+        print("Http response: \(httpResponse.statusCode)")
+        print("About to try")
         return try JSONDecoder().decode(ScreenModel.self, from: data)
     }
     
