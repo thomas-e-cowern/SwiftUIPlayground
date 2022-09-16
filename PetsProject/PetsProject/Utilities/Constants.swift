@@ -23,7 +23,7 @@ struct Constants {
     }
     
     struct Urls {
-        static let baseUrl = "http://localhost:3000/"
-        static let petListing = "\(baseUrl)pet-listing"
+        static let baseUrl = "http://localhost:3000"
+        static let petListing = "\(baseUrl)/pet-listing"
     }
 }

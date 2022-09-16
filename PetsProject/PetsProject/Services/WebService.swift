@@ -14,12 +14,12 @@ enum NetworkError: Error {
 
 class WebService: NetworkService {
     
-    func load(resource: String) async throws -> ScreenModel {
+    func load(_ resource: String) async throws -> ScreenModel {
         
-        guard let url = URL(string: resource) else {
+        guard let url = Constants.ScreenResources.resource(for: resource) else {
             throw NetworkError.invalidUrl
         }
-        
+        print("URL from WebService: \(url)")
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {

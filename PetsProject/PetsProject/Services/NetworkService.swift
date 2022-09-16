@@ -8,5 +8,5 @@
 import Foundation
 
 protocol NetworkService {
-    func load(resource: String) async throws -> ScreenModel
+    func load(_ resourceName: String) async throws -> ScreenModel
 }

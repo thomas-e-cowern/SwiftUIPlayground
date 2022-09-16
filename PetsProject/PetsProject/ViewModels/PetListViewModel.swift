@@ -21,7 +21,7 @@ class PetListViewModel: ObservableObject {
         
         do {
             print("In Do")
-            let screenModel = try await service.load(resource: Constants.Urls.petListing)
+            let screenModel = try await service.load(Constants.ScreenResources.petListing)
             print("Beyond screenModel")
             components = try screenModel.buildComponents()
             print("Beyond components")

@@ -8,10 +8,10 @@
 import Foundation
 
 class LocalService: NetworkService {
-    func load(resource: String) async throws -> ScreenModel {
+    func load(_ resourceName: String) async throws -> ScreenModel {
         
-        guard let path = Bundle.main.path(forResource: resource, ofType: "json") else {
-            fatalError("Resource file \(resource) not found!")
+        guard let path = Bundle.main.path(forResource: resourceName, ofType: "json") else {
+            fatalError("Resource file \(resourceName) not found!")
         }
         
         let data = try Data(contentsOf: URL(fileURLWithPath: path))
@@ -19,3 +19,4 @@ class LocalService: NetworkService {
         return screenModel
     }
 }
+	
