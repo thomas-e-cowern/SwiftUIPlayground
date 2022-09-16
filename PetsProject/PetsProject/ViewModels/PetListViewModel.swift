@@ -10,10 +10,10 @@ import Foundation
 @MainActor
 class PetListViewModel: ObservableObject {
     
-    private var service: WebService
+    private var service: NetworkService
     @Published var components: [UIComponent] = []
     
-    init(service: WebService) {
+    init(service: NetworkService) {
         self.service = service
     }
     
