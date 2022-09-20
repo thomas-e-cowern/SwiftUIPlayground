@@ -1,3 +1,10 @@
-import UIKit
+import SwiftUI
+import Foundation
 
-var greeting = "Hello, playground"
+let json = """
+{
+    "type: "featuredImage",
+    "rating": 4,
+    "isVisible": true
+}
+"""
