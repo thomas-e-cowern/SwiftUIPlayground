@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2128DA2C96006C2C77 /* JSON.swift */; };
 		4D5D0C1D28D4B02D0021BDC5 /* pet-listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */; };
 		4D5D0C1F28D4B1270021BDC5 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */; };
 		4D5D0C2128D4B1640021BDC5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D146F2128DA2C96006C2C77 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pet-listing.json"; sourceTree = "<group>"; };
 		4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			children = (
 				4DF27CBC28CF9FF5005BB897 /* ScreenModel.swift */,
 				4DF27CC328CFAB86005BB897 /* FeaturedImageUIModel.swift */,
+				4D146F2128DA2C96006C2C77 /* JSON.swift */,
 			);
 			path = UIModels;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF27CB728CF9629005BB897 /* WebService.swift in Sources */,
+				4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */,
 				4DF27CC728CFAC3E005BB897 /* View+Extensions.swift in Sources */,
 				4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */,
 				4DF27CC228CFAAB9005BB897 /* FeaturedImageComponent.swift in Sources */,
