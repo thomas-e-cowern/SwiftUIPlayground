@@ -20,11 +20,11 @@ class PetListViewModel: ObservableObject {
     func load() async {
         
         do {
-            print("In Do")
+//            print("In Do")
             let screenModel = try await service.load(Constants.ScreenResources.petListing)
-            print("Beyond screenModel")
+//            print("Beyond screenModel")
             components = try screenModel.buildComponents()
-            print("Beyond components")
+//            print("Beyond components")
         } catch {
             print("Error in load: \(error.localizedDescription)")
         }
