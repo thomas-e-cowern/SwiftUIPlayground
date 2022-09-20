@@ -59,5 +59,5 @@ struct JSON: Decodable {
     }
 }
 
-let decoded = try? JSONDecoder().decode(JSON.self, from: json.data(using: .utf8)!)
+let decoded = try? JSONDecoder().decode(JSON.self, from: json.data(using: .utf8)!).value
 print(decoded)
