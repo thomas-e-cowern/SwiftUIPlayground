@@ -3,11 +3,15 @@ import Foundation
 
 let json = """
 {
-    "type: "featuredImage",
+    "type": "featuredImage",
     "rating": 4,
     "isVisible": true
 }
 """
+
+enum DecodingError: Error {
+    case dataCorruptedError
+}
 
 struct JSON: Decodable {
     
@@ -45,9 +49,15 @@ struct JSON: Decodable {
                 value = boolValue
             } else if let arrayValue = try? container.decode([JSON].self) {
                 value = arrayValue.map { $0.value }
+            } else {
+                throw DecodingError.dataCorruptedError
             }
             
+        } else {
+            throw DecodingError.dataCorruptedError
         }
-        
     }
 }
+
+let decoded = try? JSONDecoder().decode(JSON.self, from: json.data(using: .utf8)!)
+print(decoded)
