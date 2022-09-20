@@ -13,6 +13,7 @@ enum ComponentError: Error {
 
 enum ComponentType: String, Decodable {
     case featuredImage
+    case carousel
 }
 
 struct ComponentModel: Decodable {

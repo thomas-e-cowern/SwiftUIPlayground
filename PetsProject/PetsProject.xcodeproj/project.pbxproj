@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2128DA2C96006C2C77 /* JSON.swift */; };
+		4D146F2428DA34FA006C2C77 /* CarouselUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */; };
 		4D5D0C1D28D4B02D0021BDC5 /* pet-listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */; };
 		4D5D0C1F28D4B1270021BDC5 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */; };
 		4D5D0C2128D4B1640021BDC5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		4D146F2128DA2C96006C2C77 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUIModel.swift; sourceTree = "<group>"; };
 		4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pet-listing.json"; sourceTree = "<group>"; };
 		4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				4DF27CBC28CF9FF5005BB897 /* ScreenModel.swift */,
 				4DF27CC328CFAB86005BB897 /* FeaturedImageUIModel.swift */,
 				4D146F2128DA2C96006C2C77 /* JSON.swift */,
+				4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */,
 			);
 			path = UIModels;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				4D5D0C1F28D4B1270021BDC5 /* LocalService.swift in Sources */,
 				4DF27CCC28CFAEDB005BB897 /* Dictionary+Extensions.swift in Sources */,
 				4DF27CBD28CF9FF5005BB897 /* ScreenModel.swift in Sources */,
+				4D146F2428DA34FA006C2C77 /* CarouselUIModel.swift in Sources */,
 				4DF27CAA28CF8D73005BB897 /* ContentView.swift in Sources */,
 				4DF27CA828CF8D73005BB897 /* PetsProjectApp.swift in Sources */,
 				4DF27CBA28CF9D0F005BB897 /* Constants.swift in Sources */,
