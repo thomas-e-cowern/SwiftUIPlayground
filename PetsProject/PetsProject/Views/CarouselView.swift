@@ -15,10 +15,10 @@ struct CarouselView: View {
         ScrollView(.horizontal) {
             HStack {
                 ForEach(uiModel.imageUrls, id: \.self) { url in
-                    AsyncImage(url: uiModel.imageUrls) { image in
+                    AsyncImage(url: url) { image in
                         image
                             .resizable()
-                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 200, height: 200)
                     } placeholder: {
                         ProgressView()
                     }
