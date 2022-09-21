@@ -14,10 +14,10 @@ struct CarouselView: View {
     var body: some View {
         ScrollView(.horizontal) {
             HStack {
-                ForEach(uiModel.imageUrls, id: \.self) { url in
+                ForEach(uiModel.items) { item in
                     
-                    Navigator.perform(action: uiModel.action, payload: url) {
-                        AsyncImage(url: url) { image in
+                    Navigator.perform(action: uiModel.action, payload: item) {
+                        AsyncImage(url: item.imageUrl) { image in
                             image
                                 .resizable()
                                 .frame(width: 200, height: 200)
