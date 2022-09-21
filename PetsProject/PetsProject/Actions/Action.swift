@@ -12,6 +12,6 @@ enum ActionType: String, Decodable {
 }
 
 struct Action: Decodable {
-    let type; ActionType
+    let type: ActionType
     let destination: Route
 }
