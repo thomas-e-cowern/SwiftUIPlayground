@@ -10,7 +10,7 @@ import Foundation
 struct CarouselUIRowModel: Decodable, Identifiable {
     let id = UUID()
     let petId: Int
-    let imageUrl: String
+    let imageUrl: URL
     
     private enum CodingKeys: CodingKey {
         case petId
