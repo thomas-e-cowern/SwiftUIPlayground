@@ -14,6 +14,8 @@
 		4D5D0C1D28D4B02D0021BDC5 /* pet-listing.json in Resources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */; };
 		4D5D0C1F28D4B1270021BDC5 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */; };
 		4D5D0C2128D4B1640021BDC5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */; };
+		4DD5ED0F28DB519D0064F0BE /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD5ED0E28DB519D0064F0BE /* Action.swift */; };
+		4DD5ED1228DB52150064F0BE /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD5ED1128DB52150064F0BE /* Routes.swift */; };
 		4DF27CA828CF8D73005BB897 /* PetsProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CA728CF8D73005BB897 /* PetsProjectApp.swift */; };
 		4DF27CAA28CF8D73005BB897 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF27CA928CF8D73005BB897 /* ContentView.swift */; };
 		4DF27CAC28CF8D7C005BB897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF27CAB28CF8D7C005BB897 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 		4D5D0C1C28D4B02D0021BDC5 /* pet-listing.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pet-listing.json"; sourceTree = "<group>"; };
 		4D5D0C1E28D4B1270021BDC5 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
 		4D5D0C2028D4B1640021BDC5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		4DD5ED0E28DB519D0064F0BE /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		4DD5ED1128DB52150064F0BE /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		4DF27CA428CF8D73005BB897 /* PetsProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PetsProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF27CA728CF8D73005BB897 /* PetsProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsProjectApp.swift; sourceTree = "<group>"; };
 		4DF27CA928CF8D73005BB897 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		4DD5ED0D28DB51810064F0BE /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				4DD5ED0E28DB519D0064F0BE /* Action.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		4DD5ED1028DB51FC0064F0BE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				4DD5ED1128DB52150064F0BE /* Routes.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		4DF27C9B28CF8D73005BB897 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +111,8 @@
 		4DF27CA628CF8D73005BB897 /* PetsProject */ = {
 			isa = PBXGroup;
 			children = (
+				4DD5ED1028DB51FC0064F0BE /* Navigation */,
+				4DD5ED0D28DB51810064F0BE /* Actions */,
 				4D146F2728DA37D4006C2C77 /* Views */,
 				4DF27CC828CFACD7005BB897 /* ViewModels */,
 				4DF27CC528CFAC28005BB897 /* Extensions */,
@@ -243,10 +265,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DF27CB728CF9629005BB897 /* WebService.swift in Sources */,
+				4DD5ED0F28DB519D0064F0BE /* Action.swift in Sources */,
 				4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */,
 				4DF27CC728CFAC3E005BB897 /* View+Extensions.swift in Sources */,
 				4D146F2628DA3702006C2C77 /* CarouselComponent.swift in Sources */,
 				4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */,
+				4DD5ED1228DB52150064F0BE /* Routes.swift in Sources */,
 				4DF27CC228CFAAB9005BB897 /* FeaturedImageComponent.swift in Sources */,
 				4DF27CCA28CFACED005BB897 /* PetListViewModel.swift in Sources */,
 				4D146F2928DA396F006C2C77 /* CarouselView.swift in Sources */,
