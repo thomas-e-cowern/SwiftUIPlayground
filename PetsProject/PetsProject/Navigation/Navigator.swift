@@ -22,7 +22,7 @@ struct SheetView<V: View>: View {
     }
 }
 
-class navigator {
+class Navigator {
     
     static func perform<V: View>(action: Action, content: @escaping () -> V) -> AnyView {
         
