@@ -7,6 +7,18 @@
 
 import Foundation
 
+struct CarouselUIRowModel: Decodable, Identifiable {
+    let id = UUID()
+    let petId: Int
+    let imageUrl: String
+    
+    private enum CodingKeys: CodingKey {
+        case petId
+        case imageUrl
+    }
+}
+
 struct CarouselUIModel: Decodable {
-    let imageUrls: [URL]
+    let items: [CarouselUIRowModel]
+    let action: Action
 }
