@@ -6,9 +6,38 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct SheetView<V: View>: View {
+    @State private var isPresented: Bool = false
+    let content: () -> V
+    let destinationView: AnyView
+    
+    var body: some View {
+        content().onTapGesture {
+            isPresented = true
+        }.sheet(isPresented: $isPresented) {
+            destinationView
+        }
+    }
+}
 
 class navigator {
     
-    
-    
+    static func perform<V: View>(action: Action, content: @escaping () -> V) -> AnyView {
+        
+        var desinationView: AnyView!
+        
+        switch action.destination {
+            case .petDetail:
+                desinationView = Text("Pet Detail").toAnyView()
+        }
+        
+        switch action.type {
+            case .sheet:
+            return SheetView(content: {
+                content()
+            }, destinationView: desinationView).toAnyView()
+        }
+    }
 }
