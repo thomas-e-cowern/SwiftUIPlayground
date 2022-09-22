@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ForEach(vm.components, id: \.uniqueId) { component in
+                ForEach(vm.components, id: \.id) { component in
                     component.render()
                 }
                 .navigationTitle("Pets")
