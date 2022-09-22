@@ -10,7 +10,7 @@ import SwiftUI
 
 struct FeaturedImageComponent: UIComponent {
     
-    var id: UUID
+    var id = UUID()
     let uiModel: FeaturedImageUIModel
 
     func render() -> AnyView {
