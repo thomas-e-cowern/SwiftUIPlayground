@@ -12,8 +12,11 @@ struct Constants {
     struct ScreenResources {
         
         static let petListing = "pet-listing"
-        
         static let baseURL = URLComponents(string: "http://localhost:3000")!
+        
+        static func petDetail(petId: Int) -> String {
+            return "pet-detail/\(petId)"
+        }
 
         static func resource(for resourceName: String) -> URL? {
             var components = baseURL
