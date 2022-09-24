@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct PetDetailScreen: View {
+    
+    let petId: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Pet Details Screen")
     }
 }
 
 struct PetDetailScreen_Previews: PreviewProvider {
     static var previews: some View {
-        PetDetailScreen()
+        PetDetailScreen(petId: 1)
     }
 }
