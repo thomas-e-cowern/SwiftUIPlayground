@@ -19,7 +19,11 @@ struct PetDetailScreen: View {
     }
     
     var body: some View {
-        Text("Pet Details Screen")
+        ScrollView {
+            ForEach(vm.components, id: \.id) { component in
+                component.render()
+            }
+        }
     }
 }
 
