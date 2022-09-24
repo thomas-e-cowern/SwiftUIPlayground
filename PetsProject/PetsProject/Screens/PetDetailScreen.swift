@@ -11,6 +11,13 @@ struct PetDetailScreen: View {
     
     let petId: Int
     
+    @StateObject private var vm: PetDetailViewModel
+    
+    init(petId: Int) {
+        _vm = StateObject(wrappedValue: PetDetailViewModel(service: WebService()))
+        self.petId = petId
+    }
+    
     var body: some View {
         Text("Pet Details Screen")
     }
