@@ -35,7 +35,6 @@ class Navigator {
             } else {
                 desinationView = EmptyView().toAnyView()
             }
-//                desinationView = Text("Pet Detail").toAnyView()
         }
         
         switch action.type {

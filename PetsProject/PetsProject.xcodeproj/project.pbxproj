@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D0FEE4F28DF9AD30010CC5A /* PetDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0FEE4E28DF9AD30010CC5A /* PetDetailScreen.swift */; };
+		4D0FEE5128DF9DF20010CC5A /* PetDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0FEE5028DF9DF20010CC5A /* PetDetailViewModel.swift */; };
 		4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2128DA2C96006C2C77 /* JSON.swift */; };
 		4D146F2428DA34FA006C2C77 /* CarouselUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */; };
 		4D146F2628DA3702006C2C77 /* CarouselComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2528DA3702006C2C77 /* CarouselComponent.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		4D0FEE4E28DF9AD30010CC5A /* PetDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailScreen.swift; sourceTree = "<group>"; };
+		4D0FEE5028DF9DF20010CC5A /* PetDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailViewModel.swift; sourceTree = "<group>"; };
 		4D146F2128DA2C96006C2C77 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUIModel.swift; sourceTree = "<group>"; };
 		4D146F2528DA3702006C2C77 /* CarouselComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselComponent.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				4DF27CC928CFACED005BB897 /* PetListViewModel.swift */,
+				4D0FEE5028DF9DF20010CC5A /* PetDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				4DF27CC728CFAC3E005BB897 /* View+Extensions.swift in Sources */,
 				4D146F2628DA3702006C2C77 /* CarouselComponent.swift in Sources */,
 				4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */,
+				4D0FEE5128DF9DF20010CC5A /* PetDetailViewModel.swift in Sources */,
 				4DD5ED1228DB52150064F0BE /* Routes.swift in Sources */,
 				4DF27CC228CFAAB9005BB897 /* FeaturedImageComponent.swift in Sources */,
 				4DF27CCA28CFACED005BB897 /* PetListViewModel.swift in Sources */,
