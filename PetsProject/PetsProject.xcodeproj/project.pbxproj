@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0FEE4F28DF9AD30010CC5A /* PetDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0FEE4E28DF9AD30010CC5A /* PetDetailScreen.swift */; };
 		4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2128DA2C96006C2C77 /* JSON.swift */; };
 		4D146F2428DA34FA006C2C77 /* CarouselUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */; };
 		4D146F2628DA3702006C2C77 /* CarouselComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2528DA3702006C2C77 /* CarouselComponent.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0FEE4E28DF9AD30010CC5A /* PetDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetDetailScreen.swift; sourceTree = "<group>"; };
 		4D146F2128DA2C96006C2C77 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		4D146F2328DA34FA006C2C77 /* CarouselUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUIModel.swift; sourceTree = "<group>"; };
 		4D146F2528DA3702006C2C77 /* CarouselComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselComponent.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 		4D0FEE4D28DF9A4D0010CC5A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4D0FEE4E28DF9AD30010CC5A /* PetDetailScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				4DF27CBD28CF9FF5005BB897 /* ScreenModel.swift in Sources */,
 				4D146F2428DA34FA006C2C77 /* CarouselUIModel.swift in Sources */,
 				4DF27CAA28CF8D73005BB897 /* ContentView.swift in Sources */,
+				4D0FEE4F28DF9AD30010CC5A /* PetDetailScreen.swift in Sources */,
 				4DF27CA828CF8D73005BB897 /* PetsProjectApp.swift in Sources */,
 				4DF27CBA28CF9D0F005BB897 /* Constants.swift in Sources */,
 				4D5D0C2128D4B1640021BDC5 /* NetworkService.swift in Sources */,
