@@ -15,6 +15,6 @@ struct RatingRowComponent: UIComponent {
     let id = UUID()
     
     func render() -> AnyView {
-        Text("Rating \(uiModel.rating)").toAnyView()
+        RatingView(rating: .constant(uiModel.rating)).toAnyView()
     }
 }
