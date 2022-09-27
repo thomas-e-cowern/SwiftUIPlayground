@@ -31,10 +31,8 @@ class Navigator {
         switch action.destination {
             case .petDetail:
             if let payload = payload as? CarouselUIRowModel {
-                print("Inside navigator: petId: \(payload.petId)")
                 desinationView = PetDetailScreen(petId: payload.petId).toAnyView()
             } else {
-                print("INside else")
                 desinationView = EmptyView().toAnyView()
             }
         }
