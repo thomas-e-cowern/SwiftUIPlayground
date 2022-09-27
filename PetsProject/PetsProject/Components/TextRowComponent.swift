@@ -15,6 +15,6 @@ struct TextRowComponent: UIComponent {
     let uiModel: TextRowUIModel
     
     func render() -> AnyView {
-        Text("Text Row").toAnyView()
+        Text(uiModel.text).toAnyView()
     }
 }
