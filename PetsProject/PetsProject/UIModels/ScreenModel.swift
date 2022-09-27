@@ -47,6 +47,7 @@ extension ScreenModel {
         for component in self.components {
             switch component.type {
                 case .featuredImage:
+                print("Inside featured image in screen model")
                     guard let uiModel: FeaturedImageUIModel = component.data.decode() else {
                         throw ComponentError.decodingError
                     }
@@ -57,6 +58,7 @@ extension ScreenModel {
                 }
                 components.append(CarouselComponent(uiModel: uiModel))
             case .textRow:
+                print("Inside text row in screen model")
                 guard let uiModel: TextRowUIModel = component.data.decode() else {
                     throw ComponentError.decodingError
                 }

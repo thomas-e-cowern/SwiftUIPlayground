@@ -18,10 +18,11 @@ class PetDetailViewModel: ObservableObject {
     
     func load(petId: Int) async {
         do {
+            print("Inside pet detail view model load")
             let screenModel = try await service.load(Constants.ScreenResources.petDetail(petId: petId))
             self.components = try screenModel.buildComponents()
         } catch {
-            print(error)
+            print("Error from pet detail veiw model: \(error)")
         }
     }
 }

@@ -17,6 +17,7 @@ struct PetDetailScreen: View {
         print("Inside pet detail screen init")
         _vm = StateObject(wrappedValue: PetDetailViewModel(service: WebService()))
         self.petId = petId
+        print("Pet ID from Pet detail screen: \(self.petId)")
     }
     
     var body: some View {
