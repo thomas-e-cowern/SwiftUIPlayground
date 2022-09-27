@@ -25,6 +25,9 @@ struct PetDetailScreen: View {
             ForEach(vm.components, id: \.id) { component in
                 component.render()
             }
+            .task {
+                await vm.load(petId: petId)
+            }
         }
     }
 }
