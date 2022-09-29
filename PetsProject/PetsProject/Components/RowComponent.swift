@@ -24,7 +24,7 @@ struct RowComponent: UIComponent {
                 }.toAnyView()
             }
             
-            VStack {
+            VStack (alignment: .leading){
                 Text(uiModel.title)
                 Text(uiModel.subTitle ?? "").opacity(0.4)
                 Text(uiModel.description ?? "")
