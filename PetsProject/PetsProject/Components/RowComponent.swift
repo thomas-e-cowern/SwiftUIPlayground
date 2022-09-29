@@ -29,6 +29,7 @@ struct RowComponent: UIComponent {
                 Text(uiModel.subTitle ?? "").opacity(0.4)
                 Text(uiModel.description ?? "")
             }
-        }
+        }.padding()
+            .toAnyView()
     }
 }

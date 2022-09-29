@@ -16,8 +16,8 @@ struct ListComponent: UIComponent {
     func render() -> AnyView {
         
         ForEach(uidModel.rows, id: \.id) { row in
-            RowComponent(uidModel: row).render().toAnyView()
+            RowComponent(uiModel: row).render().toAnyView()
             
-        }
+        }.toAnyView()
     }
 }
