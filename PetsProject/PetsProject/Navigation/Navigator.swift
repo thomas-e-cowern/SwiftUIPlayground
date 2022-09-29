@@ -32,6 +32,8 @@ class Navigator {
             case .petDetail:
             if let payload = payload as? CarouselUIRowModel {
                 desinationView = PetDetailScreen(petId: payload.petId).toAnyView()
+            } else if let payload = payload as? RowUIModel {
+                desinationView = PetDetailScreen(petId: payload.id).toAnyView()
             } else {
                 desinationView = EmptyView().toAnyView()
             }
