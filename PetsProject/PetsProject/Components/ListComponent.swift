@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
+
+struct ListComponent: UIComponent {
+    
+    let id = UUID()
+    let uidModel: ListUIModel
+    
+    func render() -> AnyView {
+        
+        ForEach(uidModel.rows, id: \.id) { row in
+            RowComponent(uidModel: row).render().toAnyView()
+            
+        }
+    }
+}
