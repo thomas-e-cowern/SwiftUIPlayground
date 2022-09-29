@@ -15,6 +15,7 @@
 		4D146F2928DA396F006C2C77 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D146F2828DA396F006C2C77 /* CarouselView.swift */; };
 		4D44A42128E47DFF008837D2 /* ListUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A42028E47DFF008837D2 /* ListUIModel.swift */; };
 		4D44A42328E62DCE008837D2 /* ListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A42228E62DCE008837D2 /* ListComponent.swift */; };
+		4D44A42528E62EAE008837D2 /* RowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A42428E62EAE008837D2 /* RowComponent.swift */; };
 		4D4C36F428E344B40028EDF6 /* TextRowUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C36F328E344B40028EDF6 /* TextRowUIModel.swift */; };
 		4D4C36F628E344F50028EDF6 /* TextRowComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C36F528E344F50028EDF6 /* TextRowComponent.swift */; };
 		4D4C36F828E35FEA0028EDF6 /* RatingRowUIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4C36F728E35FEA0028EDF6 /* RatingRowUIModel.swift */; };
@@ -50,6 +51,7 @@
 		4D146F2828DA396F006C2C77 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		4D44A42028E47DFF008837D2 /* ListUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUIModel.swift; sourceTree = "<group>"; };
 		4D44A42228E62DCE008837D2 /* ListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListComponent.swift; sourceTree = "<group>"; };
+		4D44A42428E62EAE008837D2 /* RowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowComponent.swift; sourceTree = "<group>"; };
 		4D4C36F328E344B40028EDF6 /* TextRowUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRowUIModel.swift; sourceTree = "<group>"; };
 		4D4C36F528E344F50028EDF6 /* TextRowComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextRowComponent.swift; sourceTree = "<group>"; };
 		4D4C36F728E35FEA0028EDF6 /* RatingRowUIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRowUIModel.swift; sourceTree = "<group>"; };
@@ -209,6 +211,7 @@
 				4D4C36F528E344F50028EDF6 /* TextRowComponent.swift */,
 				4D4C36F928E362380028EDF6 /* RatingRowComponent.swift */,
 				4D44A42228E62DCE008837D2 /* ListComponent.swift */,
+				4D44A42428E62EAE008837D2 /* RowComponent.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				4DD5ED0F28DB519D0064F0BE /* Action.swift in Sources */,
 				4D146F2228DA2C96006C2C77 /* JSON.swift in Sources */,
 				4D44A42128E47DFF008837D2 /* ListUIModel.swift in Sources */,
+				4D44A42528E62EAE008837D2 /* RowComponent.swift in Sources */,
 				4DF27CC728CFAC3E005BB897 /* View+Extensions.swift in Sources */,
 				4D146F2628DA3702006C2C77 /* CarouselComponent.swift in Sources */,
 				4DF27CC028CFAA50005BB897 /* UIComponent.swift in Sources */,
