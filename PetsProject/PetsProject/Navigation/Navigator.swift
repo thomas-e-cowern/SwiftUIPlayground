@@ -34,6 +34,7 @@ class Navigator {
                 desinationView = PetDetailScreen(petId: payload.petId).toAnyView()
             } else if let payload = payload as? RowUIModel {
                 desinationView = PetDetailScreen(petId: payload.id).toAnyView()
+                    .navigationTitle(payload.title).toAnyView()
             } else {
                 desinationView = EmptyView().toAnyView()
             }
