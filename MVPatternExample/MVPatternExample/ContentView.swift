@@ -13,7 +13,9 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, world!")
+            List(storeModel.products) { product in
+                Text(product.title)
+            }
         }.task {
             await populateProducts()
         }
