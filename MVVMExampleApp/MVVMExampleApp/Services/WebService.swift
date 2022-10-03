@@ -7,3 +7,10 @@
 
 import Foundation
 
+class WebService {
+    
+    func getProducts() -> [Product] {
+        
+    }
+    
+}
