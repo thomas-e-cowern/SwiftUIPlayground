@@ -10,6 +10,7 @@ import Foundation
 enum NetworkError: Error {
     case badUrl
     case badRequest
+    case decodingError
 }
 
 
@@ -27,6 +28,12 @@ class WebService {
               httpResponse.statusCode == 200 else {
             throw NetworkError.badRequest
         }
+        
+        guard let products = try? JSONDecoder().decode([Product].self, from: data) else {
+            throw NetworkError.decodingError
+        }
+        
+        return products
     }
     
 }
