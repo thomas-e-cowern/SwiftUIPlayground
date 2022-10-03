@@ -25,3 +25,23 @@ class ProductListViewModel: ObservableObject {
     }
     
 }
+
+struct ProductViewModel {
+    private var product: Product
+    
+    init(product: Product) {
+        self.product = product
+    }
+    
+    var id: Int {
+        product.id
+    }
+    
+    var title: String {
+        product.title
+    }
+    
+    var price: Double {
+        product.price
+    }
+}
