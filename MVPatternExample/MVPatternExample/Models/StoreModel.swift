@@ -7,11 +7,20 @@
 
 import Foundation
 
+@MainActor
 class StoreModel: ObservableObject {
+    
+    let webService: WebService
     
     @Published var products: [Product] = []
     
-    func populateProducts() async {
+    init(webService: WebService) {
+        self.webService = webService
+    }
+    
+    func populateProducts() async throws {
+        
+        products = try await webService.getProducts()
         
     }
     
