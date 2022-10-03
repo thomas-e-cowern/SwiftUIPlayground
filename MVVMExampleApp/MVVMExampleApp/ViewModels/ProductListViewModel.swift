@@ -7,6 +7,7 @@
 
 import Foundation
 
+@MainActor
 class ProductListViewModel: ObservableObject {
     
     @Published var products: [ProductViewModel] = []
@@ -29,7 +30,7 @@ class ProductListViewModel: ObservableObject {
     
 }
 
-struct ProductViewModel {
+struct ProductViewModel: Identifiable {
     private var product: Product
     
     init(product: Product) {
