@@ -13,6 +13,7 @@
 		4D44A43A28EB4ED6008837D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A43928EB4ED6008837D2 /* Preview Assets.xcassets */; };
 		4D44A44228EB5061008837D2 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A44128EB5061008837D2 /* WebService.swift */; };
 		4D44A44528EB513A008837D2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A44428EB513A008837D2 /* Product.swift */; };
+		4D44A44828EB53B0008837D2 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A44728EB53B0008837D2 /* ProductListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D44A43928EB4ED6008837D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D44A44128EB5061008837D2 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		4D44A44428EB513A008837D2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4D44A44728EB53B0008837D2 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		4D44A43128EB4EC7008837D2 /* MVVMExampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				4D44A44628EB539E008837D2 /* ViewModels */,
 				4D44A44328EB50B1008837D2 /* Models */,
 				4D44A44028EB5051008837D2 /* Services */,
 				4D44A43228EB4EC7008837D2 /* MVVMExampleAppApp.swift */,
@@ -87,6 +90,14 @@
 				4D44A44428EB513A008837D2 /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4D44A44628EB539E008837D2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A44728EB53B0008837D2 /* ProductListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D44A44228EB5061008837D2 /* WebService.swift in Sources */,
+				4D44A44828EB53B0008837D2 /* ProductListViewModel.swift in Sources */,
 				4D44A44528EB513A008837D2 /* Product.swift in Sources */,
 				4D44A43528EB4EC7008837D2 /* ContentView.swift in Sources */,
 				4D44A43328EB4EC7008837D2 /* MVVMExampleAppApp.swift in Sources */,
