@@ -13,6 +13,7 @@
 		4D44A45D28EB734A008837D2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D44A45C28EB734A008837D2 /* Preview Assets.xcassets */; };
 		4D44A46528EB7397008837D2 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46428EB7397008837D2 /* StoreModel.swift */; };
 		4D44A46728EB7445008837D2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46628EB7445008837D2 /* Product.swift */; };
+		4D44A46A28EB74E8008837D2 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46928EB74E8008837D2 /* WebService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D44A45C28EB734A008837D2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D44A46428EB7397008837D2 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		4D44A46628EB7445008837D2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4D44A46928EB74E8008837D2 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		4D44A45428EB7340008837D2 /* MVPatternExample */ = {
 			isa = PBXGroup;
 			children = (
+				4D44A46828EB74D9008837D2 /* Services */,
 				4D44A46328EB736F008837D2 /* Models */,
 				4D44A45528EB7340008837D2 /* MVPatternExampleApp.swift */,
 				4D44A45728EB7340008837D2 /* ContentView.swift */,
@@ -79,6 +82,14 @@
 				4D44A46628EB7445008837D2 /* Product.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4D44A46828EB74D9008837D2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A46928EB74E8008837D2 /* WebService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 				4D44A45828EB7340008837D2 /* ContentView.swift in Sources */,
 				4D44A46728EB7445008837D2 /* Product.swift in Sources */,
 				4D44A45628EB7340008837D2 /* MVPatternExampleApp.swift in Sources */,
+				4D44A46A28EB74E8008837D2 /* WebService.swift in Sources */,
 				4D44A46528EB7397008837D2 /* StoreModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

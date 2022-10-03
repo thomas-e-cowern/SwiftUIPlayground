@@ -11,4 +11,8 @@ class StoreModel: ObservableObject {
     
     @Published var products: [Product] = []
     
+    func populateProducts() async {
+        
+    }
+    
 }
