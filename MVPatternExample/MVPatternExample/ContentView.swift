@@ -8,19 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @EnvironmentObject private var storeModel: StoreModel
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
             Text("Hello, world!")
+        }.task {
+            await populateProducts()
         }
         .padding()
+    }
+    
+    private func populateProducts() async {
+        do {
+            try await storeModel.populateProducts()
+        } catch {
+            print("Error: There was an error in populateProducts in content view: \(error.localizedDescription)")
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(StoreModel(webService: WebService()))
     }
 }
