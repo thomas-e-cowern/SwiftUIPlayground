@@ -15,6 +15,7 @@ struct ContentView: View {
         VStack {
             List(storeModel.products) { product in
                 Text(product.title)
+                Text("\(product.price)")
             }
         }.task {
             await populateProducts()

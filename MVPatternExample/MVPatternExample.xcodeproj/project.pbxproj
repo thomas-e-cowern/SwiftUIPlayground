@@ -14,6 +14,7 @@
 		4D44A46528EB7397008837D2 /* StoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46428EB7397008837D2 /* StoreModel.swift */; };
 		4D44A46728EB7445008837D2 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46628EB7445008837D2 /* Product.swift */; };
 		4D44A46A28EB74E8008837D2 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46928EB74E8008837D2 /* WebService.swift */; };
+		4D44A46D28EB8389008837D2 /* NumberFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D44A46C28EB8389008837D2 /* NumberFormatter+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4D44A46428EB7397008837D2 /* StoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreModel.swift; sourceTree = "<group>"; };
 		4D44A46628EB7445008837D2 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4D44A46928EB74E8008837D2 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		4D44A46C28EB8389008837D2 /* NumberFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		4D44A45428EB7340008837D2 /* MVPatternExample */ = {
 			isa = PBXGroup;
 			children = (
+				4D44A46B28EB836E008837D2 /* Extension */,
 				4D44A46828EB74D9008837D2 /* Services */,
 				4D44A46328EB736F008837D2 /* Models */,
 				4D44A45528EB7340008837D2 /* MVPatternExampleApp.swift */,
@@ -90,6 +93,14 @@
 				4D44A46928EB74E8008837D2 /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4D44A46B28EB836E008837D2 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4D44A46C28EB8389008837D2 /* NumberFormatter+Extension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,6 +178,7 @@
 				4D44A45628EB7340008837D2 /* MVPatternExampleApp.swift in Sources */,
 				4D44A46A28EB74E8008837D2 /* WebService.swift in Sources */,
 				4D44A46528EB7397008837D2 /* StoreModel.swift in Sources */,
+				4D44A46D28EB8389008837D2 /* NumberFormatter+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
