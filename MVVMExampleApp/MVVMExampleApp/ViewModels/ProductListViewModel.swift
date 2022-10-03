@@ -9,6 +9,8 @@ import Foundation
 
 class ProductListViewModel: ObservableObject {
     
+    @Published var products: [ProductViewModel] = []
+    
     let webService: WebService
     
     init(webService: WebService) {
@@ -19,6 +21,7 @@ class ProductListViewModel: ObservableObject {
         
         do {
             let products = try await webService.getProducts()
+            self.products = products.map(ProductViewModel.init)
         } catch {
             print("Error in populate products \(error.localizedDescription)")
         }
