@@ -9,22 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State var email: String?
-    @State var password: String?
+    @State private var email: String = ""
+    @State private var password: String = ""
+    
+    var isFormValid: Bool {
+        return !email.isEmpty && !password.isEmpty
+    }
     
     var body: some View {
         Form {
             TextField("Email", text: $email)
             TextField("Password", text: $password)
             Button("Login") {
-                
-            }.disabled(true)
+                print("Logged IN")
+            }.disabled(isFormValid ? false : true)
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(email: "Email", password: "Password")
+        ContentView()
     }
 }
