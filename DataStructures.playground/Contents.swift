@@ -14,7 +14,7 @@ final class LinkedListNode<Element> {
 }
 
 // LiST
-final class LinkedList<Element>: ExpressibleByArrayLiteral {
+final class LinkedList<Element>: ExpressibleByArrayLiteral, Sequence {
     
     var start: LinkedListNode<Element>?
     
@@ -22,6 +22,25 @@ final class LinkedList<Element>: ExpressibleByArrayLiteral {
         for element in elements.reversed() {
             start = LinkedListNode(value: element, next:  start)
         }
+    }
+    
+    init(array: [Element]) {
+        for element in array.reversed() {
+            start = LinkedListNode(value: element, next:  start)
+        }
+    }
+    
+    func makeIterator() -> LinkedListIterator<Element> {
+        LinkedListIterator(current: start)
+    }
+}
+
+struct LinkedListIterator<Element>: IteratorProtocol {
+    var current: LinkedListNode<Element>?
+    
+    mutating func next() -> LinkedListNode<Element>? {
+        defer { current = current?.next }
+        return current
     }
 }
 
@@ -32,12 +51,20 @@ final class LinkedList<Element>: ExpressibleByArrayLiteral {
 
 //list.start = first
 
-let list: LinkedList<Int> = [2, 4, 6]
+//let list: LinkedList<Int> = [2, 4, 6]
 
-var currentNode = list.start
+let array = [12, 3, 5, 78]
 
-while let node = currentNode {
-    print(node.value, terminator: " ")
-    currentNode = node.next
+let list: LinkedList<Int> = LinkedList(array: array)
+
+//var currentNode = list.start
+//
+//while let node = currentNode {
+//    print(node.value, terminator: " ")
+//    currentNode = node.next
+//}
+
+for node in list {
+    print(node.value)
 }
 
