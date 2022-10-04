@@ -19,6 +19,7 @@ struct ContentView: View {
     var body: some View {
         Form {
             TextField("Email", text: $email)
+                .textInputAutocapitalization(.never)
             SecureField("Password", text: $password)
             Button("Login") {
                 print("Logged IN")
