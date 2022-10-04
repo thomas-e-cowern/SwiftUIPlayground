@@ -19,7 +19,17 @@ struct ContentView: View {
     @State private var loginFormError = LoginFormError()
     
     var isFormValid: Bool {
-        return !email.isEmpty && !password.isEmpty && email.isValidEmail
+        
+        if email.isEmpty {
+            loginFormError.email = "Email is required"
+        } else if !email.isValidEmail {
+            loginFormError.email = "Email is not in the correct format"
+        }
+        
+        if password.isEmpty {
+            loginFormError.password = "Password is required"
+        }
+        return loginFormError.email.isEmpty && loginFormError.password.isEmpty
     }
     
     var body: some View {
