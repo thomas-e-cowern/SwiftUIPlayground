@@ -51,7 +51,7 @@ struct ContentView: View {
                 if isFormValid {
                     // submit form
                 }
-            }.disabled(!isFormValid)
+            }
         }
     }
     
