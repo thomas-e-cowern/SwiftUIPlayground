@@ -68,10 +68,19 @@ for node in list {
     print(node.value)
 }
 
-struct LinkedListEnum<Element> {
-    var start: LinkedListNode<Element>?
-}
+//struct LinkedListEnum<Element> {
+//    var start: LinkedListNode<Element>?
+//}
+//
+//indirect enum LinkedListNodeEnum<Element> {
+//    case node(value: Element, next: LinkedListNodeEnum<Element>?)
+//}
+//
+//var third = LinkedListNodeEnum.node(value: 5, next: nil)
+//var second = LinkedListNodeEnum.node(value: 3, next: third)
+//var first = LinkedListNodeEnum.node(value: 1, next: second)
+//
+//let listEnum = LinkedListEnum<Int>(start: first)
+//var currentNode = listEnum.start
 
-indirect enum LinkedListNodeEnum<Element> {
-    case node(value: Element, next: LinkedListNodeEnum<Element>?)
-}
+
