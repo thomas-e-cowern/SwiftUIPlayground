@@ -68,3 +68,10 @@ for node in list {
     print(node.value)
 }
 
+struct LinkedListEnum<Element> {
+    var start: LinkedListNode<Element>?
+}
+
+indirect enum LinkedListNodeEnum<Element> {
+    case node(value: Element, next: LinkedListNodeEnum<Element>?)
+}
