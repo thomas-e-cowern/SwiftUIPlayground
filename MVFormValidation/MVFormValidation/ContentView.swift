@@ -20,6 +20,8 @@ struct ContentView: View {
     
     var isFormValid: Bool {
         
+        clearForm()
+        
         if email.isEmpty {
             loginFormError.email = "Email is required"
         } else if !email.isValidEmail {
@@ -36,11 +38,25 @@ struct ContentView: View {
         Form {
             TextField("Email", text: $email)
                 .textInputAutocapitalization(.never)
+            if !loginFormError.email.isEmpty {
+                Text(loginFormError.email)
+                    .font(.caption)
+            }
             SecureField("Password", text: $password)
+            if !loginFormError.password.isEmpty {
+                Text(loginFormError.password)
+                    .font(.caption)
+            }
             Button("Login") {
-                
+                if isFormValid {
+                    // submit form
+                }
             }.disabled(!isFormValid)
         }
+    }
+    
+    private func clearForm() {
+        loginFormError = LoginFormError()
     }
 }
 
