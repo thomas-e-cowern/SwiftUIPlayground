@@ -12,6 +12,7 @@
 		4DDE2B9228ECAAFF00B52D43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDE2B9128ECAAFF00B52D43 /* Assets.xcassets */; };
 		4DDE2B9528ECAAFF00B52D43 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DDE2B9428ECAAFF00B52D43 /* Preview Assets.xcassets */; };
 		4DDE2B9D28ECAE8E00B52D43 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE2B9C28ECAE8E00B52D43 /* String+Extension.swift */; };
+		4DDE2BA028ECBBBC00B52D43 /* LoginFormError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE2B9F28ECBBBC00B52D43 /* LoginFormError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4DDE2B9128ECAAFF00B52D43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DDE2B9428ECAAFF00B52D43 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DDE2B9C28ECAE8E00B52D43 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		4DDE2B9F28ECBBBC00B52D43 /* LoginFormError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		4DDE2B8C28ECAAFB00B52D43 /* MVFormValidation */ = {
 			isa = PBXGroup;
 			children = (
+				4DDE2B9E28ECBBA700B52D43 /* FormErrors */,
 				4DDE2B9B28ECAE7B00B52D43 /* Extensions */,
 				4DDE2B8D28ECAAFB00B52D43 /* MVFormValidationApp.swift */,
 				4DDE2B8F28ECAAFB00B52D43 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				4DDE2B9C28ECAE8E00B52D43 /* String+Extension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		4DDE2B9E28ECBBA700B52D43 /* FormErrors */ = {
+			isa = PBXGroup;
+			children = (
+				4DDE2B9F28ECBBBC00B52D43 /* LoginFormError.swift */,
+			);
+			path = FormErrors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			files = (
 				4DDE2B9028ECAAFB00B52D43 /* ContentView.swift in Sources */,
 				4DDE2B9D28ECAE8E00B52D43 /* String+Extension.swift in Sources */,
+				4DDE2BA028ECBBBC00B52D43 /* LoginFormError.swift in Sources */,
 				4DDE2B8E28ECAAFB00B52D43 /* MVFormValidationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

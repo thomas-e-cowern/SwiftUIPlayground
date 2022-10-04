@@ -7,10 +7,7 @@
 
 import SwiftUI
 
-struct LoginFormError {
-    var email: String = ""
-    var password: String = ""
-}
+
 
 struct ContentView: View {
     
