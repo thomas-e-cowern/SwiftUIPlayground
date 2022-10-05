@@ -18,11 +18,13 @@ struct LoginState {
             emailError = LoginError.emailIsEmpty
         } else if !email.isValidEmail {
             emailError = LoginError.emailInvalid
-        } else if password.isEmpty {
+        }
+        
+        if password.isEmpty {
             emailError = LoginError.passwordEmpty
         }
         
-        return true
+        return passwordError == nil && emailError == nil
     }
 }
 
