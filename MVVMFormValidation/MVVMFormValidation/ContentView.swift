@@ -13,13 +13,15 @@ struct ContentView: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Form {
+            TextField("Email", text: $email)
+                .textInputAutocapitalization(.never)
+            SecureField("Password", text: $password)
+            
+            Button("Login") {
+                    // submit form
+            }
         }
-        .padding()
     }
 }
 
