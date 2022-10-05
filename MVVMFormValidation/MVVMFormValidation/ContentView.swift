@@ -37,14 +37,13 @@ struct LoginState {
 
 struct ContentView: View {
     
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @State private var loginState = LoginState()
     
     var body: some View {
         Form {
-            TextField("Email", text: $email)
+            TextField("Email", text: $loginState.email)
                 .textInputAutocapitalization(.never)
-            SecureField("Password", text: $password)
+            SecureField("Password", text: $loginState.password)
             
             Button("Login") {
                     // submit form
