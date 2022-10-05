@@ -43,10 +43,13 @@ struct ContentView: View {
         Form {
             TextField("Email", text: $loginState.email)
                 .textInputAutocapitalization(.never)
+            Text(loginState.emailError?.localizedDescription ?? "")
             SecureField("Password", text: $loginState.password)
             
             Button("Login") {
+                if loginState.isValid() {
                     // submit form
+                }
             }
         }
     }
