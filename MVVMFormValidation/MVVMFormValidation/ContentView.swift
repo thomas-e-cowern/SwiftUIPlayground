@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var email: String = ""
+    @State private var password: String = ""
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
