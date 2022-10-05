@@ -16,7 +16,13 @@ struct LoginState {
     mutating func isValid() -> Bool {
         if email.isEmpty {
             emailError = LoginError.emailIsEmpty
+        } else if !email.isValidEmail {
+            emailError = LoginError.emailInvalid
+        } else if password.isEmpty {
+            emailError = LoginError.passwordEmpty
         }
+        
+        return true
     }
 }
 
