@@ -55,7 +55,7 @@ struct ContentView: View {
             
             Button("Login") {
                 if loginState.isValid() {
-                    // submit form
+                    print("The form has been submitted")
                 }
             }
         }
