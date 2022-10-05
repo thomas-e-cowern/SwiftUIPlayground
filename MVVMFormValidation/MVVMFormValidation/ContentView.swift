@@ -14,7 +14,7 @@ struct LoginState {
     var passwordError: LoginError?
     
     mutating func clearErrors() {
-        errors.removeAll()
+//        errors.removeAll()
     }
     
     mutating func isValid() -> Bool {
@@ -43,8 +43,14 @@ struct ContentView: View {
         Form {
             TextField("Email", text: $loginState.email)
                 .textInputAutocapitalization(.never)
-            Text(loginState.emailError?.localizedDescription ?? "")
+            if let emailError = loginState.emailError {
+                Text(emailError.localizedDescription)
+            }
+            
             SecureField("Password", text: $loginState.password)
+            if let passwordError = loginState.passwordError {
+                Text(passwordError.localizedDescription)
+            }
             
             Button("Login") {
                 if loginState.isValid() {
