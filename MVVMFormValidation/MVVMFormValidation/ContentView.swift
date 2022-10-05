@@ -13,7 +13,14 @@ struct LoginState {
     var emailError: LoginError?
     var passwordError: LoginError?
     
+    mutating func clearErrors() {
+        errors.removeAll()
+    }
+    
     mutating func isValid() -> Bool {
+        
+        clearErrors()
+        
         if email.isEmpty {
             emailError = LoginError.emailIsEmpty
         } else if !email.isValidEmail {
@@ -45,6 +52,8 @@ struct ContentView: View {
         }
     }
 }
+
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
