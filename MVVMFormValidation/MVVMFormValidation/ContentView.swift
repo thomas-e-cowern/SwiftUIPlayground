@@ -7,6 +7,19 @@
 
 import SwiftUI
 
+struct LoginState {
+    var email: String = ""
+    var password: String = ""
+    var emailError: LoginError?
+    var passwordError: LoginError?
+    
+    mutating func isValid() -> Bool {
+        if email.isEmpty {
+            emailError = LoginError.emailIsEmpty
+        }
+    }
+}
+
 struct ContentView: View {
     
     @State private var email: String = ""
