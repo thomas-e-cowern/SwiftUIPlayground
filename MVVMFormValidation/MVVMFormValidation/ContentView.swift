@@ -14,7 +14,8 @@ struct LoginState {
     var passwordError: LoginError?
     
     mutating func clearErrors() {
-//        errors.removeAll()
+        emailError = nil
+        passwordError = nil
     }
     
     mutating func isValid() -> Bool {
@@ -22,15 +23,12 @@ struct LoginState {
         clearErrors()
         
         if email.isEmpty {
-            print("Email empty")
             emailError = LoginError.emailIsEmpty
         } else if !email.isValidEmail {
-            print("Email invalid")
             emailError = LoginError.emailInvalid
         }
         
         if password.isEmpty {
-            print("Password empty")
             passwordError = LoginError.passwordEmpty
         }
         
