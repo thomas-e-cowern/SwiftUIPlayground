@@ -25,6 +25,14 @@ enum LoginError: LocalizedError {
 }
 
 struct ContentView: View {
+    
+    @State private var email: String = ""
+    @State private var password: String = ""
+    
+    var isValid: Bool {
+        return false
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
