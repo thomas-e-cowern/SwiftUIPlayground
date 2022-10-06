@@ -35,6 +35,17 @@ struct ContentView: View {
     @State private var errors: [LoginError] = []
     
     var isValid: Bool {
+        
+        if email.isEmpty {
+            errors.append(.emailIsEmpty)
+        } else if !email.isValidEmail {
+            errors.append(.invalidEmail)
+        }
+        
+        if password.isEmpty {
+            errors.append(.passwordIsEmpty)
+        }
+        
         return false
     }
     
