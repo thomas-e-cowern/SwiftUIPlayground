@@ -34,13 +34,17 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        Form {
+            TextField("Email", text: $email)
+                .textInputAutocapitalization(.never)
+            TextField("Password", text: $password)
+            
+            Button("Login") {
+                if isValid {
+                    print("This is valid")
+                }
+            }
         }
-        .padding()
     }
 }
 
