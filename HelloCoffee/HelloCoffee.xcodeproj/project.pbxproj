@@ -12,6 +12,7 @@
 		4D64DE7028EF29B9002F6D58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D64DE6F28EF29B9002F6D58 /* Assets.xcassets */; };
 		4D64DE7328EF29B9002F6D58 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D64DE7228EF29B9002F6D58 /* Preview Assets.xcassets */; };
 		4D64DE7B28EF29FF002F6D58 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64DE7A28EF29FF002F6D58 /* WebService.swift */; };
+		4D64DE7E28EF2A73002F6D58 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D64DE7D28EF2A73002F6D58 /* Order.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D64DE6F28EF29B9002F6D58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D64DE7228EF29B9002F6D58 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D64DE7A28EF29FF002F6D58 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		4D64DE7D28EF2A73002F6D58 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		4D64DE6A28EF29B2002F6D58 /* HelloCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				4D64DE7C28EF2A5F002F6D58 /* Models */,
 				4D64DE7928EF29EF002F6D58 /* Services */,
 				4D64DE6B28EF29B2002F6D58 /* HelloCoffeeApp.swift */,
 				4D64DE6D28EF29B2002F6D58 /* ContentView.swift */,
@@ -76,6 +79,14 @@
 				4D64DE7A28EF29FF002F6D58 /* WebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		4D64DE7C28EF2A5F002F6D58 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D64DE7D28EF2A73002F6D58 /* Order.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 			files = (
 				4D64DE7B28EF29FF002F6D58 /* WebService.swift in Sources */,
 				4D64DE6E28EF29B2002F6D58 /* ContentView.swift in Sources */,
+				4D64DE7E28EF2A73002F6D58 /* Order.swift in Sources */,
 				4D64DE6C28EF29B2002F6D58 /* HelloCoffeeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

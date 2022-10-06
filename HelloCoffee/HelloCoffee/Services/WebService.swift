@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+class WebService {
+    
+    func getOrders() async throws -> [Order] {
+        
+    }
+    
+}
