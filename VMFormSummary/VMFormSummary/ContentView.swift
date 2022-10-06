@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-enum LoginError: LocalizedError {
+enum LoginError: LocalizedError, Identifiable {
     case emailIsEmpty
     case invalidEmail
     case passwordIsEmpty
+    
+    var id: Int {
+        hashValue
+    }
     
     var errorDescription: String? {
         switch self {
@@ -28,6 +32,7 @@ struct ContentView: View {
     
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var errors: [LoginError] = []
     
     var isValid: Bool {
         return false
