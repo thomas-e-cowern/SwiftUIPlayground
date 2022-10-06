@@ -63,9 +63,7 @@ struct ContentView: View {
                 }
             }
             
-            ForEach(errors) { error in
-                Text(error.localizedDescription)
-            }
+            
         }
     }
 }

@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ValidationSummaryView: View {
+    
+    let errors: [LocalizedError]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ForEach(errors) { error in
+            Text(error.localizedDescription)
+        }
     }
 }
 
 struct ValidationSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        ValidationSummaryView()
+        ValidationSummaryView(errors: [])
     }
 }
