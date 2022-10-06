@@ -7,6 +7,23 @@
 
 import SwiftUI
 
+enum LoginError: LocalizedError {
+    case emailIsEmpty
+    case invalidEmail
+    case passwordIsEmpty
+    
+    var errorDescription: String? {
+        switch self {
+        case .emailIsEmpty:
+            return "You must provide an email"
+        case .invalidEmail:
+            return "You must provide a valid email"
+        case .passwordIsEmpty:
+            return "You must provide a password"
+        }
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
