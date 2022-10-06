@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ValidationSummaryView: View {
     
-    let errors: [LocalizedError]
+    let errors: [LocalizedError] = []
     
     var body: some View {
-        ForEach(errors) { error in
+        ForEach(errors, id: \.id) { error in
             Text(error.localizedDescription)
         }
     }
@@ -20,6 +20,6 @@ struct ValidationSummaryView: View {
 
 struct ValidationSummaryView_Previews: PreviewProvider {
     static var previews: some View {
-        ValidationSummaryView(errors: [])
+        ValidationSummaryView()
     }
 }

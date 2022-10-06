@@ -63,7 +63,7 @@ struct ContentView: View {
                 }
             }
             
-            
+            ValidationSummaryView(errors: errors)
         }
     }
 }
