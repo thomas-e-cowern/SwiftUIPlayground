@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             List(model.orders) { order in
-                OrderCellView()
+                OrderCellView(order: order)
             }
         }
         .padding()

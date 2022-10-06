@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct OrderCellView: View {
+    
+    let order: Order
+    
     var body: some View {
         Text(order.name)
     }
@@ -15,6 +18,6 @@ struct OrderCellView: View {
 
 struct OrderCellView_Previews: PreviewProvider {
     static var previews: some View {
-        OrderCellView()
+        OrderCellView(order: Order(name: "John", coffeeName: "Latte", total: 2.50, size: CoffeeSize.small))
     }
 }
