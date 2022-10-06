@@ -36,6 +36,8 @@ struct ContentView: View {
     
     var isValid: Bool {
         
+        errors.removeAll()
+        
         if email.isEmpty {
             errors.append(.emailIsEmpty)
         } else if !email.isValidEmail {
@@ -46,7 +48,7 @@ struct ContentView: View {
             errors.append(.passwordIsEmpty)
         }
         
-        return false
+        return errors.isEmpty
     }
     
     var body: some View {
@@ -59,6 +61,10 @@ struct ContentView: View {
                 if isValid {
                     print("This is valid")
                 }
+            }
+            
+            ForEach(errors) { error in
+                Text(error.localizedDescription)
             }
         }
     }
