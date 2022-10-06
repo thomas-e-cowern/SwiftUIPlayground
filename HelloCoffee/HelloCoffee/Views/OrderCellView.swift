@@ -22,8 +22,8 @@ struct OrderCellView: View {
                     .opacity(0.5)
             }
             Spacer()
-            Text(order.total as NSNumber, formatter: NumberFormatter.currency)
-                .accessibilityIdentifier("coffePriceText")
+//            Text(order.total as NSNumber, formatter: NumberFormatter.currency)
+//                .accessibilityIdentifier("coffePriceText")
         }
     }
 }
