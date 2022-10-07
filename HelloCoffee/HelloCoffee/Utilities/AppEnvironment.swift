@@ -33,3 +33,21 @@ enum AppEnvironment: String {
         }
     }
 }
+
+struct Configuration {
+    
+    lazy var environment: AppEnvironment = {
+       // Read the value from environment variable
+        guard let env = ProcessInfo.processInfo.environment["ENV"] else {
+            return AppEnvironment.dev
+        }
+        
+        if env == "TEST" {
+            return AppEnvironment.test
+        }
+        
+        return AppEnvironment.dev
+        
+    }()
+    
+}
