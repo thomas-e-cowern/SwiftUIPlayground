@@ -9,11 +9,16 @@ import XCTest
 
 final class HelloCoffeeUIEndToEndTests: XCTestCase {
 
-    func testExample() throws {
-        // UI tests must launch the application that they test.
+    func test_should_make_sure_no_orders_displayed() throws {
+        
         let app = XCUIApplication()
+        
+        continueAfterFailure = false
+        
+        app.launchEnvironment = ["ENV": "TEST"]
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        XCTAssertEqual("No orders available", app.staticTexts["noOrdersText"].label)
+        
     }
 }
