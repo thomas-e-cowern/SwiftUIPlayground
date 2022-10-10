@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct AddCoffeeErrors {
+    var name: String = ""
+    var coffeeName: String = ""
+    var price: String = ""
+}
+
 struct AddCoffeeView: View {
     
     @State private var name: String = ""
