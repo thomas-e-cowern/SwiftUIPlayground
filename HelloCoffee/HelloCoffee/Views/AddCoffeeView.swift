@@ -12,7 +12,7 @@ struct AddCoffeeView: View {
     @State private var name: String = ""
     @State private var coffeeName: String = ""
     @State private var price: String = ""
-    @State private var coffeeSize: String = ""
+    @State private var coffeeSize: CoffeeSize = .medium
     
     var body: some View {
         Form {
@@ -27,6 +27,7 @@ struct AddCoffeeView: View {
                     Text(size.rawValue).tag(size)
                 }
             }
+            .pickerStyle(.segmented)
         }
     }
 }
