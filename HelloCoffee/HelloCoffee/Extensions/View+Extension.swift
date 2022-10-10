@@ -18,4 +18,12 @@ extension View {
         }
     }
     
+    @ViewBuilder
+    func visible(_ value: Bool) -> some View {
+        if value == true {
+            self
+        } else {
+            EmptyView()
+        }
+    }
 }
