@@ -28,6 +28,11 @@ struct AddCoffeeView: View {
                 }
             }
             .pickerStyle(.segmented)
+            
+            Button("Place Order") {
+                
+            }
+            .accessibilityIdentifier("placeOrderButton")
         }
     }
 }
