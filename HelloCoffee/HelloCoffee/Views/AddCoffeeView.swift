@@ -33,6 +33,7 @@ struct AddCoffeeView: View {
                 
             }
             .accessibilityIdentifier("placeOrderButton")
+            .centerHorizontally()
         }
     }
 }
