@@ -37,6 +37,10 @@ struct AddCoffeeView: View {
             
             TextField("Price", text: $price)
                 .accessibilityIdentifier("price")
+            Text(errors.price)
+                .visible(!errors.price.isEmpty)
+                .font(.caption)
+            
             Picker("Select Size", selection: $coffeeSize) {
                 ForEach(CoffeeSize.allCases, id: \.rawValue) { size in
                     Text(size.rawValue).tag(size)
