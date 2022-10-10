@@ -15,7 +15,19 @@ struct AddCoffeeView: View {
     @State private var coffeeSize: String = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            TextField("Name", text: $name)
+                .accessibilityIdentifier("name")
+            TextField("Coffee Name", text: $coffeeName)
+                .accessibilityIdentifier("coffeeName")
+            TextField("Price", text: $price)
+                .accessibilityIdentifier("price")
+            Picker("Select Size", selection: $coffeeSize) {
+                ForEach(CoffeeSize.allCases, id: \.rawValue) { size in
+                    Text(size.rawValue).tag(size)
+                }
+            }
+        }
     }
 }
 
