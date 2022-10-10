@@ -25,6 +25,10 @@ struct AddCoffeeView: View {
         Form {
             TextField("Name", text: $name)
                 .accessibilityIdentifier("name")
+            Text(errors.name)
+                .visible(errors.name.isEmpty)
+                .font(.caption)
+            
             TextField("Coffee Name", text: $coffeeName)
                 .accessibilityIdentifier("coffeeName")
             TextField("Price", text: $price)

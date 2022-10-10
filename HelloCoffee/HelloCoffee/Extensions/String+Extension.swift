@@ -8,13 +8,13 @@
 import Foundation
 
 extension String {
-    
-    var isNumberic: Bool {
+
+    var isNumeric: Bool {
         Double(self) != nil
     }
     
     func isLessThan(_ number: Double) -> Bool {
-        if !self.isNumberic {
+        if !self.isNumeric {
             return false
         }
         
