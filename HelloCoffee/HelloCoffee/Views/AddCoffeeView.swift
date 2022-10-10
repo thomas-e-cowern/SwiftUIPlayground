@@ -26,11 +26,15 @@ struct AddCoffeeView: View {
             TextField("Name", text: $name)
                 .accessibilityIdentifier("name")
             Text(errors.name)
-                .visible(errors.name.isEmpty)
+                .visible(!errors.name.isEmpty)
                 .font(.caption)
             
             TextField("Coffee Name", text: $coffeeName)
                 .accessibilityIdentifier("coffeeName")
+            Text(errors.coffeeName)
+                .visible(!errors.coffeeName.isEmpty)
+                .font(.caption)
+            
             TextField("Price", text: $price)
                 .accessibilityIdentifier("price")
             Picker("Select Size", selection: $coffeeSize) {
