@@ -19,6 +19,7 @@ struct AddCoffeeView: View {
     @State private var coffeeName: String = ""
     @State private var price: String = ""
     @State private var coffeeSize: CoffeeSize = .medium
+    @State private var errors: AddCoffeeErrors = AddCoffeeErrors()
     
     var body: some View {
         Form {
@@ -37,10 +38,37 @@ struct AddCoffeeView: View {
             
             Button("Place Order") {
                 
+                if isValid {
+                    // place order
+                }
+                
             }
             .accessibilityIdentifier("placeOrderButton")
             .centerHorizontally()
         }
+    }
+    
+    var isValid: Bool {
+        
+        errors = AddCoffeeErrors()
+        
+        if name.isEmpty {
+            errors.name = "Name field cannot be empty"
+        }
+        
+        if coffeeName.isEmpty {
+            errors.coffeeName = "Coffee name field cannot be empty"
+        }
+        
+        if price.isEmpty {
+            errors.price = "Price cannot be empty"
+        } else if (!price.isNumeric) {
+            errors.price = "Price needs to be a number"
+        } else if price.isLessThan(1) {
+            errors.price = "Price must be greater than one"
+        }
+        
+        return errors.name.isEmpty && errors.price.isEmpty && errors.coffeeName.isEmpty
     }
 }
 
