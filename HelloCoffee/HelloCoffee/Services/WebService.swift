@@ -22,7 +22,15 @@ class WebService {
     }
     
     func placeOrder(order: Order) async throws -> Order {
+        guard let url = URL(string: Endpoints.placeOrder.path, relativeTo: baseUrl) else {
+            print("Bad place order url")
+            throw NetworkError.badUrl
+        }
         
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.httpBody = try JSONEncoder().encode(order)
     }
     
     func getOrders() async throws -> [Order] {
