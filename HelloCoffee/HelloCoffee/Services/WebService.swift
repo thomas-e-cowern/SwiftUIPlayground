@@ -21,6 +21,10 @@ class WebService {
         self.baseUrl = baseUrl
     }
     
+    func placeOrder(order: Order) async throws -> Order {
+        
+    }
+    
     func getOrders() async throws -> [Order] {
         // https://powerful-melted-jam.glitch.me
 
