@@ -53,7 +53,9 @@ struct AddCoffeeView: View {
             Button("Place Order") {
                 
                 if isValid {
-                    // place order
+                    Task {
+                        await placeOrder()
+                    }
                 }
                 
             }
