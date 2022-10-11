@@ -9,22 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var isPresented: Bool = false
+    
     @EnvironmentObject private var model: CoffeeModel
     
     var body: some View {
-        VStack {
-            if model.orders.isEmpty {
-                Text("No orders available")
-                    .accessibilityIdentifier("noOrdersText")
-            } else {
-                List(model.orders) { order in
-                    OrderCellView(order: order)
+        NavigationStack {
+            VStack {
+                if model.orders.isEmpty {
+                    Text("No orders available")
+                        .accessibilityIdentifier("noOrdersText")
+                } else {
+                    List(model.orders) { order in
+                        OrderCellView(order: order)
+                    }
                 }
             }
-        }
-        .padding()
-        .task {
-            await populateOrders()
+            .padding()
+            .task {
+                await populateOrders()
+            }
+            .sheet(isPresented: $isPresented, content: {
+                AddCoffeeView()
+            })
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Add Order") {
+                        isPresented = true
+                    }
+                    .accessibilityIdentifier("addNewOrderButton")
+                }
+            }
         }
     }
     
