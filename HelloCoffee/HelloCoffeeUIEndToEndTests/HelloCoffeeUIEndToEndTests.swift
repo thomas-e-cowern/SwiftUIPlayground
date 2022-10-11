@@ -11,7 +11,7 @@ final class when_adding_a_new_coffee_order: XCTestCase {
     
     private var app: XCUIApplication
     
-    override func setUp() async throws {
+    override func setUp() {
         app = XCUIApplication()
         continueAfterFailure = false
         app.launchEnvironment = ["ENV": "TEST"]
@@ -22,6 +22,17 @@ final class when_adding_a_new_coffee_order: XCTestCase {
         let coffeeNameTextField = app.textFields["coffeeName"]
         let priceTextField = app.textFields["price"]
         let placeOrderButton = app.textFields["placeOrderButton"]
+        
+        nameTextField.tap()
+        nameTextField.typeText("Bill")
+        
+        coffeeNameTextField.tap()
+        coffeeNameTextField.typeText("Hot Coffee")
+        
+        priceTextField.tap()
+        priceTextField.typeText("2.50")
+        
+        placeOrderButton.tap()
     }
 }
 
