@@ -22,6 +22,7 @@ struct AddCoffeeView: View {
     @State private var errors: AddCoffeeErrors = AddCoffeeErrors()
     
     @EnvironmentObject private var model: CoffeeModel
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         NavigationStack {
@@ -93,7 +94,7 @@ struct AddCoffeeView: View {
     private func placeOrder() async {
         
         let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0.00, size: coffeeSize)
-        
+        dismiss()
         do {
             try await model.placeOrder(order)
         } catch {
