@@ -17,6 +17,11 @@ final class when_adding_a_new_coffee_order: XCTestCase {
         app.launchEnvironment = ["ENV": "TEST"]
         
         app.buttons["addNewOrderButton"].tap()
+        
+        let nameTextField = app.textFields["name"]
+        let coffeeNameTextField = app.textFields["coffeeName"]
+        let priceTextField = app.textFields["price"]
+        let placeOrderButton = app.textFields["placeOrderButton"]
     }
 }
 
