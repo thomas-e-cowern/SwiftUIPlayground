@@ -89,7 +89,11 @@ struct AddCoffeeView: View {
         
         let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0.00, size: coffeeSize)
         
-        model.placeOrder(order)
+        do {
+            try await model.placeOrder(order)
+        } catch {
+            print("Error placing order")
+        }
     }
 }
 
