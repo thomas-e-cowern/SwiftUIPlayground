@@ -21,6 +21,8 @@ struct AddCoffeeView: View {
     @State private var coffeeSize: CoffeeSize = .medium
     @State private var errors: AddCoffeeErrors = AddCoffeeErrors()
     
+    @EnvironmentObject private var model: CoffeeModel
+    
     var body: some View {
         Form {
             TextField("Name", text: $name)
@@ -81,6 +83,13 @@ struct AddCoffeeView: View {
         }
         
         return errors.name.isEmpty && errors.price.isEmpty && errors.coffeeName.isEmpty
+    }
+    
+    private func placeOrder() async {
+        
+        let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0.00, size: coffeeSize)
+        
+        model.placeOrder(order)
     }
 }
 
