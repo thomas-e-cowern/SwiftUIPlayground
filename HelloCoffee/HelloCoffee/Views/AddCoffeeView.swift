@@ -92,7 +92,7 @@ struct AddCoffeeView: View {
         do {
             try await model.placeOrder(order)
         } catch {
-            print("Error placing order")
+            print("Error placing order: \(error)")
         }
     }
 }
