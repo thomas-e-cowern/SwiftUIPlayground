@@ -9,7 +9,7 @@ import XCTest
 
 final class when_adding_a_new_coffee_order: XCTestCase {
     
-    private var app: XCUIApplication
+    private var app: XCUIApplication!
     
     override func setUp() {
         app = XCUIApplication()
@@ -33,6 +33,12 @@ final class when_adding_a_new_coffee_order: XCTestCase {
         priceTextField.typeText("2.50")
         
         placeOrderButton.tap()
+    }
+    
+    func test_should_display_coffee_order_in_list_successfully() throws {
+        XCTAssertEqual("Bill", app.staticTexts["orderNameText"].label)
+        XCTAssertEqual("Hot Coffee", app.staticTexts["coffeeNameAndSizeText"].label)
+        XCTAssertEqual("$2.50", app.textFields["coffeePriceText"].label)
     }
 }
 
