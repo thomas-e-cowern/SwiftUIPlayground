@@ -18,7 +18,7 @@ struct OrderCellView: View {
                     .accessibilityIdentifier("orderNameText")
                     .bold()
                 Text("\(order.coffeeName) (\(order.size.rawValue))")
-                    .accessibilityIdentifier("coffeNameAndSizeText")
+                    .accessibilityIdentifier("coffeeNameAndSizeText")
                     .opacity(0.5)
             }
             Spacer()
