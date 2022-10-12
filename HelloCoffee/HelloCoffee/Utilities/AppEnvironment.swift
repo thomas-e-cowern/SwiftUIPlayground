@@ -10,6 +10,7 @@ import Foundation
 enum Endpoints {
     case allOrders
     case placeOrder
+    case deleteOrder
     
     var path: String {
         switch self {
@@ -17,6 +18,8 @@ enum Endpoints {
             return "test/orders"
         case .placeOrder:
             return "/test/new-order"
+        case .deleteOrder:
+            return "/test/orders/:id"
         }
     }
 }
