@@ -7,6 +7,16 @@
 
 import XCTest
 
+final class when_deleting_an_order: XCTestCase {
+    
+    private var app: XCUIApplication!
+    
+    func test_should_delete_order_successfully() {
+        
+    }
+    
+}
+
 final class when_adding_a_new_coffee_order: XCTestCase {
     
     private var app: XCUIApplication!
