@@ -39,7 +39,11 @@ final class when_deleting_an_order: XCTestCase {
     }
     
     func test_should_delete_order_successfully() {
-        
+        let collectionView = XCUIApplication().collectionViews
+        let cellsQuery = collectionView.cells
+        let element = cellsQuery.children(matching: .other).element(boundBy: 1).children(matching: .other).element
+        element.swipeLeft()
+        collectionView.buttons["Delete"].tap()
     }
     
 }
