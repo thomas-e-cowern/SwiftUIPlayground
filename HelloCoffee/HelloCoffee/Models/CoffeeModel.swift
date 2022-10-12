@@ -26,4 +26,8 @@ class CoffeeModel: ObservableObject {
         orders.append(newOrder)
     }
     
+    func deleteOrder(_ orderId: Int) async throws {
+        let deletedOrder = try await webService.deleteOrder(orderId: orderId)
+        orders = orders.filter { $0.id != deletedOrder.id }
+    }
 }
