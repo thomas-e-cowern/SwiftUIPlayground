@@ -11,6 +11,33 @@ final class when_deleting_an_order: XCTestCase {
     
     private var app: XCUIApplication!
     
+    override func setUp() {
+        app = XCUIApplication()
+        continueAfterFailure = false
+        app.launchEnvironment = ["ENV": "TEST"]
+        app.launch()
+        
+        // go to place order screen
+        app.buttons["addNewOrderButton"].tap()
+        // fill out the textfields
+        let nameTextField = app.textFields["name"]
+        let coffeeNameTextField = app.textFields["coffeeName"]
+        let priceTextField = app.textFields["price"]
+        let placeOrderButton = app.buttons["placeOrderButton"]
+        
+        nameTextField.tap()
+        nameTextField.typeText("John")
+        
+        coffeeNameTextField.tap()
+        coffeeNameTextField.typeText("Hot Coffee")
+        
+        priceTextField.tap()
+        priceTextField.typeText("4.50")
+        
+        // place the order
+        placeOrderButton.tap()
+    }
+    
     func test_should_delete_order_successfully() {
         
     }
