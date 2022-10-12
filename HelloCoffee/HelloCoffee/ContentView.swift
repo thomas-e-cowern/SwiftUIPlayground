@@ -20,8 +20,11 @@ struct ContentView: View {
                     Text("No orders available")
                         .accessibilityIdentifier("noOrdersText")
                 } else {
-                    List(model.orders) { order in
-                        OrderCellView(order: order)
+                    List {
+                        ForEach(model.orders) { order in
+                            OrderCellView(order: order)
+                        }
+                        .onDelete(perform: <#T##Optional<(IndexSet) -> Void>##Optional<(IndexSet) -> Void>##(IndexSet) -> Void#>)
                     }
                 }
             }
