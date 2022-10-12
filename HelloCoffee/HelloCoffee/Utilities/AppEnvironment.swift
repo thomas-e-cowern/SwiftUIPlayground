@@ -18,8 +18,8 @@ enum Endpoints {
             return "test/orders"
         case .placeOrder:
             return "/test/new-order"
-        case .deleteOrder:
-            return "/test/orders/:id"
+        case .deleteOrder(let orderId):
+            return "/test/orders/\(orderId)"
         }
     }
 }

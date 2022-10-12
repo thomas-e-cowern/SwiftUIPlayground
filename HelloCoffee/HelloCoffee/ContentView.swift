@@ -24,7 +24,7 @@ struct ContentView: View {
                         ForEach(model.orders) { order in
                             OrderCellView(order: order)
                         }
-                        .onDelete(perform: <#T##Optional<(IndexSet) -> Void>##Optional<(IndexSet) -> Void>##(IndexSet) -> Void#>)
+                        .onDelete(perform: deleteOrder)
                     }
                 }
             }
@@ -67,7 +67,6 @@ struct ContentView: View {
                 } catch {
                     print("Error deleting order \(error)")
                 }
-                
             }
         }
     }
