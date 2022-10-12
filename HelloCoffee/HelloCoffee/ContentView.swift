@@ -53,6 +53,24 @@ struct ContentView: View {
             print(error.localizedDescription)
         }
     }
+    
+    private func deleteOrder(_ indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let order = model.orders[index]
+            guard let orderId = order.id else {
+                return
+            }
+            
+            Task {
+                do {
+                    try await model.deleteOrder(orderId)
+                } catch {
+                    print("Error deleting order \(error)")
+                }
+                
+            }
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
