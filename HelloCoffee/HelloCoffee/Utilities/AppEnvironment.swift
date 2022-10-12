@@ -10,7 +10,7 @@ import Foundation
 enum Endpoints {
     case allOrders
     case placeOrder
-    case deleteOrder
+    case deleteOrder(Int)
     
     var path: String {
         switch self {
