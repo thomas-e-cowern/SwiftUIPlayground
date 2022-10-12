@@ -68,4 +68,8 @@ class WebService {
         return orders
     }
     
+    func deleteOrder(orderId: Int) async throws -> Order {
+        
+    }
+    
 }
