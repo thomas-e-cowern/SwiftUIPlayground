@@ -75,18 +75,21 @@ class WebService {
             throw NetworkError.badUrl
         }
         
-        let (data, response) = try await URLSession.shared.data(from: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "DELETE"
+        
+        let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse,
             httpResponse.statusCode == 200 else {
             throw NetworkError.badRequest
         }
         
-        guard let order = try? JSONDecoder().decode(Order.self, from: data) else {
+        guard let deletedOrder = try? JSONDecoder().decode(Order.self, from: data) else {
             throw NetworkError.decodingError
         }
         
-        return order
+        return deletedOrder
     }
     
 }
