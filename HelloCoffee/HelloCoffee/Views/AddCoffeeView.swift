@@ -121,6 +121,11 @@ struct AddCoffeeView: View {
             editOrder.coffeeName = coffeeName
             editOrder.total = Double(price) ?? 0.0
             editOrder.size = coffeeSize
+            
+            await updateOrder(editOrder)
+        } else {
+            let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0.0, size: coffeeSize)
+            await placeOrder(order)
         }
     }
 }
