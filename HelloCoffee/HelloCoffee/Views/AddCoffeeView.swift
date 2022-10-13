@@ -57,10 +57,9 @@ struct AddCoffeeView: View {
                     
                     if isValid {
                         Task {
-                            await placeOrder()
+                            await saveOrUpdate()
                         }
                     }
-                    
                 }
                 .accessibilityIdentifier("placeOrderButton")
                 .centerHorizontally()
@@ -112,6 +111,16 @@ struct AddCoffeeView: View {
             coffeeName = order.coffeeName
             price = String(order.total)
             coffeeSize = order.size
+        }
+    }
+    
+    private func saveOrUpdate() async {
+        if let order {
+            var editOrder = order
+            editOrder.name = name
+            editOrder.coffeeName = coffeeName
+            editOrder.total = Double(price) ?? 0.0
+            editOrder.size = coffeeSize
         }
     }
 }
