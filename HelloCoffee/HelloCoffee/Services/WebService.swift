@@ -92,4 +92,11 @@ class WebService {
         return deletedOrder
     }
     
+    func updateOrder(order: Order) async throws -> Order {
+        
+        guard let orderId = order.id else {
+            throw NetworkError.badUrl
+        }
+    }
+    
 }
