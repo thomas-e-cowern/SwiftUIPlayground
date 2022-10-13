@@ -134,6 +134,8 @@ struct AddCoffeeView: View {
             let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0.0, size: coffeeSize)
             await placeOrder(order)
         }
+        
+        dismiss()
     }
 }
 
