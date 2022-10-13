@@ -53,7 +53,7 @@ struct AddCoffeeView: View {
                 }
                 .pickerStyle(.segmented)
                 
-                Button("Place Order") {
+                Button(order != nil ? "Update Order" : "Place Order") {
                     
                     if isValid {
                         Task {
@@ -65,7 +65,7 @@ struct AddCoffeeView: View {
                 .accessibilityIdentifier("placeOrderButton")
                 .centerHorizontally()
             }
-            .navigationTitle("Add a Coffee")
+            .navigationTitle(order == nil ? "Add Coffee" : "Update Order")
             .onAppear {
                 populateExistingOrder()
             }
