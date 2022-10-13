@@ -27,10 +27,24 @@ struct OrderDetailView: View {
         
         if let order = model.getOrderById(orderId) {
             
+            
             Text(order.name)
             Text(order.coffeeName)
             Text(order.size.rawValue)
             Text(order.total as NSNumber, formatter: NumberFormatter.currency)
+            
+            HStack {
+                Spacer()
+                Button("Delete Order", role: .destructive) {
+                    // Delete here
+                }
+                .accessibilityIdentifier("deleteOrderButton")
+                Button("Edit Order") {
+                    // Edit here
+                }
+                .accessibilityIdentifier("editOrderButton")
+                Spacer()
+            }
 //            Form {
 //                TextField("Name", text: $name)
 //                    .accessibilityIdentifier("name")
