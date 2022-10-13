@@ -15,6 +15,7 @@ struct AddCoffeeErrors {
 
 struct AddCoffeeView: View {
     
+    var order: Order? = nil
     @State private var name: String = ""
     @State private var coffeeName: String = ""
     @State private var price: String = ""
@@ -65,6 +66,9 @@ struct AddCoffeeView: View {
                 .centerHorizontally()
             }
             .navigationTitle("Add a Coffee")
+            .onAppear {
+                populateExistingOrder()
+            }
         }
     }
     
@@ -99,6 +103,15 @@ struct AddCoffeeView: View {
             try await model.placeOrder(order)
         } catch {
             print("Error placing order: \(error)")
+        }
+    }
+    
+    private func populateExistingOrder() {
+        if let order = order {
+            name = order.name
+            coffeeName = order.coffeeName
+            price = String(order.total)
+            coffeeSize = order.size
         }
     }
 }
