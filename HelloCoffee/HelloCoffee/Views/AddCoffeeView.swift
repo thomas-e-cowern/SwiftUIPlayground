@@ -94,14 +94,21 @@ struct AddCoffeeView: View {
         return errors.name.isEmpty && errors.price.isEmpty && errors.coffeeName.isEmpty
     }
     
-    private func placeOrder() async {
+    private func placeOrder(_ order: Order) async {
         
-        let order = Order(name: name, coffeeName: coffeeName, total: Double(price) ?? 0.00, size: coffeeSize)
-        dismiss()
         do {
             try await model.placeOrder(order)
+            dismiss()
         } catch {
             print("Error placing order: \(error)")
+        }
+    }
+    
+    private func updateOrder(_ order: Order) async {
+        do {
+            try await model.updateOrder(order)
+        } catch {
+            print("Error updating order: \(error.localizedDescription)")
         }
     }
     
