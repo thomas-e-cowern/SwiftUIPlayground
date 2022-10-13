@@ -49,7 +49,7 @@ struct OrderDetailView: View {
                 Spacer()
             }
             .sheet(isPresented: $isPresented) {
-                AddCoffeeView()
+                AddCoffeeView(order: order)
             }
         }
     }
