@@ -11,6 +11,7 @@ enum NetworkError: Error {
     case badUrl
     case badRequest
     case decodingError
+    case badId
 }
 
 class WebService {
@@ -95,7 +96,7 @@ class WebService {
     func updateOrder(order: Order) async throws -> Order {
         
         guard let orderId = order.id else {
-            throw NetworkError.badUrl
+            throw NetworkError.badId
         }
     }
     
