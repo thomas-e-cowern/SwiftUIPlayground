@@ -28,6 +28,9 @@ struct OrderDetailView: View {
         if let order = model.getOrderById(orderId) {
             
             Text(order.name)
+            Text(order.coffeeName)
+            Text(order.size.rawValue)
+            Text(order.total as NSNumber, formatter: NumberFormatter.currency)
 //            Form {
 //                TextField("Name", text: $name)
 //                    .accessibilityIdentifier("name")
