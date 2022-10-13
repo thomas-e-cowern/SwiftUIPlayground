@@ -17,6 +17,7 @@ struct OrderDetailView: View {
     
     let orderId: Int
     @EnvironmentObject private var model: CoffeeModel
+    @Environment(\.dismiss) private var dismiss
     @State private var isPresented: Bool = false
     
 //    @State private var name: String = ""
@@ -39,6 +40,10 @@ struct OrderDetailView: View {
                 Spacer()
                 Button("Delete Order", role: .destructive) {
                     // Delete here
+                    Task {
+                         await deleteOrder()
+                        dismiss()
+                    }
                 }
                 .accessibilityIdentifier("deleteOrderButton")
                 Button("Edit Order") {
@@ -51,6 +56,14 @@ struct OrderDetailView: View {
             .sheet(isPresented: $isPresented) {
                 AddCoffeeView(order: order)
             }
+        }
+    }
+    
+    private func deleteOrder() async {
+        do {
+            try await model.deleteOrder(orderId)
+        } catch {
+            print("There was a problem with deleteOrder in OrderDetailView: \(error.localizedDescription)")
         }
     }
 }
