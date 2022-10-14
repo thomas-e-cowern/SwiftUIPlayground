@@ -46,8 +46,14 @@ final class when_updating_an_existing_order: XCTestCase {
     func test_should_update_order_successfully() {
         
         let orderList = app.collectionViews["orderList"]
-        orderList.buttons[""].tap()
+        orderList.buttons["orderNameText-coffeeNameAndSize-coffeePriceText"].tap()
         
+        app.buttons["editOrderButton"].tap()
+        
+        let nameTextField = app.textFields["name"]
+        let coffeeNameTextField = app.textFields["coffeeName"]
+        let priceTextField = app.textFields["price"]
+        let placeOrderButton = app.buttons["placeOrderButton"]
     }
     
     // called after running each test
