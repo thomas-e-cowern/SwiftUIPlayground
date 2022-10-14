@@ -75,6 +75,8 @@ final class when_updating_an_existing_order: XCTestCase {
         placeOrderButton.tap()
         
         XCTAssertEqual("Hot Coffee Edit", app.staticTexts["coffeeNameText"].label)
+        XCTAssertEqual("Medium", app.staticTexts["Medium"].label)
+        XCTAssertEqual("$7.50", app.staticTexts["price"].label)
     }
     
     // called after running each test

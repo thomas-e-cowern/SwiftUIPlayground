@@ -39,7 +39,7 @@ struct OrderDetailView: View {
                     Text(order.size.rawValue)
                         .opacity(0.5)
                     Text(order.total as NSNumber, formatter: NumberFormatter.currency)
-                    
+                        .accessibilityIdentifier("price")
                     HStack {
                         Spacer()
                         Button("Delete Order", role: .destructive) {
