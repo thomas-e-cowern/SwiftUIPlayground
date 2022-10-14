@@ -35,6 +35,7 @@ struct OrderDetailView: View {
                 .accessibilityIdentifier("orderName")
             VStack {
                 Text(order.coffeeName)
+                    .accessibilityIdentifier("coffeeNames")
                 Text(order.size.rawValue)
             }
                 .accessibilityIdentifier("coffeeNameAndSize")

@@ -45,6 +45,44 @@ final class when_updating_an_existing_order: XCTestCase {
     
     func test_should_update_order_successfully() {
         
+ //       ************************************
+        
+//        app.navigationBars["_TtGC7SwiftUI32NavigationStackHosting"]/*@START_MENU_TOKEN@*/.buttons["addNewOrderButton"]/*[[".otherElements[\"Add Order\"]",".buttons[\"Add Order\"]",".buttons[\"addNewOrderButton\"]",".otherElements[\"addNewOrderButton\"]"],[[[-1,2],[-1,1],[-1,3,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let collectionViewsQuery2 = app.collectionViews
+//        collectionViewsQuery2/*@START_MENU_TOKEN@*/.textFields["name"]/*[[".cells",".textFields[\"Name\"]",".textFields[\"name\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let coffeenameTextField = collectionViewsQuery2/*@START_MENU_TOKEN@*/.textFields["coffeeName"]/*[[".cells",".textFields[\"Coffee Name\"]",".textFields[\"coffeeName\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+//        coffeenameTextField.tap()
+//
+//        let priceTextField = collectionViewsQuery2/*@START_MENU_TOKEN@*/.textFields["price"]/*[[".cells",".textFields[\"Price\"]",".textFields[\"price\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+//        priceTextField.tap()
+//
+//        let collectionViewsQuery = collectionViewsQuery2
+//        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Small"]/*[[".cells",".segmentedControls[\"coffeeSize\"].buttons[\"Small\"]",".buttons[\"Small\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["placeOrderButton"]/*[[".cells",".buttons[\"Place Order\"]",".buttons[\"placeOrderButton\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let app2 = app
+//        app2.collectionViews["orderList"]/*@START_MENU_TOKEN@*/.buttons["orderNameText-coffeeNameAndSizeText-coffeePriceText"]/*[[".cells",".buttons[\"John, Hot Coffee (Small), $4.50\"]",".buttons[\"orderNameText-coffeeNameAndSizeText-coffeePriceText\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let app = app2
+//        app/*@START_MENU_TOKEN@*/.buttons["editOrderButton"]/*[[".buttons[\"Edit Order\"]",".buttons[\"editOrderButton\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let nameTextField = collectionViewsQuery/*@START_MENU_TOKEN@*/.textFields["name"]/*[[".cells",".textFields[\"Name\"]",".textFields[\"name\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/
+//        nameTextField.tap()
+//        nameTextField.tap()
+//        coffeenameTextField.tap()
+//        coffeenameTextField.tap()
+//        priceTextField.tap()
+//        priceTextField.tap()
+//        priceTextField.swipeLeft()
+//        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["Medium"]/*[[".cells",".segmentedControls[\"coffeeSize\"].buttons[\"Medium\"]",".buttons[\"Medium\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        collectionViewsQuery/*@START_MENU_TOKEN@*/.buttons["placeOrderButton"]/*[[".cells",".buttons[\"Update Order\"]",".buttons[\"placeOrderButton\"]"],[[[-1,2],[-1,1],[-1,0,1]],[[-1,2],[-1,1]]],[0]]@END_MENU_TOKEN@*/.tap()
+//        app.staticTexts["Hot Coffee Edit"].tap()
+                                
+        
+ //       ************************************
+        
         let orderList = app.collectionViews["orderList"]
         orderList.buttons["orderNameText-coffeeNameAndSizeText-coffeePriceText"].tap()
         
@@ -69,7 +107,7 @@ final class when_updating_an_existing_order: XCTestCase {
         
         placeOrderButton.tap()
         
-        XCTAssertEqual("Hot Coffee Edit", app.staticTexts["coffeeNameText"].label)
+        XCTAssertEqual("Hot Coffee Edit", app.staticTexts["coffeeNameAndSize"].label)
     }
     
     // called after running each test
