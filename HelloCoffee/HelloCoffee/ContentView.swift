@@ -27,7 +27,7 @@ struct ContentView: View {
                             }
                         }
                         .onDelete(perform: deleteOrder)
-                    }
+                    }.accessibilityIdentifier("orderList")
                 }
             }
             .navigationDestination(for: Int.self, destination: { orderId in

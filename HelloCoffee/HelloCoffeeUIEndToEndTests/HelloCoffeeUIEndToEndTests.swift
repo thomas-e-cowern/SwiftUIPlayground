@@ -46,7 +46,7 @@ final class when_updating_an_existing_order: XCTestCase {
     func test_should_update_order_successfully() {
         
         let orderList = app.collectionViews["orderList"]
-        orderList.buttons["orderNameText-coffeeNameAndSize-coffeePriceText"].tap()
+        orderList.buttons["orderNameText-coffeeNameAndSizeText-coffeePriceText"].tap()
         
         app.buttons["editOrderButton"].tap()
         
