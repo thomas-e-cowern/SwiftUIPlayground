@@ -30,38 +30,36 @@ struct OrderDetailView: View {
         
         if let order = model.getOrderById(orderId) {
             
-            
-            Text(order.name)
-                .accessibilityIdentifier("orderName")
             VStack {
-                Text(order.coffeeName)
-                    .accessibilityIdentifier("coffeeNames")
-                Text(order.size.rawValue)
-            }
-                .accessibilityIdentifier("coffeeNameAndSize")
-            Text(order.total as NSNumber, formatter: NumberFormatter.currency)
-                .accessibilityIdentifier("coffeePriceList")
-            
-            HStack {
-                Spacer()
-                Button("Delete Order", role: .destructive) {
-                    // Delete here
-                    Task {
-                         await deleteOrder()
-                        dismiss()
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(order.coffeeName)
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .accessibilityIdentifier("coffeeNameText")
+                    Text(order.size.rawValue)
+                        .opacity(0.5)
+                    Text(order.total as NSNumber, formatter: NumberFormatter.currency)
+                    
+                    HStack {
+                        Spacer()
+                        Button("Delete Order", role: .destructive) {
+                            Task {
+                                await deleteOrder()
+                            }
+                        }
+                        Button("Edit Order") {
+                            isPresented = true
+                        }.accessibilityIdentifier("editOrderButton")
+                        Spacer()
                     }
+                }.sheet(isPresented: $isPresented) {
+                    AddCoffeeView(order: order)
                 }
-                .accessibilityIdentifier("deleteOrderButton")
-                Button("Edit Order") {
-                    // Edit here
-                    isPresented = true
-                }
-                .accessibilityIdentifier("editOrderButton")
-                Spacer()
             }
-            .sheet(isPresented: $isPresented) {
-                AddCoffeeView(order: order)
-            }
+            .padding()
+            
+            Spacer()
+            
         }
     }
     

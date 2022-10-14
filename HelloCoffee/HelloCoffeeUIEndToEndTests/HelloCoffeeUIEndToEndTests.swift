@@ -155,7 +155,6 @@ final class when_adding_a_new_coffee_order: XCTestCase {
         let nameTextField = app.textFields["name"]
         let coffeeNameTextField = app.textFields["coffeeName"]
         let priceTextField = app.textFields["price"]
-        let coffeeSizePicker = app.pickerWheels["coffeeSize"].segmentedControls
         let placeOrderButton = app.buttons["placeOrderButton"]
         
         nameTextField.tap()
