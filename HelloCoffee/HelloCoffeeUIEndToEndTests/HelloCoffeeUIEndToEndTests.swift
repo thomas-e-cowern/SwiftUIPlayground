@@ -9,7 +9,41 @@ import XCTest
 
 final class when_updating_an_existing_order: XCTestCase {
     
+    private var app: XCUIApplication!
+    
+    // called before running each test
+    override func setUp() {
+        
+        app = XCUIApplication()
+        continueAfterFailure = false
+        app.launchEnvironment = ["ENV": "TEST"]
+        app.launch()
+        
+        // go to place order screen
+        app.buttons["addNewOrderButton"].tap()
+        // fill out the textfields
+        let nameTextField = app.textFields["name"]
+        let coffeeNameTextField = app.textFields["coffeeName"]
+        let priceTextField = app.textFields["price"]
+        let placeOrderButton = app.buttons["placeOrderButton"]
+        
+        nameTextField.tap()
+        nameTextField.typeText("John")
+        
+        coffeeNameTextField.tap()
+        coffeeNameTextField.typeText("Hot Coffee")
+        
+        priceTextField.tap()
+        priceTextField.typeText("4.50")
+        
+        // place the order
+        placeOrderButton.tap()
+    }
+    
     func test_should_update_order_successfully() {
+        
+       
+        
         
     }
     
