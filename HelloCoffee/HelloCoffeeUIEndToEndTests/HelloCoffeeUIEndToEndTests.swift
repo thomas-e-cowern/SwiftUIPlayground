@@ -25,6 +25,7 @@ final class when_updating_an_existing_order: XCTestCase {
         let nameTextField = app.textFields["name"]
         let coffeeNameTextField = app.textFields["coffeeName"]
         let priceTextField = app.textFields["price"]
+        let coffeeSizePicker = app.textFields["coffeeSize"]
         let placeOrderButton = app.buttons["placeOrderButton"]
         
         nameTextField.tap()
@@ -36,14 +37,13 @@ final class when_updating_an_existing_order: XCTestCase {
         priceTextField.tap()
         priceTextField.typeText("4.50")
         
+        coffeeSizePicker.adjust(toPickerWheelValue: "Small")
+        
         // place the order
         placeOrderButton.tap()
     }
     
     func test_should_update_order_successfully() {
-        
-       
-        
         
     }
     
@@ -54,7 +54,6 @@ final class when_updating_an_existing_order: XCTestCase {
             let (_, _) = try! await URLSession.shared.data(from: url)
         }
     }
-    
 }
 
 final class when_deleting_an_order: XCTestCase {
@@ -126,6 +125,7 @@ final class when_adding_a_new_coffee_order: XCTestCase {
         let nameTextField = app.textFields["name"]
         let coffeeNameTextField = app.textFields["coffeeName"]
         let priceTextField = app.textFields["price"]
+        let coffeeSizePicker = app.textFields["coffeeSize"]
         let placeOrderButton = app.buttons["placeOrderButton"]
         
         nameTextField.tap()
@@ -136,6 +136,8 @@ final class when_adding_a_new_coffee_order: XCTestCase {
         
         priceTextField.tap()
         priceTextField.typeText("4.50")
+        
+        coffeeSizePicker.adjust(toPickerWheelValue: "Small")
         
         // place the order
         placeOrderButton.tap()

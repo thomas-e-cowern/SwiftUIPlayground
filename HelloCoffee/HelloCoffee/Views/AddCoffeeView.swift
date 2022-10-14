@@ -52,6 +52,7 @@ struct AddCoffeeView: View {
                     }
                 }
                 .pickerStyle(.segmented)
+                .accessibilityIdentifier("coffeeSize")
                 
                 Button(order != nil ? "Update Order" : "Place Order") {
                     
