@@ -32,9 +32,14 @@ struct OrderDetailView: View {
             
             
             Text(order.name)
-            Text(order.coffeeName)
-            Text(order.size.rawValue)
+                .accessibilityIdentifier("orderName")
+            VStack {
+                Text(order.coffeeName)
+                Text(order.size.rawValue)
+            }
+                .accessibilityIdentifier("coffeeNameAndSize")
             Text(order.total as NSNumber, formatter: NumberFormatter.currency)
+                .accessibilityIdentifier("coffeePriceList")
             
             HStack {
                 Spacer()
