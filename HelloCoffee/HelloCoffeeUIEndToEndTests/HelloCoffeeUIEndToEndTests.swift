@@ -7,6 +7,14 @@
 
 import XCTest
 
+final class when_updating_an_existing_order: XCTestCase {
+    
+    func test_should_update_order_successfully() {
+        
+    }
+    
+}
+
 final class when_deleting_an_order: XCTestCase {
     
     private var app: XCUIApplication!
