@@ -58,6 +58,10 @@ final class when_updating_an_existing_order: XCTestCase {
         let _ = nameTextField.waitForExistence(timeout: 2)
         nameTextField.tap(withNumberOfTaps: 2, numberOfTouches: 1)
         nameTextField.typeText("John Edit")
+        
+        let _ = coffeeNameTextField.waitForExistence(timeout: 2)
+        coffeeNameTextField.tap(withNumberOfTaps: 2, numberOfTouches: 1)
+        coffeeNameTextField.typeText("Hot Coffee Edit")
     }
     
     // called after running each test
