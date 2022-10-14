@@ -47,6 +47,14 @@ final class when_updating_an_existing_order: XCTestCase {
         
     }
     
+    // called after running each test
+    override func tearDown() {
+        Task {
+            guard let url = URL(string: "/test/clear-orders", relativeTo: URL(string: "https://island-bramble.glitch.me")!) else { return }
+            let (_, _) = try! await URLSession.shared.data(from: url)
+        }
+    }
+    
 }
 
 final class when_deleting_an_order: XCTestCase {
