@@ -25,8 +25,11 @@ final class when_updating_an_existing_order: XCTestCase {
         let nameTextField = app.textFields["name"]
         let coffeeNameTextField = app.textFields["coffeeName"]
         let priceTextField = app.textFields["price"]
-        let coffeeSizePicker = app.textFields["coffeeSize"]
         let placeOrderButton = app.buttons["placeOrderButton"]
+        
+        let collectionViewsQuery = app.collectionViews
+        
+        collectionViewsQuery.buttons["Small"].tap()
         
         nameTextField.tap()
         nameTextField.typeText("John")
@@ -36,8 +39,6 @@ final class when_updating_an_existing_order: XCTestCase {
         
         priceTextField.tap()
         priceTextField.typeText("4.50")
-        
-//        coffeeSizePicker.adjust(toPickerWheelValue: "Small")
         
         // place the order
         placeOrderButton.tap()
@@ -87,6 +88,10 @@ final class when_updating_an_existing_order: XCTestCase {
         orderList.buttons["orderNameText-coffeeNameAndSizeText-coffeePriceText"].tap()
         
         app.buttons["editOrderButton"].tap()
+        
+        let collectionViewsQuery = app.collectionViews
+        
+        collectionViewsQuery.buttons["Medium"].tap()
         
         let nameTextField = app.textFields["name"]
         let coffeeNameTextField = app.textFields["coffeeName"]
