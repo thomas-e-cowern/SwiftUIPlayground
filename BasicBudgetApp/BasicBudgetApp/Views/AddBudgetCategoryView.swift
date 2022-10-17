@@ -13,7 +13,7 @@ struct AddBudgetCategoryView: View {
     @Environment(\.dismiss) private var dismiss
     
     @State private var title: String = ""
-    @State private var total: Double = 0
+    @State private var total: Double = 0.0
     @State private var messages: [String] = []
     
     var isFormValid: Bool {
@@ -70,6 +70,15 @@ struct AddBudgetCategoryView: View {
     
     private func save() {
         
+        let budgetCategory = BudgetCategory(context: viewContext)
+        budgetCategory.title = title
+        budgetCategory.total = total
+        
+        do {
+            try viewContext.save()
+        } catch {
+            print("Error saving category: \(error.localizedDescription)")
+        }
     }
 }
 
