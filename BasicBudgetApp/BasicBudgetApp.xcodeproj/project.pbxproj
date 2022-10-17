@@ -15,6 +15,7 @@
 		4D5940F128FDC986000798E8 /* BudgetCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F028FDC986000798E8 /* BudgetCategory+CoreDataClass.swift */; };
 		4D5940F428FDCC18000798E8 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F328FDCC18000798E8 /* CoreDataManager.swift */; };
 		4D5940F728FDD031000798E8 /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F628FDD031000798E8 /* AddBudgetCategoryView.swift */; };
+		4D5940FA28FDD3F7000798E8 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4D5940F028FDC986000798E8 /* BudgetCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetCategory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4D5940F328FDCC18000798E8 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		4D5940F628FDD031000798E8 /* AddBudgetCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetCategoryView.swift; sourceTree = "<group>"; };
+		4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		4D5940DC28FDC79A000798E8 /* BasicBudgetApp */ = {
 			isa = PBXGroup;
 			children = (
+				4D5940F828FDD3DC000798E8 /* Extensions */,
 				4D5940F528FDD01A000798E8 /* Views */,
 				4D5940F228FDCC00000798E8 /* Managers */,
 				4D5940EE28FDC942000798E8 /* Models */,
@@ -101,6 +104,14 @@
 				4D5940F628FDD031000798E8 /* AddBudgetCategoryView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4D5940F828FDD3DC000798E8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 			files = (
 				4D5940E028FDC79A000798E8 /* ContentView.swift in Sources */,
 				4D5940DE28FDC79A000798E8 /* BasicBudgetAppApp.swift in Sources */,
+				4D5940FA28FDD3F7000798E8 /* NumberFormatter+Extensions.swift in Sources */,
 				4D5940F128FDC986000798E8 /* BudgetCategory+CoreDataClass.swift in Sources */,
 				4D5940F728FDD031000798E8 /* AddBudgetCategoryView.swift in Sources */,
 				4D5940F428FDCC18000798E8 /* CoreDataManager.swift in Sources */,
