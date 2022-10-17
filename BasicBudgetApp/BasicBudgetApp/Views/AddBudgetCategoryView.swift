@@ -16,6 +16,21 @@ struct AddBudgetCategoryView: View {
     @State private var total: Double = 0
     @State private var messages: [String] = []
     
+    var isFormValid: Bool {
+        
+        messages.removeAll()
+        
+        if title.isEmpty {
+            messages.append("Title is required")
+        }
+        
+        if total <= 0 {
+            messages.append("Total must be greater than zero")
+        }
+        
+        return messages.count == 0
+    }
+    
     var body: some View {
         NavigationStack {
             Form {
@@ -30,6 +45,10 @@ struct AddBudgetCategoryView: View {
                 
                 Text(total as NSNumber, formatter: NumberFormatter.currency)
                     .frame(maxWidth: .infinity, alignment: .center)
+                
+                ForEach(messages, id:\.self) { message in
+                    Text(message)
+                }
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -40,11 +59,17 @@ struct AddBudgetCategoryView: View {
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
-                        // Things will be saved to core data
+                        if isFormValid {
+                            save()
+                        }
                     }
                 }
             }
         }
+    }
+    
+    private func save() {
+        
     }
 }
 
