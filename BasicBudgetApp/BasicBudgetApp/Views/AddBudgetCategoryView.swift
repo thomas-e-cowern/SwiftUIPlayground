@@ -14,6 +14,7 @@ struct AddBudgetCategoryView: View {
     
     @State private var title: String = ""
     @State private var total: Double = 0
+    @State private var messages: [String] = []
     
     var body: some View {
         NavigationStack {
@@ -27,7 +28,8 @@ struct AddBudgetCategoryView: View {
                     Text("$1000")
                 }
                 
-                Text("\(total)")
+                Text(total as NSNumber, formatter: NumberFormatter.currency)
+                    .frame(maxWidth: .infinity, alignment: .center)
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
