@@ -26,11 +26,19 @@ struct AddBudgetCategoryView: View {
                 } maximumValueLabel: {
                     Text("$1000")
                 }
+                
+                Text("\(total)")
             }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
                         dismiss()
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button("Save") {
+                        // Things will be saved to core data
                     }
                 }
             }
