@@ -61,6 +61,7 @@ struct AddBudgetCategoryView: View {
                     Button("Save") {
                         if isFormValid {
                             save()
+                            dismiss()
                         }
                     }
                 }
