@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct AddBudgetCategoryView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @State private var title: String = ""
+    @State private var total: Double = 0
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            TextField("Title", text: $title)
+            Slider(value: $total, in: 0...1000, step: 10) {
+                Text("Total")
+            } minimumValueLabel: {
+                Text("$0")
+            } maximumValueLabel: {
+                Text("$1000")
+            }
+        }
     }
 }
 
