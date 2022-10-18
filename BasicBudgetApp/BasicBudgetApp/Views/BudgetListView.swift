@@ -11,6 +11,8 @@ struct BudgetListView: View {
     
     let budgetCategoryResults: FetchedResults<BudgetCategory>
     
+    let onDeleteBudgetCategory: (BudgetCategory) -> Void
+    
     var body: some View {
         List {
             if budgetCategoryResults.isEmpty {
@@ -27,6 +29,9 @@ struct BudgetListView: View {
                             Text(category.total as NSNumber, formatter: NumberFormatter.currency)
                         }
                     }
+                }
+                .onDelete { IndexSet in
+                    IndexSet.map { budgetCategoryResults[$0] }.forEach(onDeleteBudgetCategory)
                 }
             }
         }
