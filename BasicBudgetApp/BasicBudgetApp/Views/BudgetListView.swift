@@ -14,10 +14,17 @@ struct BudgetListView: View {
     var body: some View {
         List {
             if budgetCategoryResults.isEmpty {
-                Text("No Budget Categories Exist")
+                HStack {
+                    Text("No Budget Categories Exist")
+
+                }
             } else {
                 ForEach(budgetCategoryResults) { category in
                     Text(category.title ?? "")
+                    Spacer()
+                    VStack {
+                        Text(category.total as NSNumber, formatter: NumberFormatter.currency)
+                    }
                 }
             }
         }
