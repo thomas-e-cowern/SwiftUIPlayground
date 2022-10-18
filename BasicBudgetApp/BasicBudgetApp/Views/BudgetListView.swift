@@ -9,9 +9,17 @@ import SwiftUI
 
 struct BudgetListView: View {
     
-    let BudgetCategoryResults: FetchedResults<BudgetCategory>
+    let budgetCategoryResults: FetchedResults<BudgetCategory>
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            if budgetCategoryResults.isEmpty {
+                Text("No Budget Categories Exist")
+            } else {
+                ForEach(budgetCategoryResults) { category in
+                    Text(category.title ?? "")
+                }
+            }
+        }
     }
 }

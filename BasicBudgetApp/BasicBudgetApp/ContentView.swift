@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                BudgetListView(BudgetCategoryResults: budgetCategoryResults)
+                BudgetListView(budgetCategoryResults: budgetCategoryResults)
             }
             .padding()
             .toolbar {
