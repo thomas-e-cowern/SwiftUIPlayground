@@ -27,11 +27,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                 BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: { budgetCategory in
                     viewContext.delete(budgetCategory)
-                    do {
-                        try viewContext.save()
-                    } catch  {
-                        print("There was an error saving the deletion: \(error.localizedDescription)")
-                    }
+                    saveChanges()
                 })
             }
             .padding()
@@ -46,6 +42,14 @@ struct ContentView: View {
         }
         .sheet(isPresented: $isPresented) {
             AddBudgetCategoryView()
+        }
+    }
+    
+    private func saveChanges() {
+        do {
+            try viewContext.save()
+        } catch  {
+            print("There was an error saving the deletion: \(error.localizedDescription)")
         }
     }
 }
