@@ -25,7 +25,14 @@ struct ContentView: View {
                 
                 Text(total as NSNumber, formatter: NumberFormatter.currency)
                     .fontWeight(.bold)
-                BudgetListView(budgetCategoryResults: budgetCategoryResults)
+                BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: { budgetCategory in
+                    viewContext.delete(budgetCategory)
+                    do {
+                        try viewContext.save()
+                    } catch  {
+                        print("There was an error saving the deletion: \(error.localizedDescription)")
+                    }
+                })
             }
             .padding()
             .toolbar {
