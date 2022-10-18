@@ -20,10 +20,12 @@ struct BudgetListView: View {
                 }
             } else {
                 ForEach(budgetCategoryResults) { category in
-                    Text(category.title ?? "")
-                    Spacer()
-                    VStack {
-                        Text(category.total as NSNumber, formatter: NumberFormatter.currency)
+                    HStack {
+                        Text(category.title ?? "")
+                        Spacer()
+                        VStack {
+                            Text(category.total as NSNumber, formatter: NumberFormatter.currency)
+                        }
                     }
                 }
             }
