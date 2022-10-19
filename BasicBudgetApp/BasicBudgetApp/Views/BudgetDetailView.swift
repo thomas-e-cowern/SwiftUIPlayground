@@ -52,7 +52,7 @@ struct BudgetDetailView: View {
             .disabled(!isFormValid)
         }
         
-        
+        BudgetSummaryView(budgetCategory: budgetCategory)
         
         TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory))
         

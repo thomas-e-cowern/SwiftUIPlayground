@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BudgetSummaryView: View {
     
-    let budgetCategory: BudgetCategory
+    @ObservedObject var budgetCategory: BudgetCategory
     
     var body: some View {
         VStack {
