@@ -26,13 +26,13 @@ struct BudgetListView: View {
                         HStack {
                             Text(category.title ?? "")
                             Spacer()
-                            VStack {
+                            VStack (alignment: .trailing, spacing: 10) {
                                 Text(category.total as NSNumber, formatter: NumberFormatter.currency)
-                                Text("\(category.overSpent ? "Overspent" : "Remaining")")
-                                Text(category.remainingBudgetTotal as NSNumber, formatter: NumberFormatter.currency)
-                                    .frame(maxWidth: .infinity)
+                                Text("\(category.overSpent ? "Overspent" : "Remaining") \(Text(category.remainingBudgetTotal as NSNumber, formatter: NumberFormatter.currency))")
+                                    .frame(maxWidth: .infinity, alignment: .trailing)
                                     .fontWeight(.bold)
                                     .foregroundColor(category.overSpent ? .red : .green)
+                                    
                             }
                         }
                     }
