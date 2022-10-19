@@ -12,7 +12,13 @@ struct BudgetDetailView: View {
     let budgetCategory: BudgetCategory
     
     var body: some View {
-        Text(budgetCategory.title ?? "")
+        VStack {
+            HStack {
+                VStack {
+                    Text(budgetCategory.title ?? "")
+                }
+            }
+        }
     }
 }
 
