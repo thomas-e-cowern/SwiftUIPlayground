@@ -18,6 +18,7 @@
 		4D5940FA28FDD3F7000798E8 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */; };
 		4D5940FC28FF2769000798E8 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940FB28FF2769000798E8 /* BudgetListView.swift */; };
 		4DDD1B06290041DB0038EC5F /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD1B05290041DB0038EC5F /* Transaction+CoreDataClass.swift */; };
+		4DDD1B08290042A10038EC5F /* BudgetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD1B07290042A10038EC5F /* BudgetDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		4D5940FB28FF2769000798E8 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
 		4DDD1B05290041DB0038EC5F /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4DDD1B07290042A10038EC5F /* BudgetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			children = (
 				4D5940F628FDD031000798E8 /* AddBudgetCategoryView.swift */,
 				4D5940FB28FF2769000798E8 /* BudgetListView.swift */,
+				4DDD1B07290042A10038EC5F /* BudgetDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				4D5940FA28FDD3F7000798E8 /* NumberFormatter+Extensions.swift in Sources */,
 				4DDD1B06290041DB0038EC5F /* Transaction+CoreDataClass.swift in Sources */,
 				4D5940F128FDC986000798E8 /* BudgetCategory+CoreDataClass.swift in Sources */,
+				4DDD1B08290042A10038EC5F /* BudgetDetailView.swift in Sources */,
 				4D5940F728FDD031000798E8 /* AddBudgetCategoryView.swift in Sources */,
 				4D5940F428FDCC18000798E8 /* CoreDataManager.swift in Sources */,
 				4D5940ED28FDC804000798E8 /* BudgetModel.xcdatamodeld in Sources */,
