@@ -15,4 +15,6 @@ public class Transaction: NSManagedObject {
         self.dateCreated = Date()
     }
     
+    
+    
 }
