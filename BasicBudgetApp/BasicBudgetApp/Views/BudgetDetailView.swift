@@ -71,7 +71,9 @@ struct BudgetDetailView: View {
             messages.append("Total must be greater than zero")
         }
         
-        return messages.count == 0
+        guard let totalAsDouble = Double(total) else { return false}
+        
+        return messages.count == 0 && totalAsDouble > 0
     }
 }
 
