@@ -13,7 +13,6 @@ struct BudgetDetailView: View {
     
     @State private var title: String = ""
     @State private var total: String = ""
-    @State private var messages: [String] = []
     
     @Environment(\.dismiss) private var dismiss
     
@@ -40,9 +39,11 @@ struct BudgetDetailView: View {
                 Text("Add Transaction")
             }
             
-            ForEach(messages, id:\.self) { message in
-                Text(message)
-            }
+
+                ForEach(messages, id:\.self) { message in
+                    Text(message)
+                }
+
             
             Button("Save Transaction") {
                 // save transaction
@@ -52,28 +53,19 @@ struct BudgetDetailView: View {
                 }
             }
             .centerHorizontally()
+            .disabled(!isFormValid)
         }
         
         
         
         Spacer()
     }
-    
+
     var isFormValid: Bool {
-        
-        messages.removeAll()
-        
-        if title.isEmpty {
-            messages.append("Title is required")
-        }
-        
-        if total.isEmpty {
-            messages.append("Total must be greater than zero")
-        }
         
         guard let totalAsDouble = Double(total) else { return false}
         
-        return messages.count == 0 && totalAsDouble > 0
+        return !title.isEmpty && !total.isEmpty && totalAsDouble > 0
     }
 }
 
