@@ -11,6 +11,9 @@ struct BudgetDetailView: View {
     
     let budgetCategory: BudgetCategory
     
+    @State private var title: String = ""
+    @State private var total: Double = 0.0
+    
     var body: some View {
         VStack {
             HStack {
@@ -23,6 +26,14 @@ struct BudgetDetailView: View {
                     }
                     .fontWeight(.bold)
                 }
+            }
+        }
+        
+        Form {
+            Section {
+                Text("Content")
+            } header: {
+                Text("Add Transaction")
             }
         }
         
