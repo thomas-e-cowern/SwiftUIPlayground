@@ -44,6 +44,7 @@ struct BudgetDetailView: View {
                 // save transaction
                 if isFormValid {
                     print("transaction saved")
+                    saveTransaction()
                 }
             }
             .centerHorizontally()
@@ -78,6 +79,11 @@ struct BudgetDetailView: View {
         } catch  {
             print("Error saving transaction: \(error.localizedDescription)")
         }
+    }
+    
+    private func clearEntries() {
+        title = ""
+        total = ""
     }
 }
 
