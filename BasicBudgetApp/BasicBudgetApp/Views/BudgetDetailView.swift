@@ -45,6 +45,7 @@ struct BudgetDetailView: View {
                 if isFormValid {
                     print("transaction saved")
                     saveTransaction()
+                    clearEntries()
                 }
             }
             .centerHorizontally()
@@ -72,7 +73,7 @@ struct BudgetDetailView: View {
         }
         transaction.total = total
         
-        budgetCategory.addToTransaction(transaction)
+        budgetCategory.addToTransactions(transaction)
         
         do {
             try viewContext.save()
