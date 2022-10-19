@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct BudgetDetailView: View {
+    
+    @Environment(\.managedObjectContext) private var viewContext
     
     let budgetCategory: BudgetCategory
     
@@ -57,6 +60,24 @@ struct BudgetDetailView: View {
         guard let totalAsDouble = Double(total) else { return false}
         
         return !title.isEmpty && !total.isEmpty && totalAsDouble > 0
+    }
+    
+    private func saveTransaction() {
+        
+        let transaction = Transaction(context: viewContext)
+        transaction.title = title
+        guard let total = Double(total) else {
+            return
+        }
+        transaction.total = total
+        
+        budgetCategory.addToTransaction(transaction)
+        
+        do {
+            try viewContext.save()
+        } catch  {
+            print("Error saving transaction: \(error.localizedDescription)")
+        }
     }
 }
 
