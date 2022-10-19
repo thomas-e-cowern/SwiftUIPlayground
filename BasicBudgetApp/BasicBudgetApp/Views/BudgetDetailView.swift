@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct BudgetDetailView: View {
+    
+    let budgetCategory: BudgetCategory
+    
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
@@ -15,6 +18,6 @@ struct BudgetDetailView: View {
 
 struct BudgetDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BudgetDetailView()
+        BudgetDetailView(budgetCategory: BudgetCategory())
     }
 }
