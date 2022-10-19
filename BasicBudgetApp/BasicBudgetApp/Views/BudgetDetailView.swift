@@ -12,7 +12,7 @@ struct BudgetDetailView: View {
     let budgetCategory: BudgetCategory
     
     @State private var title: String = ""
-    @State private var total: Double = 0.0
+    @State private var total: String = ""
     
     var body: some View {
         VStack {
@@ -31,9 +31,14 @@ struct BudgetDetailView: View {
         
         Form {
             Section {
-                Text("Content")
+                TextField("Title", text: $title)
+                TextField("Total", text: $total)
             } header: {
                 Text("Add Transaction")
+            }
+            
+            Button("Save Transaction") {
+                // save transaction
             }
         }
         
