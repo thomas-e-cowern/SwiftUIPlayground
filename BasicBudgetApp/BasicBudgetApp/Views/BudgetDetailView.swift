@@ -16,9 +16,17 @@ struct BudgetDetailView: View {
             HStack {
                 VStack {
                     Text(budgetCategory.title ?? "")
+                        .font(.largeTitle)
+                    HStack {
+                        Text("Budget:")
+                        Text(budgetCategory.total as NSNumber, formatter: NumberFormatter.currency)
+                    }
+                    .fontWeight(.bold)
                 }
             }
         }
+        
+        Spacer()
     }
 }
 
