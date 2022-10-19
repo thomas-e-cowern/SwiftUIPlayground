@@ -17,7 +17,6 @@
 		4D5940F728FDD031000798E8 /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F628FDD031000798E8 /* AddBudgetCategoryView.swift */; };
 		4D5940FA28FDD3F7000798E8 /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */; };
 		4D5940FC28FF2769000798E8 /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5940FB28FF2769000798E8 /* BudgetListView.swift */; };
-		4DDD1B0429003FCE0038EC5F /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD1B0329003FCE0038EC5F /* Transaction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +31,6 @@
 		4D5940F628FDD031000798E8 /* AddBudgetCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetCategoryView.swift; sourceTree = "<group>"; };
 		4D5940F928FDD3F6000798E8 /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		4D5940FB28FF2769000798E8 /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
-		4DDD1B0329003FCE0038EC5F /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				4D5940F028FDC986000798E8 /* BudgetCategory+CoreDataClass.swift */,
-				4DDD1B0329003FCE0038EC5F /* Transaction.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,7 +195,6 @@
 				4D5940F728FDD031000798E8 /* AddBudgetCategoryView.swift in Sources */,
 				4D5940F428FDCC18000798E8 /* CoreDataManager.swift in Sources */,
 				4D5940ED28FDC804000798E8 /* BudgetModel.xcdatamodeld in Sources */,
-				4DDD1B0429003FCE0038EC5F /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
