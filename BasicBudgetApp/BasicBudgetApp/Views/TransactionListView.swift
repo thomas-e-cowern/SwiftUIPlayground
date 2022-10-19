@@ -6,15 +6,29 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct TransactionListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    
+    @FetchRequest var transactions: FetchedResults<Transaction>
+        
+    init(request: NSFetchRequest<Transaction>) {
+        _transactions = FetchRequest(fetchRequest: request)
     }
-}
-
-struct TransactionListView_Previews: PreviewProvider {
-    static var previews: some View {
-        TransactionListView()
+    
+    var body: some View {
+        if transactions.isEmpty {
+            Text("No transactions.")
+        } else {
+            List {
+                ForEach(transactions) { transaction in
+                    HStack {
+                        Text(transaction.title ?? "")
+                        Spacer()
+                        Text(transaction.total as NSNumber, formatter: NumberFormatter.currency)
+                    }
+                }
+            }
+        }
     }
 }
