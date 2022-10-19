@@ -15,6 +15,13 @@ public class Transaction: NSManagedObject {
         self.dateCreated = Date()
     }
     
-    
+    static func transactionsByCategoryRequest(_ budgetCategory: BudgetCategory) -> NSFetchRequest<Transaction> {
+        
+        let request = Transaction.fetchRequest()
+        request.sortDescriptors = [NSSortDescriptor(key: "dateCreated", ascending: false)]
+        request.predicate = NSPredicate(format: "category = %@", budgetCategory)
+        return request
+        
+    }
     
 }
