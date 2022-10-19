@@ -52,6 +52,8 @@ struct BudgetDetailView: View {
             .disabled(!isFormValid)
         }
         
+        
+        
         TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory))
         
         Spacer()

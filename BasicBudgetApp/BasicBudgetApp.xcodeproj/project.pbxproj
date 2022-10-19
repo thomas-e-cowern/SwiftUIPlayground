@@ -21,6 +21,7 @@
 		4DDD1B08290042A10038EC5F /* BudgetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD1B07290042A10038EC5F /* BudgetDetailView.swift */; };
 		4DDD1B0A29005E490038EC5F /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD1B0929005E490038EC5F /* View+Extensions.swift */; };
 		4DDE37FA2900714500B244F7 /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE37F92900714500B244F7 /* TransactionListView.swift */; };
+		4DDE37FC2900866D00B244F7 /* BudgetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDE37FB2900866D00B244F7 /* BudgetSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4DDD1B07290042A10038EC5F /* BudgetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailView.swift; sourceTree = "<group>"; };
 		4DDD1B0929005E490038EC5F /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		4DDE37F92900714500B244F7 /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		4DDE37FB2900866D00B244F7 /* BudgetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				4D5940FB28FF2769000798E8 /* BudgetListView.swift */,
 				4DDD1B07290042A10038EC5F /* BudgetDetailView.swift */,
 				4DDE37F92900714500B244F7 /* TransactionListView.swift */,
+				4DDE37FB2900866D00B244F7 /* BudgetSummaryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				4D5940DE28FDC79A000798E8 /* BasicBudgetAppApp.swift in Sources */,
 				4D5940FA28FDD3F7000798E8 /* NumberFormatter+Extensions.swift in Sources */,
 				4DDE37FA2900714500B244F7 /* TransactionListView.swift in Sources */,
+				4DDE37FC2900866D00B244F7 /* BudgetSummaryView.swift in Sources */,
 				4DDD1B06290041DB0038EC5F /* Transaction+CoreDataClass.swift in Sources */,
 				4D5940F128FDC986000798E8 /* BudgetCategory+CoreDataClass.swift in Sources */,
 				4DDD1B08290042A10038EC5F /* BudgetDetailView.swift in Sources */,
