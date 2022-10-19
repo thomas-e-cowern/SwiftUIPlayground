@@ -13,6 +13,7 @@ struct BudgetDetailView: View {
     
     @State private var title: String = ""
     @State private var total: String = ""
+    @State private var messages: [String] = []
     
     var body: some View {
         VStack {
@@ -37,13 +38,37 @@ struct BudgetDetailView: View {
                 Text("Add Transaction")
             }
             
+            ForEach(messages, id:\.self) { message in
+                Text(message)
+            }
+            
             Button("Save Transaction") {
                 // save transaction
+                if isFormValid {
+                    print("transaction saved")
+                }
             }
             .centerHorizontally()
         }
         
+        
+        
         Spacer()
+    }
+    
+    var isFormValid: Bool {
+        
+        messages.removeAll()
+        
+        if title.isEmpty {
+            messages.append("Title is required")
+        }
+        
+        if total.isEmpty {
+            messages.append("Total must be greater than zero")
+        }
+        
+        return messages.count == 0
     }
 }
 
