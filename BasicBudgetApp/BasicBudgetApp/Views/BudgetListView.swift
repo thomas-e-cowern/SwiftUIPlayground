@@ -22,11 +22,13 @@ struct BudgetListView: View {
                 }
             } else {
                 ForEach(budgetCategoryResults) { category in
-                    HStack {
-                        Text(category.title ?? "")
-                        Spacer()
-                        VStack {
-                            Text(category.total as NSNumber, formatter: NumberFormatter.currency)
+                    NavigationLink(value: category) {
+                        HStack {
+                            Text(category.title ?? "")
+                            Spacer()
+                            VStack {
+                                Text(category.total as NSNumber, formatter: NumberFormatter.currency)
+                            }
                         }
                     }
                 }
@@ -34,6 +36,9 @@ struct BudgetListView: View {
                     IndexSet.map { budgetCategoryResults[$0] }.forEach(onDeleteBudgetCategory)
                 }
             }
+        }
+        .navigationDestination(for: BudgetCategory.self) { category in
+            BudgetDetailView()
         }
     }
 }
