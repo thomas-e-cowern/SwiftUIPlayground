@@ -14,8 +14,6 @@ struct BudgetDetailView: View {
     @State private var title: String = ""
     @State private var total: String = ""
     
-    @Environment(\.dismiss) private var dismiss
-    
     var body: some View {
         VStack {
             HStack {
@@ -39,17 +37,10 @@ struct BudgetDetailView: View {
                 Text("Add Transaction")
             }
             
-
-                ForEach(messages, id:\.self) { message in
-                    Text(message)
-                }
-
-            
             Button("Save Transaction") {
                 // save transaction
                 if isFormValid {
                     print("transaction saved")
-                    dismiss()
                 }
             }
             .centerHorizontally()
