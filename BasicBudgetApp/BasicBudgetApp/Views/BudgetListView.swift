@@ -38,7 +38,7 @@ struct BudgetListView: View {
             }
         }
         .navigationDestination(for: BudgetCategory.self) { category in
-            BudgetDetailView()
+            BudgetDetailView(budgetCategory: category)
         }
     }
 }
