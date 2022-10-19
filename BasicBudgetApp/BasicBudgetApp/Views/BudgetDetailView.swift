@@ -40,6 +40,7 @@ struct BudgetDetailView: View {
             Button("Save Transaction") {
                 // save transaction
             }
+            .centerHorizontally()
         }
         
         Spacer()
