@@ -56,12 +56,13 @@ struct BudgetDetailView: View {
             BudgetSummaryView(budgetCategory: budgetCategory)
             
             TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+            
+            Spacer()
         }
+        .padding()
         
-        
-        
-        Spacer()
     }
+    
 
     var isFormValid: Bool {
         
