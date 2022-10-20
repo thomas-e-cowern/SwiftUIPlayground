@@ -52,9 +52,13 @@ struct BudgetDetailView: View {
             .disabled(!isFormValid)
         }
         
-        BudgetSummaryView(budgetCategory: budgetCategory)
+        VStack {
+            BudgetSummaryView(budgetCategory: budgetCategory)
+            
+            TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+        }
         
-        TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+        
         
         Spacer()
     }

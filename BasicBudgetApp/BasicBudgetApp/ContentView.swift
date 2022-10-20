@@ -39,8 +39,11 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 
-                Text(total as NSNumber, formatter: NumberFormatter.currency)
-                    .fontWeight(.bold)
+                HStack {
+                    Text("Total Budget: ")
+                    Text(total as NSNumber, formatter: NumberFormatter.currency)
+                        .fontWeight(.bold)
+                }
                 BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: { budgetCategory in
                     viewContext.delete(budgetCategory)
                     saveChanges()
