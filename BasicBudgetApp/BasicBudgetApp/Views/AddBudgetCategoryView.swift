@@ -55,6 +55,12 @@ struct AddBudgetCategoryView: View {
                     Text(message)
                 }
             }
+            .onAppear {
+                if let budgetCategoryToEdit {
+                    title = budgetCategoryToEdit.title ?? ""
+                    total = budgetCategoryToEdit.total
+                }
+            }
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancel") {
