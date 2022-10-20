@@ -92,6 +92,16 @@ struct AddBudgetCategoryView: View {
             print("Error saving category: \(error.localizedDescription)")
         }
     }
+    
+    private func saveOrUpdate() {
+        if let budgetCategoryToEdit {
+            // update existing category
+            
+        } else {
+            // save new buget category
+            
+        }
+    }
 }
 
 struct AddBudgetCategoryView_Previews: PreviewProvider {
