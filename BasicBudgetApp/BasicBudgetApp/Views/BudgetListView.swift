@@ -10,8 +10,8 @@ import SwiftUI
 struct BudgetListView: View {
     
     let budgetCategoryResults: FetchedResults<BudgetCategory>
-    
     let onDeleteBudgetCategory: (BudgetCategory) -> Void
+    let onEditBudgetCategory: (BudgetCategory) -> Void
     
     var body: some View {
         List {
@@ -34,6 +34,10 @@ struct BudgetListView: View {
                                     .foregroundColor(category.overSpent ? .red : .green)
                                     
                             }
+                        }
+                        .contentShape(Rectangle())
+                        .onLongPressGesture {
+                            onEditBudgetCategory(category)
                         }
                     }
                 }
