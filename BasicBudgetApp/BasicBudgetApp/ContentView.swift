@@ -26,7 +26,7 @@ enum SheetAction: Identifiable {
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var budgetCategoryResults: FetchedResults<BudgetCategory>
+    @FetchRequest(fetchRequest: BudgetCategory.all) var budgetCategoryResults
     @State private var sheetAction: SheetAction?
     
     var total: Double {

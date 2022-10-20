@@ -35,10 +35,10 @@ struct BudgetListView: View {
                                     
                             }
                         }
-//                        .contentShape(Rectangle())
                         .onLongPressGesture {
                             onEditBudgetCategory(category)
                         }
+                        .contentShape(Rectangle())
                     }
                 }
                 .onDelete { IndexSet in
