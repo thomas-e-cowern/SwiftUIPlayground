@@ -54,7 +54,7 @@ struct BudgetDetailView: View {
         
         BudgetSummaryView(budgetCategory: budgetCategory)
         
-        TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory))
+        TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
         
         Spacer()
     }
@@ -87,6 +87,15 @@ struct BudgetDetailView: View {
     private func clearEntries() {
         title = ""
         total = ""
+    }
+    
+    private func deleteTransaction(transaction: Transaction) {
+        viewContext.delete(transaction)
+        do {
+            try viewContext.save()
+        } catch  {
+            print("Error in deleteTransaction: \(error.localizedDescription)")
+        }
     }
 }
 
