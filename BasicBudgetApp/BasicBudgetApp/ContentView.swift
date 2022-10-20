@@ -51,14 +51,20 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Add a Category"){
                         // Add category
-                        isPresented = true
+                        sheetAction = .add
                     }
                 }
             }
         }
-        .sheet(isPresented: $isPresented) {
-            AddBudgetCategoryView()
-        }
+        .sheet(item: $sheetAction, content: { sheetAction in
+                        // display the sheet
+                        switch sheetAction {
+                            case .add:
+                                AddBudgetCategoryView()
+                            case .edit(_):
+                                AddBudgetCategoryView()
+                        }
+                    })
     }
     
     private func saveChanges() {
@@ -70,7 +76,7 @@ struct ContentView: View {
     }
     
     private func editBudgetCategory(budgetCategory: BudgetCategory) {
-        sheetAction = .edit)budgetCategory
+        sheetAction = .edit(budgetCategory)
     }
 }
 

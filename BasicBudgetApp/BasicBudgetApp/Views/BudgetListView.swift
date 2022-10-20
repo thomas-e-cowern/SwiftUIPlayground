@@ -35,7 +35,7 @@ struct BudgetListView: View {
                                     
                             }
                         }
-                        .contentShape(Rectangle())
+//                        .contentShape(Rectangle())
                         .onLongPressGesture {
                             onEditBudgetCategory(category)
                         }
