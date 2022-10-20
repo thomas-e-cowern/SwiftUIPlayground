@@ -96,10 +96,19 @@ struct AddBudgetCategoryView: View {
     private func saveOrUpdate() {
         if let budgetCategoryToEdit {
             // update existing category
-            
+            let budget = BudgetCategory.byId(budgetCategoryToEdit.objectID)
+            budget.title = title
+            budget.total = total
         } else {
             // save new buget category
-            
+            save()
+        }
+        
+        do {
+            try viewContext.save()
+            dismiss()
+        } catch {
+            print("Error in saveOrUpdate: \(error.localizedDescription)")
         }
     }
 }
