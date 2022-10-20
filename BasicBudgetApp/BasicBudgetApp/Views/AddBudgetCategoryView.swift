@@ -15,10 +15,10 @@ struct AddBudgetCategoryView: View {
     @State private var title: String = ""
     @State private var total: Double = 0.0
     @State private var messages: [String] = []
-    private var budgetCategory: BudgetCategory?
+    private var budgetCategoryToEdit: BudgetCategory?
     
-    init(budgetCategory: BudgetCategory? = nil) {
-        self.budgetCategory = budgetCategory
+    init(budgetCategoryToEdit: BudgetCategory? = nil) {
+        self.budgetCategoryToEdit = budgetCategoryToEdit
     }
     
     var isFormValid: Bool {
