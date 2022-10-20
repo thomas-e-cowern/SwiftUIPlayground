@@ -71,25 +71,12 @@ struct AddBudgetCategoryView: View {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Save") {
                         if isFormValid {
-                            save()
+                            saveOrUpdate()
                             dismiss()
                         }
                     }
                 }
             }
-        }
-    }
-    
-    private func save() {
-        
-        let budgetCategory = BudgetCategory(context: viewContext)
-        budgetCategory.title = title
-        budgetCategory.total = total
-        
-        do {
-            try viewContext.save()
-        } catch {
-            print("Error saving category: \(error.localizedDescription)")
         }
     }
     
@@ -101,7 +88,9 @@ struct AddBudgetCategoryView: View {
             budget.total = total
         } else {
             // save new buget category
-            save()
+            let budgetCategory = BudgetCategory(context: viewContext)
+            budgetCategory.title = title
+            budgetCategory.total = total
         }
         
         do {
