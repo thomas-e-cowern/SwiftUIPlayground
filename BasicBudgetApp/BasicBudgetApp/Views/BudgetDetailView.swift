@@ -89,7 +89,7 @@ struct BudgetDetailView: View {
         total = ""
     }
     
-    private func deleteTransaction(transaction: Transaction) {
+    private func deleteTransaction(_ transaction: Transaction) {
         viewContext.delete(transaction)
         do {
             try viewContext.save()
