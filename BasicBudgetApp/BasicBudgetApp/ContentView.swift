@@ -7,11 +7,27 @@
 
 import SwiftUI
 
+enum SheetAction: Identifiable {
+    
+    case add
+    case edit(BudgetCategory)
+    
+    var id: Int {
+        switch self {
+            case .add:
+                return 1
+            case .edit(_):
+                return 2
+        }
+    }
+    
+}
+
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var budgetCategoryResults: FetchedResults<BudgetCategory>
-    @State private var isPresented: Bool = false
+    @State private var sheetAction: SheetAction?
     
     var total: Double {
         budgetCategoryResults.reduce(0) { result, budgetCategory in
@@ -28,7 +44,7 @@ struct ContentView: View {
                 BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: { budgetCategory in
                     viewContext.delete(budgetCategory)
                     saveChanges()
-                })
+                }, onEditBudgetCategory: editBudgetCategory)
             }
             .padding()
             .toolbar {
@@ -51,6 +67,10 @@ struct ContentView: View {
         } catch  {
             print("There was an error saving the deletion: \(error.localizedDescription)")
         }
+    }
+    
+    private func editBudgetCategory(budgetCategory: BudgetCategory) {
+        sheetAction = .edit)budgetCategory
     }
 }
 
