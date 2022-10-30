@@ -7,6 +7,9 @@
 
 import Foundation
 
+struct ServiceError {
+    static let invalid = NSError(domain: "Number 8 is invalid", code: 1)
+}
 
 struct Service {
     static let mockData = 1...10
@@ -17,7 +20,12 @@ struct Service {
         mockData.forEach { value in
             let delay = DispatchTimeInterval.seconds(value)
             DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                completion(.success("\(value)"))
+                
+                if value == 8 {
+                    completion(.failure(ServiceError.invalid))
+                } else {
+                    completion(.success("\(value)"))
+                }
             }
         }
     }

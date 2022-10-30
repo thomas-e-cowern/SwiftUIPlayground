@@ -26,6 +26,7 @@ class ContentViewModel: ObservableObject {
                 self.time = "Finished"
             case .failure(let err):
                 print("Error: \(err.localizedDescription)")
+                self.time = err.localizedDescription
             }
         } receiveValue: { (value) in
             self.time = value + " seconds"
