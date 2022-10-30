@@ -22,6 +22,8 @@ struct ContentView: View {
                 
                 Text(viewModel.time)
                 
+                Text(viewModel.seconds)
+                
                 Image("ReceiveValue")
                     .resizable()
                     .scaledToFit()

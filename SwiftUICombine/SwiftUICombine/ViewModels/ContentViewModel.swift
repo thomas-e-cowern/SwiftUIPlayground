@@ -47,8 +47,8 @@ class ContentViewModel: ObservableObject {
                 }
                 self.seconds = value + " seconds"
             case .failure(let err):
-                print(err.localizedDescription)
                 self.passthroughSubject.send(completion: .failure(err))
+                self.seconds = err.localizedDescription
             }
         }
     }
