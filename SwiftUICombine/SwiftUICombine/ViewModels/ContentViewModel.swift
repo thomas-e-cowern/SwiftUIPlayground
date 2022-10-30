@@ -22,7 +22,7 @@ class ContentViewModel: ObservableObject {
             case .finished:
                 print("finished")
             case .failure(let err):
-                print("Error: \(err.localizedDescription)"
+                print("Error: \(err.localizedDescription)")
             }
         } receiveValue: { (value) in
             print(value)
