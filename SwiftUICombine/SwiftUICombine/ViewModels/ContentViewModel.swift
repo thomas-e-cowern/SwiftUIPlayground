@@ -13,11 +13,20 @@ class ContentViewModel: ObservableObject {
     
     let passthroughSubject = PassthroughSubject<String, Error>()
     
+    private var cancelables: Set<AnyCancellable> = []
+    
     init() {
-        let cancelable = passthroughSubject.sink { (completion) in
-            print(completion)
+        passthroughSubject.sink { (completion) in
+            switch completion {
+                
+            case .finished:
+                print("finished")
+            case .failure(let err):
+                print("Error: \(err.localizedDescription)"
+            }
         } receiveValue: { (value) in
             print(value)
         }
+        .store(in: &cancelables)
     }
 }
