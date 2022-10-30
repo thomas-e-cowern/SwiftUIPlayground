@@ -29,4 +29,16 @@ class ContentViewModel: ObservableObject {
         }
         .store(in: &cancelables)
     }
+    
+    func startFetch() {
+        Service.fetch { (result) in
+            switch result {
+                
+            case .success(let value):
+                self.passthroughSubject.send(value)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+        }
+    }
 }
