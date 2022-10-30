@@ -24,6 +24,10 @@ struct ContentView: View {
                     .padding()
                 
                 Text(viewModel.seconds)
+                    .padding()
+                
+                Text("\(viewModel.timeModel.seconds)")
+                    .foregroundColor(Color.red)
                 
                 Image("ReceiveValue")
                     .resizable()
