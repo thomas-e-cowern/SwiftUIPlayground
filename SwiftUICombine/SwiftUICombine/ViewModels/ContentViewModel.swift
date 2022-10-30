@@ -35,9 +35,15 @@ class ContentViewModel: ObservableObject {
             switch result {
                 
             case .success(let value):
+                if value == "10" {
+                    self.passthroughSubject.send(completion: .finished)
+                } else {
+                    
+                }
                 self.passthroughSubject.send(value)
             case .failure(let err):
                 print(err.localizedDescription)
+                self.passthroughSubject.send(completion: .failure(err))
             }
         }
     }
