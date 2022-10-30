@@ -20,7 +20,7 @@ struct ContentView: View {
                     Text("Start")
                 }
                 
-                Text("Time")
+                Text(viewModel.time)
                 
                 Image("ReceiveValue")
                     .resizable()

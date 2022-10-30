@@ -23,11 +23,12 @@ class ContentViewModel: ObservableObject {
                 
             case .finished:
                 print("finished")
+                self.time = "Finished"
             case .failure(let err):
                 print("Error: \(err.localizedDescription)")
             }
         } receiveValue: { (value) in
-            self.time = value
+            self.time = value + " seconds"
         }
         .store(in: &cancelables)
     }
