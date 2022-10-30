@@ -13,6 +13,13 @@ struct ContentView: View {
     
     var body: some View {
             ScrollView {
+                
+                Button {
+                    viewModel.startFetch()
+                } label: {
+                    Text("Start")
+                }
+                
                 Image("ReceiveValue")
                     .resizable()
                     .scaledToFit()

@@ -38,7 +38,7 @@ class ContentViewModel: ObservableObject {
                 if value == "10" {
                     self.passthroughSubject.send(completion: .finished)
                 } else {
-                    
+
                 }
                 self.passthroughSubject.send(value)
             case .failure(let err):
