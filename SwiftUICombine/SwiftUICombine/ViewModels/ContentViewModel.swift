@@ -10,7 +10,14 @@ import SwiftUI
 import Combine
 
 class ContentViewModel: ObservableObject {
+    
+    let passthroughSubject = PassthroughSubject<String, Error>()
+    
     init() {
-        
+        let cancelable = passthroughSubject.sink { (completion) in
+            print(completion)
+        } receiveValue: { (value) in
+            print(value)
+        }
     }
 }
