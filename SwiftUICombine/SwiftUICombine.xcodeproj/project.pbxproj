@@ -57,7 +57,6 @@
 				4D34609E290F1F93004F9328 /* ViewModels */,
 				4D34609D290F1F85004F9328 /* Main */,
 				4D34608F290F1EE2004F9328 /* SwiftUICombineApp.swift */,
-				4D346091290F1EE2004F9328 /* ContentView.swift */,
 				4D346093290F1EE5004F9328 /* Assets.xcassets */,
 				4D346095290F1EE5004F9328 /* Preview Content */,
 			);
@@ -89,6 +88,7 @@
 		4D34609F290F1F9A004F9328 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D346091290F1EE2004F9328 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
