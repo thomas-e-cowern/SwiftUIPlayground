@@ -12,9 +12,12 @@ import Combine
 class ContentViewModel: ObservableObject {
     
     let passthroughSubject = PassthroughSubject<String, Error>()
+    let passthroughModelSubject = PassthroughSubject<TimeModel, Error>()
     
     @Published var time: String = "0 seconds"
     @Published var seconds: String = "0 seconds"
+    
+    @Published var timeModel = TimeModel(seconds: 0)
     
     private var cancelables: Set<AnyCancellable> = []
     
@@ -41,6 +44,15 @@ class ContentViewModel: ObservableObject {
             self.time = value
         }
         .store(in: &cancelables)
+        
+        passthroughModelSubject.sink { (completion) in
+            print(completion)
+        } receiveValue: { timeModel in
+            print(timeModel)
+            self.timeModel = timeModel
+        }
+        .store(in: &cancelables)
+
     }
     
     func startFetch() {
@@ -58,6 +70,17 @@ class ContentViewModel: ObservableObject {
                 self.passthroughSubject.send(completion: .failure(err))
                 self.seconds = err.localizedDescription
             }
+        }
+        
+        Service.fetchModel { (result) in
+            switch result {
+                
+            case .success( let timeModel):
+                self.passthroughModelSubject.send(timeModel)
+            case .failure(let err):
+                print(err.localizedDescription)
+            }
+            
         }
     }
 }
