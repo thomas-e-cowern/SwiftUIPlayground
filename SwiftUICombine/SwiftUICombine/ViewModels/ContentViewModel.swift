@@ -14,6 +14,7 @@ class ContentViewModel: ObservableObject {
     let passthroughSubject = PassthroughSubject<String, Error>()
     
     @Published var time: String = "0 seconds"
+    @Published var seconds: String = "0 seconds"
     
     private var cancelables: Set<AnyCancellable> = []
     
@@ -42,9 +43,9 @@ class ContentViewModel: ObservableObject {
                 if value == "10" {
                     self.passthroughSubject.send(completion: .finished)
                 } else {
-
+                    self.passthroughSubject.send(value)
                 }
-                self.passthroughSubject.send(value)
+                self.seconds = value + " seconds"
             case .failure(let err):
                 print(err.localizedDescription)
                 self.passthroughSubject.send(completion: .failure(err))
