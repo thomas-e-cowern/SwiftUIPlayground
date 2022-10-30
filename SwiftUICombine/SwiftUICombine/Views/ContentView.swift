@@ -20,6 +20,8 @@ struct ContentView: View {
                     Text("Start")
                 }
                 
+                Text("Time")
+                
                 Image("ReceiveValue")
                     .resizable()
                     .scaledToFit()
@@ -34,6 +36,7 @@ struct ContentView: View {
                     .frame(height: 70)
             }
             .padding()
+            .font(.system(size: 36, weight: .bold))
     }
 }
 

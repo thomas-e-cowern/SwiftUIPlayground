@@ -13,6 +13,8 @@ class ContentViewModel: ObservableObject {
     
     let passthroughSubject = PassthroughSubject<String, Error>()
     
+    @Published var time: String = "0 seconds"
+    
     private var cancelables: Set<AnyCancellable> = []
     
     init() {
@@ -25,7 +27,7 @@ class ContentViewModel: ObservableObject {
                 print("Error: \(err.localizedDescription)")
             }
         } receiveValue: { (value) in
-            print(value)
+            self.time = value
         }
         .store(in: &cancelables)
     }
