@@ -19,7 +19,15 @@ class ContentViewModel: ObservableObject {
     private var cancelables: Set<AnyCancellable> = []
     
     init() {
-        passthroughSubject.sink { (completion) in
+        passthroughSubject
+            .dropFirst()
+            .filter({ (value) -> Bool in
+                value != "5"
+            })
+            .map { value in
+                return value + " seconds"
+            }
+            .sink { (completion) in
             switch completion {
                 
             case .finished:
@@ -30,7 +38,7 @@ class ContentViewModel: ObservableObject {
                 self.time = err.localizedDescription
             }
         } receiveValue: { (value) in
-            self.time = value + " seconds"
+            self.time = value
         }
         .store(in: &cancelables)
     }

@@ -21,6 +21,7 @@ struct ContentView: View {
                 }
                 
                 Text(viewModel.time)
+                    .padding()
                 
                 Text(viewModel.seconds)
                 
