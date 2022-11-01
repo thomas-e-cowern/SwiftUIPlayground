@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(Color.green)
+                .stroke(Color.black, style: StrokeStyle(lineWidth: 10, dash: [1, 1], dashPhase: 7))
                 .frame(width: 100)
             Circle()
                 .foregroundColor(Color.yellow)
