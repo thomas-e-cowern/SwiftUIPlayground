@@ -10,6 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
+            
+            Image("beach")
+                .resizable()
+                .clipShape(Circle())
+            
             ZStack {
                 Circle()
                     .stroke(Color.black, style: StrokeStyle(lineWidth: 10, dash: [1, 1], dashPhase: 7))
