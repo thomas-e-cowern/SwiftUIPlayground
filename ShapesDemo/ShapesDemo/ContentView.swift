@@ -24,7 +24,18 @@ struct ContentView: View {
             
             Rectangle()
                 .foregroundColor(Color.blue)
+                .cornerRadius(25)
                 .frame(width: 100, height: 100)
+            
+            RoundedRectangle(cornerRadius: 7)
+                .frame(width: 100, height: 100)
+            
+            ZStack {
+                Capsule()
+                    .frame(width: 100, height: 40)
+                Text("Press Me")
+                    .foregroundColor(.white)
+            }
         }
     }
 }
