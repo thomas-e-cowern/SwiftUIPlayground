@@ -45,6 +45,17 @@ class WebService {
                 return
             }
             
+            guard let loginRespons = try? JSONDecoder().decode(LoginResponseBody.self, from: data) else {
+                completion(.failure(.invalidCredentials))
+                return
+            }
+            
+            guard let token = loginRespons.token else {
+                completion(.failure(.invalidCredentials))
+                return
+            }
+            
+            completion(.success(token))
             
         }.resume()
         
