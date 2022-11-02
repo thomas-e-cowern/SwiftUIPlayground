@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject private var loginVM = LoginViewModel()
+    @StateObject private var accountLVM = AccountViewListModel()
     
     var body: some View {
         VStack {
@@ -26,7 +27,7 @@ struct ContentView: View {
                         loginVM.login()
                     }
                     Button("Logoout") {
-                        
+                        loginVM.signOut()
                     }
                     Spacer()
                 }
@@ -37,7 +38,7 @@ struct ContentView: View {
                 Spacer()
                 
                 Button("Get Accounts") {
-                    
+                    accountLVM.getAllAccounts()
                 }
             }
         }

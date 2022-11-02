@@ -30,4 +30,12 @@ class LoginViewModel: ObservableObject {
         }
     }
     
+    func signOut() {
+        let defaults = UserDefaults.standard
+        defaults.removeObject(forKey: "jsonwebtoken")
+        DispatchQueue.main.async {
+            self.isAuthenticated = false
+        }
+    }
+    
 }

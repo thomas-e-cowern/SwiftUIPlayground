@@ -34,21 +34,25 @@ class WebService {
     func getAllAccounts(token: String, completion: @escaping (Result<[Account], NetworkError>) -> Void) {
         
         guard let url = URL(string: "https://four-harvest-hovercraft.glitch.me/accounts") else {
+            print("Invalid URL in getAllAccounts")
             completion(.failure(.invalidUrl))
             return
         }
         
         var request = URLRequest(url: url)
         
-        request.addValue(token, forHTTPHeaderField: "Authorization")
+        request.addValue(token, forHTTPHeaderField: "authorization")
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
+                print("Invalid Data in getAllAccounts")
                 completion(.failure(.noData))
                 return
             }
             
+//            print("Response: \(response)")
             guard let accounts = try? JSONDecoder().decode([Account].self, from: data) else {
+                print("Decoding error in getAllAccounts")
                 completion(.failure(.decodingError))
                 return
             }
