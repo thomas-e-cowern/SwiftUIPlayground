@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0E66FC29130E610077AADF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E66FB29130E610077AADF /* Account.swift */; };
 		4D862C8F2912D7DB00043341 /* SiwftUIAuthenticationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D862C8E2912D7DB00043341 /* SiwftUIAuthenticationApp.swift */; };
 		4D862C912912D7DB00043341 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D862C902912D7DB00043341 /* ContentView.swift */; };
 		4D862C932912D7DE00043341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D862C922912D7DE00043341 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0E66FB29130E610077AADF /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		4D862C8B2912D7DB00043341 /* SiwftUIAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiwftUIAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D862C8E2912D7DB00043341 /* SiwftUIAuthenticationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiwftUIAuthenticationApp.swift; sourceTree = "<group>"; };
 		4D862C902912D7DB00043341 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +38,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0E66FA29130E540077AADF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4D0E66FB29130E610077AADF /* Account.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4D862C822912D7DB00043341 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 		4D862C8D2912D7DB00043341 /* SiwftUIAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				4D0E66FA29130E540077AADF /* Models */,
 				4D862C9F2912F0ED00043341 /* ViewModels */,
 				4D862C9C2912D97F00043341 /* Services */,
 				4D862C8E2912D7DB00043341 /* SiwftUIAuthenticationApp.swift */,
@@ -159,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0E66FC29130E610077AADF /* Account.swift in Sources */,
 				4D862CA12912F0FF00043341 /* LoginViewModel.swift in Sources */,
 				4D862C9E2912D98E00043341 /* WebService.swift in Sources */,
 				4D862C912912D7DB00043341 /* ContentView.swift in Sources */,
