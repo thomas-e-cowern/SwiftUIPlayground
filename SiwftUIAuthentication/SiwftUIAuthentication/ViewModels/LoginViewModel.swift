@@ -7,6 +7,21 @@
 
 import Foundation
  
-struct LoginViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
+    
+    var username: String = ""
+    var password: String = ""
+    
+    func login() {
+        
+        WebService().login(username: username, password: password) { result in
+            switch result {
+            case .success(let token):
+                print(token)
+            case .failure(let error):
+                print("Error in login: \(error.localizedDescription)")
+            }
+        }
+    }
     
 }
