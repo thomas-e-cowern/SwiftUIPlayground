@@ -23,7 +23,7 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     Button("Login") {
-                        
+                        loginVM.login()
                     }
                     Button("Logoout") {
                         
