@@ -25,6 +25,10 @@ struct LoginResponseBody: Codable {
 
 class WebService {
     
+    func getAllAccounts(token: String, completion: @escaping (Result<[Account], NetworkError>) -> Void) {
+        
+    }
+    
     func login(username: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
         
         guard let url = URL(string: "https://four-harvest-hovercraft.glitch.me/login") else {
