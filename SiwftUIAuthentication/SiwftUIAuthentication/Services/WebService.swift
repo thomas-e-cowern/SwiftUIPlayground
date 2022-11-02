@@ -17,6 +17,12 @@ struct LoginRequestBody: Codable {
     let password: String
 }
 
+struct LoginResponseBody: Codable {
+    let token: String?
+    let message: String?
+    let success: Bool?
+}
+
 class WebService {
     
     func login(username: String, password: String, completion: @escaping (Result<String, AuthenticationError>) -> Void) {
