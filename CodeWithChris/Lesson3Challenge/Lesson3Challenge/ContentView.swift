@@ -21,31 +21,29 @@ struct ContentView: View {
         })
     }()
     
+    let starShape: Path = {
+        return  Path({ path in
+            path.move(to: CGPoint(x: 70, y: 320))
+            path.addLine(to: CGPoint(x: 150, y: 320))
+            path.addLine(to: CGPoint(x: 110, y: 430))
+            path.addLine(to: CGPoint(x: 70, y: 320))
+            path.closeSubpath()
+            
+            path.move(to: CGPoint(x: 110, y: 280))
+            path.addLine(to: CGPoint(x: 150, y: 400))
+            path.addLine(to: CGPoint(x: 70, y: 400))
+            path.addLine(to: CGPoint(x: 110, y: 280))
+            path.closeSubpath()
+        })
+    }()
+    
     var body: some View {
         HStack {
             chevronShape
             .foregroundColor(.blue)
             
-            ZStack {
-                Path({ path in
-                    path.move(to: CGPoint(x: 70, y: 320))
-                    path.addLine(to: CGPoint(x: 150, y: 320))
-                    path.addLine(to: CGPoint(x: 110, y: 430))
-                    path.addLine(to: CGPoint(x: 70, y: 320))
-                    path.closeSubpath()
-                })
-                .foregroundColor(.yellow)
-                
-                Path({ path in
-                    path.move(to: CGPoint(x: 110, y: 280))
-                    path.addLine(to: CGPoint(x: 150, y: 400))
-                    path.addLine(to: CGPoint(x: 70, y: 400))
-                    path.addLine(to: CGPoint(x: 110, y: 280))
-                    path.closeSubpath()
-                })
-                .foregroundColor(.yellow)
-            }
-
+           starShape
+            .foregroundColor(.yellow)
         }
     }
 }
