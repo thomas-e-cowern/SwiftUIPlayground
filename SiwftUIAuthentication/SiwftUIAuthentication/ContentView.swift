@@ -28,6 +28,14 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(PlainButtonStyle())
+            
+            VStack {
+                Spacer()
+                
+                Button("Get Accounts") {
+                    
+                }
+            }
         }
     }
 }
