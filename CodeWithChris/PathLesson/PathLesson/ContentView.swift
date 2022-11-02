@@ -34,8 +34,6 @@ struct ContentView: View {
         VStack {
             customShape
             .foregroundColor(.red)
-            .rotationEffect(Angle(degrees: 25))
-            .scaleEffect(0.7)
             
             customShape
         
