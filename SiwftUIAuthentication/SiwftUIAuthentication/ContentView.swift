@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject private var loginVM = LoginViewModel()
+    
     var body: some View {
         VStack {
             Form {
@@ -15,7 +18,8 @@ struct ContentView: View {
                     Spacer()
                     Image(systemName: "lock.fill")
                 }
-                
+                TextField("Username", text: $loginVM.username)
+                TextField("Password", text: $loginVM.password)
                 HStack {
                     Spacer()
                     Button("Login") {
