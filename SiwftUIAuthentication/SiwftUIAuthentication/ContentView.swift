@@ -35,6 +35,22 @@ struct ContentView: View {
             .buttonStyle(PlainButtonStyle())
             
             VStack {
+                
+                Spacer()
+                
+                if loginVM.isAuthenticated && accountLVM.accounts.count > 0 {
+                    List(accountLVM.accounts, id: \.id) { account in
+                        HStack {
+                            Text("\(account.name)")
+                            Spacer()
+                            Text(String(format: "$%.2f", account.balance))
+                        }
+                    }
+                    .listStyle(PlainListStyle())
+                } else {
+                    Text("Login to see your accounts!")
+                }
+                                
                 Spacer()
                 
                 Button("Get Accounts") {

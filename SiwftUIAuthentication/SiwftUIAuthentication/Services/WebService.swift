@@ -41,7 +41,7 @@ class WebService {
         
         var request = URLRequest(url: url)
         
-        request.addValue(token, forHTTPHeaderField: "authorization")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "authorization")
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
