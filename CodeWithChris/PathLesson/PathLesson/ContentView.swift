@@ -35,8 +35,9 @@ struct ContentView: View {
             customShape
             .foregroundColor(.red)
             
-            customShape
-        
+            Image("beach")
+                .resizable()
+                .clipShape(customShape)
         }
     }
 }
