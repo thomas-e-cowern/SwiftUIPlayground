@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4D0E66FC29130E610077AADF /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E66FB29130E610077AADF /* Account.swift */; };
+		4D0E66FE291318860077AADF /* AccountListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E66FD291318860077AADF /* AccountListViewModel.swift */; };
+		4D0E6700291318CD0077AADF /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0E66FF291318CD0077AADF /* AccountViewModel.swift */; };
 		4D862C8F2912D7DB00043341 /* SiwftUIAuthenticationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D862C8E2912D7DB00043341 /* SiwftUIAuthenticationApp.swift */; };
 		4D862C912912D7DB00043341 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D862C902912D7DB00043341 /* ContentView.swift */; };
 		4D862C932912D7DE00043341 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D862C922912D7DE00043341 /* Assets.xcassets */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		4D0E66FB29130E610077AADF /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		4D0E66FD291318860077AADF /* AccountListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountListViewModel.swift; sourceTree = "<group>"; };
+		4D0E66FF291318CD0077AADF /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		4D862C8B2912D7DB00043341 /* SiwftUIAuthentication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SiwftUIAuthentication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D862C8E2912D7DB00043341 /* SiwftUIAuthenticationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiwftUIAuthenticationApp.swift; sourceTree = "<group>"; };
 		4D862C902912D7DB00043341 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +46,7 @@
 			isa = PBXGroup;
 			children = (
 				4D0E66FB29130E610077AADF /* Account.swift */,
+				4D0E66FF291318CD0077AADF /* AccountViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				4D862CA02912F0FF00043341 /* LoginViewModel.swift */,
+				4D0E66FD291318860077AADF /* AccountListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -171,9 +177,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0E66FC29130E610077AADF /* Account.swift in Sources */,
+				4D0E6700291318CD0077AADF /* AccountViewModel.swift in Sources */,
 				4D862CA12912F0FF00043341 /* LoginViewModel.swift in Sources */,
 				4D862C9E2912D98E00043341 /* WebService.swift in Sources */,
 				4D862C912912D7DB00043341 /* ContentView.swift in Sources */,
+				4D0E66FE291318860077AADF /* AccountListViewModel.swift in Sources */,
 				4D862C8F2912D7DB00043341 /* SiwftUIAuthenticationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
