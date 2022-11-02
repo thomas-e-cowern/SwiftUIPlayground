@@ -23,6 +23,12 @@ struct LoginResponseBody: Codable {
     let success: Bool?
 }
 
+enum NetworkError: Error {
+    case invalidUrl
+    case noData
+    case decodingError
+}
+
 class WebService {
     
     func getAllAccounts(token: String, completion: @escaping (Result<[Account], NetworkError>) -> Void) {
