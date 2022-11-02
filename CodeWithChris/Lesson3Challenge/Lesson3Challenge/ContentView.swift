@@ -8,12 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let chevronShape: Path = {
+        return Path({ path in
+            path.move(to: CGPoint(x: 30, y: 100))
+            path.addLine(to: CGPoint(x: 130, y: 100))
+            path.addLine(to: CGPoint(x: 230, y: 350))
+            path.addLine(to: CGPoint(x: 130, y: 600))
+            path.addLine(to: CGPoint(x: 30, y: 600))
+            path.addLine(to: CGPoint(x: 130, y: 350))
+            path.closeSubpath()
+        })
+    }()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        HStack {
+            chevronShape
+            .foregroundColor(.blue)
+            
+            Path({ path in
+                path.move(to: CGPoint(x: <#T##Double#>, y: <#T##Double#>))
+            })
         }
         .padding()
     }
