@@ -27,10 +27,14 @@ struct ContentView: View {
             .foregroundColor(.blue)
             
             Path({ path in
-                path.move(to: CGPoint(x: <#T##Double#>, y: <#T##Double#>))
+                path.move(to: CGPoint(x: 70, y: 350))
+                path.addLine(to: CGPoint(x: 100, y: 350))
+                path.addLine(to: CGPoint(x: 82, y: 400))
+                path.addLine(to: CGPoint(x: 70, y: 350))
+                path.closeSubpath()
             })
+            .foregroundColor(.yellow)
         }
-        .padding()
     }
 }
 
