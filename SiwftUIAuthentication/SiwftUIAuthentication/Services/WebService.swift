@@ -12,6 +12,12 @@ enum AuthenticationError: Error {
     case custom(errorMessage: String)
 }
 
+enum NetworkError: Error {
+    case invalidUrl
+    case noData
+    case decodingError
+}
+
 struct LoginRequestBody: Codable {
     let username: String
     let password: String
@@ -23,15 +29,33 @@ struct LoginResponseBody: Codable {
     let success: Bool?
 }
 
-enum NetworkError: Error {
-    case invalidUrl
-    case noData
-    case decodingError
-}
-
 class WebService {
     
     func getAllAccounts(token: String, completion: @escaping (Result<[Account], NetworkError>) -> Void) {
+        
+        guard let url = URL(string: "https://four-harvest-hovercraft.glitch.me/accounts") else {
+            completion(.failure(.invalidUrl))
+            return
+        }
+        
+        var request = URLRequest(url: url)
+        
+        request.addValue(token, forHTTPHeaderField: "Authorization")
+        
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                completion(.failure(.noData))
+                return
+            }
+            
+            guard let accounts = try? JSONDecoder().decode([Account].self, from: data) else {
+                completion(.failure(.decodingError))
+                return
+            }
+            
+            completion(.success(accounts))
+        }
+        .resume()
         
     }
     
