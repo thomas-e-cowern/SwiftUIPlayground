@@ -16,7 +16,7 @@ struct ContentView: View {
             Text("Howdy")
                 .foregroundColor(.white)
         }
-        .shadow(color: .yellow, radius: 20, x: 5, y: 5)
+        .blur(radius: 3, opaque: true)
     }
 }
 
