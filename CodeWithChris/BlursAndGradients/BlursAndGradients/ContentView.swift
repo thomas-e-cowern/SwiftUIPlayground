@@ -11,14 +11,28 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             
-            LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing)
+            LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: UnitPoint(x: 0.1, y: 0.1), endPoint: UnitPoint(x: 0.5, y: 0.9))
                 .ignoresSafeArea()
-            
-            Capsule()
-                .foregroundColor(.blue)
-                .frame(width: 200, height: 40)
-            Text("Howdy")
-                .foregroundColor(.white)
+            VStack {
+                
+                // Linear Gradietn
+                ZStack {
+                    Capsule()
+                        .fill(.linearGradient(Gradient(colors: [Color.blue, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                        .frame(width: 200, height: 40)
+                    Text("Howdy")
+                        .foregroundColor(.white)
+                }
+                
+                // Radial Gradient
+                ZStack {
+                    Capsule()
+                        .fill(.linearGradient(Gradient(colors: [Color.blue, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                        .frame(width: 200, height: 40)
+                    Text("Howdy")
+                        .foregroundColor(.white)
+                }
+            }
         }
     }
 }
