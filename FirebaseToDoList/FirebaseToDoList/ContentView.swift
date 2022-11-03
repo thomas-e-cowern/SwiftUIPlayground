@@ -14,6 +14,7 @@ struct ContentView: View {
     private var db: Firestore
     
     @State private var title: String = ""
+    @State private var tasks: [Task] = []
     
     init() {
         db = Firestore.firestore()
@@ -48,6 +49,21 @@ struct ContentView: View {
         } catch let error {
             print("Error in ContentView: \(error.localizedDescription)")
         }
+    }
+    
+    private func fetchAllTasks() {
+        db.collection("tasks")
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    if let snapshot = snapshot {
+                        tasks = snapshot.documents.compactMap { doc in
+                            return try? doc.data(as: Task.self)
+                        }
+                    }
+                }
+            }
     }
 }
 
