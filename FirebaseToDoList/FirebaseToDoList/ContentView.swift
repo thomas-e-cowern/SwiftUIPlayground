@@ -11,14 +11,17 @@ import FirebaseFirestoreSwift
 
 struct ContentView: View {
     
-    let db = Firestore.firestore()
+    private var db: Firestore
+    
+    @State private var title: String = ""
+    
+    init() {
+        db = Firestore.firestore()
+    }
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            TextField("Enter Task", text: $title)
         }
         .padding()
     }
