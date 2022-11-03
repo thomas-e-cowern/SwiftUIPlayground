@@ -28,21 +28,26 @@ struct ContentView: View {
             
             Button("Save") {
                 let task = Task(title: title)
-                do {
-                    _ = try db.collection("tasks").addDocument(from: task) { error in
-                        if let error = error {
-                            print(error.localizedDescription)
-                        } else {
-                            print("Document has been saved")
-                        }
-                    }
-                } catch let error {
-                    print("Error in ContentView: \(error.localizedDescription)")
-                }
+                saveTask(task: task)
+
             }
             .buttonStyle(.bordered)
         }
         .padding()
+    }
+    
+    private func saveTask(task: Task) {
+        do {
+            _ = try db.collection("tasks").addDocument(from: task) { error in
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    print("Document has been saved")
+                }
+            }
+        } catch let error {
+            print("Error in ContentView: \(error.localizedDescription)")
+        }
     }
 }
 
