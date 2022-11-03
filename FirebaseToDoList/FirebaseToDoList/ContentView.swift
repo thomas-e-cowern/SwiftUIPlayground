@@ -22,6 +22,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             TextField("Enter Task", text: $title)
+                .padding()
+                .textFieldStyle(.roundedBorder)
+                .border(.black)
+            
+            Button("Save") {
+                
+            }
+            .buttonStyle(.bordered)
         }
         .padding()
     }
