@@ -10,12 +10,18 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            ZStack {
+                Color.black
+                
+                Circle()
+                    .fill(.radialGradient(Gradient(colors: [.blue, .yellow]), center: .center, startRadius: 90, endRadius: 360))
+                    .blur(radius: 1)
+                    .shadow(color: .yellow, radius: 45)
+                    .padding()
+
+            }
+            .ignoresSafeArea()
         }
-        .padding()
     }
 }
 
