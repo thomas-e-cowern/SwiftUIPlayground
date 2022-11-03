@@ -27,7 +27,7 @@ struct ContentView: View {
                 // Radial Gradient
                 ZStack {
                     Capsule()
-                        .fill(.linearGradient(Gradient(colors: [Color.blue, Color.orange]), startPoint: .leading, endPoint: .trailing))
+                        .fill(.radialGradient(Gradient(colors: [Color.blue, Color.orange]), center: .center, startRadius: 0, endRadius: 100))
                         .frame(width: 200, height: 40)
                     Text("Howdy")
                         .foregroundColor(.white)
