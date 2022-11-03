@@ -32,6 +32,15 @@ struct ContentView: View {
                     Text("Howdy")
                         .foregroundColor(.white)
                 }
+                
+                // Angular Gradient
+                ZStack {
+                    Capsule()
+                        .fill(.angularGradient(Gradient(colors: [Color.blue, Color.orange]), center: .center, startAngle: Angle(degrees: 34), endAngle: Angle(degrees: 100)))
+                        .frame(width: 200, height: 40)
+                    Text("Howdy")
+                        .foregroundColor(.white)
+                }
             }
         }
     }
