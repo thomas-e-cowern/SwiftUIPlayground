@@ -12,13 +12,18 @@ struct ContentView: View {
         VStack {
             ZStack {
                 Color.black
-                
-                Circle()
-                    .fill(.radialGradient(Gradient(colors: [.blue, .yellow]), center: .center, startRadius: 90, endRadius: 360))
-                    .blur(radius: 1)
-                    .shadow(color: .yellow, radius: 45)
-                    .padding()
-
+                VStack {
+                    Circle()
+                        .fill(.yellow)
+                        .blur(radius: 80)
+                        .shadow(radius: 45, x: 0, y: 20)
+                        .padding()
+                    Circle()
+                        .fill(.radialGradient(Gradient(colors: [.blue, .yellow]), center: .center, startRadius: 0, endRadius: 360))
+                        .blur(radius: 1)
+                        .shadow(color: .yellow, radius: 45, x: -10, y: -20)
+                        .padding()
+                }
             }
             .ignoresSafeArea()
         }
