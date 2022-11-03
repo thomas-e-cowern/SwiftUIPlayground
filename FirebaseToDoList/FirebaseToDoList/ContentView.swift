@@ -6,8 +6,13 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestoreSwift
 
 struct ContentView: View {
+    
+    let db = Firestore.firestore()
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
