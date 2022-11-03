@@ -30,6 +30,7 @@ struct ContentView: View {
             Button("Save") {
                 let task = Task(title: title)
                 saveTask(task: task)
+                title = ""
 
             }
             .buttonStyle(.bordered)
@@ -53,6 +54,7 @@ struct ContentView: View {
                     print(error.localizedDescription)
                 } else {
                     print("Document has been saved")
+                    fetchAllTasks()
                 }
             }
         } catch let error {
