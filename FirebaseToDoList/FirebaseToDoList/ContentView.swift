@@ -39,6 +39,7 @@ struct ContentView: View {
                 ForEach(tasks, id: \.title) { task in
                     Text(task.title)
                 }
+                .onDelete(perform: deleteTask)
             }
             
             Spacer()
@@ -77,6 +78,14 @@ struct ContentView: View {
                     }
                 }
             }
+    }
+    
+    private func deleteTask(at indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let task = tasks[index]
+            db.collection("tasks")
+                .document(<#T##documentPath: String##String#>)
+        }
     }
 }
 
