@@ -44,6 +44,7 @@ struct ContentView: View {
                     }
                     .onDelete(perform: deleteTask)
                 }
+                .listStyle(.plain)
                 
                 Spacer()
                     .onAppear {
