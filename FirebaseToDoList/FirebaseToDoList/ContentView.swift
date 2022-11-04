@@ -21,33 +21,37 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            TextField("Enter Task", text: $title)
-                .textFieldStyle(.roundedBorder)
-                .border(.black)
-                .padding()
-            
-            Button("Save") {
-                let task = Task(title: title)
-                saveTask(task: task)
-                title = ""
-
-            }
-            .buttonStyle(.bordered)
-            
-            List {
-                ForEach(tasks, id: \.title) { task in
-                    Text(task.title)
+        NavigationView {
+            VStack {
+                TextField("Enter Task", text: $title)
+                    .textFieldStyle(.roundedBorder)
+                    .border(.black)
+                    .padding()
+                
+                Button("Save") {
+                    let task = Task(title: title)
+                    saveTask(task: task)
+                    title = ""
+                    
                 }
-                .onDelete(perform: deleteTask)
-            }
-            
-            Spacer()
-                .onAppear {
-                    fetchAllTasks()
+                .buttonStyle(.bordered)
+                
+                List {
+                    ForEach(tasks, id: \.title) { task in
+                        NavigationLink(destination: TaskDetailView()) {
+                            Text(task.title)
+                        }
+                    }
+                    .onDelete(perform: deleteTask)
                 }
+                
+                Spacer()
+                    .onAppear {
+                        fetchAllTasks()
+                    }
+            }
+            .padding()
         }
-        .padding()
     }
     
     private func saveTask(task: Task) {
