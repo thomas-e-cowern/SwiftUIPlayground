@@ -10,9 +10,19 @@ import SwiftUI
 struct TaskDetailView: View {
     
     let task: Task
+    @State private var title: String = ""
     
     var body: some View {
-        Text(task.title)
+        VStack {
+            TextField(task.title, text: $title)
+                .textFieldStyle(.roundedBorder)
+                .border(.black)
+                .padding()
+            Button("Update") {
+                
+            }
+            .buttonStyle(.bordered)
+        }
     }
 }
 
