@@ -14,6 +14,8 @@ struct TaskDetailView: View {
     let db: Firestore = Firestore.firestore()
     let task: Task
     
+    @Environment(\.dismiss) var dissmiss
+    
     @State private var title: String = ""
     
     var body: some View {
@@ -39,6 +41,7 @@ struct TaskDetailView: View {
                     print(error.localizedDescription)
                 } else {
                     print("Document has been updated")
+                    dissmiss()
                 }
             }
         
