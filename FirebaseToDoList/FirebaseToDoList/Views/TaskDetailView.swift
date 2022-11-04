@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct TaskDetailView: View {
+    
+    let task: Task
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(task.title)
     }
 }
 
 struct TaskDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskDetailView()
+        TaskDetailView(task: Task(title: "Test Task"))
     }
 }

@@ -37,8 +37,8 @@ struct ContentView: View {
                 .buttonStyle(.bordered)
                 
                 List {
-                    ForEach(tasks, id: \.title) { task in
-                        NavigationLink(destination: TaskDetailView()) {
+                    ForEach(tasks, id: \.id) { task in
+                        NavigationLink(destination: TaskDetailView(task: task)) {
                             Text(task.title)
                         }
                     }
