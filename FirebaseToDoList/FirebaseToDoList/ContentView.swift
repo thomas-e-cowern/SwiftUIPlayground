@@ -73,7 +73,11 @@ struct ContentView: View {
                 } else {
                     if let snapshot = snapshot {
                         tasks = snapshot.documents.compactMap { doc in
-                            return try? doc.data(as: Task.self)
+                            var task = try? doc.data(as: Task.self)
+                            if task != nil {
+                                task!.id = doc.documentID
+                            }
+                            return task
                         }
                     }
                 }
@@ -83,8 +87,17 @@ struct ContentView: View {
     private func deleteTask(at indexSet: IndexSet) {
         indexSet.forEach { index in
             let task = tasks[index]
-            db.collection("tasks")
-                .document(<#T##documentPath: String##String#>)
+  
+                db.collection("tasks")
+                .document(task.id!)
+                .delete { error in
+                    if let error = error {
+                        print("Error in deleteTask: \(error.localizedDescription)")
+                    } else {
+                        fetchAllTasks()
+                    }
+                }
+                
         }
     }
 }
