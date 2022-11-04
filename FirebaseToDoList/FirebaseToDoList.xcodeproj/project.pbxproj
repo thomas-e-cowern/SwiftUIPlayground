@@ -40,6 +40,7 @@
 		4D5883752914544300FEF1BA /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D5883742914544300FEF1BA /* FirebaseStorage */; };
 		4D5883772914544300FEF1BA /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4D5883762914544300FEF1BA /* FirebaseStorageCombine-Community */; };
 		4D58837A29145C7F00FEF1BA /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58837929145C7F00FEF1BA /* Task.swift */; };
+		4D58837D2915C8D000FEF1BA /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D58837C2915C8D000FEF1BA /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		4D5883382914515C00FEF1BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D58833F2914522D00FEF1BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D58837929145C7F00FEF1BA /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		4D58837C2915C8D000FEF1BA /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		4D5883302914515900FEF1BA /* FirebaseToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				4D58837B2915C8BC00FEF1BA /* Views */,
 				4D58837829145C6900FEF1BA /* Models */,
 				4D5883312914515900FEF1BA /* FirebaseToDoListApp.swift */,
 				4D5883332914515900FEF1BA /* ContentView.swift */,
@@ -133,6 +136,14 @@
 				4D58837929145C7F00FEF1BA /* Task.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4D58837B2915C8BC00FEF1BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D58837C2915C8D000FEF1BA /* TaskDetailView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D58837D2915C8D000FEF1BA /* TaskDetailView.swift in Sources */,
 				4D5883342914515900FEF1BA /* ContentView.swift in Sources */,
 				4D58837A29145C7F00FEF1BA /* Task.swift in Sources */,
 				4D5883322914515900FEF1BA /* FirebaseToDoListApp.swift in Sources */,
