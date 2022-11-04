@@ -35,8 +35,10 @@ struct ContentView: View {
             }
             .buttonStyle(.bordered)
             
-            List(tasks, id: \.title) { task in
-                Text(task.title)
+            List {
+                ForEach(tasks, id: \.title) { task in
+                    Text(task.title)
+                }
             }
             
             Spacer()
