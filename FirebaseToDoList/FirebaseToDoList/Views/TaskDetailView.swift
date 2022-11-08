@@ -16,7 +16,7 @@ struct TaskDetailView: View {
     
     @Environment(\.dismiss) var dissmiss
     
-    @State private var title: String = ""
+    @State var title: String
     
     var body: some View {
         VStack {
@@ -50,6 +50,6 @@ struct TaskDetailView: View {
 
 struct TaskDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TaskDetailView(task: Task(id: "123", title: "Test Task"))
+        TaskDetailView(task: Task(id: "123", title: "Test Task"), title: "")
     }
 }

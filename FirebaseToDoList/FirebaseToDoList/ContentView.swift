@@ -24,6 +24,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 TextField("Enter Task", text: $title)
+                    .fontWeight(.bold)
                     .textFieldStyle(.roundedBorder)
                     .border(.black)
                     .padding()
@@ -38,7 +39,7 @@ struct ContentView: View {
                 
                 List {
                     ForEach(tasks, id: \.id) { task in
-                        NavigationLink(destination: TaskDetailView(task: task)) {
+                        NavigationLink(destination: TaskDetailView(task: task, title: task.title)) {
                             Text(task.title)
                         }
                     }
