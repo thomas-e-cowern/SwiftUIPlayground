@@ -23,6 +23,7 @@
 		4D3CD960291B1A63006D75F9 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4D3CD95F291B1A63006D75F9 /* FirebaseStorageCombine-Community */; };
 		4D3CD962291B1BD3006D75F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD961291B1BD3006D75F9 /* Constants.swift */; };
 		4D3CD964291B1C72006D75F9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD963291B1C72006D75F9 /* Store.swift */; };
+		4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4D3CD94C291B1928006D75F9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4D3CD961291B1BD3006D75F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4D3CD963291B1C72006D75F9 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		4D3CD947291B17EA006D75F9 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3CD93B291B17A5006D75F9 /* ContentView.swift in Sources */,
+				4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */,
 				4D3CD939291B17A5006D75F9 /* GroceryAppApp.swift in Sources */,
 				4D3CD962291B1BD3006D75F9 /* Constants.swift in Sources */,
 				4D3CD964291B1C72006D75F9 /* Store.swift in Sources */,
