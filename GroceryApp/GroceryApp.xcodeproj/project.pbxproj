@@ -24,6 +24,7 @@
 		4D3CD962291B1BD3006D75F9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD961291B1BD3006D75F9 /* Constants.swift */; };
 		4D3CD964291B1C72006D75F9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD963291B1C72006D75F9 /* Store.swift */; };
 		4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */; };
+		4D3CD968291B1F23006D75F9 /* AddStoreVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4D3CD961291B1BD3006D75F9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4D3CD963291B1C72006D75F9 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreVIewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		4D3CD949291B17F8006D75F9 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */,
 				4D3CD939291B17A5006D75F9 /* GroceryAppApp.swift in Sources */,
 				4D3CD962291B1BD3006D75F9 /* Constants.swift in Sources */,
+				4D3CD968291B1F23006D75F9 /* AddStoreVIewModel.swift in Sources */,
 				4D3CD964291B1C72006D75F9 /* Store.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
