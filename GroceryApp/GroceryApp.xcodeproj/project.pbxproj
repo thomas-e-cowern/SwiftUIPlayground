@@ -51,6 +51,12 @@
 		4D3CD937291B17A5006D75F9 /* GroceryApp */ = {
 			isa = PBXGroup;
 			children = (
+				4D3CD94B291B180F006D75F9 /* Views */,
+				4D3CD94A291B1804006D75F9 /* Extensions */,
+				4D3CD949291B17F8006D75F9 /* ViewModels */,
+				4D3CD948291B17F1006D75F9 /* Models */,
+				4D3CD947291B17EA006D75F9 /* Managers */,
+				4D3CD946291B17E1006D75F9 /* Utils */,
 				4D3CD938291B17A5006D75F9 /* GroceryAppApp.swift */,
 				4D3CD93A291B17A5006D75F9 /* ContentView.swift */,
 				4D3CD93C291B17AA006D75F9 /* Assets.xcassets */,
@@ -65,6 +71,48 @@
 				4D3CD93F291B17AA006D75F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D3CD946291B17E1006D75F9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4D3CD947291B17EA006D75F9 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4D3CD948291B17F1006D75F9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4D3CD949291B17F8006D75F9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			sourceTree = "<group>";
+		};
+		4D3CD94A291B1804006D75F9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4D3CD94B291B180F006D75F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
