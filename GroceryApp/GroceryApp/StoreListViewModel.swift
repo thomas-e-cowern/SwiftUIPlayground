@@ -50,4 +50,8 @@ struct StoreViewModel {
         store.address
     }
     
+    var items: [String] {
+        store.items ?? []
+    }
+    
 }
