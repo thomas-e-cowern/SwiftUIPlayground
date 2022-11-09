@@ -35,7 +35,6 @@ class FirestoreManager {
     }
     
     func getAllStores(completion: @escaping (Result<[Store]?, Error>) -> Void) {
-        print("Inside getAllStores")
         db.collection("stores").getDocuments { snapshot, error in
             if let error = error {
                 completion(.failure(error))
@@ -46,10 +45,8 @@ class FirestoreManager {
                         if store != nil {
                             store!.id = doc.documentID
                         }
-                        print("Shoud return store")
                         return store
                     }
-                    print("About to be complete")
                     completion(.success(stores))
                 }
             }
