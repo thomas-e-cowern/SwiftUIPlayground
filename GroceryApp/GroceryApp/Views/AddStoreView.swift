@@ -29,14 +29,10 @@ struct AddStoreView: View {
                         }
                     }
                     .centerHorizontally()
+                    
+                    Text(addStoreVM.message)
                    
                 }
-                
-                
-                if addStoreVM.message.isEmpty {
-                    Text(addStoreVM.message)
-                }
-                
             }
             .navigationTitle("Add New Store")
             .navigationBarItems(leading: Button(action: {
@@ -45,6 +41,7 @@ struct AddStoreView: View {
             }, label: {
                 Image(systemName: "xmark")
         }))
+
         }
     }
 }
