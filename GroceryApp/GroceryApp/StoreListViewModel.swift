@@ -12,8 +12,8 @@ class StoreListViewModel: ObservableObject {
     private var firestoreManager: FirestoreManager
     @Published var stores: [StoreViewModel] = []
     
-    init(firestoreManager: FirestoreManager) {
-        self.firestoreManager = firestoreManager
+    init() {
+        self.firestoreManager = FirestoreManager()
     }
     
     func getAllStores() {

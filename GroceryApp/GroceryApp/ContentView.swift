@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isPresented: Bool = false
+    @ObservedObject private var storeListVM = StoreListViewModel()
     
     var body: some View {
         NavigationView {
