@@ -24,8 +24,11 @@ struct ContentView: View {
                     }
                    
                 }
+                .listStyle(.plain)
             }
-            .sheet(isPresented: $isPresented, content: {
+            .sheet(isPresented: $isPresented, onDismiss: {
+                storeListVM.getAllStores()
+            }, content: {
                 AddStoreView()
             })
             .navigationTitle("Grocery App")
