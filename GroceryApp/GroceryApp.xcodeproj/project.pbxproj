@@ -25,6 +25,7 @@
 		4D3CD964291B1C72006D75F9 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD963291B1C72006D75F9 /* Store.swift */; };
 		4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */; };
 		4D3CD968291B1F23006D75F9 /* AddStoreVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */; };
+		4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD969291B2697006D75F9 /* AddStoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		4D3CD963291B1C72006D75F9 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreVIewModel.swift; sourceTree = "<group>"; };
+		4D3CD969291B2697006D75F9 /* AddStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 		4D3CD94B291B180F006D75F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D3CD969291B2697006D75F9 /* AddStoreView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */,
 				4D3CD93B291B17A5006D75F9 /* ContentView.swift in Sources */,
 				4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */,
 				4D3CD939291B17A5006D75F9 /* GroceryAppApp.swift in Sources */,
