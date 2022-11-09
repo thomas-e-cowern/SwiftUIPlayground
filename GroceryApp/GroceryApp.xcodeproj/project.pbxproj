@@ -27,6 +27,7 @@
 		4D3CD968291B1F23006D75F9 /* AddStoreVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */; };
 		4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD969291B2697006D75F9 /* AddStoreView.swift */; };
 		4D3CD96C291B27C6006D75F9 /* View+Estensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD96B291B27C6006D75F9 /* View+Estensions.swift */; };
+		4D3CD96E291BEE8B006D75F9 /* StoreListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD96D291BEE8B006D75F9 /* StoreListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreVIewModel.swift; sourceTree = "<group>"; };
 		4D3CD969291B2697006D75F9 /* AddStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreView.swift; sourceTree = "<group>"; };
 		4D3CD96B291B27C6006D75F9 /* View+Estensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Estensions.swift"; sourceTree = "<group>"; };
+		4D3CD96D291BEE8B006D75F9 /* StoreListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */,
+				4D3CD96D291BEE8B006D75F9 /* StoreListViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D3CD96E291BEE8B006D75F9 /* StoreListViewModel.swift in Sources */,
 				4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */,
 				4D3CD96C291B27C6006D75F9 /* View+Estensions.swift in Sources */,
 				4D3CD93B291B17A5006D75F9 /* ContentView.swift in Sources */,
