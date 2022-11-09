@@ -19,7 +19,11 @@ struct StoreItemsListView: View {
                 .padding()
             
             Button("Save") {
-                // Save here
+                storeItemLVModel.addItemsToStore(storeId: store.storeId)
+            }
+            
+            List(store.store.items, id: \.self) { item in
+                Text(item)
             }
         }
     }
