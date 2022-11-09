@@ -15,30 +15,21 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                List(storeListVM.stores, id: \.storeId) { store in
-                    VStack (alignment: .leading, spacing: 8) {
-                        Text(store.name)
-                            .font(.headline)
-                        Text(store.address)
-                            .font(.body)
+                StoreCellView()
+                    .sheet(isPresented: $isPresented, onDismiss: {
+                        storeListVM.getAllStores()
+                    }, content: {
+                        AddStoreView()
+                    })
+                    .navigationTitle("Grocery App")
+                    .navigationBarItems(trailing: Button(action: {
+                        isPresented = true
+                    }, label: {
+                        Image(systemName: "plus")
+                    }))
+                    .onAppear {
+                        storeListVM.getAllStores()
                     }
-                   
-                }
-                .listStyle(.plain)
-            }
-            .sheet(isPresented: $isPresented, onDismiss: {
-                storeListVM.getAllStores()
-            }, content: {
-                AddStoreView()
-            })
-            .navigationTitle("Grocery App")
-            .navigationBarItems(trailing: Button(action: {
-                isPresented = true
-            }, label: {
-                Image(systemName: "plus")
-            }))
-            .onAppear {
-                storeListVM.getAllStores()
             }
         }
     }
