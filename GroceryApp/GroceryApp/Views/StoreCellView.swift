@@ -9,25 +9,21 @@ import SwiftUI
 
 struct StoreCellView: View {
     
-    @ObservedObject private var storeListVM = StoreListViewModel()
+    var store: StoreViewModel
     
     var body: some View {
         
-        List(storeListVM.stores, id: \.storeId) { store in
-            VStack (alignment: .leading, spacing: 8) {
-                Text(store.name)
-                    .font(.headline)
-                Text(store.address)
-                    .font(.body)
-            }
-            
+        VStack (alignment: .leading, spacing: 8) {
+            Text(store.name)
+                .font(.headline)
+            Text(store.address)
+                .font(.body)
         }
-        .listStyle(.plain)
     }
 }
 
 struct StoreCellView___Previews: PreviewProvider {
     static var previews: some View {
-        StoreCellView()
+        StoreCellView(store: StoreViewModel(store: Store(name: "Test", address: "123 Test Ave")))
     }
 }
