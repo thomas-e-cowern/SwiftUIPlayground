@@ -29,9 +29,14 @@ struct AddStoreView: View {
                         }
                     }
                     .centerHorizontally()
-                    
+                   
+                }
+                
+                
+                if addStoreVM.message.isEmpty {
                     Text(addStoreVM.message)
                 }
+                
             }
             .navigationTitle("Add New Store")
             .navigationBarItems(leading: Button(action: {
