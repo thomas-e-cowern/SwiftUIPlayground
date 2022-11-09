@@ -21,7 +21,9 @@ class StoreListViewModel: ObservableObject {
             switch result {
             case .success(let stores):
                 if let stores = stores {
-                    self.stores = stores .map(StoreViewModel.init)
+                    DispatchQueue.main.async {
+                        self.stores = stores .map(StoreViewModel.init)
+                    }
                 }
             case.failure(let error):
                 print("Error in getAllStores(): \(error.localizedDescription)")
