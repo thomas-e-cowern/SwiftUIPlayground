@@ -26,6 +26,7 @@
 		4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */; };
 		4D3CD968291B1F23006D75F9 /* AddStoreVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */; };
 		4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD969291B2697006D75F9 /* AddStoreView.swift */; };
+		4D3CD96C291B27C6006D75F9 /* View+Estensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD96B291B27C6006D75F9 /* View+Estensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		4D3CD965291B1CEE006D75F9 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
 		4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreVIewModel.swift; sourceTree = "<group>"; };
 		4D3CD969291B2697006D75F9 /* AddStoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoreView.swift; sourceTree = "<group>"; };
+		4D3CD96B291B27C6006D75F9 /* View+Estensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Estensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 		4D3CD94A291B1804006D75F9 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				4D3CD96B291B27C6006D75F9 /* View+Estensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */,
+				4D3CD96C291B27C6006D75F9 /* View+Estensions.swift in Sources */,
 				4D3CD93B291B17A5006D75F9 /* ContentView.swift in Sources */,
 				4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */,
 				4D3CD939291B17A5006D75F9 /* GroceryAppApp.swift in Sources */,

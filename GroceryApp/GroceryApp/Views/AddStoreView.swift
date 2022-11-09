@@ -21,6 +21,7 @@ struct AddStoreView: View {
                         
                     }
                 }
+                .centerHorizontally()
             }
         }
     }
