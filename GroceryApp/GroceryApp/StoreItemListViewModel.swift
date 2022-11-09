@@ -22,8 +22,8 @@ class StoreItemListViewModel: ObservableObject {
         firestoreManager.updateStore(storeId: storeId, values: ["items": [groceryItemName]]) { result in
             
             switch result {
-            case .success(let store):
-                if let model = store {
+            case .success(let storeModel):
+                if let model = storeModel {
                     self.store = StoreViewModel(store: model)
                 }
             case .failure(let error):

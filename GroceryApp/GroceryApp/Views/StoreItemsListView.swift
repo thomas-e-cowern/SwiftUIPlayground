@@ -10,9 +10,18 @@ import SwiftUI
 struct StoreItemsListView: View {
     
     let store: StoreViewModel
+    @StateObject private var storeItemLVModel = StoreItemListViewModel()
     
     var body: some View {
-        Text(store.name)
+        VStack {
+            TextField("Enter Item Name", text: $storeItemLVModel.groceryItemName)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            Button("Save") {
+                // Save here
+            }
+        }
     }
 }
 
