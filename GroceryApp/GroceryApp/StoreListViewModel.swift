@@ -19,11 +19,11 @@ class StoreListViewModel: ObservableObject {
     func getAllStores() {
         firestoreManager.getAllStores { result in
             switch result {
-            case .success(var stores):
+            case .success(let stores):
                 if let stores = stores {
                     self.stores = stores .map(StoreViewModel.init)
                 }
-            case.failure(var error):
+            case.failure(let error):
                 print("Error in getAllStores(): \(error.localizedDescription)")
             }
         }
