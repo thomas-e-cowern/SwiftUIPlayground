@@ -23,6 +23,11 @@ struct ContentView: View {
                 AddStoreView()
             })
             .navigationTitle("Grocery App")
+            .navigationBarItems(trailing: Button(action: {
+                isPresented = true
+            }, label: {
+                Image(systemName: "plus")
+            }))
         }
     }
 }

@@ -11,18 +11,35 @@ struct AddStoreView: View {
     
     @StateObject private var addStoreVM = AddStoreViewModel()
     
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
-        Form {
-            Section {
-                TextField("Name", text: $addStoreVM.name)
-                TextField("Address", text: $addStoreVM.address)
-                HStack {
-                    Button("Save") {
-                        
+        NavigationView {
+            Form {
+                Section {
+                    TextField("Name", text: $addStoreVM.name)
+                    TextField("Address", text: $addStoreVM.address)
+                    HStack {
+                        Button("Save") {
+                            addStoreVM.save()
+                        }.onChange(of: addStoreVM.saved) { newValue in
+                            if newValue {
+                                dismiss()
+                            }
+                        }
                     }
+                    .centerHorizontally()
+                    
+                    Text(addStoreVM.message)
                 }
-                .centerHorizontally()
             }
+            .navigationTitle("Add New Store")
+            .navigationBarItems(leading: Button(action: {
+                // will do something here
+                dismiss()
+            }, label: {
+                Image(systemName: "xmark")
+        }))
         }
     }
 }
