@@ -22,7 +22,7 @@ struct StoreItemsListView: View {
                 storeItemLVModel.addItemsToStore(storeId: store.storeId)
             }
             
-            List(store.store.items, id: \.self) { item in
+            List(store.items, id: \.self) { item in
                 Text(item)
             }
         }
