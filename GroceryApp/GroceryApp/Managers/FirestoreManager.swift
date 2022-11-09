@@ -53,4 +53,8 @@ class FirestoreManager {
         }
         
     }
+    
+    func updateStore() {
+        
+    }
 }
