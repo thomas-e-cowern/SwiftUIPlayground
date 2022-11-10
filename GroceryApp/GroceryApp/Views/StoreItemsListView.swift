@@ -28,20 +28,18 @@ struct StoreItemsListView: View {
             
             Button("Save") {
                 storeItemLVModel.addItemToStore(storeId: store.storeId) { error in
-                    // More to come
+                    if error == nil {
+                        storeItemLVModel.getStoreItemsBy(storeId: store.storeId)
+                    }
                 }
-//                storeItemLVModel.addItemsToStore(storeId: store.storeId)
-                storeItemLVModel.getStoreById(storeId: store.storeId)
             }
             
-            if let store = storeItemLVModel.store {
-                List(store.items, id: \.self) { item in
-                    Text(item)
-                }
+            List(storeItemLVModel.storeItems, id:\.name) { item in
+                Text(item.name)
             }
         }
         .onAppear {
-            storeItemLVModel.getStoreById(storeId: store.storeId)
+            storeItemLVModel.getStoreItemsBy(storeId: store.storeId)
         }
     }
 }

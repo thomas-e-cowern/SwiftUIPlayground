@@ -61,7 +61,7 @@ class StoreItemListViewModel: ObservableObject {
                         self.storeItems = items.map(StoreItemViewModel.init)
                     }
                 case .failure(let error):
-                    print("Error in getStoreById in StoreItemListViewModel: \(error.localizedDescription)")
+                    print("Error in getStoreItemsBy in StoreItemListViewModel: \(error.localizedDescription)")
             }
         }
     }
