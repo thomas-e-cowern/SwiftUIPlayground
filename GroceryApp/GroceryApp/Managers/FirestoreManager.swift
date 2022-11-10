@@ -118,7 +118,7 @@ class FirestoreManager {
         }
     }
     
-    func getStoreItemsBy(storeId: String, completion: @escaping (Result<Store?, Error>) -> Void) {
+    func getStoreItemsBy(storeId: String, completion: @escaping (Result<[StoreItem]?, Error>) -> Void) {
      
         db.collection("stores")
             .document(storeId)
@@ -131,6 +131,8 @@ class FirestoreManager {
                         let items = snapshot.documents.compactMap { doc in
                             try? doc.data(as: StoreItem.self)
                         }
+                        
+                        completion(.success(items))
                     }
                 }
             }

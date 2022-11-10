@@ -19,6 +19,7 @@ class StoreItemListViewModel: ObservableObject {
     
     var groceryItemName: String = ""
     @Published var store: StoreViewModel?
+    @Published var storeItems: [StoreItemViewModel] = []
     
     var storeItemViewState = StoreItemViewState()
     
@@ -53,6 +54,15 @@ class StoreItemListViewModel: ObservableObject {
     }
     
     func getStoreItemsBy(storeId: String) {
-        
+        firestoreManager.getStoreItemsBy(storeId: storeId) { result in
+            switch result {
+                case .success(let items):
+                    if let items = items {
+                        self.storeItems = items.map(StoreItemViewModel.init)
+                    }
+                case .failure(let error):
+                    print("Error in getStoreById in StoreItemListViewModel: \(error.localizedDescription)")
+            }
+        }
     }
 }
