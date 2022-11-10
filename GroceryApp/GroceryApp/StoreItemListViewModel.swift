@@ -10,7 +10,7 @@ import Foundation
 struct StoreItemViewState {
     var name: String = ""
     var price: String = ""
-    var quantitiy: String = ""
+    var quantity: String = ""
 }
 
 class StoreItemListViewModel: ObservableObject {
