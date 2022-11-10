@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct StoreItemViewState {
+    var name: String = ""
+    var price: String = ""
+    var quantitiy: String = ""
+}
+
 class StoreItemListViewModel: ObservableObject {
     
     private var firestoreManager: FirestoreManager
