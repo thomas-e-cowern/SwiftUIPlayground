@@ -10,6 +10,10 @@ import Foundation
 struct StoreItemViewModel {
     let storeItem: StoreItem
     
+    var storeItemId: String {
+        return storeItem.id ?? ""
+    }
+    
     var name: String {
         storeItem.name
     }

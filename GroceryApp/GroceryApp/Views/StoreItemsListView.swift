@@ -34,8 +34,13 @@ struct StoreItemsListView: View {
                 }
             }
             
-            List(storeItemLVModel.storeItems, id:\.name) { item in
-                Text(item.name)
+            List {
+                ForEach(storeItemLVModel.storeItems, id: \.storeItem.id) { item in
+                    Text(item.name)
+                }
+                .onDelete {
+                    
+                }
             }
         }
         .onAppear {
