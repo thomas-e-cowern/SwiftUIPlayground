@@ -27,7 +27,10 @@ struct StoreItemsListView: View {
                 .padding()
             
             Button("Save") {
-                storeItemLVModel.addItemsToStore(storeId: store.storeId)
+                storeItemLVModel.addItemToStore(storeId: store.storeId) { error in
+                    // More to come
+                }
+//                storeItemLVModel.addItemsToStore(storeId: store.storeId)
                 storeItemLVModel.getStoreById(storeId: store.storeId)
             }
             
