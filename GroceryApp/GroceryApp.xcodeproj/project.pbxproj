@@ -33,6 +33,7 @@
 		4D3CD974291C5669006D75F9 /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD973291C5669006D75F9 /* StoreCellView.swift */; };
 		4D83B3F6291D84A9002BE926 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F5291D84A9002BE926 /* StoreItem.swift */; };
 		4D83B3F8291D8731002BE926 /* StoreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */; };
+		4D83B3FA291D9C6D002BE926 /* Extensions+StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F9291D9C6D002BE926 /* Extensions+StoreItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		4D3CD973291C5669006D75F9 /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
 		4D83B3F5291D84A9002BE926 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemViewModel.swift; sourceTree = "<group>"; };
+		4D83B3F9291D9C6D002BE926 /* Extensions+StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+StoreItem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				4D3CD96B291B27C6006D75F9 /* View+Estensions.swift */,
+				4D83B3F9291D9C6D002BE926 /* Extensions+StoreItem.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				4D3CD93B291B17A5006D75F9 /* ContentView.swift in Sources */,
 				4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */,
 				4D3CD970291C535F006D75F9 /* StoreItemListViewModel.swift in Sources */,
+				4D83B3FA291D9C6D002BE926 /* Extensions+StoreItem.swift in Sources */,
 				4D3CD972291C5579006D75F9 /* StoreItemsListView.swift in Sources */,
 				4D3CD939291B17A5006D75F9 /* GroceryAppApp.swift in Sources */,
 				4D83B3F6291D84A9002BE926 /* StoreItem.swift in Sources */,
