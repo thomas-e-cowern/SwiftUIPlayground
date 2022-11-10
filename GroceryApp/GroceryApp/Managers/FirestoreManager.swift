@@ -54,29 +54,50 @@ class FirestoreManager {
         
     }
     
-    func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?, Error>) -> Void) {
+    func updateStore(storeId: String, storeItem: StoreItem, completion: @escaping (Result<Store?, Error>) -> Void) {
         
-        let ref = db.collection("stores").document(storeId)
-        
-        ref.updateData(
-            [
-                "items": FieldValue.arrayUnion((values["items"] as? [String]) ?? [])
-            ]
-        ) { error in
-            if let error = error {
-                completion(.failure(error))
-            } else {
-                self.getStoreById(storeId: storeId) { result in
-                    switch result {
+        do {
+            let _ = try db.collection("stores")
+                .document(storeId)
+                .collection("items")
+                .addDocument(from: storeItem)
+            
+            self.getStoreById(storeId: storeId) { result in
+                switch result {
                     case .success(let store):
                         completion(.success(store))
                     case .failure(let error):
                         print("Error in updateStore: \(error.localizedDescription)")
                     }
-                }
             }
+        } catch let error {
+            completion(.failure(error))
         }
     }
+    
+//    func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?, Error>) -> Void) {
+//
+//        let ref = db.collection("stores").document(storeId)
+//
+//        ref.updateData(
+//            [
+//                "items": FieldValue.arrayUnion((values["items"] as? [String]) ?? [])
+//            ]
+//        ) { error in
+//            if let error = error {
+//                completion(.failure(error))
+//            } else {
+//                self.getStoreById(storeId: storeId) { result in
+//                    switch result {
+//                    case .success(let store):
+//                        completion(.success(store))
+//                    case .failure(let error):
+//                        print("Error in updateStore: \(error.localizedDescription)")
+//                    }
+//                }
+//            }
+//        }
+//    }
     
     func getStoreById(storeId: String, completion: @escaping (Result<Store?, Error>) -> Void) {
         
