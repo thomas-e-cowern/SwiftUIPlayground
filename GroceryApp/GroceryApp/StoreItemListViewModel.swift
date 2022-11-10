@@ -26,20 +26,26 @@ class StoreItemListViewModel: ObservableObject {
         firestoreManager = FirestoreManager()
     }
     
-    func addItemsToStore(storeId: String) {
-        firestoreManager.updateStore(storeId: storeId, values: ["items": [groceryItemName]]) { result in
-            
-            switch result {
-            case .success(let storeModel):
-                if let model = storeModel {
-                    self.store = StoreViewModel(store: model)
-                }
-            case .failure(let error):
-                print("Error in addItemsToStore: \(error.localizedDescription)")
-            }
-            
-        }
+    func addItemToStore(storeId: String, completion: @escaping (Error?) -> Void) {
+        
+        
+        
     }
+    
+//    func addItemsToStore(storeId: String) {
+//        firestoreManager.updateStore(storeId: storeId, values: ["items": [groceryItemName]]) { result in
+//
+//            switch result {
+//            case .success(let storeModel):
+//                if let model = storeModel {
+//                    self.store = StoreViewModel(store: model)
+//                }
+//            case .failure(let error):
+//                print("Error in addItemsToStore: \(error.localizedDescription)")
+//            }
+//
+//        }
+//    }
     
     func getStoreById(storeId: String) {
         firestoreManager.getStoreById(storeId: storeId) { result in
