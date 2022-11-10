@@ -33,4 +33,17 @@ class StoreItemListViewModel: ObservableObject {
         }
     }
     
+    func getStoreById(storeId: String) {
+        firestoreManager.getStoreById(storeId: storeId) { result in
+            switch result {
+                case    .success(let store):
+                    if let store = store {
+                        self.store = StoreViewModel(store: store)
+                    }
+                case .failure(let error):
+                    print("Error in getStoreById in StoreItemListViewModel: \(error.localizedDescription)")
+            }
+        }
+    }
+    
 }
