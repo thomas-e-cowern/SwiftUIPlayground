@@ -20,6 +20,7 @@ struct StoreItemsListView: View {
             
             Button("Save") {
                 storeItemLVModel.addItemsToStore(storeId: store.storeId)
+                storeItemLVModel.getStoreById(storeId: store.storeId)
             }
             
             if let store = storeItemLVModel.store {
