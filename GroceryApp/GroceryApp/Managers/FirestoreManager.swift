@@ -128,8 +128,10 @@ class FirestoreManager {
                     completion(.failure(error))
                 } else {
                     if let snapshot = snapshot {
-                        let items = snapshot.documents.compactMap { doc in
-                            try? doc.data(as: StoreItem.self)
+                        let items: [StoreItem]? = snapshot.documents.compactMap { doc in
+                            var storeItem = try? doc.data(as: StoreItem.self)
+                            storeItem?.id = doc.documentID
+                            return storeItem
                         }
                         
                         completion(.success(items))
