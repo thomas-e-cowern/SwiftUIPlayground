@@ -28,8 +28,15 @@ class StoreItemListViewModel: ObservableObject {
     
     func addItemToStore(storeId: String, completion: @escaping (Error?) -> Void) {
         
-        
-        
+        let storeItem = StoreItem.from(storeItemViewState)
+        firestoreManager.updateStore(storeId: storeId, storeItem: storeItem) { result in
+            switch result {
+                case .success(_):
+                    completion(nil)
+                case .failure(let error):
+                    completion(error)
+                }
+        }
     }
     
 //    func addItemsToStore(storeId: String) {

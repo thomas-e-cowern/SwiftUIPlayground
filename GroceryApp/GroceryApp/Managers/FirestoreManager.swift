@@ -75,29 +75,29 @@ class FirestoreManager {
         }
     }
     
-//    func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?, Error>) -> Void) {
-//
-//        let ref = db.collection("stores").document(storeId)
-//
-//        ref.updateData(
-//            [
-//                "items": FieldValue.arrayUnion((values["items"] as? [String]) ?? [])
-//            ]
-//        ) { error in
-//            if let error = error {
-//                completion(.failure(error))
-//            } else {
-//                self.getStoreById(storeId: storeId) { result in
-//                    switch result {
-//                    case .success(let store):
-//                        completion(.success(store))
-//                    case .failure(let error):
-//                        print("Error in updateStore: \(error.localizedDescription)")
-//                    }
-//                }
-//            }
-//        }
-//    }
+    func updateStore(storeId: String, values: [AnyHashable: Any], completion: @escaping (Result<Store?, Error>) -> Void) {
+
+        let ref = db.collection("stores").document(storeId)
+
+        ref.updateData(
+            [
+                "items": FieldValue.arrayUnion((values["items"] as? [String]) ?? [])
+            ]
+        ) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                self.getStoreById(storeId: storeId) { result in
+                    switch result {
+                    case .success(let store):
+                        completion(.success(store))
+                    case .failure(let error):
+                        print("Error in updateStore: \(error.localizedDescription)")
+                    }
+                }
+            }
+        }
+    }
     
     func getStoreById(storeId: String, completion: @escaping (Result<Store?, Error>) -> Void) {
         
