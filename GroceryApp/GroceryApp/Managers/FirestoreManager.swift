@@ -137,4 +137,14 @@ class FirestoreManager {
                 }
             }
     }
+    
+    func deleteStoreItem(storeId: String, storeItemId: String, completion: @escaping (Error?) -> Void) {
+        db.collection("stores")
+            .document(storeId)
+            .collection("items")
+            .document(storeItemId)
+            .delete { error in
+                completion(error)
+            }
+    }
 }
