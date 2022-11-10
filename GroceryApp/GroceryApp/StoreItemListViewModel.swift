@@ -36,7 +36,7 @@ class StoreItemListViewModel: ObservableObject {
     func getStoreById(storeId: String) {
         firestoreManager.getStoreById(storeId: storeId) { result in
             switch result {
-                case    .success(let store):
+                case .success(let store):
                     if let store = store {
                         self.store = StoreViewModel(store: store)
                     }

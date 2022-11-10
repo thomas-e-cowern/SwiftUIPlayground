@@ -6,12 +6,10 @@
 //
 
 import SwiftUI
-import Combine
 
 struct StoreItemsListView: View {
     
-    @State var store: StoreViewModel
-    @State var cancellable: AnyCancellable?
+    var store: StoreViewModel
     @StateObject private var storeItemLVModel = StoreItemListViewModel()
     
     var body: some View {
@@ -24,16 +22,14 @@ struct StoreItemsListView: View {
                 storeItemLVModel.addItemsToStore(storeId: store.storeId)
             }
             
-            List(store.items, id: \.self) { item in
-                Text(item)
+            if let store = storeItemLVModel.store {
+                List(store.items, id: \.self) { item in
+                    Text(item)
+                }
             }
         }
         .onAppear {
-            cancellable = storeItemLVModel.$store.sink { value in
-                if let value = value {
-                    store = value
-                }
-            }
+            storeItemLVModel.getStoreById(storeId: store.storeId)
         }
     }
 }
