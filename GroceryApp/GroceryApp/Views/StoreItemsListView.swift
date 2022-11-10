@@ -38,13 +38,18 @@ struct StoreItemsListView: View {
                 ForEach(storeItemLVModel.storeItems, id: \.storeItem.id) { item in
                     Text(item.name)
                 }
-                .onDelete {
-                    
-                }
+                .onDelete(perform: deleteStoreItem)
             }
         }
         .onAppear {
             storeItemLVModel.getStoreItemsBy(storeId: store.storeId)
+        }
+    }
+    
+    private func deleteStoreItem(as indexSet: IndexSet) {
+        indexSet.forEach { index in
+            let storeItem = storeItemLVModel.storeItems[index]
+            storeItemLVModel.deleteStoreItem(storeId: store.storeId, storeItemId: storeItem.storeItemId)
         }
     }
 }
