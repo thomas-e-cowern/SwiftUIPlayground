@@ -20,6 +20,8 @@ class StoreItemListViewModel: ObservableObject {
     var groceryItemName: String = ""
     @Published var store: StoreViewModel?
     
+    var storeItemViewState = StoreItemViewState()
+    
     init() {
         firestoreManager = FirestoreManager()
     }
