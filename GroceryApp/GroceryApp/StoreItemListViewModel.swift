@@ -65,4 +65,12 @@ class StoreItemListViewModel: ObservableObject {
             }
         }
     }
+    
+    func deleteStoreItem(storeId: String, storeItemId: String) {
+        firestoreManager.deleteStoreItem(storeId: storeId, storeItemId: storeItemId) { error in
+            if error == nil {
+                self.getStoreItemsBy(storeId: storeId)
+            }
+        }
+    }
 }
