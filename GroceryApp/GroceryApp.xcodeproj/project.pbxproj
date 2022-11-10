@@ -32,6 +32,7 @@
 		4D3CD972291C5579006D75F9 /* StoreItemsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD971291C5579006D75F9 /* StoreItemsListView.swift */; };
 		4D3CD974291C5669006D75F9 /* StoreCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3CD973291C5669006D75F9 /* StoreCellView.swift */; };
 		4D83B3F6291D84A9002BE926 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F5291D84A9002BE926 /* StoreItem.swift */; };
+		4D83B3F8291D8731002BE926 /* StoreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		4D3CD971291C5579006D75F9 /* StoreItemsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsListView.swift; sourceTree = "<group>"; };
 		4D3CD973291C5669006D75F9 /* StoreCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCellView.swift; sourceTree = "<group>"; };
 		4D83B3F5291D84A9002BE926 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
+		4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				4D3CD967291B1F23006D75F9 /* AddStoreVIewModel.swift */,
 				4D3CD96D291BEE8B006D75F9 /* StoreListViewModel.swift */,
 				4D3CD96F291C535F006D75F9 /* StoreItemListViewModel.swift */,
+				4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4D83B3F6291D84A9002BE926 /* StoreItem.swift in Sources */,
 				4D3CD962291B1BD3006D75F9 /* Constants.swift in Sources */,
 				4D3CD974291C5669006D75F9 /* StoreCellView.swift in Sources */,
+				4D83B3F8291D8731002BE926 /* StoreItemViewModel.swift in Sources */,
 				4D3CD968291B1F23006D75F9 /* AddStoreVIewModel.swift in Sources */,
 				4D3CD964291B1C72006D75F9 /* Store.swift in Sources */,
 			);

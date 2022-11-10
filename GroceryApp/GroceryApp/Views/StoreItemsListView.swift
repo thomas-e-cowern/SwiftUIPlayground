@@ -18,11 +18,11 @@ struct StoreItemsListView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            TextField("Enter Item Name", text: $storeItemLVModel.storeItemViewState.price)
+            TextField("Enter Item Price", text: $storeItemLVModel.storeItemViewState.price)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            TextField("Enter Item Name", text: $storeItemLVModel.storeItemViewState.quantity)
+            TextField("Enter Item Quantity", text: $storeItemLVModel.storeItemViewState.quantity)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
