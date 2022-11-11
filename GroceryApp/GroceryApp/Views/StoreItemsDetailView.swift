@@ -23,7 +23,9 @@ struct StoreItemsDetailView: View {
                     Text("Price: ")
                     Text(storeItem.price as NSNumber, formatter: NumberFormatter.currency)
                 }
+                .font(.headline)
                 Text("Quantity: \(storeItem.quantity)")
+                    .font(.headline)
             }
         }
     }
