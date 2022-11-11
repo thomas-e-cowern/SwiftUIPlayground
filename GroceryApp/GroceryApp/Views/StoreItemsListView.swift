@@ -29,9 +29,10 @@ struct StoreItemsListView: View {
                 .padding()
             
             Button("Save") {
-                storeItemLVModel.addItemToStore(storeId: store.storeId) { error in
+                storeItemLVModel.addItemToStore(storeId: store.storeId, storeItemVS: storeItemVS) { error in
                     if error == nil {
                         storeItemLVModel.getStoreItemsBy(storeId: store.storeId)
+                        storeItemVS = StoreItemViewState()
                     }
                 }
             }
