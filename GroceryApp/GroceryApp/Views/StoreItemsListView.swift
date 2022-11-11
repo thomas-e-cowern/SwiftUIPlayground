@@ -39,7 +39,7 @@ struct StoreItemsListView: View {
             
             List {
                 ForEach(storeItemLVModel.storeItems, id: \.storeItem.id) { item in
-                    Text(item.name)
+                    StoreItemsDetailView(storeItem: item)
                 }
                 .onDelete(perform: deleteStoreItem)
             }

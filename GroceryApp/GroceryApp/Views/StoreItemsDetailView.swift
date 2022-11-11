@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StoreItemsDetailView: View {
     
-    var storeItem: StoreItem
+    var storeItem: StoreItemViewModel
     
     var body: some View {
         VStack {
@@ -17,7 +17,7 @@ struct StoreItemsDetailView: View {
                 .font(.title)
                 .padding()
             HStack (spacing: 80) {
-                Text("Price: \(storeItem.price as NSNumber, formatter: NumberFormatter.currency)")
+                Text("Price: \(storeItem.price)")
                 Text("Quantity: \(storeItem.quantity)")
             }
         }
@@ -26,6 +26,6 @@ struct StoreItemsDetailView: View {
 
 struct StoreItemsDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        StoreItemsDetailView(storeItem: StoreItem(name: "Test Items", price: 10.0, quantity: 2))
+        StoreItemsDetailView(storeItem: StoreItemViewModel(storeItem: StoreItem(name: "Test name", price: 10.0, quantity: 2)))
     }
 }
