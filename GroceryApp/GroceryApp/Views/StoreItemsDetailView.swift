@@ -15,9 +15,10 @@ struct StoreItemsDetailView: View {
         VStack {
             Text(storeItem.name)
                 .font(.title)
-            HStack {
-                Text("\(storeItem.price)")
-                Text("\(storeItem.quantity)")
+                .padding()
+            HStack (spacing: 80) {
+                Text("Price: \(storeItem.price as NSNumber, formatter: NumberFormatter.currency)")
+                Text("Quantity: \(storeItem.quantity)")
             }
         }
     }
