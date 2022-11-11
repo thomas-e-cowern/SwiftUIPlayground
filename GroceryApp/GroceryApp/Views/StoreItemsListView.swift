@@ -12,17 +12,19 @@ struct StoreItemsListView: View {
     var store: StoreViewModel
     @StateObject private var storeItemLVModel = StoreItemListViewModel()
     
+    @State private var storeItemVS = StoreItemViewState()
+    
     var body: some View {
         VStack {
-            TextField("Enter Item Name", text: $storeItemLVModel.storeItemViewState.name)
+            TextField("Enter Item Name", text: $storeItemVS.name)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            TextField("Enter Item Price", text: $storeItemLVModel.storeItemViewState.price)
+            TextField("Enter Item Price", text: $storeItemVS.price)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
-            TextField("Enter Item Quantity", text: $storeItemLVModel.storeItemViewState.quantity)
+            TextField("Enter Item Quantity", text: $storeItemVS.quantity)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding()
             
