@@ -28,6 +28,7 @@ struct StoreItemsDetailView: View {
                     .font(.headline)
             }
         }
+        .padding()
     }
 }
 
