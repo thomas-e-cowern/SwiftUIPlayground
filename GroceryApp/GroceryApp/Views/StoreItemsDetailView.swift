@@ -12,12 +12,17 @@ struct StoreItemsDetailView: View {
     var storeItem: StoreItemViewModel
     
     var body: some View {
-        VStack {
-            Text(storeItem.name)
-                .font(.title)
-                .padding()
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
+                Text(storeItem.name)
+                    .font(.title)
+                    .padding(.bottom, 10)
+            }
             HStack (spacing: 80) {
-                Text("Price: \(storeItem.price)")
+                HStack {
+                    Text("Price: ")
+                    Text(storeItem.price as NSNumber, formatter: NumberFormatter.currency)
+                }
                 Text("Quantity: \(storeItem.quantity)")
             }
         }
