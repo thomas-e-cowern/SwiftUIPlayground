@@ -14,6 +14,7 @@ struct StoreItemsDetailView: View {
     var body: some View {
         VStack {
             Text(storeItem.name)
+                .font(.title)
             HStack {
                 Text("\(storeItem.price)")
                 Text("\(storeItem.quantity)")
