@@ -27,9 +27,9 @@ class StoreItemListViewModel: ObservableObject {
         firestoreManager = FirestoreManager()
     }
     
-    func addItemToStore(storeId: String, completion: @escaping (Error?) -> Void) {
+    func addItemToStore(storeId: String, storeItemVS: StoreItemViewState, completion: @escaping (Error?) -> Void) {
         
-        let storeItem = StoreItem.from(storeItemViewState)
+        let storeItem = StoreItem.from(storeItemVS)
         firestoreManager.updateStore(storeId: storeId, storeItem: storeItem) { result in
             switch result {
                 case .success(_):
