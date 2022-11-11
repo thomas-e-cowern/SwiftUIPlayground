@@ -34,6 +34,7 @@
 		4D83B3F6291D84A9002BE926 /* StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F5291D84A9002BE926 /* StoreItem.swift */; };
 		4D83B3F8291D8731002BE926 /* StoreItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */; };
 		4D83B3FA291D9C6D002BE926 /* Extensions+StoreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3F9291D9C6D002BE926 /* Extensions+StoreItem.swift */; };
+		4D83B3FC291DCAB2002BE926 /* StoreItemsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83B3FB291DCAB2002BE926 /* StoreItemsDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		4D83B3F5291D84A9002BE926 /* StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItem.swift; sourceTree = "<group>"; };
 		4D83B3F7291D8731002BE926 /* StoreItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemViewModel.swift; sourceTree = "<group>"; };
 		4D83B3F9291D9C6D002BE926 /* Extensions+StoreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+StoreItem.swift"; sourceTree = "<group>"; };
+		4D83B3FB291DCAB2002BE926 /* StoreItemsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				4D3CD969291B2697006D75F9 /* AddStoreView.swift */,
 				4D3CD971291C5579006D75F9 /* StoreItemsListView.swift */,
 				4D3CD973291C5669006D75F9 /* StoreCellView.swift */,
+				4D83B3FB291DCAB2002BE926 /* StoreItemsDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				4D3CD96E291BEE8B006D75F9 /* StoreListViewModel.swift in Sources */,
 				4D3CD96A291B2697006D75F9 /* AddStoreView.swift in Sources */,
+				4D83B3FC291DCAB2002BE926 /* StoreItemsDetailView.swift in Sources */,
 				4D3CD96C291B27C6006D75F9 /* View+Estensions.swift in Sources */,
 				4D3CD93B291B17A5006D75F9 /* ContentView.swift in Sources */,
 				4D3CD966291B1CEE006D75F9 /* FirestoreManager.swift in Sources */,
