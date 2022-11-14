@@ -13,6 +13,7 @@
 		4D1E1A952922A20700E5A1B8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E1A942922A20700E5A1B8 /* Preview Assets.xcassets */; };
 		4D1E1AA02922A31900E5A1B8 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1A9F2922A31900E5A1B8 /* RegisterView.swift */; };
 		4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA12922A3BD00E5A1B8 /* PhotoCaptureView.swift */; };
+		4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA32922A43F00E5A1B8 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D1E1A942922A20700E5A1B8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D1E1A9F2922A31900E5A1B8 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		4D1E1AA12922A3BD00E5A1B8 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
+		4D1E1AA32922A43F00E5A1B8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				4D1E1A9F2922A31900E5A1B8 /* RegisterView.swift */,
 				4D1E1AA12922A3BD00E5A1B8 /* PhotoCaptureView.swift */,
+				4D1E1AA32922A43F00E5A1B8 /* LoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				4D1E1AA02922A31900E5A1B8 /* RegisterView.swift in Sources */,
 				4D1E1A902922A20400E5A1B8 /* ContentView.swift in Sources */,
 				4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */,
+				4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */,
 				4D1E1A8E2922A20400E5A1B8 /* FungiFinderApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
