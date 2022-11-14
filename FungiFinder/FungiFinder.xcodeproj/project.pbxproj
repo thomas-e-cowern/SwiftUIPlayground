@@ -17,6 +17,7 @@
 		4D1E1AA62922B24D00E5A1B8 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA52922B24D00E5A1B8 /* SecondaryButtonStyle.swift */; };
 		4D1E1AA92922B33600E5A1B8 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA82922B33600E5A1B8 /* PrimaryButtonStyle.swift */; };
 		4D1E1AAB2922CA6500E5A1B8 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AAA2922CA6500E5A1B8 /* LoadingView.swift */; };
+		4D1E1AAD2922CADB00E5A1B8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AAC2922CADB00E5A1B8 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4D1E1AA52922B24D00E5A1B8 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
 		4D1E1AA82922B33600E5A1B8 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 		4D1E1AAA2922CA6500E5A1B8 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4D1E1AAC2922CADB00E5A1B8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				4D1E1AA12922A3BD00E5A1B8 /* PhotoCaptureView.swift */,
 				4D1E1AA32922A43F00E5A1B8 /* LoginView.swift */,
 				4D1E1AAA2922CA6500E5A1B8 /* LoadingView.swift */,
+				4D1E1AAC2922CADB00E5A1B8 /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				4D1E1AA92922B33600E5A1B8 /* PrimaryButtonStyle.swift in Sources */,
 				4D1E1AA02922A31900E5A1B8 /* RegisterView.swift in Sources */,
 				4D1E1A902922A20400E5A1B8 /* ContentView.swift in Sources */,
+				4D1E1AAD2922CADB00E5A1B8 /* ImagePicker.swift in Sources */,
 				4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */,
 				4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */,
 				4D1E1AAB2922CA6500E5A1B8 /* LoadingView.swift in Sources */,
