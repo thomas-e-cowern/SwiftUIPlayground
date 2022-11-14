@@ -32,7 +32,8 @@ struct LoginView: View {
                 Spacer()
                 
                 Button("Login") {
-                   
+                    isActive = true
+                    print("Clicked")
                 }
                 .buttonStyle(PrimaryButtonStyle())
                 .padding(.bottom, 10)
@@ -43,16 +44,16 @@ struct LoginView: View {
                
                 Spacer()
                
-//                NavigationLink(destination: FungiListView()) {
-//                    EmptyView()
+//                NavigationLink("") {
+//                    FungiListView()
 //                }
-                
-                NavigationLink(
-                    destination: FungiListView(),
-                    isActive: $isActive,
-                    label: {
-                        EmptyView()
-                    })
+//
+//                NavigationLink(
+//                    destination: FungiListView(),
+//                    isActive: $isActive,
+//                    label: {
+//                        EmptyView()
+//                    })
                 
             }
             .padding()
