@@ -16,48 +16,52 @@ struct LoginView: View {
     @State private var password: String = ""
     
     var body: some View {
-        VStack {
-            Image("mushroom")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .clipShape(Circle())
-                .padding(.bottom, 20)
-            
-            TextField("Username", text: $email)
-                .padding(.bottom, 20)
-            
-            SecureField("Password", text: $password)
+        NavigationView {
+            VStack {
+                Image("mushroom")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+                    .padding(.bottom, 20)
+                
+                TextField("Username", text: $email)
+                    .padding(.bottom, 20)
+                
+                SecureField("Password", text: $password)
+                   
+                Spacer()
+                
+                Button("Login") {
+                   
+                }
+                .buttonStyle(PrimaryButtonStyle())
+                .padding(.bottom, 10)
+                
+                Button("Create account") {
+                    isPresented = true
+                }.buttonStyle(SecondaryButtonStyle())
                
-            Spacer()
-            
-            Button("Login") {
+                Spacer()
                
+//                NavigationLink(destination: FungiListView()) {
+//                    EmptyView()
+//                }
+                
+                NavigationLink(
+                    destination: FungiListView(),
+                    isActive: $isActive,
+                    label: {
+                        EmptyView()
+                    })
+                
             }
-            .buttonStyle(PrimaryButtonStyle())
-            .padding(.bottom, 10)
-            
-            Button("Create account") {
-                isPresented = true
-            }.buttonStyle(SecondaryButtonStyle())
-           
-            Spacer()
-           
-            
-            NavigationLink(
-                destination: FungiListView(),
-                isActive: $isActive,
-                label: {
-                    EmptyView()
-                })
-            
-        }
-        .padding()
-        .defaultBackgroundView()
-        .sheet(isPresented: $isPresented, content: {
-            RegisterView()
-        })
+            .padding()
+            .defaultBackgroundView()
+            .sheet(isPresented: $isPresented, content: {
+                RegisterView()
+            })
         .navigationTitle("Fungi Finder")
-        .embedInNavigationView()
+        }
     }
 }
 
