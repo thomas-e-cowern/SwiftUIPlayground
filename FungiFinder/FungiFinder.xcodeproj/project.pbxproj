@@ -15,6 +15,7 @@
 		4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA12922A3BD00E5A1B8 /* PhotoCaptureView.swift */; };
 		4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA32922A43F00E5A1B8 /* LoginView.swift */; };
 		4D1E1AA62922B24D00E5A1B8 /* SecondaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA52922B24D00E5A1B8 /* SecondaryButtonStyle.swift */; };
+		4D1E1AA92922B33600E5A1B8 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AA82922B33600E5A1B8 /* PrimaryButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4D1E1AA12922A3BD00E5A1B8 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		4D1E1AA32922A43F00E5A1B8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		4D1E1AA52922B24D00E5A1B8 /* SecondaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButtonStyle.swift; sourceTree = "<group>"; };
+		4D1E1AA82922B33600E5A1B8 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1E1AA52922B24D00E5A1B8 /* SecondaryButtonStyle.swift */,
+				4D1E1AA82922B33600E5A1B8 /* PrimaryButtonStyle.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D1E1AA92922B33600E5A1B8 /* PrimaryButtonStyle.swift in Sources */,
 				4D1E1AA02922A31900E5A1B8 /* RegisterView.swift in Sources */,
 				4D1E1A902922A20400E5A1B8 /* ContentView.swift in Sources */,
 				4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */,
