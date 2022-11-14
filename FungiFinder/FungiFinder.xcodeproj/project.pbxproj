@@ -20,6 +20,7 @@
 		4D1E1AAD2922CADB00E5A1B8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AAC2922CADB00E5A1B8 /* ImagePicker.swift */; };
 		4D1E1AAF2922CB3A00E5A1B8 /* FungiListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AAE2922CB3A00E5A1B8 /* FungiListView.swift */; };
 		4D1E1AB12922CB9D00E5A1B8 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AB02922CB9D00E5A1B8 /* UIImage+Extensions.swift */; };
+		4D1E1AB32922CBF200E5A1B8 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AB22922CBF200E5A1B8 /* View+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		4D1E1AAC2922CADB00E5A1B8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		4D1E1AAE2922CB3A00E5A1B8 /* FungiListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungiListView.swift; sourceTree = "<group>"; };
 		4D1E1AB02922CB9D00E5A1B8 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		4D1E1AB22922CBF200E5A1B8 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1E1AB02922CB9D00E5A1B8 /* UIImage+Extensions.swift */,
+				4D1E1AB22922CBF200E5A1B8 /* View+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */,
 				4D1E1AAB2922CA6500E5A1B8 /* LoadingView.swift in Sources */,
 				4D1E1A8E2922A20400E5A1B8 /* FungiFinderApp.swift in Sources */,
+				4D1E1AB32922CBF200E5A1B8 /* View+Extensions.swift in Sources */,
 				4D1E1AA62922B24D00E5A1B8 /* SecondaryButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
