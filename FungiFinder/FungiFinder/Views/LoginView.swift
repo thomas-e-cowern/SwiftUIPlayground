@@ -11,12 +11,13 @@ struct LoginView: View {
     
     @State var isPresented: Bool = false
     @State var isActive: Bool = false
+    @State private var path: [Bool] = []
     
     @State private var email: String = ""
     @State private var password: String = ""
     
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $path) {
             VStack {
                 Image("mushroom")
                     .resizable()
@@ -31,29 +32,26 @@ struct LoginView: View {
                    
                 Spacer()
                 
-                Button("Login") {
-                    isActive = true
-                    print("Clicked")
+                VStack {
+                    Button("Login") {
+                        isActive = true
+                        
+                        if isActive {
+                            path.append(isActive)
+                        }
+                    }
+                    .navigationDestination(for: Bool.self, destination: { value in
+                        FungiListView()
+                    })
+                    .buttonStyle(PrimaryButtonStyle())
+                    .padding(.bottom, 10)
                 }
-                .buttonStyle(PrimaryButtonStyle())
-                .padding(.bottom, 10)
                 
                 Button("Create account") {
                     isPresented = true
                 }.buttonStyle(SecondaryButtonStyle())
                
                 Spacer()
-               
-//                NavigationLink("") {
-//                    FungiListView()
-//                }
-//
-//                NavigationLink(
-//                    destination: FungiListView(),
-//                    isActive: $isActive,
-//                    label: {
-//                        EmptyView()
-//                    })
                 
             }
             .padding()
