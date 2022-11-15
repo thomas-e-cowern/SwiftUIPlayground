@@ -6,3 +6,28 @@
 //
 
 import Foundation
+import FirebaseStorage
+
+class FungiListViewModel: ObservableObject {
+    
+    let storage = Storage.storage()
+    
+    func uploadPhoto(data: Data, completion: @escaping (URL?) -> Void) {
+        
+        let imageName = UUID().uuidString
+        let storageRef = storage.reference()
+        let photoRef = storageRef.child("images/\(imageName).png")
+        
+        photoRef.putData(data, metadata: nil) { metadata, error in
+            photoRef.downloadURL { url, error in
+                if let error = error {
+                    print("Error in uploadPhotos \(error.localizedDescription)")
+                } else {
+                    completion(url)
+                }
+            }
+        }
+        
+    }
+    
+}
