@@ -39,6 +39,8 @@
 		4D1E1AD429237A2D00E5A1B8 /* FungiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD329237A2D00E5A1B8 /* FungiListViewModel.swift */; };
 		4D1E1AD6292390E700E5A1B8 /* Fungi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD5292390E700E5A1B8 /* Fungi.swift */; };
 		4D1E1AD82923F39800E5A1B8 /* FungiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD72923F39800E5A1B8 /* FungiViewModel.swift */; };
+		4D1E1ADB2923F8EB00E5A1B8 /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1ADA2923F8EB00E5A1B8 /* URLImage */; };
+		4D1E1ADD2923F8EB00E5A1B8 /* URLImageStore in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1ADC2923F8EB00E5A1B8 /* URLImageStore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,10 +79,12 @@
 				4D1E1AC229236DDF00E5A1B8 /* FirebaseDatabase in Frameworks */,
 				4D1E1ACC29236DDF00E5A1B8 /* FirebaseStorage in Frameworks */,
 				4D1E1ABA29236DDF00E5A1B8 /* FirebaseAnalytics in Frameworks */,
+				4D1E1ADD2923F8EB00E5A1B8 /* URLImageStore in Frameworks */,
 				4D1E1AC029236DDF00E5A1B8 /* FirebaseCrashlytics in Frameworks */,
 				4D1E1ABE29236DDF00E5A1B8 /* FirebaseAuthCombine-Community in Frameworks */,
 				4D1E1ABC29236DDF00E5A1B8 /* FirebaseAuth in Frameworks */,
 				4D1E1AC629236DDF00E5A1B8 /* FirebaseFirestore in Frameworks */,
+				4D1E1ADB2923F8EB00E5A1B8 /* URLImage in Frameworks */,
 				4D1E1ACA29236DDF00E5A1B8 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +212,8 @@
 				4D1E1AC929236DDF00E5A1B8 /* FirebaseFirestoreSwift */,
 				4D1E1ACB29236DDF00E5A1B8 /* FirebaseStorage */,
 				4D1E1ACD29236DDF00E5A1B8 /* FirebaseStorageCombine-Community */,
+				4D1E1ADA2923F8EB00E5A1B8 /* URLImage */,
+				4D1E1ADC2923F8EB00E5A1B8 /* URLImageStore */,
 			);
 			productName = FungiFinder;
 			productReference = 4D1E1A8A2922A20400E5A1B8 /* FungiFinder.app */;
@@ -239,6 +245,7 @@
 			mainGroup = 4D1E1A812922A20400E5A1B8;
 			packageReferences = (
 				4D1E1AB829236DDF00E5A1B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				4D1E1AD92923F8EB00E5A1B8 /* XCRemoteSwiftPackageReference "url-image" */,
 			);
 			productRefGroup = 4D1E1A8B2922A20400E5A1B8 /* Products */;
 			projectDirPath = "";
@@ -495,6 +502,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		4D1E1AD92923F8EB00E5A1B8 /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -552,6 +567,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D1E1AB829236DDF00E5A1B8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		4D1E1ADA2923F8EB00E5A1B8 /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1E1AD92923F8EB00E5A1B8 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+		4D1E1ADC2923F8EB00E5A1B8 /* URLImageStore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D1E1AD92923F8EB00E5A1B8 /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImageStore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
