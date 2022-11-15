@@ -27,36 +27,11 @@ struct FungiListView: View {
     
     var body: some View {
         ZStack {
-            VStack {
-                
-                if fungiLVM.fungi.count > 0 {
-                    List(fungiLVM.fungi, id: \.fungiId) { fungi in
-                        VStack {
-                            let fungiUrl = getUrl(url: fungi.photoUrl)
-                            
-                            URLImage(fungiUrl) {
-                                // This view is displayed before download starts
-                                EmptyView()
-                            } inProgress: { progress in
-                                // Display progress
-                                Text("Loading...")
-                            } failure: { error, retry in
-                                // Display error and retry button
-                                VStack {
-                                    Text(error.localizedDescription)
-                                    Button("Retry", action: retry)
-                                }
-                            } content: { image in
-                                // Downloaded image
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                            }
-                            Text(fungi.name)
-                        }
-                    }
+            
+            if fungiLVM.fungi.count > 0 {
+                List(fungi, id: \.fungiId) { fungi in
+                    
                 }
-                
             }
             
             if image != nil {
@@ -157,22 +132,5 @@ struct PhotoPreviewView: View {
         .offset(y: 0)
         .padding()
         
-    }
-}
-
-struct FungiCell: View {
-    
-    var body: some View {
-        Text("Fungi Cell")
-        /*
-        VStack {
-            URLImage(url: URL(string: fungi.photoUrl)!) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-            }.clipShape(RoundedRectangle(cornerRadius: /*@START_MENU_TOKEN@*/25.0/*@END_MENU_TOKEN@*/, style: /*@START_MENU_TOKEN@*/.continuous/*@END_MENU_TOKEN@*/))
-            
-            Text(fungi.name)
-                .font(.headline)
-        } */
     }
 }
