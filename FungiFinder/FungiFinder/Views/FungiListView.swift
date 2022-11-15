@@ -31,28 +31,29 @@ struct FungiListView: View {
                 
                 if fungiLVM.fungi.count > 0 {
                     List(fungiLVM.fungi, id: \.fungiId) { fungi in
-                        
-                        let fungiUrl = getUrl(url: fungi.photoUrl)
-                        
-                        URLImage(fungiUrl) {
-                            // This view is displayed before download starts
-                            EmptyView()
-                        } inProgress: { progress in
-                            // Display progress
-                            Text("Loading...")
-                        } failure: { error, retry in
-                            // Display error and retry button
-                            VStack {
-                                Text(error.localizedDescription)
-                                Button("Retry", action: retry)
+                        VStack {
+                            let fungiUrl = getUrl(url: fungi.photoUrl)
+                            
+                            URLImage(fungiUrl) {
+                                // This view is displayed before download starts
+                                EmptyView()
+                            } inProgress: { progress in
+                                // Display progress
+                                Text("Loading...")
+                            } failure: { error, retry in
+                                // Display error and retry button
+                                VStack {
+                                    Text(error.localizedDescription)
+                                    Button("Retry", action: retry)
+                                }
+                            } content: { image in
+                                // Downloaded image
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
                             }
-                        } content: { image in
-                            // Downloaded image
-                            image
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
+                            Text(fungi.name)
                         }
-                        Text(fungi.name)
                     }
                 }
                 
