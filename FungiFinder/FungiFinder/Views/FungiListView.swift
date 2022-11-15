@@ -25,6 +25,12 @@ struct FungiListView: View {
     var body: some View {
         ZStack {
             Text("Display List of Fungi")
+            
+            if image != nil {
+                PhotoPreviewView(image: $image, name: $name) {
+                    /// Something here
+                }
+            }
            
         }.navigationTitle("Fungi")
         .navigationBarItems(trailing: Button(action: {
