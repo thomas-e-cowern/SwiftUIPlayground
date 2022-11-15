@@ -14,13 +14,14 @@ struct FungiCellView: View {
     
     var body: some View {
         VStack {
-            VStack {
+            VStack (alignment: .center) {
                 URLImage(URL(string: fungi.photoUrl)!) {
                     // This view is displayed before download starts
                     EmptyView()
                 } inProgress: { progress in
                     // Display progress
                     ProgressView()
+                        .centerHorizontally()
                 } failure: { error, retry in
                     // Display error and retry button
                     VStack {
