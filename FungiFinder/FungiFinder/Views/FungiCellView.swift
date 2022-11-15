@@ -20,7 +20,7 @@ struct FungiCellView: View {
                     EmptyView()
                 } inProgress: { progress in
                     // Display progress
-                    Text("Loading...")
+                    ProgressView()
                 } failure: { error, retry in
                     // Display error and retry button
                     VStack {

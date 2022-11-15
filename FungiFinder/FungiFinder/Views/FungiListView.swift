@@ -32,6 +32,8 @@ struct FungiListView: View {
                 List(fungiLVM.fungi, id: \.fungiId) { fungi in
                     FungiCellView(fungi: fungi)
                 }
+            } else {
+                EmptyFungiView()
             }
             
             if image != nil {
