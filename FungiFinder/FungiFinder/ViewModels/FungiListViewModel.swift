@@ -8,10 +8,12 @@
 import Foundation
 import FirebaseStorage
 import Firebase
+import FirebaseFirestoreSwift
 
 class FungiListViewModel: ObservableObject {
     
     let storage = Storage.storage()
+    let db = Firestore.firestore()
     
     func uploadPhoto(data: Data, completion: @escaping (URL?) -> Void) {
         
@@ -34,6 +36,15 @@ class FungiListViewModel: ObservableObject {
         
         guard let currentUser = Auth.auth().currentUser else {
             
+            return
+            
+        }
+        
+        do {
+            try db.collection("fungi")
+                .addDocument(data: <#T##[String : Any]#>)
+        } catch <#pattern#> {
+            <#statements#>
         }
         
     }
