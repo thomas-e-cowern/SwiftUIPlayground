@@ -35,18 +35,18 @@ class FungiListViewModel: ObservableObject {
     func save(name: String, url: URL, completion: (Error?) -> Void) {
         
         guard let currentUser = Auth.auth().currentUser else {
-            
+            print("Problem with the current user")
             return
             
         }
         
         do {
-            try db.collection("fungi")
-                .addDocument(data: <#T##[String : Any]#>)
-        } catch <#pattern#> {
-            <#statements#>
+            let _ = try db.collection("fungi")
+                .addDocument(from: Fungi(name: name, url: url.absoluteString, userId: currentUser.uid))
+            completion(nil)
+                             
+        } catch let error {
+            completion(error)
         }
-        
     }
-    
 }

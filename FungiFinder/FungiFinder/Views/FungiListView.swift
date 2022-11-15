@@ -73,7 +73,11 @@ struct FungiListView: View {
                 if let data = resizedImage.pngData() {
                     fungiLVM.uploadPhoto(data: data) { url in
                         if let url = url {
-                            print("URL IS: \(url)")
+                            fungiLVM.save(name: name, url: url) { error in
+                                
+                                image = nil
+                                
+                            }
                         }
                     }
                 }
