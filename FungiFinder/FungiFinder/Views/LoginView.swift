@@ -13,8 +13,7 @@ struct LoginView: View {
     @State var isActive: Bool = false
     @State private var path: [Bool] = []
     
-    @State private var email: String = ""
-    @State private var password: String = ""
+    @ObservedObject private var loginVM = LoginViewModel()
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -25,16 +24,19 @@ struct LoginView: View {
                     .clipShape(Circle())
                     .padding(.bottom, 20)
                 
-                TextField("Username", text: $email)
+                TextField("Username", text: $loginVM.email)
                     .padding(.bottom, 20)
                 
-                SecureField("Password", text: $password)
+                SecureField("Password", text: $loginVM.password)
                    
                 Spacer()
                 
                 VStack {
                     Button("Login") {
-                        isActive = true
+  
+                        loginVM.login {
+                            isActive = true
+                        }
                         
                         if isActive {
                             path.append(isActive)
