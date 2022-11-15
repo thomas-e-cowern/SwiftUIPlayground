@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseStorage
+import Firebase
 
 class FungiListViewModel: ObservableObject {
     
@@ -26,6 +27,13 @@ class FungiListViewModel: ObservableObject {
                     completion(url)
                 }
             }
+        }
+    }
+    
+    func save(name: String, url: URL, completion: (Error?) -> Void) {
+        
+        guard let currentUser = Auth.auth().currentUser else {
+            
         }
         
     }

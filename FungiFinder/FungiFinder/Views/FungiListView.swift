@@ -79,7 +79,6 @@ struct FungiListView: View {
                 }
             }
         }
-        
     }
 }
 
