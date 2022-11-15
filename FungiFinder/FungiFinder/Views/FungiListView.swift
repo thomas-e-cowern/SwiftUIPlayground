@@ -22,13 +22,15 @@ struct FungiListView: View {
     @State private var showActionSheet: Bool = false
     @State private var sourceType: SourceType = .photoLibrary
     
+    @StateObject private var fungiLVM = FungiListViewModel()
+    
     var body: some View {
         ZStack {
             Text("Display List of Fungi")
             
             if image != nil {
                 PhotoPreviewView(image: $image, name: $name) {
-                    /// Something here
+                    saveFungi()
                 }
             }
            
@@ -62,6 +64,22 @@ struct FungiListView: View {
     .onAppear(perform: {
         
     })
+    }
+    
+    private func saveFungi() {
+        
+        if let originalImage = originalImage {
+            if let resizedImage = originalImage.resized(width: 1024) {
+                if let data = resizedImage.pngData() {
+                    fungiLVM.uploadPhoto(data: data) { url in
+                        if let url = url {
+                            print("URL IS: \(url)")
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
 
