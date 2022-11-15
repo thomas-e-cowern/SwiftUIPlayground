@@ -38,6 +38,7 @@
 		4D1E1AD22923740000E5A1B8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD12923740000E5A1B8 /* LoginViewModel.swift */; };
 		4D1E1AD429237A2D00E5A1B8 /* FungiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD329237A2D00E5A1B8 /* FungiListViewModel.swift */; };
 		4D1E1AD6292390E700E5A1B8 /* Fungi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD5292390E700E5A1B8 /* Fungi.swift */; };
+		4D1E1AD82923F39800E5A1B8 /* FungiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD72923F39800E5A1B8 /* FungiViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		4D1E1AD12923740000E5A1B8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4D1E1AD329237A2D00E5A1B8 /* FungiListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungiListViewModel.swift; sourceTree = "<group>"; };
 		4D1E1AD5292390E700E5A1B8 /* Fungi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fungi.swift; sourceTree = "<group>"; };
+		4D1E1AD72923F39800E5A1B8 /* FungiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungiViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 				4D1E1ACF292370BD00E5A1B8 /* RegisterViewModel.swift */,
 				4D1E1AD12923740000E5A1B8 /* LoginViewModel.swift */,
 				4D1E1AD329237A2D00E5A1B8 /* FungiListViewModel.swift */,
+				4D1E1AD72923F39800E5A1B8 /* FungiViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				4D1E1A902922A20400E5A1B8 /* ContentView.swift in Sources */,
 				4D1E1AD429237A2D00E5A1B8 /* FungiListViewModel.swift in Sources */,
 				4D1E1AB12922CB9D00E5A1B8 /* UIImage+Extensions.swift in Sources */,
+				4D1E1AD82923F39800E5A1B8 /* FungiViewModel.swift in Sources */,
 				4D1E1AAD2922CADB00E5A1B8 /* ImagePicker.swift in Sources */,
 				4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */,
 				4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */,
