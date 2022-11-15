@@ -29,8 +29,8 @@ struct FungiListView: View {
         ZStack {
             
             if fungiLVM.fungi.count > 0 {
-                List(fungi, id: \.fungiId) { fungi in
-                    
+                List(fungiLVM.fungi, id: \.fungiId) { fungi in
+                    FungiCellView(fungi: fungi)
                 }
             }
             

@@ -1,5 +1,5 @@
 //
-//  FungiCell.swift
+//  FungiCellView.swift
 //  FungiFinder
 //
 //  Created by Thomas Cowern on 11/15/22.
@@ -8,7 +8,7 @@
 import SwiftUI
 import URLImage
 
-struct FungiCell: View {
+struct FungiCellView: View {
     
     let fungi: FungiViewModel
     
@@ -36,11 +36,5 @@ struct FungiCell: View {
                 Text(fungi.name)
             }
         }
-    }
-}
-
-struct FungiCell_Previews: PreviewProvider {
-    static var previews: some View {
-        FungiCell()
     }
 }
