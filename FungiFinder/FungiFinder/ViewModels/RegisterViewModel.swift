@@ -15,6 +15,13 @@ class RegisterViewModel: ObservableObject {
     
     func register(completion: @escaping () -> Void) {
         
+        Auth.auth().createUser(withEmail: email, password: password) { result, error  in
+            if let error = error {
+                print("Error in register: \(error.localizedDescription)")
+            } else {
+                completion()
+            }
+        }
     }
     
 }
