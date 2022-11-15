@@ -32,8 +32,10 @@ struct FungiCellView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fit)
+                        .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
                 }
                 Text(fungi.name)
+                    .font(.headline)
             }
         }
     }
