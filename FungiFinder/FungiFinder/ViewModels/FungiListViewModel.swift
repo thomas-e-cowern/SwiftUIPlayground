@@ -15,6 +15,8 @@ class FungiListViewModel: ObservableObject {
     let storage = Storage.storage()
     let db = Firestore.firestore()
     
+    @Published var fungi: [FungiViewModel] = []
+    
     func uploadPhoto(data: Data, completion: @escaping (URL?) -> Void) {
         
         let imageName = UUID().uuidString
@@ -37,7 +39,6 @@ class FungiListViewModel: ObservableObject {
         guard let currentUser = Auth.auth().currentUser else {
             print("Problem with the current user")
             return
-            
         }
         
         do {
@@ -48,5 +49,36 @@ class FungiListViewModel: ObservableObject {
         } catch let error {
             completion(error)
         }
+    }
+    
+    func getAllFungiForUser() {
+        
+        guard let currentUser = Auth.auth().currentUser else {
+            print("Problem with the current user")
+            return
+        }
+        
+        db.collection("fungi")
+            .whereField("userId", isEqualTo: currentUser.uid)
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error in uploadPhotos \(error.localizedDescription)")
+                } else {
+                    if let snapshot = snapshot {
+                        let fungi: [FungiViewModel] = snapshot.documents.compactMap { doc in
+                            var fungi = try? doc.data(as: Fungi.self)
+                            fungi?.id = doc.documentID
+                            if let fungi = fungi {
+                                return FungiViewModel(fungi: fungi)
+                            }
+                            
+                            return nil
+                        }
+                        
+                        self.fungi = fungi
+                    }
+                }
+            }
+        
     }
 }
