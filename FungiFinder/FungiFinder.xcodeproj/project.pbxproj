@@ -34,6 +34,7 @@
 		4D1E1ACA29236DDF00E5A1B8 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1AC929236DDF00E5A1B8 /* FirebaseFirestoreSwift */; };
 		4D1E1ACC29236DDF00E5A1B8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1ACB29236DDF00E5A1B8 /* FirebaseStorage */; };
 		4D1E1ACE29236DDF00E5A1B8 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1ACD29236DDF00E5A1B8 /* FirebaseStorageCombine-Community */; };
+		4D1E1AD0292370BD00E5A1B8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1ACF292370BD00E5A1B8 /* RegisterViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		4D1E1AB22922CBF200E5A1B8 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		4D1E1AB42922CC9000E5A1B8 /* EmptyFungiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFungiView.swift; sourceTree = "<group>"; };
 		4D1E1AB629236CFB00E5A1B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D1E1ACF292370BD00E5A1B8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		4D1E1A9D2922A25600E5A1B8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E1ACF292370BD00E5A1B8 /* RegisterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */,
 				4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */,
 				4D1E1AAB2922CA6500E5A1B8 /* LoadingView.swift in Sources */,
+				4D1E1AD0292370BD00E5A1B8 /* RegisterViewModel.swift in Sources */,
 				4D1E1A8E2922A20400E5A1B8 /* FungiFinderApp.swift in Sources */,
 				4D1E1AB52922CC9000E5A1B8 /* EmptyFungiView.swift in Sources */,
 				4D1E1AB32922CBF200E5A1B8 /* View+Extensions.swift in Sources */,
