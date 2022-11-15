@@ -36,11 +36,12 @@ struct LoginView: View {
   
                         loginVM.login {
                             isActive = true
+                            
+                            if isActive {
+                                path.append(isActive)
+                            }
                         }
                         
-                        if isActive {
-                            path.append(isActive)
-                        }
                     }
                     .navigationDestination(for: Bool.self, destination: { value in
                         FungiListView()
