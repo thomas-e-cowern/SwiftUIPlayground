@@ -80,9 +80,12 @@ struct FungiListView: View {
                     fungiLVM.uploadPhoto(data: data) { url in
                         if let url = url {
                             fungiLVM.save(name: name, url: url) { error in
-                                
-                                image = nil
-                                
+                                if let error = error {
+                                    print("Error in saveFungi in FungiListView: \(error)")
+                                    image = nil
+                                } else {
+                                    fungiLVM.getAllFungiForUser()
+                                }
                             }
                         }
                     }
