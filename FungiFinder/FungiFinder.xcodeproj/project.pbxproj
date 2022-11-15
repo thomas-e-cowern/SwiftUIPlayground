@@ -37,6 +37,7 @@
 		4D1E1AD0292370BD00E5A1B8 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1ACF292370BD00E5A1B8 /* RegisterViewModel.swift */; };
 		4D1E1AD22923740000E5A1B8 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD12923740000E5A1B8 /* LoginViewModel.swift */; };
 		4D1E1AD429237A2D00E5A1B8 /* FungiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD329237A2D00E5A1B8 /* FungiListViewModel.swift */; };
+		4D1E1AD6292390E700E5A1B8 /* Fungi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AD5292390E700E5A1B8 /* Fungi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		4D1E1ACF292370BD00E5A1B8 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		4D1E1AD12923740000E5A1B8 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4D1E1AD329237A2D00E5A1B8 /* FungiListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FungiListViewModel.swift; sourceTree = "<group>"; };
+		4D1E1AD5292390E700E5A1B8 /* Fungi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fungi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		4D1E1A9C2922A24A00E5A1B8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E1AD5292390E700E5A1B8 /* Fungi.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				4D1E1AAD2922CADB00E5A1B8 /* ImagePicker.swift in Sources */,
 				4D1E1AA22922A3BD00E5A1B8 /* PhotoCaptureView.swift in Sources */,
 				4D1E1AA42922A43F00E5A1B8 /* LoginView.swift in Sources */,
+				4D1E1AD6292390E700E5A1B8 /* Fungi.swift in Sources */,
 				4D1E1AD22923740000E5A1B8 /* LoginViewModel.swift in Sources */,
 				4D1E1AAB2922CA6500E5A1B8 /* LoadingView.swift in Sources */,
 				4D1E1AD0292370BD00E5A1B8 /* RegisterViewModel.swift in Sources */,
