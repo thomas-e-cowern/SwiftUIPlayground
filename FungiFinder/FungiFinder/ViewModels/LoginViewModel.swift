@@ -15,7 +15,13 @@ class LoginViewModel: ObservableObject {
     
     func login(completion: @escaping () -> Void) {
         
-        
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("Error in login: \(error.localizedDescription)")
+            } else {
+                completion()
+            }
+        }
         
     }
     
