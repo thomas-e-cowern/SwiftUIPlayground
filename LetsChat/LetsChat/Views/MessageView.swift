@@ -14,7 +14,19 @@ enum MessageStyle {
 
 struct MessageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: style == .primary ? .trailing : .leading) {
+            
+            if style == .primary {
+                Text(messageText).withPrimaryTextStyle()
+                    .lineLimit(nil)
+            } else {
+                Text(messageText).withSecondaryTextStyle()
+                    .lineLimit(nil)
+            }
+            
+            Text(username)
+                .font(.caption)
+        }
     }
 }
 
