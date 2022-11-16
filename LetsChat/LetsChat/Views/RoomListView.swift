@@ -16,24 +16,21 @@ struct RoomListView: View {
             VStack {
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
             }
-            .navigationTitle("Rooms")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         isPresented = true
                     } label: {
                         Image(systemName: "plus")
                             .font(.title)
-                            .foregroundColor(.white)
+                            .foregroundColor(.green)
                     }
-
                 }
-            }
-            
+            })
+            .navigationTitle("Rooms")
             .sheet(isPresented: $isPresented) {
                 AddRoomView()
             }
-            
             .onAppear {
                 // Do somthing...
             }
