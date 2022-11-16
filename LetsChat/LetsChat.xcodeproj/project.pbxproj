@@ -17,6 +17,7 @@
 		4D1E1B062924BECC00E5A1B8 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B052924BECC00E5A1B8 /* RoomListView.swift */; };
 		4D1E1B082924C10500E5A1B8 /* AddRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B072924C10500E5A1B8 /* AddRoomView.swift */; };
 		4D1E1B0A2924C60300E5A1B8 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B092924C60300E5A1B8 /* MessageListView.swift */; };
+		4D1E1B0C2924C68600E5A1B8 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B0B2924C68600E5A1B8 /* MessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		4D1E1B052924BECC00E5A1B8 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		4D1E1B072924C10500E5A1B8 /* AddRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomView.swift; sourceTree = "<group>"; };
 		4D1E1B092924C60300E5A1B8 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
+		4D1E1B0B2924C68600E5A1B8 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				4D1E1B052924BECC00E5A1B8 /* RoomListView.swift */,
 				4D1E1B072924C10500E5A1B8 /* AddRoomView.swift */,
 				4D1E1B092924C60300E5A1B8 /* MessageListView.swift */,
+				4D1E1B0B2924C68600E5A1B8 /* MessageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				4D1E1B002924BB0500E5A1B8 /* Text+Extensions.swift in Sources */,
 				4D1E1B082924C10500E5A1B8 /* AddRoomView.swift in Sources */,
 				4D1E1B042924BD1800E5A1B8 /* PrimaryButtonStyle.swift in Sources */,
+				4D1E1B0C2924C68600E5A1B8 /* MessageView.swift in Sources */,
 				4D1E1AEF2924B9FE00E5A1B8 /* ContentView.swift in Sources */,
 				4D1E1B0A2924C60300E5A1B8 /* MessageListView.swift in Sources */,
 				4D1E1B062924BECC00E5A1B8 /* RoomListView.swift in Sources */,
