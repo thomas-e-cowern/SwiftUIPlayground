@@ -14,6 +14,7 @@
 		4D1E1B002924BB0500E5A1B8 /* Text+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AFF2924BB0500E5A1B8 /* Text+Extensions.swift */; };
 		4D1E1B022924BBAA00E5A1B8 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B012924BBAA00E5A1B8 /* View+Extensions.swift */; };
 		4D1E1B042924BD1800E5A1B8 /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B032924BD1800E5A1B8 /* PrimaryButtonStyle.swift */; };
+		4D1E1B062924BECC00E5A1B8 /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B052924BECC00E5A1B8 /* RoomListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4D1E1AFF2924BB0500E5A1B8 /* Text+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Text+Extensions.swift"; sourceTree = "<group>"; };
 		4D1E1B012924BBAA00E5A1B8 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		4D1E1B032924BD1800E5A1B8 /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		4D1E1B052924BECC00E5A1B8 /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		4D1E1AFA2924BA8700E5A1B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E1B052924BECC00E5A1B8 /* RoomListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 				4D1E1B002924BB0500E5A1B8 /* Text+Extensions.swift in Sources */,
 				4D1E1B042924BD1800E5A1B8 /* PrimaryButtonStyle.swift in Sources */,
 				4D1E1AEF2924B9FE00E5A1B8 /* ContentView.swift in Sources */,
+				4D1E1B062924BECC00E5A1B8 /* RoomListView.swift in Sources */,
 				4D1E1B022924BBAA00E5A1B8 /* View+Extensions.swift in Sources */,
 				4D1E1AED2924B9FE00E5A1B8 /* LetsChatApp.swift in Sources */,
 			);
