@@ -15,37 +15,39 @@ struct ContentView: View {
     @State private var path: [Bool] = []
       
     var body: some View {
-        VStack {
-            
-            Image("Let's Chat Logo")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
-            
-            Spacer()
-            
-            TextField("Enter username", text: $usernameEntry)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            
-            Button("Enter") {
+        NavigationStack(path: $path) {
+            VStack {
                 
-                isActive = true
-                username = usernameEntry
+                Image("Let's Chat Logo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                 
-                if isActive {
-                    path.append(isActive)
+                Spacer()
+                
+                TextField("Enter username", text: $usernameEntry)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                VStack {
+                    Button("Enter") {
+                        
+                        isActive = true
+                        username = usernameEntry
+                        
+                        if isActive {
+                            path.append(isActive)
+                        }
+                    }
+                    .buttonStyle(PrimaryButtonStyle())
                 }
-
+                .navigationDestination(for: Bool.self, destination: { value in
+                       RoomListView()
+                   })
                 
-            }
-            .navigationDestination(for: Bool.self, destination: { value in
-                   RoomListView()
-               })
-            .buttonStyle(PrimaryButtonStyle())
-            
-            Spacer()
-        }.padding()
-            .embedInNavigationView()
+                
+                Spacer()
+            }.padding()
+        }
     }
 }
 
