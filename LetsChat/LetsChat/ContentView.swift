@@ -17,7 +17,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            Image("logo")
+            Image("Let's Chat Logo")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
