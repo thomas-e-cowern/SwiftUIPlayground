@@ -21,13 +21,15 @@ struct AddRoomView: View {
                     TextField("Enter description", text: $addRoomVM.description)
                     
                 }
+                .formStyle(.automatic)
                 
                 Button("Save") {
                     addRoomVM.createRoom {
                         presentationMode.wrappedValue.dismiss()
                     }
                     
-                }.buttonStyle(PrimaryButtonStyle())
+                }
+                .buttonStyle(PrimaryButtonStyle())
                 .padding()
                 
                 Spacer()
