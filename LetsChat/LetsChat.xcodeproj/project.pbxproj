@@ -46,6 +46,7 @@
 		4D1E1B412924D7B500E5A1B8 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1B402924D7B500E5A1B8 /* FirebaseRemoteConfigSwift */; };
 		4D1E1B432924D7B500E5A1B8 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1B422924D7B500E5A1B8 /* FirebaseStorage */; };
 		4D1E1B452924D7B500E5A1B8 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 4D1E1B442924D7B500E5A1B8 /* FirebaseStorageCombine-Community */; };
+		4D1E1B472924DC3A00E5A1B8 /* AddRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1B462924DC3A00E5A1B8 /* AddRoomViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		4D1E1B092924C60300E5A1B8 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		4D1E1B0B2924C68600E5A1B8 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		4D1E1B0D2924D6F400E5A1B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D1E1B462924DC3A00E5A1B8 /* AddRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRoomViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 		4D1E1AFB2924BA9100E5A1B8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E1B462924DC3A00E5A1B8 /* AddRoomViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				4D1E1B042924BD1800E5A1B8 /* PrimaryButtonStyle.swift in Sources */,
 				4D1E1B0C2924C68600E5A1B8 /* MessageView.swift in Sources */,
 				4D1E1AEF2924B9FE00E5A1B8 /* ContentView.swift in Sources */,
+				4D1E1B472924DC3A00E5A1B8 /* AddRoomViewModel.swift in Sources */,
 				4D1E1B0A2924C60300E5A1B8 /* MessageListView.swift in Sources */,
 				4D1E1B062924BECC00E5A1B8 /* RoomListView.swift in Sources */,
 				4D1E1B022924BBAA00E5A1B8 /* View+Extensions.swift in Sources */,
