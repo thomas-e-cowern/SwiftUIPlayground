@@ -9,8 +9,10 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var usernameEntry: String = ""
-      @State private var isActive: Bool = false
-      @AppStorage("username") private var username = ""
+    @State private var isActive: Bool = false
+    @AppStorage("username") private var username = ""
+    
+    @State private var path: [Bool] = []
       
     var body: some View {
         VStack {
@@ -26,17 +28,20 @@ struct ContentView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
             
             Button("Enter") {
+                
                 isActive = true
                 username = usernameEntry
                 
-            }.buttonStyle(PrimaryButtonStyle())
-            
-            NavigationLink(
-                destination: RoomListView(),
-                isActive: $isActive,
-                label: {
-                    EmptyView()
-                })
+                if isActive {
+                    path.append(isActive)
+                }
+
+                
+            }
+            .navigationDestination(for: Bool.self, destination: { value in
+                   RoomListView()
+               })
+            .buttonStyle(PrimaryButtonStyle())
             
             Spacer()
         }.padding()
