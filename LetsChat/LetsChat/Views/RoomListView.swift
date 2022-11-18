@@ -11,10 +11,14 @@ struct RoomListView: View {
     
     @State private var isPresented: Bool = false
     
+    @StateObject private var roomListVM = RoomListViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
-                
+                List(roomListVM.rooms, id: \.roomId) { room in
+                    Text(room.name)
+                }
             }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -32,7 +36,7 @@ struct RoomListView: View {
                 AddRoomView()
             }
             .onAppear {
-                // Do somthing...
+                roomListVM.getAllRooms()
             }
         }
     }
