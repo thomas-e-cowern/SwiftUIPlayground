@@ -12,6 +12,8 @@ struct MessageListView: View {
     @State private var message: String = ""
     @AppStorage("username") private var username = ""
     
+    let room: RoomViewModel
+    
     var body: some View {
         VStack {
             ScrollView {
@@ -42,7 +44,7 @@ struct MessageListView: View {
             
             .background(Color(#colorLiteral(red: 0.9483042359, green: 0.9484629035, blue: 0.9482833743, alpha: 1)))
         }
-        .navigationTitle("Room Name")
+        .navigationTitle(room.name)
         .onAppear(perform: {
             
         })
@@ -51,6 +53,6 @@ struct MessageListView: View {
 
 struct MessageListView_Previews: PreviewProvider {
     static var previews: some View {
-        MessageListView()
+        MessageListView(room: RoomViewModel(room: Room(name: "Testing", description: "Testing description")))
     }
 }
