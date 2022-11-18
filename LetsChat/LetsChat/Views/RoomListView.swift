@@ -18,6 +18,7 @@ struct RoomListView: View {
             VStack {
                 List(roomListVM.rooms, id: \.roomId) { room in
                     Text(room.name)
+                    Text(room.description)
                 }
             }
             .toolbar(content: {
