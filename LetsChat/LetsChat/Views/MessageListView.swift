@@ -22,6 +22,19 @@ struct MessageListView: View {
                 ScrollViewReader { scrollView in
                     VStack {
                        
+                        ForEach(messageListVM.messages, id: \.messageId) { message in
+                            HStack {
+                                if message.username == username {
+                                    Spacer()
+                                    MessageView(messageText: message.messageText, username: message.username, style: .primary)
+                                } else {
+                                    MessageView(messageText: message.messageText, username: message.username, style: .secondary)
+                                }
+                            }
+                            .padding()
+                            .id(message.messageId)
+                        }
+                        
                     }.onAppear(perform: {
                             
                           
