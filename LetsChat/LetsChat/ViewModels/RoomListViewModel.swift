@@ -25,3 +25,36 @@ struct RoomViewModel {
         room.id ?? ""
     }
 }
+
+class RoomListViewModel: ObservableObject {
+    
+    @Published var rooms: [RoomViewModel] = []
+    
+    let db = Firestore.firestore()
+    
+    func getAllRooms() {
+        
+        db.collection("rooms")
+            .getDocuments { snapshot, error in
+                if let error = error {
+                    print("Error in getAllRooms: \(error.localizedDescription)")
+                } else {
+                    if let snapshot = snapshot {
+                        
+                        let rooms: [RoomViewModel] = snapshot.documents.compactMap { doc in
+                            guard var room = try? doc.data(as: Room.self) else {
+                                return nil
+                            }
+                            
+                            room.id = doc.documentID
+                            return RoomViewModel(room: room)
+                        }
+                        
+                        self.rooms = rooms
+                    }
+                }
+            }
+    }
+    
+    
+}
