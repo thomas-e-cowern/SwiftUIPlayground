@@ -9,7 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct messageViewState {
+struct MessageViewState {
     let message: String
     let roomId: String
     let username: String
@@ -21,6 +21,10 @@ class MessageListViewModel: ObservableObject {
     
     let db = Firestore.firestore()
     
-   
+    func sendMessage(msg: MessageViewState, completion: @escaping () -> Void) {
+        
+        
+        
+    }
     
 }
