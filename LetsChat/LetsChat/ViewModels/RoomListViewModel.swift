@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 struct RoomViewModel {
     
@@ -20,6 +22,6 @@ struct RoomViewModel {
     }
     
     var roomId: String {
-        room.id ?? 0
+        room.id ?? ""
     }
 }
