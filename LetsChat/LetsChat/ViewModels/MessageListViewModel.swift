@@ -9,12 +9,18 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
+struct messageViewState {
+    let message: String
+    let roomId: String
+    let username: String
+}
+
 class MessageListViewModel: ObservableObject {
     
     @Published var message: [MessageViewModel] = []
     
     let db = Firestore.firestore()
     
-    
+   
     
 }
