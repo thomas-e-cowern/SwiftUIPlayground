@@ -10,14 +10,21 @@ import SwiftUI
 struct RoomListView: View {
     
     @State private var isPresented: Bool = false
+    @State private var path: [Bool] = []
+    @State private var isActive: Bool = false
     
     @StateObject private var roomListVM = RoomListViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack (path: $path) {
             VStack {
                 List(roomListVM.rooms, id: \.roomId) { room in
-                    RoomRowView(room: room)
+                    NavigationLink {
+                        MessageListView()
+                    } label: {
+                        RoomRowView(room: room)
+                    }
+
                 }
             }
             .toolbar(content: {
