@@ -23,8 +23,22 @@ class MessageListViewModel: ObservableObject {
     
     func sendMessage(msg: MessageViewState, completion: @escaping () -> Void) {
         
+        let message = Message(vs: msg)
         
-        
+        do {
+            try db.collection("rooms")
+                .document(message.roomId)
+                .collection("messages")
+                .addDocument(from: message, encoder: Firestore.Encoder()) { error in
+                    if let error = error {
+                        print("Error in sendMessage: \(error.localizedDescription)")
+                    } else {
+                        completion()
+                    }
+                }
+        } catch let error {
+            print("Error in do-catch in sendMessage: \(error.localizedDescription)")
+        }
     }
     
 }
