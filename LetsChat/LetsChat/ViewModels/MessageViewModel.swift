@@ -1,5 +1,5 @@
 //
-//  MessageListViewModel.swift
+//  MessageViewModel.swift
 //  LetsChat
 //
 //  Created by Thomas Cowern on 11/18/22.
