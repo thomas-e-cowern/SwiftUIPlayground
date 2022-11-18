@@ -10,17 +10,16 @@ import SwiftUI
 struct RoomListView: View {
     
     @State private var isPresented: Bool = false
-    @State private var path: [Bool] = []
     @State private var isActive: Bool = false
     
     @StateObject private var roomListVM = RoomListViewModel()
     
     var body: some View {
-        NavigationStack (path: $path) {
+        NavigationStack {
             VStack {
                 List(roomListVM.rooms, id: \.roomId) { room in
                     NavigationLink {
-                        MessageListView()
+                        MessageListView(room: room)
                     } label: {
                         RoomRowView(room: room)
                     }
@@ -40,7 +39,7 @@ struct RoomListView: View {
                 }
             })
             .navigationTitle("Rooms")
-            .sheet(isPresented: $isPresented) {
+            .sheet(isPresented: $isPresented, onDismiss: roomListVM.getAllRooms) {
                 AddRoomView()
             }
             .onAppear {

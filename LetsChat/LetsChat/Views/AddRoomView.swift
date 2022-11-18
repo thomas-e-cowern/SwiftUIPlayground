@@ -34,7 +34,8 @@ struct AddRoomView: View {
                 
                 Spacer()
                 
-            }.navigationTitle("Add New Room")
+            }
+            .navigationTitle("Add New Room")
         }
     }
 }
