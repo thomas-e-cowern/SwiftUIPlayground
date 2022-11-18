@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D147C1B29274EE100AF44AA /* RoomListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D147C1A29274EE100AF44AA /* RoomListViewModel.swift */; };
 		4D1E1AED2924B9FE00E5A1B8 /* LetsChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AEC2924B9FE00E5A1B8 /* LetsChatApp.swift */; };
 		4D1E1AEF2924B9FE00E5A1B8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E1AEE2924B9FE00E5A1B8 /* ContentView.swift */; };
 		4D1E1AF12924BA0300E5A1B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E1AF02924BA0300E5A1B8 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D147C1A29274EE100AF44AA /* RoomListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListViewModel.swift; sourceTree = "<group>"; };
 		4D1E1AE92924B9FD00E5A1B8 /* LetsChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D1E1AEC2924B9FE00E5A1B8 /* LetsChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsChatApp.swift; sourceTree = "<group>"; };
 		4D1E1AEE2924B9FE00E5A1B8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1E1B462924DC3A00E5A1B8 /* AddRoomViewModel.swift */,
+				4D147C1A29274EE100AF44AA /* RoomListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				4D1E1AEF2924B9FE00E5A1B8 /* ContentView.swift in Sources */,
 				4D1E1B472924DC3A00E5A1B8 /* AddRoomViewModel.swift in Sources */,
 				4D1E1B0A2924C60300E5A1B8 /* MessageListView.swift in Sources */,
+				4D147C1B29274EE100AF44AA /* RoomListViewModel.swift in Sources */,
 				4D1E1B062924BECC00E5A1B8 /* RoomListView.swift in Sources */,
 				4D1E1B022924BBAA00E5A1B8 /* View+Extensions.swift in Sources */,
 				4D1E1AED2924B9FE00E5A1B8 /* LetsChatApp.swift in Sources */,
