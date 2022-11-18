@@ -9,6 +9,8 @@ import SwiftUI
 
 struct MessageListView: View {
     
+    @StateObject private var messageListVM = MessageListViewModel()
+    
     @State private var message: String = ""
     @AppStorage("username") private var username = ""
     
@@ -35,6 +37,7 @@ struct MessageListView: View {
                 
                 Button(action: {
                    
+                    sendMessage()
                     
                 }, label: {
                     Image(systemName: "paperplane.fill")
@@ -48,6 +51,16 @@ struct MessageListView: View {
         .onAppear(perform: {
             
         })
+    }
+    
+    func sendMessage() {
+        
+        let messageVS = MessageViewState(message: message, roomId: room.roomId, username: username)
+        
+        messageListVM.sendMessage(msg: messageVS) {
+            message = ""
+        }
+        
     }
 }
 
