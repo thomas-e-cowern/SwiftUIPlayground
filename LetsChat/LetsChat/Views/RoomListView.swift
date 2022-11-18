@@ -26,6 +26,7 @@ struct RoomListView: View {
                     }
 
                 }
+                .listStyle(.grouped)
             }
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarTrailing) {
