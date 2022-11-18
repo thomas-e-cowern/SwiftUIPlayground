@@ -31,6 +31,7 @@ struct MessageListView: View {
                                     MessageView(messageText: message.messageText, username: message.username, style: .primary)
                                 } else {
                                     MessageView(messageText: message.messageText, username: message.username, style: .secondary)
+                                    Spacer()
                                 }
                             }
                             .padding()
