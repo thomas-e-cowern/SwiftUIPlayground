@@ -12,7 +12,7 @@ struct RoomRowView: View {
     let room: RoomViewModel
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(room.name)
                 .font(.headline)
             Text(room.description)
