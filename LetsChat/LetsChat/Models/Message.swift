@@ -12,7 +12,13 @@ struct Message: Codable {
     var id: String?
     var text: String = ""
     var username: String = ""
-    var rowId: String = ""
+    var roomId: String = ""
     var messageDate = Date()
+    
+    init(vs: MessageViewState) {
+        text = vs.message
+        username = vs.username
+        roomId = vs.roomId
+    }
     
 }
