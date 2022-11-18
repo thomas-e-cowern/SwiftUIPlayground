@@ -37,7 +37,14 @@ struct MessageListView: View {
                         
                     }.onAppear(perform: {
                             
-                          
+                        messageListVM.$messages.sink { messages in
+                            if messages.count > 0 {
+                                withAnimation {
+                                    scrollView.scrollTo(messages[messages.endIndex - 1].messageId, anchor: .bottom)
+                                }
+                            }
+                        }
+                        
                     })
                 }
             }
