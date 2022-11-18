@@ -19,7 +19,6 @@ struct MessageView: View {
     let style: MessageStyle
     
     var body: some View {
-        Text("Uncomment below")
         VStack(alignment: style == .primary ? .trailing : .leading) {
 
             if style == .primary {

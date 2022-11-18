@@ -10,12 +10,11 @@ import SwiftUI
 struct RoomListView: View {
     
     @State private var isPresented: Bool = false
-    @State private var isActive: Bool = false
     
     @StateObject private var roomListVM = RoomListViewModel()
     
     var body: some View {
-        NavigationStack {
+        NavigationView {
             VStack {
                 List(roomListVM.rooms, id: \.roomId) { room in
                     NavigationLink {

@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MessageListView: View {
     
     @StateObject private var messageListVM = MessageListViewModel()
     
     @State private var message: String = ""
+    @State private var cancellables: AnyCancellable?
     @AppStorage("username") private var username = ""
     
     let room: RoomViewModel
@@ -37,7 +39,7 @@ struct MessageListView: View {
                         
                     }.onAppear(perform: {
                             
-                        messageListVM.$messages.sink { messages in
+                        cancellables = messageListVM.$messages.sink { messages in
                             if messages.count > 0 {
                                 withAnimation {
                                     scrollView.scrollTo(messages[messages.endIndex - 1].messageId, anchor: .bottom)
