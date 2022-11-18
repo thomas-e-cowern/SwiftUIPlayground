@@ -49,7 +49,7 @@ struct MessageListView: View {
         }
         .navigationTitle(room.name)
         .onAppear(perform: {
-            
+            messageListVM.registerUpdatesForRoom(room: room)
         })
     }
     
