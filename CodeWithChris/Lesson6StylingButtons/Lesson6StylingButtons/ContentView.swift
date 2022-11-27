@@ -29,10 +29,11 @@ struct ContentView: View {
                 print("Contact tapped")
             } label: {
                 HStack {
-                    Image(systemName: "letter")
+                    Image(systemName: "envelope")
                     Text("Contact")
                 }
             }
+            .buttonStyle(CustomContactButton())
 
         }
         .padding()
