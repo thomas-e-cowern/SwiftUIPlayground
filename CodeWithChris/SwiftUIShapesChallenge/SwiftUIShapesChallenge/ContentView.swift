@@ -14,18 +14,11 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+
+            TextField("Name", text: $name)
+                .textFieldStyle(CustomNameTextFieldStyle())
+
             
-            ZStack {
-                HStack {
-                    Image(systemName: "person")
-                    TextField("Name", text: $name)
-                }
-                .padding(.horizontal)
-                
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(Color.gray)
-                    .frame(height: 40)
-            }
             
             ZStack {
                 HStack {
