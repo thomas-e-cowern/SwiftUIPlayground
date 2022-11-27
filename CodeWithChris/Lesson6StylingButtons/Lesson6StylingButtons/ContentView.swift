@@ -24,6 +24,16 @@ struct ContentView: View {
                 print("Custom Button Style Pressed")
             }
             .buttonStyle(CustomButtonStyle())
+            
+            Button {
+                print("Contact tapped")
+            } label: {
+                HStack {
+                    Image(systemName: "letter")
+                    Text("Contact")
+                }
+            }
+
         }
         .padding()
     }
