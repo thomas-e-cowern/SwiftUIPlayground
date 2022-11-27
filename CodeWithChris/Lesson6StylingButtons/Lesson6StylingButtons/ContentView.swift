@@ -10,10 +10,15 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Button(action: { print("Label Button") }, label: {
+                ZStack {
+                    Capsule()
+                        .fill(LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .leading, endPoint: .trailing))
+                        .frame(height: 50)
+                    Text("Label Button")
+                        .foregroundColor(.white)
+                }
+            })
         }
         .padding()
     }
