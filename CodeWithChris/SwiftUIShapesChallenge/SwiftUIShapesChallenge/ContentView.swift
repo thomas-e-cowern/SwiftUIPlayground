@@ -13,7 +13,7 @@ struct ContentView: View {
     @State var email: String = ""
     
     var body: some View {
-        VStack {
+        VStack(spacing: 8) {
 
             TextField("Name", text: $name)
                 .textFieldStyle(CustomNameTextFieldStyle())

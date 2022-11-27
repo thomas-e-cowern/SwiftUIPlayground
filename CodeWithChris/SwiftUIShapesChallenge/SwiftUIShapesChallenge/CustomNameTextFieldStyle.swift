@@ -10,6 +10,13 @@ import SwiftUI
 
 struct CustomNameTextFieldStyle: TextFieldStyle {
     
+    var myGradient = Gradient(
+        colors: [
+            Color(.red),
+            Color(.blue)
+        ]
+    )
+    
     func _body(configuration: TextField<Self._Label>) -> some View {
         
         ZStack {
@@ -20,7 +27,7 @@ struct CustomNameTextFieldStyle: TextFieldStyle {
             .padding(.horizontal)
             
             RoundedRectangle(cornerRadius: 5)
-                .stroke(Color.gray)
+                .stroke(LinearGradient(gradient: myGradient, startPoint: .leading, endPoint: .trailing))
                 .frame(height: 40)
         }
         
