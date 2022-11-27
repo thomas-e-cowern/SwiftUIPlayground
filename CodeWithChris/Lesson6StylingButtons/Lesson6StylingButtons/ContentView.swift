@@ -19,6 +19,11 @@ struct ContentView: View {
                         .foregroundColor(.white)
                 }
             })
+            
+            Button("Custom Style Button") {
+                print("Custom Button Style Pressed")
+            }
+            .buttonStyle(CustomButtonStyle())
         }
         .padding()
     }
