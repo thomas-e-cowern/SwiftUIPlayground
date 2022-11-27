@@ -14,8 +14,15 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+                .font(.custom("Rubik Microbe", size: 20))
         }
         .padding()
+    }
+    
+    init() {
+        for familyName in UIFont.familyNames {
+            print(familyName)
+        }
     }
 }
 
