@@ -20,21 +20,26 @@ struct ContentView: View {
                     Image(systemName: "person")
                     TextField("Name", text: $name)
                 }
-                .padding()
-                RoundedRectangle(cornerRadius: 5, style: .continuous)
-                    .frame(width: UIScreen.main.bounds.size.width, height: 40)
-                    .padding()
-
+                .padding(.horizontal)
                 
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.gray)
+                    .frame(height: 40)
             }
             
-            HStack {
-                Image(systemName: "envelope")
-                TextField("Email", text: $email)
+            ZStack {
+                HStack {
+                    Image(systemName: "envelope")
+                    TextField("Email", text: $email)
+                }
+                .padding(.horizontal)
+                
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.gray)
+                    .frame(height: 40)
             }
-            .padding()
-            
         }
+        .padding()
     }
 }
 
