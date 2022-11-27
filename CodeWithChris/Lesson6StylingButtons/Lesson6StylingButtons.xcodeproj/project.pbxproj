@@ -13,6 +13,7 @@
 		4D1E2E6B2933F514004801A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E2E6A2933F514004801A7 /* Preview Assets.xcassets */; };
 		4D1E2E722933F6DD004801A7 /* CustomButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E2E712933F6DD004801A7 /* CustomButtonStyle.swift */; };
 		4D1E2E742933F908004801A7 /* CustomContactButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E2E732933F907004801A7 /* CustomContactButton.swift */; };
+		4D1E2E762934042B004801A7 /* GhostButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E2E752934042B004801A7 /* GhostButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D1E2E6A2933F514004801A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D1E2E712933F6DD004801A7 /* CustomButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonStyle.swift; sourceTree = "<group>"; };
 		4D1E2E732933F907004801A7 /* CustomContactButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomContactButton.swift; sourceTree = "<group>"; };
+		4D1E2E752934042B004801A7 /* GhostButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GhostButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				4D1E2E692933F514004801A7 /* Preview Content */,
 				4D1E2E712933F6DD004801A7 /* CustomButtonStyle.swift */,
 				4D1E2E732933F907004801A7 /* CustomContactButton.swift */,
+				4D1E2E752934042B004801A7 /* GhostButtonStyle.swift */,
 			);
 			path = Lesson6StylingButtons;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				4D1E2E662933F511004801A7 /* ContentView.swift in Sources */,
 				4D1E2E642933F511004801A7 /* Lesson6StylingButtonsApp.swift in Sources */,
 				4D1E2E742933F908004801A7 /* CustomContactButton.swift in Sources */,
+				4D1E2E762934042B004801A7 /* GhostButtonStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

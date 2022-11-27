@@ -42,6 +42,7 @@ struct ContentView: View {
                 Text("Ghost Button")
 
             }
+            .buttonStyle(GhostButtonStyle())
 
         }
         .padding()
