@@ -34,6 +34,14 @@ struct ContentView: View {
                 }
             }
             .buttonStyle(CustomContactButton())
+            
+            Button {
+                print("Ghost Button")
+            } label: {
+
+                Text("Ghost Button")
+
+            }
 
         }
         .padding()
