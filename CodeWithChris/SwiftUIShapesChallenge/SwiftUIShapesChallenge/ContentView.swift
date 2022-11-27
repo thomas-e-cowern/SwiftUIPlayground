@@ -8,14 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var name: String = ""
+    @State var email: String = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            ZStack {
+                HStack {
+                    Image(systemName: "person")
+                    TextField("Name", text: $name)
+                }
+                .padding()
+                RoundedRectangle(cornerRadius: 5, style: .continuous)
+                    .frame(width: UIScreen.main.bounds.size.width, height: 40)
+                    .padding()
+
+                
+            }
+            
+            HStack {
+                Image(systemName: "envelope")
+                TextField("Email", text: $email)
+            }
+            .padding()
+            
         }
-        .padding()
     }
 }
 
