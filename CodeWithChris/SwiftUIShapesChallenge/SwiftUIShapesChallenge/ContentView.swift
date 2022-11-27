@@ -18,19 +18,9 @@ struct ContentView: View {
             TextField("Name", text: $name)
                 .textFieldStyle(CustomNameTextFieldStyle())
 
+            TextField("Email", text: $email)
+                .textFieldStyle(CustomEmailTextViewStyle())
             
-            
-            ZStack {
-                HStack {
-                    Image(systemName: "envelope")
-                    TextField("Email", text: $email)
-                }
-                .padding(.horizontal)
-                
-                RoundedRectangle(cornerRadius: 5)
-                    .stroke(Color.gray)
-                    .frame(height: 40)
-            }
         }
         .padding()
     }

@@ -12,6 +12,7 @@
 		4D1E2E4A2933EB08004801A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E2E492933EB08004801A7 /* Assets.xcassets */; };
 		4D1E2E4D2933EB08004801A7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E2E4C2933EB08004801A7 /* Preview Assets.xcassets */; };
 		4D1E2E542933EF6A004801A7 /* CustomNameTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E2E532933EF6A004801A7 /* CustomNameTextFieldStyle.swift */; };
+		4D1E2E562933F1DC004801A7 /* CustomEmailTextViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E2E552933F1DC004801A7 /* CustomEmailTextViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D1E2E492933EB08004801A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D1E2E4C2933EB08004801A7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D1E2E532933EF6A004801A7 /* CustomNameTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNameTextFieldStyle.swift; sourceTree = "<group>"; };
+		4D1E2E552933F1DC004801A7 /* CustomEmailTextViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomEmailTextViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				4D1E2E492933EB08004801A7 /* Assets.xcassets */,
 				4D1E2E4B2933EB08004801A7 /* Preview Content */,
 				4D1E2E532933EF6A004801A7 /* CustomNameTextFieldStyle.swift */,
+				4D1E2E552933F1DC004801A7 /* CustomEmailTextViewStyle.swift */,
 			);
 			path = SwiftUIShapesChallenge;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D1E2E482933EB05004801A7 /* ContentView.swift in Sources */,
+				4D1E2E562933F1DC004801A7 /* CustomEmailTextViewStyle.swift in Sources */,
 				4D1E2E462933EB05004801A7 /* SwiftUIShapesChallengeApp.swift in Sources */,
 				4D1E2E542933EF6A004801A7 /* CustomNameTextFieldStyle.swift in Sources */,
 			);
