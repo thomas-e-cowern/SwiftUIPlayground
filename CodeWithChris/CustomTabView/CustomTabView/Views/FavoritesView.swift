@@ -16,39 +16,40 @@ struct FavoritesView: View {
     var adaptableColumns = Array(repeating: GridItem(.adaptive(minimum: 100)), count: 4)
     
     var body: some View {
-        ScrollView {
-            VStack {
-                Text("Fixed Columns")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.teal)
-                
-                LazyVGrid(columns: fixedColumns) {
-                    ForEach(0..<5) { index in
-                        Text("Index: \(index)")
-                    }
+
+        VStack {
+            Text("Fixed Columns")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.teal)
+            
+            LazyVGrid(columns: fixedColumns) {
+                ForEach(0..<5) { index in
+                    Text("Index: \(index)")
                 }
-                .padding(.bottom, 20)
-                
-                Text("Flexible Columns")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.yellow)
-                
-                LazyVGrid(columns: flexibleColumns) {
-                    ForEach(0..<5) { index in
-                        Text("Index: \(index)")
-                    }
+            }
+            .padding(.bottom, 20)
+            
+            Text("Flexible Columns")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.yellow)
+            
+            LazyVGrid(columns: flexibleColumns) {
+                ForEach(0..<5) { index in
+                    Text("Index: \(index)")
                 }
-                .padding(.bottom, 20)
-                
-                Text("Adaptable Columns")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.mint)
-                
+            }
+            .padding(.bottom, 20)
+            
+            Text("Adaptable Columns")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.mint)
+            
+            ScrollView {
                 LazyVGrid(columns: adaptableColumns) {
-                    ForEach(0..<5) { index in
+                    ForEach(0..<100) { index in
                         Text("Index: \(index)")
                     }
                 }
