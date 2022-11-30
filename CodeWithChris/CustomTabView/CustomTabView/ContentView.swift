@@ -9,27 +9,31 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            
-            Spacer()
-            
-            HStack {
+        GeometryReader  { geo in
+            VStack {
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundColor(.accentColor)
+                Text("Hello, world!")
                 
-                ForEach(0..<5, id:\.self) { _ in
-                    VStack (spacing: 5) {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                            .font(.caption)
+                Spacer()
+                
+                HStack (spacing: 0) {
+                    Spacer()
+                    ForEach(0..<5, id:\.self) { _ in
+                        VStack (spacing: 5) {
+                            Image(systemName: "magnifyingglass")
+                            Text("Search")
+                                .font(.caption)
+                        }
+                        .padding(.vertical)
+                        .frame(width: (geo.size.width - 40)/5)
                     }
-                    .padding(.vertical)
+                    Spacer()
                 }
             }
+            .ignoresSafeArea(edges: .bottom)
         }
-        .ignoresSafeArea(edges: .bottom)
     }
 }
 
