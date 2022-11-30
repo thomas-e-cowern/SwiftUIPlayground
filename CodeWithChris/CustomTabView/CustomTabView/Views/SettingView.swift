@@ -19,7 +19,7 @@ struct SettingView: View {
                 .foregroundColor(.blue)
                 .font(.title)
         }
-        .listStyle(.plain)
+        .listStyle(.sidebar)
 
     }
 }

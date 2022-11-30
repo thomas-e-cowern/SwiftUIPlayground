@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct SearchView: View {
+    
+    var items = ["item 1", "item 2", "item 3", "item 4", "item 5"]
+    
     var body: some View {
-        Text("Search View")
+        TabView {
+            ForEach(items, id:\.self) { item in
+                Text(item)
+            }
+        }
+        .tabViewStyle(.page)
     }
 }
 
