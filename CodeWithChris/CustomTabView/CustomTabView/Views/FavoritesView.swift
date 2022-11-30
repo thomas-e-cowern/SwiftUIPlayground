@@ -64,9 +64,11 @@ struct FavoritesView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.pink)
                 
-                LazyHGrid(rows: fixedRows) {
-                    ForEach(0..<10) { index in
-                        Text("Index: \(index)")
+                ScrollView (.horizontal) {
+                    LazyHGrid(rows: fixedRows) {
+                        ForEach(0..<20) { index in
+                            Text("Index: \(index)")
+                        }
                     }
                 }
             }
