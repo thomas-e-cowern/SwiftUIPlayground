@@ -11,7 +11,7 @@ struct FavoritesView: View {
     
     var fixedColumns = Array(repeating: GridItem(.fixed(100), spacing: 5, alignment: .center), count: 2)
     
-    var flexibleColumns = Array(repeating: GridItem(.fixed(100), spacing: 5, alignment: .center), count: 2)
+    var flexibleColumns = Array(repeating: GridItem(.flexible(minimum: 0)), count: 5)
     
     var body: some View {
         VStack {
@@ -32,7 +32,7 @@ struct FavoritesView: View {
                 .fontWeight(.bold)
                 .foregroundColor(.yellow)
             
-            LazyVGrid(columns: fixedColumns) {
+            LazyVGrid(columns: flexibleColumns) {
                 ForEach(0..<5) { index in
                     Text("Index: \(index)")
                 }
