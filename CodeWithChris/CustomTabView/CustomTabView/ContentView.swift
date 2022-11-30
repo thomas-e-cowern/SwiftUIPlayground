@@ -7,7 +7,15 @@
 
 import SwiftUI
 
+struct TabInfo {
+    var icon: String
+    var name: String
+}
+
 struct ContentView: View {
+    
+    var tabIcons = ["person", "envelope", "magnifyingglass", "star", "person.fill"]
+    
     var body: some View {
         GeometryReader  { geo in
             VStack {
@@ -26,13 +34,13 @@ struct ContentView: View {
                     .stroke(.gray)
                     HStack (spacing: 0) {
                         Spacer()
-                        ForEach(0..<5, id:\.self) { _ in
+                        ForEach(0..<5, id:\.self) { index in
                             VStack (spacing: 5) {
                                 Button {
                                     print("Clicked")
                                 } label: {
                                     VStack {
-                                        Image(systemName: "magnifyingglass")
+                                        Image(systemName: tabIcons[index])
                                             .padding(.bottom, 4)
                                         Text("Search")
                                             .font(.caption)
@@ -41,12 +49,12 @@ struct ContentView: View {
                                 }
                             }
                             .padding(.vertical)
-                            .frame(width: (geo.size.width - 40)/5, height: 70)
+                            .frame(width: (geo.size.width - 40)/5, height: 60)
                         }
                         Spacer()
                     }
                 }
-                .frame(height: 80)
+                .frame(height: 70)
             }
 //            .ignoresSafeArea(edges: .bottom)
         }
