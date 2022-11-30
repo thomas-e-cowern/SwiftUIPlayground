@@ -16,19 +16,21 @@ struct EmailView: View {
             // Contnet
             VStack {
                 Spacer()
-                ZStack {
+                ZStack (alignment: .leading) {
 
                     Rectangle()
                         .foregroundColor(.white)
                         .frame(height: 80)
                     
-                    VStack {
-                        Text("Headline")
+                    VStack (alignment: .leading) {
+                        Text("TheLlast James Bond Moview")
                             .font(.headline)
-                        Text("Caption")
+                        Text("The one where James Bond is killled by a missle")
                             .font(.caption)
                     }
-            }
+                    .padding(.horizontal)
+                }
+                
             }
         }
         .frame(height: 500)
