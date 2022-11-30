@@ -25,7 +25,7 @@ struct ContentView: View {
                             Button {
                                 print("Clicked")
                             } label: {
-                                HStack {
+                                VStack {
                                     Image(systemName: "magnifyingglass")
                                     Text("Search")
                                         .font(.caption)
