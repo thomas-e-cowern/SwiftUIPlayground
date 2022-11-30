@@ -27,6 +27,7 @@ struct ContentView: View {
                             } label: {
                                 VStack {
                                     Image(systemName: "magnifyingglass")
+                                        .padding(.bottom, 4)
                                     Text("Search")
                                         .font(.caption)
                                 }
