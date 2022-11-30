@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  CustomFont
+//  CustomTabView
 //
-//  Created by Thomas Cowern on 11/27/22.
+//  Created by Thomas Cowern on 11/29/22.
 //
 
 import SwiftUI
@@ -14,15 +14,8 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
-                .font(.custom("Rubik Microbe", size: 32))
         }
         .padding()
-    }
-    
-    init() {
-        for familyName in UIFont.familyNames {
-            print(familyName)
-        }
     }
 }
 
