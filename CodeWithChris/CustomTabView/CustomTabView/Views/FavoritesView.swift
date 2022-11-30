@@ -9,13 +9,11 @@ import SwiftUI
 
 struct FavoritesView: View {
     
-    var columns = [GridItem(.fixed(100), spacing: 5, alignment: .center),
-                   GridItem(.fixed(100), spacing: 5, alignment: .center),
-                   GridItem(.fixed(100), spacing: 5, alignment: .center)]
+    var columns = Array(repeating: GridItem(.fixed(100), spacing: 5, alignment: .center), count: 2)
     
     var body: some View {
         LazyVGrid(columns: columns) {
-            ForEach(0..<5) { index in
+            ForEach(0..<10) { index in
                 Text("Index: \(index)")
             }
         }
