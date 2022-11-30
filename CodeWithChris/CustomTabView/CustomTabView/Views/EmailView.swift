@@ -16,9 +16,19 @@ struct EmailView: View {
             // Contnet
             VStack {
                 Spacer()
-                Rectangle()
-                    .foregroundColor(.white)
-                    .frame(height: 80)
+                ZStack {
+
+                    Rectangle()
+                        .foregroundColor(.white)
+                        .frame(height: 80)
+                    
+                    VStack {
+                        Text("Headline")
+                            .font(.headline)
+                        Text("Caption")
+                            .font(.caption)
+                    }
+            }
             }
         }
         .frame(height: 500)
