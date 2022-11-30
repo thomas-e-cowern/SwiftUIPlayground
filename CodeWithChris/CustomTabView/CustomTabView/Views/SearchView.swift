@@ -18,6 +18,7 @@ struct SearchView: View {
             }
         }
         .tabViewStyle(.page)
+        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
     }
 }
 
