@@ -40,6 +40,18 @@ struct FavoritesView: View {
                 }
             }
             .padding(.bottom, 20)
+            
+            Text("Adaptable Columns")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.mint)
+            
+            LazyVGrid(columns: adaptableColumns) {
+                ForEach(0..<5) { index in
+                    Text("Index: \(index)")
+                }
+            }
+            .padding(.bottom, 20)
         }
     }
 }
