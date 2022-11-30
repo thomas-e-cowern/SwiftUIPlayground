@@ -8,12 +8,19 @@
 import SwiftUI
 
 struct SettingView: View {
+    
+    var items = ["cat", "dog", "mouse", "bird", "lizard", "tiger", "lion", "shark"]
+    
     var body: some View {
         
         ScrollView {
-            
+            List(items, id:\.self) { item in
+                Text(item)
+                    .foregroundColor(.blue)
+                    .font(.title)
+            }
+            .listStyle(.plain)
         }
-        
     }
 }
 
