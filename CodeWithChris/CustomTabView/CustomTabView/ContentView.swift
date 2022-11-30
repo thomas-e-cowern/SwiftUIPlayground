@@ -7,6 +7,14 @@
 
 import SwiftUI
 
+enum Tab {
+    case Home
+    case Email
+    case Search
+    case Favorites
+    case Settings
+}
+
 struct TabInfo {
     var icon: String
     var name: String
