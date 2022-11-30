@@ -16,6 +16,7 @@ enum Tab {
 }
 
 struct TabInfo {
+    var view: Tab
     var icon: String
     var name: String
 }
