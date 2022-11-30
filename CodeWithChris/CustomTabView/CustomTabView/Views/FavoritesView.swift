@@ -13,6 +13,8 @@ struct FavoritesView: View {
     
     var flexibleColumns = Array(repeating: GridItem(.flexible(minimum: 0)), count: 5)
     
+    var adaptableColumns = Array(repeating: GridItem(.adaptive(minimum: 0)), count: 4)
+    
     var body: some View {
         VStack {
             Text("Fixed Columns")
