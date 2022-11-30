@@ -11,6 +11,11 @@
 		4D82DD3D2936DF7A00F1F7BA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD3C2936DF7A00F1F7BA /* ContentView.swift */; };
 		4D82DD3F2936DF7D00F1F7BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D82DD3E2936DF7D00F1F7BA /* Assets.xcassets */; };
 		4D82DD422936DF7D00F1F7BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D82DD412936DF7D00F1F7BA /* Preview Assets.xcassets */; };
+		4D82DD4A2936ECE400F1F7BA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD492936ECE400F1F7BA /* HomeView.swift */; };
+		4D82DD4C2936ECFD00F1F7BA /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD4B2936ECFD00F1F7BA /* EmailView.swift */; };
+		4D82DD4E2936ED0F00F1F7BA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD4D2936ED0F00F1F7BA /* SearchView.swift */; };
+		4D82DD502936ED2300F1F7BA /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD4F2936ED2300F1F7BA /* FavoritesView.swift */; };
+		4D82DD522936ED3700F1F7BA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD512936ED3700F1F7BA /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		4D82DD3C2936DF7A00F1F7BA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D82DD3E2936DF7D00F1F7BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D82DD412936DF7D00F1F7BA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D82DD492936ECE400F1F7BA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4D82DD4B2936ECFD00F1F7BA /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
+		4D82DD4D2936ED0F00F1F7BA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		4D82DD4F2936ED2300F1F7BA /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		4D82DD512936ED3700F1F7BA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,7 @@
 		4D82DD392936DF7A00F1F7BA /* CustomTabView */ = {
 			isa = PBXGroup;
 			children = (
+				4D82DD482936ECCF00F1F7BA /* Views */,
 				4D82DD3A2936DF7A00F1F7BA /* CustomTabViewApp.swift */,
 				4D82DD3C2936DF7A00F1F7BA /* ContentView.swift */,
 				4D82DD3E2936DF7D00F1F7BA /* Assets.xcassets */,
@@ -65,6 +76,18 @@
 				4D82DD412936DF7D00F1F7BA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D82DD482936ECCF00F1F7BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D82DD492936ECE400F1F7BA /* HomeView.swift */,
+				4D82DD4B2936ECFD00F1F7BA /* EmailView.swift */,
+				4D82DD4D2936ED0F00F1F7BA /* SearchView.swift */,
+				4D82DD4F2936ED2300F1F7BA /* FavoritesView.swift */,
+				4D82DD512936ED3700F1F7BA /* SettingView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +160,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D82DD4E2936ED0F00F1F7BA /* SearchView.swift in Sources */,
+				4D82DD4A2936ECE400F1F7BA /* HomeView.swift in Sources */,
+				4D82DD502936ED2300F1F7BA /* FavoritesView.swift in Sources */,
+				4D82DD522936ED3700F1F7BA /* SettingView.swift in Sources */,
+				4D82DD4C2936ECFD00F1F7BA /* EmailView.swift in Sources */,
 				4D82DD3D2936DF7A00F1F7BA /* ContentView.swift in Sources */,
 				4D82DD3B2936DF7A00F1F7BA /* CustomTabViewApp.swift in Sources */,
 			);
