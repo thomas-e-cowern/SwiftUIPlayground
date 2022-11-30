@@ -46,10 +46,6 @@ struct ContentView: View {
                 SettingView()
             }
             VStack {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                Text("Hello, world!")
                 
                 Spacer()
                 
@@ -72,7 +68,7 @@ struct ContentView: View {
                                         Text(tab.name)
                                             .font(.caption)
                                     }
-                                    .foregroundColor(.gray)
+                                    .foregroundColor(tab.view == selectedTab ? .blue : .gray)
                                 }
                             }
                             .padding(.vertical)
