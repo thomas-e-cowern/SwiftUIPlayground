@@ -13,14 +13,14 @@ struct SettingView: View {
     
     var body: some View {
         
-        ScrollView {
-            List(items, id:\.self) { item in
-                Text(item)
-                    .foregroundColor(.blue)
-                    .font(.title)
-            }
-            .listStyle(.plain)
+
+        List(items, id:\.self) { item in
+            Text(item)
+                .foregroundColor(.blue)
+                .font(.title)
         }
+        .listStyle(.plain)
+
     }
 }
 
