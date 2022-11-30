@@ -15,10 +15,15 @@ struct EmailView: View {
             
             // Contnet
             VStack {
-                
+                Spacer()
+                Rectangle()
+                    .foregroundColor(.white)
+                    .frame(height: 80)
             }
         }
+        .frame(height: 500)
         .cornerRadius(15)
+        .shadow(radius: 10)
         .padding()
     }
 }
