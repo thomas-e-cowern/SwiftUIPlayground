@@ -23,6 +23,8 @@ struct TabInfo {
 
 struct ContentView: View {
     
+    @State var tabs = [TabInfo]()
+    
     var tabIcons = ["person", "envelope", "magnifyingglass", "star", "person.fill"]
     
     var body: some View {
@@ -67,6 +69,16 @@ struct ContentView: View {
             }
 //            .ignoresSafeArea(edges: .bottom)
         }
+        .onAppear {
+            // Create tabs
+            var newTabs = [TabInfo]()
+            newTabs.append(TabInfo(view: Tab.Home, icon: "person", name: "Home"))
+            newTabs.append(TabInfo(view: Tab.Email, icon: "envelope", name: "Email"))
+            newTabs.append(TabInfo(view: Tab.Search, icon: "magnifyingglass", name: "Search"))
+            newTabs.append(TabInfo(view: Tab.Favorites, icon: "star", name: "Favorites"))
+            newTabs.append(TabInfo(view: Tab.Settings, icon: "person.fill", name: "Settings"))
+        }
+        
     }
 }
 
