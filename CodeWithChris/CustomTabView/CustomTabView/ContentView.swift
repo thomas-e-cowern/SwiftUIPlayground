@@ -22,9 +22,16 @@ struct ContentView: View {
                     Spacer()
                     ForEach(0..<5, id:\.self) { _ in
                         VStack (spacing: 5) {
-                            Image(systemName: "magnifyingglass")
-                            Text("Search")
-                                .font(.caption)
+                            Button {
+                                print("Clicked")
+                            } label: {
+                                HStack {
+                                    Image(systemName: "magnifyingglass")
+                                    Text("Search")
+                                        .font(.caption)
+                                }
+                                
+                            }
                         }
                         .padding(.vertical)
                         .frame(width: (geo.size.width - 40)/5)
