@@ -9,7 +9,17 @@ import SwiftUI
 
 struct EmailView: View {
     var body: some View {
-        Text("Email View")
+        ZStack {
+            Rectangle()
+                .foregroundColor(.green)
+            
+            // Contnet
+            VStack {
+                
+            }
+        }
+        .cornerRadius(15)
+        .padding()
     }
 }
 
