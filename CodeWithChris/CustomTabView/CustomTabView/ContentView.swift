@@ -25,11 +25,21 @@ struct TabInfo: Identifiable {
 struct ContentView: View {
     
     @State var tabs = [TabInfo]()
+    @State var selectedTab = Tab.Home
     
     var tabIcons = ["person", "envelope", "magnifyingglass", "star", "person.fill"]
     
     var body: some View {
         GeometryReader  { geo in
+            
+            
+            switch selectedTab {
+            case Tab.Home:
+            case Tab.Email:
+            case Tab.Search
+            case Tab.Favorites
+            case Tab.Settings
+            }
             VStack {
                 Image(systemName: "globe")
                     .imageScale(.large)
@@ -49,7 +59,7 @@ struct ContentView: View {
                         ForEach(tabs) { tab in
                             VStack (spacing: 5) {
                                 Button {
-                                    print("Clicked")
+                                    self.selectedTab = tab.view
                                 } label: {
                                     VStack {
                                         Image(systemName: tab.icon)
