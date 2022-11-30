@@ -15,7 +15,8 @@ enum Tab {
     case Settings
 }
 
-struct TabInfo {
+struct TabInfo: Identifiable {
+    var id = UUID()
     var view: Tab
     var icon: String
     var name: String
@@ -45,15 +46,15 @@ struct ContentView: View {
                     .stroke(.gray)
                     HStack (spacing: 0) {
                         Spacer()
-                        ForEach(0..<5, id:\.self) { index in
+                        ForEach(tabs) { tab in
                             VStack (spacing: 5) {
                                 Button {
                                     print("Clicked")
                                 } label: {
                                     VStack {
-                                        Image(systemName: tabIcons[index])
+                                        Image(systemName: tab.icon)
                                             .padding(.bottom, 4)
-                                        Text("Search")
+                                        Text(tab.name)
                                             .font(.caption)
                                     }
                                     .foregroundColor(.gray)
@@ -77,6 +78,8 @@ struct ContentView: View {
             newTabs.append(TabInfo(view: Tab.Search, icon: "magnifyingglass", name: "Search"))
             newTabs.append(TabInfo(view: Tab.Favorites, icon: "star", name: "Favorites"))
             newTabs.append(TabInfo(view: Tab.Settings, icon: "person.fill", name: "Settings"))
+            
+            self.tabs = newTabs
         }
         
     }
