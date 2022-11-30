@@ -18,27 +18,35 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                HStack (spacing: 0) {
-                    Spacer()
-                    ForEach(0..<5, id:\.self) { _ in
-                        VStack (spacing: 5) {
-                            Button {
-                                print("Clicked")
-                            } label: {
-                                VStack {
-                                    Image(systemName: "magnifyingglass")
-                                        .padding(.bottom, 4)
-                                    Text("Search")
-                                        .font(.caption)
+                VStack {
+                    Path({ path in
+                        path.move(to: CGPoint(x:0, y:0))
+                        path.addLine(to: CGPoint(x:geo.size.width, y:0))
+                    })
+                    .stroke(.gray)
+                    HStack (spacing: 0) {
+                        Spacer()
+                        ForEach(0..<5, id:\.self) { _ in
+                            VStack (spacing: 5) {
+                                Button {
+                                    print("Clicked")
+                                } label: {
+                                    VStack {
+                                        Image(systemName: "magnifyingglass")
+                                            .padding(.bottom, 4)
+                                        Text("Search")
+                                            .font(.caption)
+                                    }
+                                    .foregroundColor(.gray)
                                 }
-                                
                             }
+                            .padding(.vertical)
+                            .frame(width: (geo.size.width - 40)/5, height: 70)
                         }
-                        .padding(.vertical)
-                        .frame(width: (geo.size.width - 40)/5)
+                        Spacer()
                     }
-                    Spacer()
                 }
+                .frame(height: 80)
             }
 //            .ignoresSafeArea(edges: .bottom)
         }
