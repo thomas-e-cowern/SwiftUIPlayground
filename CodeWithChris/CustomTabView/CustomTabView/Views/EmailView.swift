@@ -19,11 +19,16 @@ struct EmailView: View {
                     .scaledToFit()
                     .offset(y: -40)
                 
+                Circle()
+                    .frame(width: 100)
+                    .offset(x: (geo.size.width-60)/2, y: (geo.size.height/5) - 350)
+                    .foregroundColor(.teal)
+                
                 // Contnet
                 VStack {
                     HStack {
                         Spacer()
-                        Text("James Bond Dies")
+                        Text("Death")
                             .foregroundColor(.red)
                             .fontWeight(.bold)
                     }
