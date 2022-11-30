@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    
+    var columns = [GridItem(.fixed(40), spacing: 5, alignment: .center),
+                   GridItem(.fixed(40), spacing: 5, alignment: .center),
+                   GridItem(.fixed(40), spacing: 5, alignment: .center)]
+    
     var body: some View {
-        Text("Favorites View")
+        LazyVGrid(columns: columns) {
+            Text("Placeholder One")
+            Text("Placeholder Two")
+        }
     }
 }
 
