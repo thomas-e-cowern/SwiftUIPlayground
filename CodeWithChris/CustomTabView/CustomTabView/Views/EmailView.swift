@@ -20,6 +20,16 @@ struct EmailView: View {
             
             // Contnet
             VStack {
+                HStack {
+                    Spacer()
+                    Text("James Bond Dies")
+                        .foregroundColor(.red)
+                        .fontWeight(.bold)
+                }
+                .padding(.trailing, 5)
+                .padding(.top, 5)
+                
+                
                 Spacer()
                 ZStack (alignment: .leading) {
 
