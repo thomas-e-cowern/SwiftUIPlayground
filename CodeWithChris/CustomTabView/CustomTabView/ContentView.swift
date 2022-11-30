@@ -40,7 +40,7 @@ struct ContentView: View {
                     Spacer()
                 }
             }
-            .ignoresSafeArea(edges: .bottom)
+//            .ignoresSafeArea(edges: .bottom)
         }
     }
 }
