@@ -9,7 +9,11 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        Text("Home View")
+        HStack (alignment: .center) {
+            Spacer()
+            Text("Home View")
+            Spacer()
+        }
     }
 }
 
