@@ -13,6 +13,11 @@ struct EmailView: View {
             Rectangle()
                 .foregroundColor(.green)
             
+            Image("james-bond-no-time-to-die")
+                .resizable()
+                .scaledToFit()
+                .offset(y: -40)
+            
             // Contnet
             VStack {
                 Spacer()
@@ -23,7 +28,7 @@ struct EmailView: View {
                         .frame(height: 80)
                     
                     VStack (alignment: .leading) {
-                        Text("TheLlast James Bond Moview")
+                        Text("TheLlast James Bond Movie")
                             .font(.headline)
                         Text("The one where James Bond is killled by a missle")
                             .font(.caption)
@@ -33,7 +38,7 @@ struct EmailView: View {
                 
             }
         }
-        .frame(height: 500)
+        .frame(height: 420)
         .cornerRadius(15)
         .shadow(radius: 10)
         .padding()
