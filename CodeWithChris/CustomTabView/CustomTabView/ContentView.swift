@@ -14,8 +14,20 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
             Text("Hello, world!")
+            
+            Spacer()
+            
+            HStack {
+                
+                VStack (spacing: 5) {
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
+                        .font(.caption)
+                }
+                .padding(.vertical)
+            }
         }
-        .padding()
+        .ignoresSafeArea(edges: .bottom)
     }
 }
 
