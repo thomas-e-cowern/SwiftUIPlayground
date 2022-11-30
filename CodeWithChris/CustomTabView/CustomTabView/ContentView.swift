@@ -19,12 +19,14 @@ struct ContentView: View {
             
             HStack {
                 
-                VStack (spacing: 5) {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                        .font(.caption)
+                ForEach(0..<5, id:\.self) { _ in
+                    VStack (spacing: 5) {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                            .font(.caption)
+                    }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
             }
         }
         .ignoresSafeArea(edges: .bottom)
