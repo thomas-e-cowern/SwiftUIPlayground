@@ -26,12 +26,9 @@ struct ContentView: View {
     
     @State var tabs = [TabInfo]()
     @State var selectedTab = Tab.Home
-    
-    var tabIcons = ["person", "envelope", "magnifyingglass", "star", "person.fill"]
-    
+        
     var body: some View {
         GeometryReader  { geo in
-            
             
             switch selectedTab {
             case Tab.Home:
@@ -58,28 +55,14 @@ struct ContentView: View {
                     HStack (spacing: 0) {
                         Spacer()
                         ForEach(tabs) { tab in
-                            VStack (spacing: 5) {
-                                Button {
-                                    self.selectedTab = tab.view
-                                } label: {
-                                    VStack {
-                                        Image(systemName: tab.icon)
-                                            .padding(.bottom, 4)
-                                        Text(tab.name)
-                                            .font(.caption)
-                                    }
-                                    .foregroundColor(tab.view == selectedTab ? .blue : .gray)
-                                }
-                            }
-                            .padding(.vertical)
-                            .frame(width: (geo.size.width - 40)/5, height: 60)
+                            CustomTabBarButton(selectedTab: $selectedTab, tab: tab)
+                                .frame(width: (geo.size.width - 40)/5)
                         }
                         Spacer()
                     }
                 }
                 .frame(height: 70)
             }
-//            .ignoresSafeArea(edges: .bottom)
         }
         .onAppear {
             // Create tabs
@@ -92,7 +75,6 @@ struct ContentView: View {
             
             self.tabs = newTabs
         }
-        
     }
 }
 

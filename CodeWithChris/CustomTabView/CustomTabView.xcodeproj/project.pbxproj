@@ -16,6 +16,7 @@
 		4D82DD4E2936ED0F00F1F7BA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD4D2936ED0F00F1F7BA /* SearchView.swift */; };
 		4D82DD502936ED2300F1F7BA /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD4F2936ED2300F1F7BA /* FavoritesView.swift */; };
 		4D82DD522936ED3700F1F7BA /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD512936ED3700F1F7BA /* SettingView.swift */; };
+		4D82DD542936EFA300F1F7BA /* CustomTabBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D82DD532936EFA300F1F7BA /* CustomTabBarButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		4D82DD4D2936ED0F00F1F7BA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		4D82DD4F2936ED2300F1F7BA /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		4D82DD512936ED3700F1F7BA /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		4D82DD532936EFA300F1F7BA /* CustomTabBarButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				4D82DD3C2936DF7A00F1F7BA /* ContentView.swift */,
 				4D82DD3E2936DF7D00F1F7BA /* Assets.xcassets */,
 				4D82DD402936DF7D00F1F7BA /* Preview Content */,
+				4D82DD532936EFA300F1F7BA /* CustomTabBarButton.swift */,
 			);
 			path = CustomTabView;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				4D82DD522936ED3700F1F7BA /* SettingView.swift in Sources */,
 				4D82DD4C2936ECFD00F1F7BA /* EmailView.swift in Sources */,
 				4D82DD3D2936DF7A00F1F7BA /* ContentView.swift in Sources */,
+				4D82DD542936EFA300F1F7BA /* CustomTabBarButton.swift in Sources */,
 				4D82DD3B2936DF7A00F1F7BA /* CustomTabViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
