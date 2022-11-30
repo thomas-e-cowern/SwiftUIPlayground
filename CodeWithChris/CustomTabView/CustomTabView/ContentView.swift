@@ -35,10 +35,15 @@ struct ContentView: View {
             
             switch selectedTab {
             case Tab.Home:
+                HomeView()
             case Tab.Email:
-            case Tab.Search
-            case Tab.Favorites
-            case Tab.Settings
+                EmailView()
+            case Tab.Search:
+                SearchView()
+            case Tab.Favorites:
+                FavoritesView()
+            case Tab.Settings:
+                SettingView()
             }
             VStack {
                 Image(systemName: "globe")
