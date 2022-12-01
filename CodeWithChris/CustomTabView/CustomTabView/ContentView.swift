@@ -48,8 +48,8 @@ struct ContentView: View {
                 
                 VStack {
                     Path({ path in
-                        path.move(to: CGPoint(x:0, y:0))
-                        path.addLine(to: CGPoint(x:geo.size.width, y:0))
+                        path.move(to: CGPoint(x: 0, y: 0))
+                        path.addLine(to: CGPoint(x: geo.size.width, y: 0))
                     })
                     .stroke(.gray)
                     HStack (spacing: 0) {
@@ -62,6 +62,7 @@ struct ContentView: View {
                     }
                 }
                 .frame(height: 70)
+                .background(.white)
             }
         }
         .onAppear {

@@ -71,6 +71,9 @@ struct FavoritesView: View {
                         }
                     }
                 }
+                
+                Spacer()
+                    .frame(height: 70)
             }
         }
     }
