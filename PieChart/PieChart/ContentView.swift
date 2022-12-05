@@ -62,6 +62,15 @@ struct PieChart: View {
         
         pieSegments = segments
     }
+    
+    var body: some View {
+        ZStack {
+            ForEach(pieSegments) { segment in
+                segment
+                    .fill(segment.data.color)
+            }
+        }
+    }
 }
 
 struct ContentView: View {
