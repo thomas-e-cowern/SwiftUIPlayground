@@ -32,7 +32,7 @@ struct PieSegment: Shape, Identifiable {
     var startAngle: Double
     var amount: Double
     
-    var animatablePair: AnimatablePair<Double, Double> {
+    var animatableData: AnimatablePair<Double, Double> {
         get { AnimatablePair(startAngle, amount) }
         set {
             startAngle = newValue.first
