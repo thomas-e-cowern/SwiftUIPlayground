@@ -12,6 +12,8 @@
 		4D9B4859293DEE7800E677A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B4858293DEE7800E677A5 /* Assets.xcassets */; };
 		4D9B485C293DEE7800E677A5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D9B485B293DEE7800E677A5 /* Preview Assets.xcassets */; };
 		4D9B4865293DF8C200E677A5 /* DataPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B4864293DF8C200E677A5 /* DataPoint.swift */; };
+		4D9B4867293DF93000E677A5 /* PieSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B4866293DF93000E677A5 /* PieSegment.swift */; };
+		4D9B4869293DF96000E677A5 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9B4868293DF96000E677A5 /* PieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		4D9B4858293DEE7800E677A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D9B485B293DEE7800E677A5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D9B4864293DF8C200E677A5 /* DataPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPoint.swift; sourceTree = "<group>"; };
+		4D9B4866293DF93000E677A5 /* PieSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieSegment.swift; sourceTree = "<group>"; };
+		4D9B4868293DF96000E677A5 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				4D9B4864293DF8C200E677A5 /* DataPoint.swift */,
+				4D9B4866293DF93000E677A5 /* PieSegment.swift */,
+				4D9B4868293DF96000E677A5 /* PieChart.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -156,9 +162,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D9B4867293DF93000E677A5 /* PieSegment.swift in Sources */,
 				4D9B4865293DF8C200E677A5 /* DataPoint.swift in Sources */,
 				4D9B4857293DEE7600E677A5 /* ContentView.swift in Sources */,
 				4D9B4855293DEE7600E677A5 /* PieChartApp.swift in Sources */,
+				4D9B4869293DF96000E677A5 /* PieChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
