@@ -24,7 +24,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        PieChart(dataPoints: data, strokeWidth: 50)
+        PieChart(dataPoints: data)
             .onTapGesture {
                 withAnimation {
                     redAmount = Double.random(in: 10...100)
