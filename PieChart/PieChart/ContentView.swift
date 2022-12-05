@@ -73,6 +73,15 @@ struct PieChart: View {
         pieSegments = segments
     }
     
+    @ViewBuilder var mask : some View {
+        if let strokeWidth = strokeWidth {
+            Circle()
+                .strokeBorder(Color.white, lineWidth: CGFloat(strokeWidth))
+        } else {
+            Circle()
+        }
+    }
+    
     var body: some View {
         ZStack {
             ForEach(pieSegments) { segment in
