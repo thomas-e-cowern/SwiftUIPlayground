@@ -45,6 +45,25 @@ struct PieSegment: Shape, Identifiable {
     }
 }
 
+struct PieChart: View {
+    let pieSegments: [PieSegment]
+    
+    init(dataPoints: [DataPoint]) {
+        var segments = [PieSegment]()
+        let total = dataPoints.reduce(0) { $0 + $1.value }
+        var startAngle = Double.pi / 2
+        
+        for data in dataPoints {
+            let amount = .pi * 2 * (data.value / total)
+            let segment = PieSegment(data: data, startAngle: startAngle, amount: amount)
+            segments.append(segment)
+            startAngle += amount
+        }
+        
+        pieSegments = segments
+    }
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
