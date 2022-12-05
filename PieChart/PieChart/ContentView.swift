@@ -89,6 +89,7 @@ struct PieChart: View {
                     .fill(segment.data.color)
             }
         }
+        .mask(mask)
     }
 }
 
@@ -109,7 +110,7 @@ struct ContentView: View {
     }
     
     var body: some View {
-        PieChart(dataPoints: data)
+        PieChart(dataPoints: data, strokeWidth: 50)
             .onTapGesture {
                 withAnimation {
                     redAmount = Double.random(in: 10...100)
