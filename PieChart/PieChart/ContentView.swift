@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct DataPoint: Identifiable {
+    var id: Int
+    var value: Double
+    var color: Color
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
