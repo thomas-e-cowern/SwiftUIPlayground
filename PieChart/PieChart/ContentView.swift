@@ -26,6 +26,12 @@ struct DataPoint: Identifiable {
 }
 
 struct PieSegment: Shape, Identifiable {
+    
+    let data: DataPoint
+    var id: Int { data.id }
+    var startAngle: Double
+    var amount: Double
+    
     func path(in rect: CGRect) -> Path {
         let radius = min(rect.width, rect.height) / 2
         let center = CGPoint(x: rect.width / 2, y: rect.height / 2)
@@ -37,11 +43,6 @@ struct PieSegment: Shape, Identifiable {
         
         return path
     }
-    
-    let data: DataPoint
-    var id: Int { data.id }
-    var startAngle: Double
-    var amount: Double
 }
 
 struct ContentView: View {
