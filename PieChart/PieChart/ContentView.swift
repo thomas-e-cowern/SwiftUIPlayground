@@ -55,8 +55,10 @@ struct PieSegment: Shape, Identifiable {
 
 struct PieChart: View {
     let pieSegments: [PieSegment]
+    let strokeWidth: Double?
     
-    init(dataPoints: [DataPoint]) {
+    init(dataPoints: [DataPoint], strokeWidth: Double? = nil) {
+        self.strokeWidth = strokeWidth
         var segments = [PieSegment]()
         let total = dataPoints.reduce(0) { $0 + $1.value }
         var startAngle = Double.pi / 2
