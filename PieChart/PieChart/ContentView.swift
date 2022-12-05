@@ -25,6 +25,13 @@ struct DataPoint: Identifiable {
     }
 }
 
+struct PieSegment: Shape, Identifiable {
+    let data: DataPoint
+    var id: Int { data.id }
+    var startAngle: Double
+    var amount: Double
+}
+
 struct ContentView: View {
     var body: some View {
         VStack {
