@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var redAmount = Double.random(in: 10...100)
+    @State private var yellowAmount = Double.random(in: 10...100)
+    @State private var greenAmount = Double.random(in: 10...100)
+    @State private var blueAmount = Double.random(in: 10...100)
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
