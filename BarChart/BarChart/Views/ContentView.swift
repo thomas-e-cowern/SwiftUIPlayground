@@ -33,8 +33,6 @@ struct ContentView: View {
                     blueAmount = Double.random(in: 10...100)
                 }
             }
-            .scaleEffect(x: 1, y: CGFloat(data.value / maxValue), anchor: .bottom)
-            .background(Color.orange)
     }
 }
 
