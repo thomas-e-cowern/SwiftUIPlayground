@@ -24,13 +24,15 @@ struct ContentView: View {
     }
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        BarChart(dataPoints: data)
+            .onTapGesture {
+                withAnimation {
+                    redAmount = Double.random(in: 10...100)
+                    yellowAmount = Double.random(in: 10...100)
+                    greenAmount = Double.random(in: 10...100)
+                    blueAmount = Double.random(in: 10...100)
+                }
+            }
     }
 }
 
