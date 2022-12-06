@@ -58,7 +58,6 @@
 				4D958905293F3B3E00CFB7DD /* Models */,
 				4D958904293F3B3700CFB7DD /* Views */,
 				4D9588F6293F3AE400CFB7DD /* BarChartApp.swift */,
-				4D9588F8293F3AE400CFB7DD /* ContentView.swift */,
 				4D9588FA293F3AE800CFB7DD /* Assets.xcassets */,
 				4D9588FC293F3AE800CFB7DD /* Preview Content */,
 			);
@@ -76,6 +75,7 @@
 		4D958904293F3B3700CFB7DD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D9588F8293F3AE400CFB7DD /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
