@@ -20,6 +20,16 @@ struct BarChart: View {
     
     var body: some View {
         HStack {
+            
+            VStack {
+                ForEach((1...10).reversed(), id: \.self) { i in
+                    Text(String(Int(maxValue / 10 * Double(i))))
+                        .padding(.horizontal)
+                        .animation(nil)
+                    Spacer()
+                }
+            }
+            
             ForEach(dataPoints) { data in
                 VStack {
                     Rectangle()
