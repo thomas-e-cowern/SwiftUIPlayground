@@ -19,24 +19,32 @@ struct BarChart: View {
     }
     
     var body: some View {
-        HStack {
-            
+        ZStack {
             VStack {
-                ForEach((1...10).reversed(), id: \.self) { i in
-                    Text(String(Int(maxValue / 10 * Double(i))))
-                        .padding(.horizontal)
-                        .animation(nil)
+                ForEach(1...10, id: \.self) { _ in
+                    Divider()
                     Spacer()
                 }
             }
             
-            ForEach(dataPoints) { data in
+            HStack {
+                
                 VStack {
-                    Rectangle()
-                        .fill(data.color)
-                        .scaleEffect(y: CGFloat(data.value / maxValue), anchor: .bottom)
-                    Text(data.title)
-                        .bold()
+                    ForEach((1...10).reversed(), id: \.self) { i in
+                        Text(String(Int(maxValue / 10 * Double(i))))
+                            .padding(.horizontal)
+                        Spacer()
+                    }
+                }
+                
+                ForEach(dataPoints) { data in
+                    VStack {
+                        Rectangle()
+                            .fill(data.color)
+                            .scaleEffect(y: CGFloat(data.value / maxValue), anchor: .bottom)
+                        Text(data.title)
+                            .bold()
+                    }
                 }
             }
         }
