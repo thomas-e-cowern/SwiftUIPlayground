@@ -51,6 +51,8 @@
 		4D9588F5293F3AE400CFB7DD /* BarChart */ = {
 			isa = PBXGroup;
 			children = (
+				4D958905293F3B3E00CFB7DD /* Models */,
+				4D958904293F3B3700CFB7DD /* Views */,
 				4D9588F6293F3AE400CFB7DD /* BarChartApp.swift */,
 				4D9588F8293F3AE400CFB7DD /* ContentView.swift */,
 				4D9588FA293F3AE800CFB7DD /* Assets.xcassets */,
@@ -65,6 +67,20 @@
 				4D9588FD293F3AE800CFB7DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D958904293F3B3700CFB7DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4D958905293F3B3E00CFB7DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
