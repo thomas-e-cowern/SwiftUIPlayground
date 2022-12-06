@@ -23,7 +23,7 @@ struct BarChart: View {
             
             // Chart lines
             VStack {
-                ForEach(lineNumber, id: \.self) { _ in
+                ForEach(1...10, id: \.self) { _ in
                     Divider()
                     Spacer()
                 }
