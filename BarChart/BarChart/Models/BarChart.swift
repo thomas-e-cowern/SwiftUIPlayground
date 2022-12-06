@@ -13,20 +13,23 @@ struct BarChart: View {
 
     init(dataPoints: [DataPoint]) {
         self.dataPoints = dataPoints
-
+    
         let highestPoint = dataPoints.max { $0.value < $1.value }
         maxValue = highestPoint?.value ?? 1
     }
     
     var body: some View {
         ZStack {
+            
+            // Chart lines
             VStack {
-                ForEach(1...10, id: \.self) { _ in
+                ForEach(lineNumber, id: \.self) { _ in
                     Divider()
                     Spacer()
                 }
             }
             
+            // Chart values
             HStack {
                 
                 VStack {
@@ -37,6 +40,7 @@ struct BarChart: View {
                     }
                 }
                 
+                //  Chart bars
                 ForEach(dataPoints) { data in
                     VStack {
                         Rectangle()
