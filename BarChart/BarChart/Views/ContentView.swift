@@ -33,6 +33,7 @@ struct ContentView: View {
                     blueAmount = Double.random(in: 10...100)
                 }
             }
+            .padding()
     }
 }
 
