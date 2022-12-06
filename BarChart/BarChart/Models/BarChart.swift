@@ -21,13 +21,13 @@ struct BarChart: View {
     var body: some View {
         HStack {
             ForEach(dataPoints) { data in
-                Rectangle()
-                    .fill(data.color)
-                    .scaleEffect(y: CGFloat(data.value / maxValue))
-                    .overlay(
-                        Text(data.title)
-                            .bold()
-                    )
+                VStack {
+                    Rectangle()
+                        .fill(data.color)
+                        .scaleEffect(y: CGFloat(data.value / maxValue), anchor: .bottom)
+                    Text(data.title)
+                        .bold()
+                }
             }
         }
     }
