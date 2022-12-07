@@ -23,9 +23,27 @@ struct LineChartShape: Shape {
     
     func path(in rect: CGRect) -> Path {
         var path = Path()
-            let drawRect = rect.insetBy(dx: pointSize, dy: pointSize)
+        let drawRect = rect.insetBy(dx: pointSize, dy: pointSize)
 
-            // more code to come
+        let xMultiplier = drawRect.width / CGFloat(dataPoints.count - 1)
+        let yMultiplier = drawRect.height / CGFloat(maxValue)
+        
+        for (index, dataPoint) in dataPoints.enumerated() {
+            var x = xMultiplier * CGFloat(index)
+            var y = yMultiplier * CGFloat(dataPoint.value)
+
+            y = drawRect.height - y
+            
+            x += drawRect.minX
+            y += drawRect.minY
+            if index == 0 {
+                path.move(to: CGPoint(x: x, y: y))
+            } else {
+                path.addLine(to: CGPoint(x: x, y: y))
+            }
+        }
+        
+        return path
     }
     
 }
