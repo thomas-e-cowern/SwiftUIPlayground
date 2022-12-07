@@ -38,11 +38,20 @@ struct LineChartShape: Shape {
             
             x += drawRect.minX
             y += drawRect.minY
-            if index == 0 {
-                path.move(to: CGPoint(x: x, y: y))
+            
+            if  drawingLines {
+                if index == 0 {
+                    path.move(to: CGPoint(x: x, y: y))
+                } else {
+                    path.addLine(to: CGPoint(x: x, y: y))
+                }
             } else {
-                path.addLine(to: CGPoint(x: x, y: y))
+                x -= pointSize / 2
+                y -= pointSize / 2
+
+                path.addEllipse(in: CGRect(x: x, y: y, width: pointSize, height: pointSize))
             }
+            
         }
         
         return path
