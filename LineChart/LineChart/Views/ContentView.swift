@@ -12,14 +12,13 @@ struct ContentView: View {
     @State private var data = makeDataPoints()
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+        LineChart(dataPoints: data, lineColor: .blue, lineWidth: 5, pointSize: 5)
+            .frame(width: 300, height: 200)
+            .onTapGesture {
+                withAnimation {
+                    data = Self.makeDataPoints()
+                }
+            }    }
     
     static func makeDataPoints() -> [DataPoint] {
         var isGoingUp = true
