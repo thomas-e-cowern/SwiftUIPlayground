@@ -12,10 +12,12 @@ struct LineChartShape: Shape {
     let dataPoints: [DataPoint]
     let pointSize: CGFloat
     let maxValue: Double
+    let drawingLines: Bool
     
-    init(dataPoints: [DataPoint], pointSize: CGFloat) {
+    init(dataPoints: [DataPoint], pointSize: CGFloat, drawingLines: Bool) {
         self.dataPoints = dataPoints
         self.pointSize = pointSize
+        self.drawingLines = drawingLines
 
         let highestPoint = dataPoints.max { $0.value < $1.value }
         maxValue = highestPoint?.value ?? 1
