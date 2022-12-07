@@ -55,9 +55,9 @@
 		4DA3D07429408F4100DAC0FE /* LineChart */ = {
 			isa = PBXGroup;
 			children = (
+				4DA3D08829409C7800DAC0FE /* Views */,
 				4DA3D0832940932C00DAC0FE /* Models */,
 				4DA3D07529408F4100DAC0FE /* LineChartApp.swift */,
-				4DA3D07729408F4100DAC0FE /* ContentView.swift */,
 				4DA3D07929408F4500DAC0FE /* Assets.xcassets */,
 				4DA3D07B29408F4500DAC0FE /* Preview Content */,
 			);
@@ -79,6 +79,14 @@
 				4DA3D0862940950E00DAC0FE /* LineChartShape.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		4DA3D08829409C7800DAC0FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DA3D07729408F4100DAC0FE /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
