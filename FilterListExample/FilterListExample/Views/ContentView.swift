@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             NavigationView {
-                FilteringList(users, filterKeys: \.name) { user in
+                FilteringList(users, filterKeys: \.name, \.address) { user in
                     VStack(alignment: .leading) {
                         Text(user.name)
                             .font(.headline)
