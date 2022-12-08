@@ -28,14 +28,7 @@ struct FilteringList<T: Identifiable, Content: View>: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .padding(.horizontal)
 
-            List(filteredItems) { user in
-                VStack(alignment: .leading) {
-                    Text(user.name)
-                        .font(.headline)
-                    Text(user.address)
-                        .foregroundColor(.secondary)
-                }
-            }
+            List(filteredItems, rowContent: content)
             .onAppear(perform: applyFilter)
 
         }

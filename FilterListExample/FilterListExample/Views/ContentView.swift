@@ -14,7 +14,14 @@ struct ContentView: View {
     var body: some View {
         VStack {
             NavigationView {
-                
+                FilteringList(users, filterKeys: \.name) { user in
+                    VStack(alignment: .leading) {
+                        Text(user.name)
+                            .font(.headline)
+                        Text(user.address)
+                            .foregroundColor(.secondary)
+                    }
+                }
                 .navigationBarTitle("Address Book")
             }
         }
