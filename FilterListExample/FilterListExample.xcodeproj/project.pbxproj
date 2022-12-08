@@ -12,6 +12,7 @@
 		4DB314202941F27100EABC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB3141F2941F27100EABC7E /* Assets.xcassets */; };
 		4DB314232941F27100EABC7E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DB314222941F27100EABC7E /* Preview Assets.xcassets */; };
 		4DB3142A2941F36600EABC7E /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB314292941F36600EABC7E /* Bundle-Decodable.swift */; };
+		4DB3142C2941F3B500EABC7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB3142B2941F3B500EABC7E /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4DB3141F2941F27100EABC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DB314222941F27100EABC7E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4DB314292941F36600EABC7E /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		4DB3142B2941F3B500EABC7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				4DB3141F2941F27100EABC7E /* Assets.xcassets */,
 				4DB314212941F27100EABC7E /* Preview Content */,
 				4DB314292941F36600EABC7E /* Bundle-Decodable.swift */,
+				4DB3142B2941F3B500EABC7E /* User.swift */,
 			);
 			path = FilterListExample;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB3142C2941F3B500EABC7E /* User.swift in Sources */,
 				4DB3141E2941F26F00EABC7E /* ContentView.swift in Sources */,
 				4DB3141C2941F26F00EABC7E /* FilterListExampleApp.swift in Sources */,
 				4DB3142A2941F36600EABC7E /* Bundle-Decodable.swift in Sources */,
