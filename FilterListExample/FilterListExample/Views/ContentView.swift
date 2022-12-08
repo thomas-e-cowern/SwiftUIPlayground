@@ -17,7 +17,7 @@ struct ContentView: View {
         VStack {
             NavigationView {
                 VStack {
-                    TextField("Type to filter", text: $filterString)
+                    TextField("Type to filter", text: $filterString.onChange(applyFilter))
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding(.horizontal)
 
