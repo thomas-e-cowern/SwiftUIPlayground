@@ -29,11 +29,24 @@ struct ContentView: View {
                                 .foregroundColor(.secondary)
                         }
                     }
+                    .onAppear(perform: applyFilter)
+
                 }
                 .navigationBarTitle("Address Book")
             }
         }
         .padding()
+    }
+    
+    func applyFilter() {
+        let cleanedFilter = filterString.trimmingCharacters(in: .whitespacesAndNewlines)
+
+        if cleanedFilter.isEmpty {
+            filteredItems = users
+        } else {
+            filteredItems = users.filter { $0.name
+                    .localizedCaseInsensitiveContains(cleanedFilter) }
+        }
     }
 }
 
