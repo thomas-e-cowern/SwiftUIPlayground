@@ -8,12 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let users = Bundle.main.decode([User].self, from: "users.json")
+    @State private var filteredItems = [User]()
+    @State private var filterString = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            NavigationView {
+                VStack {
+                    TextField("Type to filter", text: $filterString)
+                        .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .padding(.horizontal)
+
+                    List(filteredItems) { user in
+                        VStack(alignment: .leading) {
+                            Text(user.name)
+                                .font(.headline)
+                            Text(user.address)
+                                .foregroundColor(.secondary)
+                        }
+                    }
+                }
+                .navigationBarTitle("Address Book")
+            }
         }
         .padding()
     }
