@@ -14,11 +14,13 @@ struct ContentView: View {
     var body: some View {
         VStack {
             NavigationView {
-                FilteringList(users, filterKeys: \.name, \.address) { user in
+                FilteringList(users, filterKeys: \.name, \.address, \.company) { user in
                     VStack(alignment: .leading) {
                         Text(user.name)
                             .font(.headline)
                         Text(user.address)
+                            .foregroundColor(.secondary)
+                        Text(user.company)
                             .foregroundColor(.secondary)
                     }
                 }
