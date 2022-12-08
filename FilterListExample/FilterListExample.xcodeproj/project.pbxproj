@@ -15,6 +15,7 @@
 		4DB3142C2941F3B500EABC7E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB3142B2941F3B500EABC7E /* User.swift */; };
 		4DB3142E2941F41F00EABC7E /* users.json in Resources */ = {isa = PBXBuildFile; fileRef = 4DB3142D2941F41F00EABC7E /* users.json */; };
 		4DB314342941F60A00EABC7E /* Binding+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB314332941F60A00EABC7E /* Binding+Extensions.swift */; };
+		4DB314362941F74500EABC7E /* FilteringList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB314352941F74400EABC7E /* FilteringList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		4DB3142B2941F3B500EABC7E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		4DB3142D2941F41F00EABC7E /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
 		4DB314332941F60A00EABC7E /* Binding+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binding+Extensions.swift"; sourceTree = "<group>"; };
+		4DB314352941F74400EABC7E /* FilteringList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteringList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				4DB3141F2941F27100EABC7E /* Assets.xcassets */,
 				4DB314212941F27100EABC7E /* Preview Content */,
 				4DB3142D2941F41F00EABC7E /* users.json */,
+				4DB314352941F74400EABC7E /* FilteringList.swift */,
 			);
 			path = FilterListExample;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DB314362941F74500EABC7E /* FilteringList.swift in Sources */,
 				4DB314342941F60A00EABC7E /* Binding+Extensions.swift in Sources */,
 				4DB3142C2941F3B500EABC7E /* User.swift in Sources */,
 				4DB3141E2941F26F00EABC7E /* ContentView.swift in Sources */,
