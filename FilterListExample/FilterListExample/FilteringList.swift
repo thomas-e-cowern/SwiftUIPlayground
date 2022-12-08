@@ -38,9 +38,10 @@ struct FilteringList<T: Identifiable, Content: View>: View {
         let cleanedFilter = filterString.trimmingCharacters(in: .whitespacesAndNewlines)
 
         if cleanedFilter.isEmpty {
-            filteredItems = users
+            filteredItems = listItems
         } else {
-            filteredItems = users.filter { $0.name
+            filteredItems = listItems.filter { element in
+                element[keyPath: filterKeyPaths]
                     .localizedCaseInsensitiveContains(cleanedFilter) }
         }
     }
