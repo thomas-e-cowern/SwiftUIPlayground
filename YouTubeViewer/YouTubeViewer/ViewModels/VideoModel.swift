@@ -44,7 +44,9 @@ class VideoModel: ObservableObject {
             }
             
             // Update UI with videos
-            
+            if let items = response.value?.items {
+                self.videos = items
+            }
             
         }
     }
