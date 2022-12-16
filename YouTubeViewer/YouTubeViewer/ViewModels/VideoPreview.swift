@@ -29,12 +29,21 @@ class VideoPreview: ObservableObject {
         // download image data
         guard video.thumbnail != "" else { return }
         
+        // check cache befor download
+        if let cachedData = CacheManager.getVideoCache(video.thumbnail) {
+            thumbnailData = cachedData
+            return
+        }
+        
         // get url from thumbnail
         guard let url = URL(string: video.thumbnail) else { return }
         
         // create request
         AF.request(url).validate().responseData { response in
             if let data = response.data {
+                // save data to cache
+                CacheManager.setVideoCache(video.title, data)
+                
                 // set image
                 self.thumbnailData = data
             }
