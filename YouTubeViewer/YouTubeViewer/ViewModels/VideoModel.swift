@@ -29,8 +29,24 @@ class VideoModel: ObservableObject {
         // Crate URL request
         AF.request(
             url,
-            parameters: ["part":"snippet" "playlistId":]
+            parameters: ["part" : "snippet", "playlistId" : "\(Constants.PLAYLISTID)", "key" : "\(Constants.API_KEY)"]
         )
+        .validate()
+        .responseDecodable(of: Response.self, decoder: decoder) { response in
+            
+            // Check call success
+            switch response.result {
+            case .success:
+                break
+            case .failure(let error):
+                print("DEBUG: Failure in responseDecodable: \(error.localizedDescription)")
+                return
+            }
+            
+            // Update UI with videos
+            
+            
+        }
     }
     
 }
