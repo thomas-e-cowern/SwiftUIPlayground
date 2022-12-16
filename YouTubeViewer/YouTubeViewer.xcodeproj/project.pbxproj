@@ -13,6 +13,7 @@
 		4D2A1B7B294CAE67006C5DAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A1B7A294CAE67006C5DAF /* Preview Assets.xcassets */; };
 		4D2A1B83294CB06B006C5DAF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2A1B82294CB06B006C5DAF /* Alamofire */; };
 		4D2A1B86294CB468006C5DAF /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2A1B85294CB468006C5DAF /* YouTubeiOSPlayerHelper */; };
+		4D2A1B89294CBA30006C5DAF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2A1B88294CBA30006C5DAF /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4D2A1B75294CAE65006C5DAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4D2A1B77294CAE67006C5DAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D2A1B7A294CAE67006C5DAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D2A1B88294CBA30006C5DAF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		4D2A1B72294CAE65006C5DAF /* YouTubeViewer */ = {
 			isa = PBXGroup;
 			children = (
+				4D2A1B87294CBA20006C5DAF /* Helpers */,
 				4D2A1B73294CAE65006C5DAF /* YouTubeViewerApp.swift */,
 				4D2A1B75294CAE65006C5DAF /* ContentView.swift */,
 				4D2A1B77294CAE67006C5DAF /* Assets.xcassets */,
@@ -69,6 +72,14 @@
 				4D2A1B7A294CAE67006C5DAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D2A1B87294CBA20006C5DAF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				4D2A1B88294CBA30006C5DAF /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			files = (
 				4D2A1B76294CAE65006C5DAF /* ContentView.swift in Sources */,
 				4D2A1B74294CAE65006C5DAF /* YouTubeViewerApp.swift in Sources */,
+				4D2A1B89294CBA30006C5DAF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
