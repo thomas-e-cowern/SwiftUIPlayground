@@ -12,6 +12,7 @@
 		4D2A1B78294CAE67006C5DAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A1B77294CAE67006C5DAF /* Assets.xcassets */; };
 		4D2A1B7B294CAE67006C5DAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D2A1B7A294CAE67006C5DAF /* Preview Assets.xcassets */; };
 		4D2A1B83294CB06B006C5DAF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2A1B82294CB06B006C5DAF /* Alamofire */; };
+		4D2A1B86294CB468006C5DAF /* YouTubeiOSPlayerHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 4D2A1B85294CB468006C5DAF /* YouTubeiOSPlayerHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2A1B83294CB06B006C5DAF /* Alamofire in Frameworks */,
+				4D2A1B86294CB468006C5DAF /* YouTubeiOSPlayerHelper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,7 @@
 			name = YouTubeViewer;
 			packageProductDependencies = (
 				4D2A1B82294CB06B006C5DAF /* Alamofire */,
+				4D2A1B85294CB468006C5DAF /* YouTubeiOSPlayerHelper */,
 			);
 			productName = YouTubeViewer;
 			productReference = 4D2A1B70294CAE65006C5DAF /* YouTubeViewer.app */;
@@ -118,6 +121,7 @@
 			mainGroup = 4D2A1B67294CAE65006C5DAF;
 			packageReferences = (
 				4D2A1B81294CB06B006C5DAF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				4D2A1B84294CB468006C5DAF /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */,
 			);
 			productRefGroup = 4D2A1B71294CAE65006C5DAF /* Products */;
 			projectDirPath = "";
@@ -357,6 +361,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		4D2A1B84294CB468006C5DAF /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/youtube/youtube-ios-player-helper";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -364,6 +376,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4D2A1B81294CB06B006C5DAF /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		4D2A1B85294CB468006C5DAF /* YouTubeiOSPlayerHelper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4D2A1B84294CB468006C5DAF /* XCRemoteSwiftPackageReference "youtube-ios-player-helper" */;
+			productName = YouTubeiOSPlayerHelper;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
