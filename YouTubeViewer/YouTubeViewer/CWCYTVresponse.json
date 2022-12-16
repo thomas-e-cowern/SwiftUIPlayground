@@ -1,0 +1,53 @@
+{
+  "kind": "youtube#playlistListResponse",
+  "etag": "EZlpPG6__ITlrRyLxh1J2VJHexs",
+  "pageInfo": {
+    "totalResults": 1,
+    "resultsPerPage": 5
+  },
+  "items": [
+    {
+      "kind": "youtube#playlist",
+      "etag": "pFKRQE8g0-l7Dza0eLQOwAPXr3U",
+      "id": "PLfSGz2lo5ka0zKazCfw1hm9-RLa2RrbI7",
+      "snippet": {
+        "publishedAt": "2017-08-20T23:18:17Z",
+        "channelId": "UCUVyuhKkPfIw_p65arA7n4A",
+        "title": "Google Web Designer",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sWubHWYnjpQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sWubHWYnjpQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sWubHWYnjpQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          },
+          "standard": {
+            "url": "https://i.ytimg.com/vi/sWubHWYnjpQ/sddefault.jpg",
+            "width": 640,
+            "height": 480
+          },
+          "maxres": {
+            "url": "https://i.ytimg.com/vi/sWubHWYnjpQ/maxresdefault.jpg",
+            "width": 1280,
+            "height": 720
+          }
+        },
+        "channelTitle": "Thomas Cowern",
+        "localized": {
+          "title": "Google Web Designer",
+          "description": ""
+        }
+      }
+    }
+  ]
+}
