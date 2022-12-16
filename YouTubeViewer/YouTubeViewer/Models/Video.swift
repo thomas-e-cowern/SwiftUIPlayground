@@ -1,5 +1,5 @@
 //
-//  Response.swift
+//  Video.swift
 //  YouTubeViewer
 //
 //  Created by Thomas Cowern on 12/16/22.
@@ -7,8 +7,6 @@
 
 import Foundation
 
-struct Response: Decodable {
-    
-    var items: [Video]
+struct Video: Decodable {
     
 }
