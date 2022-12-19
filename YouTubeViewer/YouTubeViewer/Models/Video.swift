@@ -54,4 +54,12 @@ struct Video: Decodable {
         
         self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
     }
+    
+    init() {
+        self.videoId = "1234567890"
+        self.title = "I am a video"
+        self.description = "This is where the description of the video will go"
+        self.thumbnail = "https://unsplash.com/photos/CiUR8zISX60"
+        self.published = Date()
+    }
 }
