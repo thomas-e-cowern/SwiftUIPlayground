@@ -7,9 +7,24 @@
 
 import SwiftUI
 
+let backgroundColor = Color(red: 31 / 255, green: 33 / 255, blue: 36 / 255)
+
 struct Home: View {
+    @StateObject var model = VideoModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack {
+                ForEach(model.videos, id:\.videoId) { video in
+                    VideoRow(videoPreview: VideoPreview(video: video))
+                        .padding()
+                }
+            }
+            .padding(.top, 20)
+        }
+        .foregroundColor(.white)
+        .background(backgroundColor)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
