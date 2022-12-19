@@ -6,15 +6,22 @@
 //
 
 import SwiftUI
+import WebKit
 
-struct YoutubeVideoPlayer: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct YoutubeVideoPlayer: UIViewRepresentable {
+    var video: Video
+    
+    func makeUIView(context: Context) -> some UIView {
+        <#code#>
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        <#code#>
     }
 }
 
 struct YoutubeVideoPlayer_Previews: PreviewProvider {
     static var previews: some View {
-        YoutubeVideoPlayer()
+        YoutubeVideoPlayer(video: Video())
     }
 }
