@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct VideoRow: View {
+    @ObservedObject var videoPreview: VideoPreview
+    @State private var isPresenting: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button {
+            isPresenting = true
+        } label: {
+            VStack(alignment: .leading, spacing: 10) {
+                <#code#>
+            }
+        }
+        .sheet(isPresented: $isPresenting) {
+            VideoDetail(video: videoPreview.video)
+        }
+
     }
 }
 
