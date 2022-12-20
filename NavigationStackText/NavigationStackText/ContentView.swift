@@ -21,6 +21,20 @@ struct ContentView: View {
                     }
                 }
                 .navigationTitle("Gaming")
+                .navigationDestination(for: Platform.self) { platform in
+                    ZStack {
+                        platform.color.ignoresSafeArea()
+                        VStack {
+                            Image(platform.imageName)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100)
+                            Text(platform.name)
+                                .foregroundColor(.white)
+                                .font(.title)
+                        }
+                    }
+                }
             }
         }
     }
