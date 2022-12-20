@@ -22,7 +22,9 @@ struct ContentView: View {
                     
                     Section("Games") {
                         ForEach(Data().games, id: \.name) { game in
-                            Text(game.name)
+                            NavigationLink(value: game) {
+                                Text(game.name)
+                            }
                         }
                     }
                 }
@@ -40,6 +42,12 @@ struct ContentView: View {
                             .foregroundColor(.white)
                             .font(.title)
                     }
+                }
+            }
+            .navigationDestination(for: Game.self) { game in
+                HStack {
+                    Text(game.name)
+                    Text(game.rating)
                 }
             }
         }
