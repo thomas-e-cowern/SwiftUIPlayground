@@ -56,7 +56,7 @@ struct ContentView: View {
                 }
             }
             .navigationDestination(for: Game.self) { game in
-                VStack {
+                VStack (spacing: 20) {
                     HStack {
                         Text("\(game.name), ")
                         Text("Rating: \(game.rating)")
@@ -64,15 +64,15 @@ struct ContentView: View {
                     .font(.title)
                     
                     Button("Recomended Game") {
-                        
+                        path.append(Data().games.randomElement()!)
                     }
                     
                     Button("Go to another platform") {
-                        
+                        path.append(Data().platforms.randomElement()!)
                     }
                     
                     Button("Go Home") {
-                        
+                        path.removeLast(path.count)
                     }
                 }
             }
