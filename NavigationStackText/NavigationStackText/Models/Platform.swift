@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Platform {
+struct Platform: Hashable {
     let name: String
     let imageName: String
     let color: Color
