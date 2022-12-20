@@ -56,11 +56,25 @@ struct ContentView: View {
                 }
             }
             .navigationDestination(for: Game.self) { game in
-                HStack {
-                    Text("\(game.name), ")
-                    Text("Rating: \(game.rating)")
+                VStack {
+                    HStack {
+                        Text("\(game.name), ")
+                        Text("Rating: \(game.rating)")
+                    }
+                    .font(.title)
+                    
+                    Button("Recomended Game") {
+                        
+                    }
+                    
+                    Button("Go to another platform") {
+                        
+                    }
+                    
+                    Button("Go Home") {
+                        
+                    }
                 }
-                .font(.title)
             }
         }
     }
