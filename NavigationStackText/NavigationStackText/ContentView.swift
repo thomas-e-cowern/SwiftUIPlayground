@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var path: [Game] = []
+    @State private var path = NavigationPath()
     
     var body: some View {
         NavigationStack(path: $path) {
@@ -24,13 +24,10 @@ struct ContentView: View {
                     }
                     
                     Section("Games") {
-//                        ForEach(Data().games, id: \.name) { game in
-//                            NavigationLink(value: game) {
-//                                Text(game.name)
-//                            }
-//                        }
-                        Button("Add Games") {
-                            path = Data().games
+                        ForEach(Data().games, id: \.name) { game in
+                            NavigationLink(value: game) {
+                                Text(game.name)
+                            }
                         }
                     }
                 }
@@ -52,8 +49,8 @@ struct ContentView: View {
             }
             .navigationDestination(for: Game.self) { game in
                 HStack {
-                    Text("\(game.name) - ")
-                    Text(game.rating)
+                    Text("\(game.name), ")
+                    Text("Rating: \(game.rating)")
                 }
                 .font(.title)
             }
