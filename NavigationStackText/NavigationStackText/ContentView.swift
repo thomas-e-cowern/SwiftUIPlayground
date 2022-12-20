@@ -24,10 +24,13 @@ struct ContentView: View {
                     }
                     
                     Section("Games") {
-                        ForEach(Data().games, id: \.name) { game in
-                            NavigationLink(value: game) {
-                                Text(game.name)
-                            }
+//                        ForEach(Data().games, id: \.name) { game in
+//                            NavigationLink(value: game) {
+//                                Text(game.name)
+//                            }
+//                        }
+                        Button("Add Games") {
+                            path.append(Data().games.first!)
                         }
                     }
                 }
