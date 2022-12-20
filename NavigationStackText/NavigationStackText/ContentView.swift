@@ -34,7 +34,7 @@ struct ContentView: View {
             }
             .navigationTitle("Gaming")
             .navigationDestination(for: Platform.self) { platform in
-
+                PlatformView(platform: platform, games: Data().games)
             }
             .navigationDestination(for: Game.self) { game in
                 VStack (spacing: 20) {

@@ -14,7 +14,7 @@ struct PlatformView: View {
     
     var body: some View {
         ZStack {
-            platform.color.ignoresSafeArea()
+            platform.color
             VStack {
                 Image(platform.imageName)
                     .resizable()
