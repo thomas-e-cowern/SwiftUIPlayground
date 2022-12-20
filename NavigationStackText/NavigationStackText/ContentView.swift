@@ -13,7 +13,7 @@ struct ContentView: View {
             VStack {
                 List {
                     Section("Platforms") {
-                        ForEach(PlatformData().platforms, id:\.name) { platform in
+                        ForEach(Data().platforms, id:\.name) { platform in
                             NavigationLink(value: platform) {
                                 PlatformRowView(platform: platform)
                             }

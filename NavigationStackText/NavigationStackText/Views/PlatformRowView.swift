@@ -27,6 +27,6 @@ struct PlatformRowView: View {
 
 struct PlatformRowView_Previews: PreviewProvider {
     static var previews: some View {
-        PlatformRowView(platform: PlatformData().platforms[0])
+        PlatformRowView(platform: Data().platforms[0])
     }
 }
