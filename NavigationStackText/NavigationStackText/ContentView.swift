@@ -14,7 +14,7 @@ struct ContentView: View {
                 List {
                     Section("Platforms") {
                         ForEach(PlatformData().platforms, id:\.name) { platform in
-                            NavigationLink(value: <#T##(Decodable & Encodable & Hashable)?#>, label: <#T##() -> View#>) {
+                            NavigationLink(value: platform) {
                                 PlatformRowView(platform: platform)
                             }
                         }
