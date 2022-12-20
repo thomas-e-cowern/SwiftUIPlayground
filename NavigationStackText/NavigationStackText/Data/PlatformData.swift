@@ -8,8 +8,8 @@
 import Foundation
 
 struct PlatformData {
-    var platforms: [Platform] = [.init(name: "XBox", imageName: <#T##String#>, color: .green),
-                                 .init(name: "Playstation", imageName: <#T##String#>, color: .indigo),
-                                 .init(name: "PC", imageName: <#T##String#>, color: .gray),
-                                 .init(name: "IPhone", imageName: <#T##String#>, color: .black)]
+    var platforms: [Platform] = [.init(name: "XBox", imageName: "xbox-logo", color: .green),
+                                 .init(name: "Playstation", imageName: "playstation-logo", color: .indigo),
+                                 .init(name: "PC", imageName: "pc-logo", color: .gray),
+                                 .init(name: "IPhone", imageName: "iphone-logo", color: .black)]
 }
