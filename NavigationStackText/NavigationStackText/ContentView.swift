@@ -38,11 +38,7 @@ struct ContentView: View {
             }
             .navigationDestination(for: Game.self) { game in
                 VStack (spacing: 20) {
-                    HStack {
-                        Text("\(game.name), ")
-                        Text("Rating: \(game.rating)")
-                    }
-                    .font(.title)
+                    GameView(game: game)
                     
                     Button("Recomended Game") {
                         path.append(Data().games.randomElement()!)
@@ -56,6 +52,7 @@ struct ContentView: View {
                         path.removeLast(path.count)
                     }
                 }
+                .tint(.blue)
             }
         }
         .tint(.black)

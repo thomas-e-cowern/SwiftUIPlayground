@@ -14,7 +14,7 @@ struct PlatformView: View {
     
     var body: some View {
         ZStack {
-            platform.color
+            platform.color.ignoresSafeArea()
             VStack {
                 Image(platform.imageName)
                     .resizable()
@@ -32,12 +32,16 @@ struct PlatformView: View {
                     }
                 }
             }
+            .tint(platform.name == "IPhone" ? .white : .black)
         }
+        .navigationTitle(platform.name)
+        .tint(.white)
+        
     }
 }
 
 struct PlatformView_Previews: PreviewProvider {
     static var previews: some View {
-        PlatformView(platform: Data().platforms[1], games: Data().games)
+        PlatformView(platform: Data().platforms[3], games: Data().games)
     }
 }
