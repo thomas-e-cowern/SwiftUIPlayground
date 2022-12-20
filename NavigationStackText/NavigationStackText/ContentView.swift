@@ -30,7 +30,7 @@ struct ContentView: View {
 //                            }
 //                        }
                         Button("Add Games") {
-                            path.append(Data().games.first!)
+                            path = Data().games
                         }
                     }
                 }
@@ -52,9 +52,10 @@ struct ContentView: View {
             }
             .navigationDestination(for: Game.self) { game in
                 HStack {
-                    Text(game.name)
+                    Text("\(game.name) - ")
                     Text(game.rating)
                 }
+                .font(.title)
             }
         }
     }
