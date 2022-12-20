@@ -5,4 +5,10 @@
 //  Created by Thomas Cowern on 12/20/22.
 //
 
-import Foundation
+import SwiftUI
+
+struct Platform {
+    let name: String
+    let imageName: String
+    let color: Color
+}
