@@ -44,6 +44,14 @@ struct ContentView: View {
                         Text(platform.name)
                             .foregroundColor(.white)
                             .font(.title)
+                        
+                        List {
+                            ForEach(Data().games, id: \.name) { game in
+                                NavigationLink(value: game) {
+                                    Text(game.name)
+                                }
+                            }
+                        }
                     }
                 }
             }
