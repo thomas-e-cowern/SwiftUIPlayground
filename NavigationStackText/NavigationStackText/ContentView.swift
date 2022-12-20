@@ -14,22 +14,14 @@ struct ContentView: View {
                 List {
                     Section("Platforms") {
                         ForEach(PlatformData().platforms, id:\.name) { platform in
-                            HStack {
-                                Image(platform.imageName)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 50)
-                                    .padding(.trailing, 5)
-                                Text(platform.name)
-                                    .foregroundColor(platform.color)
-                                    .font(.title2)
+                            NavigationLink(value: <#T##(Decodable & Encodable & Hashable)?#>, label: <#T##() -> View#>) {
+                                PlatformRowView(platform: platform)
                             }
                         }
                     }
                 }
                 .navigationTitle("Gaming")
             }
-            .padding()
         }
     }
 }

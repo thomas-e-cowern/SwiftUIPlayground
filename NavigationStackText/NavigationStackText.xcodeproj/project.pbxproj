@@ -13,6 +13,7 @@
 		4D27CF142951D98E009E58A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D27CF132951D98E009E58A0 /* Preview Assets.xcassets */; };
 		4D27CF1C2951DA35009E58A0 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27CF1B2951DA35009E58A0 /* Platform.swift */; };
 		4D27CF1F2951DB9D009E58A0 /* PlatformData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27CF1E2951DB9D009E58A0 /* PlatformData.swift */; };
+		4D27CF222951E951009E58A0 /* PlatformRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27CF212951E951009E58A0 /* PlatformRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4D27CF132951D98E009E58A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D27CF1B2951DA35009E58A0 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		4D27CF1E2951DB9D009E58A0 /* PlatformData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformData.swift; sourceTree = "<group>"; };
+		4D27CF212951E951009E58A0 /* PlatformRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlatformRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 		4D27CF0B2951D989009E58A0 /* NavigationStackText */ = {
 			isa = PBXGroup;
 			children = (
+				4D27CF202951E93B009E58A0 /* Views */,
 				4D27CF1D2951DB87009E58A0 /* Data */,
 				4D27CF1A2951DA13009E58A0 /* Models */,
 				4D27CF0C2951D989009E58A0 /* NavigationStackTextApp.swift */,
@@ -87,6 +90,14 @@
 				4D27CF1E2951DB9D009E58A0 /* PlatformData.swift */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4D27CF202951E93B009E58A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4D27CF212951E951009E58A0 /* PlatformRowView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +173,7 @@
 				4D27CF1F2951DB9D009E58A0 /* PlatformData.swift in Sources */,
 				4D27CF1C2951DA35009E58A0 /* Platform.swift in Sources */,
 				4D27CF0F2951D989009E58A0 /* ContentView.swift in Sources */,
+				4D27CF222951E951009E58A0 /* PlatformRowView.swift in Sources */,
 				4D27CF0D2951D989009E58A0 /* NavigationStackTextApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
