@@ -14,6 +14,7 @@
 		4D33AEC429549460002E234E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33AEC329549460002E234E /* HomeView.swift */; };
 		4D33AEC72954961C002E234E /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33AEC62954961C002E234E /* SidebarView.swift */; };
 		4D33AECA2954982B002E234E /* RemindersModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D33AEC82954982B002E234E /* RemindersModel.xcdatamodeld */; };
+		4D33AECD29549966002E234E /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33AECC29549966002E234E /* Lists.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		4D33AEC329549460002E234E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4D33AEC62954961C002E234E /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		4D33AEC92954982B002E234E /* RemindersModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RemindersModel.xcdatamodel; sourceTree = "<group>"; };
+		4D33AECC29549966002E234E /* Lists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				4D33AEC82954982B002E234E /* RemindersModel.xcdatamodeld */,
+				4D33AECC29549966002E234E /* Lists.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				4D33AEC72954961C002E234E /* SidebarView.swift in Sources */,
 				4D33AEB5295493A0002E234E /* ContentView.swift in Sources */,
 				4D33AEB3295493A0002E234E /* SwiftUIRemindersApp.swift in Sources */,
+				4D33AECD29549966002E234E /* Lists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
