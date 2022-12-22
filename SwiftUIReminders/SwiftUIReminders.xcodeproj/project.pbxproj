@@ -12,6 +12,7 @@
 		4D33AEB7295493A1002E234E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D33AEB6295493A1002E234E /* Assets.xcassets */; };
 		4D33AEBA295493A1002E234E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D33AEB9295493A1002E234E /* Preview Assets.xcassets */; };
 		4D33AEC429549460002E234E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33AEC329549460002E234E /* HomeView.swift */; };
+		4D33AEC72954961C002E234E /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33AEC62954961C002E234E /* SidebarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		4D33AEB9295493A1002E234E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4D33AEBB295493A1002E234E /* SwiftUIReminders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUIReminders.entitlements; sourceTree = "<group>"; };
 		4D33AEC329549460002E234E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4D33AEC62954961C002E234E /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		4D33AEB1295493A0002E234E /* SwiftUIReminders */ = {
 			isa = PBXGroup;
 			children = (
+				4D33AEC529549601002E234E /* Data */,
 				4D33AEC129549435002E234E /* Views */,
 				4D33AEB2295493A0002E234E /* SwiftUIRemindersApp.swift */,
 				4D33AEB4295493A0002E234E /* ContentView.swift */,
@@ -76,8 +79,16 @@
 			isa = PBXGroup;
 			children = (
 				4D33AEC329549460002E234E /* HomeView.swift */,
+				4D33AEC62954961C002E234E /* SidebarView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4D33AEC529549601002E234E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D33AEC429549460002E234E /* HomeView.swift in Sources */,
+				4D33AEC72954961C002E234E /* SidebarView.swift in Sources */,
 				4D33AEB5295493A0002E234E /* ContentView.swift in Sources */,
 				4D33AEB3295493A0002E234E /* SwiftUIRemindersApp.swift in Sources */,
 			);
